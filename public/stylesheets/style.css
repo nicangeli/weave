@@ -6,3 +6,33 @@ body {
 a {
   color: #00B7FF;
 }
+
+.onboarding {
+	text-align: center;
+}
+
+button.age {
+	margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Css for changing navbar to black on bootstrap
+/* .navbar {
+  background-color: #000; /* background color will be black for all browsers 
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.navbar a, .navbar li {
+	color: white; !important
+} */
+
