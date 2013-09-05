@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .container
+      -for(var i = 0; i < products.length; i++) {
+      -var id = "product" + i;
+      div(data-number="#{id}")  
+        img(src=products[i].imageUrl, style="width: 200px; height: 200px", data-number="#{id}")
+        button.like.btn(data-number="#{id}") Like
+        button.dislike.btn(data-number="#{id}") Dislike
+      -}      
+
+
+
+  script(src="/javascripts/client.js", type="text/javascript")
