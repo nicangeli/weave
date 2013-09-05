@@ -11,8 +11,66 @@ a {
 	text-align: center;
 }
 
+.gender {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+}
+
+img.female {
+  float: left;
+}
+
+img.male {
+  float: right;
+}
+
 button.age {
 	margin: 2px;
+}
+
+.collections {
+	text-align: center;
+}
+
+.buttons {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  max-width: 400px;
+}
+
+button.dislike {
+  float: left;
+  margin-left: 10%;
+}
+
+button.like {
+  float: right;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 480px) {
+  .image {
+    width: 100%;
+    height: 250px;
+  }
+  .image img.product {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+  }
+}
+@media screen and (min-width: 481px) {
+  .image {
+    width: 100%;
+    height: 400px;
+  }
+  .image img.product {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+  }
 }
 
 

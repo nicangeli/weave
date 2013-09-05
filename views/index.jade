@@ -3,9 +3,11 @@ extends layout
 block content
   .container
     .onboarding
-      h1#Hello Hey! Are you male or female?
-      img(src="/images/f.png", id="female")
-      img(src="/images/m.png", id="male")
+      h1#Hello Are you male or female?
+      .gender
+        img.female(src="/images/f.png", id="female")
+        img.male(src="/images/m.png", id="male")
+      h2#age How old are you?
       .btn-group.btn-group-vertical(id="age-group")
         button.btn.btn-success.age I'm under 18
         button.btn.btn-success.age 18-21
@@ -13,10 +15,11 @@ block content
         button.btn.btn-success.age 26-30
         button.btn.btn-success.age 30-40
         button.btn.btn-success.age 40+
+      h2#explanation We are going to show you some new clothes that we want you to judge, but first who are you...
       form(role='form', id="emailForm")
         .form-group
           input#exampleInputEmail.form-control(type='email', placeholder='Enter email')
-        button.btn.btn-success(type="submit")#emailButton Let's GO
+        button.btn.btn-success(type="submit")#emailButton Play
 
 
   script(src="/javascripts/onboarding.js", type="text/javascript")
