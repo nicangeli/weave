@@ -12,7 +12,6 @@ exports.index = function(req, res){
 };
 
 exports.onboarding = function(req, res) {
-	console.log(req.body);
 	res.send(200);
 };
 
@@ -32,3 +31,7 @@ exports.collection = function(req, res) {
 		"products": products
 	});
 };
+
+exports.likes = function(req, res) {
+	res.render('likes');
+}
