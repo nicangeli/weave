@@ -42,6 +42,9 @@ app.post('/onboarding', routes.onboarding);
 app.get('/collection/:round', routes.collection);
 app.get('/likes', routes.likes);
 app.get('/share', routes.share);
+app.post('/share', routes.shareSend);
+app.get('/feedback', routes.feedback);
+app.post('/feedback', routes.feedbackSend);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
