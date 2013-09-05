@@ -16,7 +16,7 @@ $(document).ready(function() {
 	$(".like").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		// attempt local storage
+
 		var likes = localStorage.getObj("likes");
 		
 		var tmp = {};
@@ -33,7 +33,6 @@ $(document).ready(function() {
 			localStorage.setObj("likes", likes);
 		}
 
-		//localStorage.setObj("likes", likes);
 		// anything that has a data-number attr of element, hide it
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
@@ -52,7 +51,11 @@ var changeProduct = function(currentProduct) {
 	var num = parseInt(currentProduct.split("product")[1]),
 		next = num + 1,
 		nextId = "product" + next;
-	$('[data-number=' + nextId + ']').each(function() {
-		$(this).show();
-	})
+	if($('[data-number=' + nextId + ']').length == 0) {
+		window.location = "/likes";
+	} else {
+		$('[data-number=' + nextId + ']').each(function() {
+			$(this).show();
+		});
+	}
 };
