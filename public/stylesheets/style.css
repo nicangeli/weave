@@ -1,5 +1,5 @@
 body {
-  padding: 80px;
+  padding: 60px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,22 +7,12 @@ a {
   color: #00B7FF;
 }
 
+h2 {
+  margin-top: 10px;
+}
+
 .onboarding {
 	text-align: center;
-}
-
-.gender {
-  display: block;
-  margin: auto;
-  max-width: 400px;
-}
-
-img.female {
-  float: left;
-}
-
-img.male {
-  float: right;
 }
 
 button.age {
@@ -33,21 +23,12 @@ button.age {
 	text-align: center;
 }
 
-.buttons {
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  max-width: 400px;
-}
-
 button.dislike {
-  float: left;
-  margin-left: 10%;
+  width: 100%;
 }
 
 button.like {
-  float: right;
-  margin-right: 10%;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {

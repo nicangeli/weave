@@ -4,9 +4,14 @@ block content
   .container
     .onboarding
       h1#Hello Are you male or female?
-      .gender
-        img.female(src="/images/f.png", id="female")
-        img.male(src="/images/m.png", id="male")
+      .row
+        .col-md-3
+        .col-md-2
+          img.female(src="/images/f.png", id="female")
+        .col-md-2
+        .col-md-2
+          img.male(src="/images/m.png", id="male")
+        .col-md-3
       h2#age How old are you?
       .btn-group.btn-group-vertical(id="age-group")
         button.btn.btn-success.age I'm under 18
