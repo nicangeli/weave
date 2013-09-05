@@ -4,10 +4,11 @@ block content
   .container
       -for(var i = 0; i < products.length; i++) {
       -var id = "product" + i;
-      div(data-number="#{id}")  
-        img(src=products[i].imageUrl, style="width: 200px; height: 200px", data-number="#{id}")
-        button.like.btn(data-number="#{id}") Like
-        button.dislike.btn(data-number="#{id}") Dislike
+      div(data-number="#{id}") 
+        h1 #{products[i].type}
+        img(src=products[i].imageUrl, style="width: 200px; height: 200px", data-number="#{id}");
+        button.like.btn(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type) Like
+        button.dislike.btn(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type) Dislike
       -}      
 
 
