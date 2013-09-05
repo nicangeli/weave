@@ -2,34 +2,26 @@ extends layout
 
 block content
   .container
+    h1#thanks Thanks!
     h1 Share with Friends
     p Before we show you your likes, want to see what your friends thought of that?
-    form.form-inline(role='form')
-      .form-group
-        label.sr-only(for='friendName1') name
-        input#friendName1.form-control(type='text', placeholder='name')
-      .form-group
-        label.sr-only(for='friendEmail1') email
-        input#friendEmail1.form-control(type='email', placeholder='email')
-      br
-      .form-group
-        label.sr-only(for='friendName2') name
-        input#friendName2.form-control(type='text', placeholder='name')
-      .form-group
-        label.sr-only(for='friendEmail2') email
-        input#friendEmail2.form-control(type='email', placeholder='email')
-      br
-      .form-group
-        label.sr-only(for='friendName3') name
-        input#friendName3.form-control(type='text', placeholder='name')
-      .form-group
-        label.sr-only(for='friendEmail3') email
-        input#friendEmail3.form-control(type='email', placeholder='email')
-      br
-      button.btn.btn-default(type='submit', id="share") Share with Friends
-      br
-      button.btn.btn-default(type='submit', id="skip") Just Reveal my Likes
+
  
+    form(role='form')
+      .form-group
+        label(for='friend1') Friend 1
+        input#friend1.form-control(type='email', placeholder='Friend 1 Email Address')
+      .form-group
+        label(for='friend2') Friend 2 
+        input#friend2.form-control(type='email', placeholder='Friend 2 Email Address')
+      .form-group
+        label(for='friend3') Friend 3
+        input#friend3.form-control(type='email', placeholder='Friend 3 Email Address')
+      button.btn.btn-default(type='submit', id="share") Share
+    hr
+    button.btn.btn-default(type='submit', id="skip") Just Reveal my Likes
+
+
 
 
 

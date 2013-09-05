@@ -10,7 +10,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 
 module.exports = function() {
 
-	this.share = function(emails, names, callback) {	
+	this.share = function(emails, callback) {	
 
 		var mailOptions = {
 		    from: "Nick Angeli <nick@weaveuk.com>", // sender address

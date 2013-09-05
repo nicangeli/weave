@@ -43,7 +43,7 @@ exports.share = function(req, res) {
 
 exports.shareSend = function(req, res) {
 	var m = new mailer();
-	m.share(req.body.emailAddresses, req.body.names, function() {
+	m.share(req.body.emailAddresses, function() {
 		res.send(200);
 	});
 }
