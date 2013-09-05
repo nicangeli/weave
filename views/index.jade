@@ -4,7 +4,7 @@ block content
   .container
     .onboarding
       h1.Landing Weave
-      h3.Landing Discover clothes you love.
+      span.tagline.Landing - Discover clothes you love -
       h4.Landing We show you new threads. You pick what you like.
       button.btn.btn-primary.Landing#LetsGo Let's go
       h3#Gender Are you male or female?
@@ -23,11 +23,15 @@ block content
         button.btn.btn-success.age 26-30
         button.btn.btn-success.age 30-40
         button.btn.btn-success.age 40+
-      h3#explanation We are going to show you some new clothes that we want you to judge, but first who are you...
-      form(role='form', id="emailForm")
-        .form-group
-          input#exampleInputEmail.form-control(type='email', placeholder='Enter email')
-        button.btn.btn-success(type="submit")#emailButton Play
+      h4#explanation We are going to show you some new clothes that we want you to judge, but first who are you...
+      .row
+        .col-xs-3
+        .col-xs-6
+          form(role='form', id="emailForm")
+            .form-group
+              input#InputEmail.form-control(type='email', placeholder='Enter email')
+            button.btn.btn-success(type="submit")#emailButton Play
+        .col-xs-3
 
 
   script(src="/javascripts/onboarding.js", type="text/javascript")
