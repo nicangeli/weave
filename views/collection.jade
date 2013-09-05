@@ -2,15 +2,18 @@ extends layout
 
 block content
   .container
+    .collections
       -for(var i = 0; i < products.length; i++) {
       -var id = "product" + i;
       -var itemDisplayNumber = i+1;
       div(data-number="#{id}") 
         h1 #{products[i].type}
         h2 #{itemDisplayNumber} / #{products.length}
-        img(src=products[i].imageUrl, style="width: 200px; height: 200px", data-number="#{id}");
-        button.like.btn(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type) Like
-        button.dislike.btn(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type) Dislike
+        .image
+          img.product(src=products[i].imageUrl, data-number="#{id}");
+        .buttons
+          button.dislike.btn.btn-primary(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type) Dislike
+          button.like.btn.btn-success(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type) Like
       -}      
 
 

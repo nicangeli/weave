@@ -8,19 +8,25 @@ $(document).ready(function() {
 	$("#age-group").hide();
 	$("#almost").hide();
 	$("#emailForm").hide();
+	$("#explanation").hide();
+	$("#age").hide();
 
 	// mouse click on male or female button
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
 		$("#male, #female").hide();
+		$("#Hello").hide();
+		$("#age").show();
 		$("#age-group").show();
 	});
 
 	//mouse click on age
 	$(".age").click(function() {
 		age = $(this).text();
+		$("#age").hide();
 		$("#age-group").hide();
 		$("#emailForm").show();
+		$("#explanation").show();
 	});
 
 	//mouse click on email address go button
