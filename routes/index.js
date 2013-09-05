@@ -35,3 +35,7 @@ exports.collection = function(req, res) {
 exports.likes = function(req, res) {
 	res.render('likes');
 }
+
+exports.share = function(req, res) {
+	res.render('share');
+}

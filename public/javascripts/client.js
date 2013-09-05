@@ -38,7 +38,7 @@ $(document).ready(function() {
 		changeProduct(element);
 	});
 
-	$(".dislike").click(function() {
+	$(".dislike").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
 		$('[data-number=' + element + ']').hide();
@@ -52,7 +52,7 @@ var changeProduct = function(currentProduct) {
 		next = num + 1,
 		nextId = "product" + next;
 	if($('[data-number=' + nextId + ']').length == 0) {
-		window.location = "/likes";
+		window.location = "/share";
 	} else {
 		$('[data-number=' + nextId + ']').each(function() {
 			$(this).show();

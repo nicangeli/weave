@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .container
+    h1 Share with Friends
+    p Before we show you your likes, fancy sharing Weave with some friends? 
+    form.form-inline(role='form')
+      .form-group
+        label.sr-only(for='friendName1') name
+        input#friendName1.form-control(type='text', placeholder='name')
+      .form-group
+        label.sr-only(for='friendEmail1') email
+        input#friendEmail1.form-control(type='email', placeholder='email')
+      br
+      .form-group
+        label.sr-only(for='friendName2') name
+        input#friendName2.form-control(type='text', placeholder='name')
+      .form-group
+        label.sr-only(for='friendName2') email
+        input#friendName2.form-control(type='email', placeholder='email')
+      br
+      .form-group
+        label.sr-only(for='friendName3') name
+        input#friendName3.form-control(type='text', placeholder='name')
+      .form-group
+        label.sr-only(for='friendName3') email
+        input#friendName3.form-control(type='email', placeholder='email')
+      br
+      button.btn.btn-default(type='submit') Share with Friends
+      br
+      button.btn.btn-default(type='submit', id="skip") Just Reveal my Likes
+ 
+
+
+
+
+  script(src="/javascripts/share.js", type="text/javascript")
