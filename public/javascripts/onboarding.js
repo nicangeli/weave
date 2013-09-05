@@ -13,6 +13,7 @@ $(document).ready(function() {
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
 		$("#male, #female").hide();
+		$("#Hello").hide();
 		$("#age-group").show();
 	});
 

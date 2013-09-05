@@ -3,7 +3,7 @@ extends layout
 block content
   .container
     .onboarding
-      h1 Hey! Are you male or female?
+      h1#Hello Hey! Are you male or female?
       img(src="/images/f.png", id="female")
       img(src="/images/m.png", id="male")
       .btn-group.btn-group-vertical(id="age-group")
@@ -13,11 +13,10 @@ block content
         button.btn.btn-success.age 26-30
         button.btn.btn-success.age 30-40
         button.btn.btn-success.age 40+
-      h1#almost Almost there, just one more!
-      form(role="form")#emailForm
+      form(role='form', id="emailForm")
         .form-group
-          input#inputEmail(type='text', placeholder='Enter email')
-        button.btn.btn-success(type="submit")#emailButton Submit
+          input#exampleInputEmail.form-control(type='email', placeholder='Enter email')
+        button.btn.btn-success(type="submit")#emailButton Let's GO
 
 
   script(src="/javascripts/onboarding.js", type="text/javascript")
