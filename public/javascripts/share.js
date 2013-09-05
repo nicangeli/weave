@@ -21,6 +21,7 @@ $(document).ready(function() {
 
 	$("#skip").click(function(e) {
 		e.preventDefault();
+		console.log('hey')
 		window.location = "/likes";
 	})
 

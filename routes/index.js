@@ -5,7 +5,7 @@
 
 var collection1 = require('../collections/first.js').data,
 	collection2 = require('../collections/second.js').data,
-	mailer = require('../libs/emailer.js');
+	mailer = require('../libs/mailer.js');
 
 
 exports.index = function(req, res){
@@ -40,3 +40,21 @@ exports.likes = function(req, res) {
 exports.share = function(req, res) {
 	res.render('share');
 }
+
+exports.shareSend = function(req, res) {
+	var m = new mailer();
+	m.share(req.body.emailAddresses, req.body.names, function() {
+		res.send(200);
+	});
+}
+
+exports.feedback = function(req, res) {
+	res.render('feedback');
+};
+
+exports.feedbackSend = function(req, res) {
+	var m = new mailer();
+	m.feedback(req.body.email, req.body.feedback, function() {
+		res.send(200);
+	})
+};

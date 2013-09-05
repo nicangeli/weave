@@ -22,6 +22,11 @@ $(document).ready(function() {
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
 		window.location = "/collection/2"
+	});
+
+	$("#feedback").click(function(e) {
+		e.preventDefault();
+		window.location = "/feedback";
 	})
 
 
