@@ -9,18 +9,24 @@ $(document).ready(function() {
 	$(".like").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		console.log(element);
 		// anything that has a data-number attr of element, hide it
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
+
+	$(".dislike").click(function() {
+		e.preventDefault();
+		var element = $(this).attr('data-number');
+		$('[data-number=' + element + ']').hide();
+		changeProduct(element);
+	});
+
 });
 
 var changeProduct = function(currentProduct) {
 	var num = parseInt(currentProduct.split("product")[1]),
 		next = num + 1,
 		nextId = "product" + next;
-	//$('[data-number=' + nextId + ']').show();
 	$('[data-number=' + nextId + ']').each(function() {
 		$(this).show();
 	})
