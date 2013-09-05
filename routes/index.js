@@ -4,7 +4,8 @@
  */
 
 var collection1 = require('../collections/first.js').data,
-	collection2 = require('../collections/second.js').data;
+	collection2 = require('../collections/second.js').data,
+	mailer = require('../libs/emailer.js');
 
 
 exports.index = function(req, res){
