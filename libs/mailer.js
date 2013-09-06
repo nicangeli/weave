@@ -24,10 +24,11 @@ module.exports = function() {
 		    if(error){
 		        console.log(error);
 		    }else{
-		        callback();
+		
 		    }
 		});
 
+		callback();
 
 	},
 
