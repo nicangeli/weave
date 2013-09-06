@@ -7,6 +7,8 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
+	$("#playAgain").hide();
+
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
 	if(likes == null || likes.length == 0) {
@@ -25,9 +27,22 @@ $(document).ready(function() {
 		}
 	}
 
+	var d = new Date(),
+		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+
+	var today = localStorage.getObj(dateString),
+		location = "";
+
+	if(today[1] == undefined) { // not been through 
+		$("#playAgain").show();
+	}
+
+
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
-		window.location = "/collection/2"
+		today[1] = true;
+		localStorage.setObj(dateString, today);
+		window.location = "/collection/" + localStorage.getItem("gender") + "/2"
 	});
 
 	$("#feedback").click(function(e) {

@@ -39,7 +39,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.post('/onboarding', routes.onboarding);
-app.get('/collection/:round', routes.collection);
+app.get('/collection/:gender/:round', routes.collection);
 app.get('/likes', routes.likes);
 app.get('/share', routes.share);
 app.post('/share', routes.shareSend);
