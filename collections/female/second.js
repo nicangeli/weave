@@ -1,21 +1,13 @@
 exports.data = {
     "products": [
-		{ 
-			"url": "http://www.asos.com/ASOS/ASOS-Skater-Dress-With-Mesh-Inserts/Prod/pgeproduct.aspx?iid=3037732&cid=12708&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-gSn2r4JEThk7vEYuxjCbIw",
-    		"price": "Â£35.00",
-		    "shop": "ASOS",
-		    "brand": "ASOS",
-		    "imageUrl": "/images/dresses/dress11.jpg",
-		    "type": "Dress"
-		},
-		{
-			"url": "http://www.asos.com/ASOS/ASOS-Swing-Dress-With-Pockets-And-Short-Sleeves/Prod/pgeproduct.aspx?iid=3282458&cid=8799&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black",
-		    "price": "Â£25.00",
-		    "shop": "ASOS",
-		    "brand": "ASOS",
-		    "imageUrl": "/images/dresses/dress4.jpg",
-		    "type": "Dress"
-		},
+        {
+            "url": "http://www.asos.com/Supra/Supra-Skytop-Grey-Multi-High-Top-Trainers/Prod/pgeproduct.aspx?iid=3155443&cid=4172&Rf947=2586&sh=0&pge=0&pgesize=204&sort=-1&clr=Greynubuck",
+            "price": "Â£75.00",
+            "shop": "ASOS",
+            "brand": "Supra",
+            "imageUrl": "/images/wildcard/wc22.jpg",
+            "type": "Shoe"
+        },
 		{
 			"url": "http://www.nastygal.com/whats-new_clothes_dresses/dark-daisy-dress",
 		    "price": "$48.00",
@@ -24,6 +16,22 @@ exports.data = {
 		    "imageUrl": "/images/dresses/dress19.jpg",
 		    "type": "Dress"
 		},
+        { 
+            "url": "http://www.asos.com/ASOS/ASOS-Skater-Dress-With-Mesh-Inserts/Prod/pgeproduct.aspx?iid=3037732&cid=12708&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-gSn2r4JEThk7vEYuxjCbIw",
+            "price": "Â£35.00",
+            "shop": "ASOS",
+            "brand": "ASOS",
+            "imageUrl": "/images/dresses/dress11.jpg",
+            "type": "Dress"
+        },
+        {
+            "url": "http://www.asos.com/New-Look/New-Look-Extreme-2-Studded-Back-Ankle-Boots/Prod/pgeproduct.aspx?iid=3102038&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Light+brown",
+            "price": "Â£27.99",
+            "shop": "ASOS",
+            "brand": "New Look",
+            "imageUrl": "/images/shoes/item34.jpg",
+            "type": "Shoe"
+        },
 		{
 			"url": "http://www.nastygal.com/whats-new_clothes_dresses/byzantine-dress",
 		    "price": "$198.00",
@@ -32,6 +40,14 @@ exports.data = {
 		    "imageUrl": "/images/dresses/dress17.jpg",
 		    "type": "Dress"
 		},
+        {
+            "url": "http://www.topshop.com/en/tsuk/product/new-in-this-week-2169932/new-in-this-week-493/nylon-quilted-backpack-2194157?bi=1&ps=200",
+            "price": "Â£32.00",
+            "shop": "Topshop",
+            "brand": "Topshop",
+            "imageUrl": "/images/wildcard/wc6.jpg",
+            "type": "Bag"
+        },
     	{
     		"url": "http://www.urbanoutfitters.co.uk/stylestalker-space-jam-dress/invt/5139441181233/",
 	    	"price": "Â£135.00",
@@ -39,14 +55,6 @@ exports.data = {
 		    "brand": "Stylestalker",
 		    "imageUrl": "/images/dresses/dress42.jpg",
 		    "type": "Dress"
-        },
- 		{
-            "url": "http://www.topshop.com/en/tsuk/product/new-in-this-week-2169932/new-in-this-week-493/nylon-quilted-backpack-2194157?bi=1&ps=200",
-            "price": "Â£32.00",
-            "shop": "Topshop",
-            "brand": "Topshop",
-            "imageUrl": "/images/wildcard/wc6.jpg",
-            "type": "Bag"
         },
  		{
             "url": "http://www.asos.com/AJ-Morgan/AJ-Morgan-Castro-Glittler-Round-Sunglasses/Prod/pgeproduct.aspx?iid=3149127&SearchQuery=sunglasses%20women&sh=0&pge=0&pgesize=36&sort=-1&clr=Silver",
@@ -96,6 +104,14 @@ exports.data = {
 		    "imageUrl": "/images/tops/top4.jpg",
 			"type": "Top"
 		},
+        {
+            "url": "http://www.asos.com/ASOS/ASOS-PORTLAND-Platforms/Prod/pgeproduct.aspx?iid=3013851&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
+            "price": "Â£45.00",
+            "shop": "ASOS",
+            "brand": "ASOS",
+            "imageUrl": "/images/shoes/item3.jpg",
+            "type": "Shoe"
+        },
        	{
             "url": "http://www.nastygal.com/whats-new_clothes_tops/sweet-charms-blouse",
             "price": "Â£26.93",
@@ -120,14 +136,15 @@ exports.data = {
             "imageUrl": "/images/tops/top52.jpg",
             "type": "Top"
         },
+
         {
-        	"url": "http://www.asos.com/ASOS/ASOS-PORTLAND-Platforms/Prod/pgeproduct.aspx?iid=3013851&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
-		    "price": "Â£45.00",
-		    "shop": "ASOS",
-		    "brand": "ASOS",
-		    "imageUrl": "/images/shoes/item3.jpg",
-			"type": "Shoe"
-		},
+            "url": "http://www.asos.com/ASOS/ASOS-Swing-Dress-With-Pockets-And-Short-Sleeves/Prod/pgeproduct.aspx?iid=3282458&cid=8799&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black",
+            "price": "Â£25.00",
+            "shop": "ASOS",
+            "brand": "ASOS",
+            "imageUrl": "/images/dresses/dress4.jpg",
+            "type": "Dress"
+        },
     	{
     		"url": "http://www.asos.com/River-Island/River-Island-Leather-Odil-Slingback-Court-Shoes/Prod/pgeproduct.aspx?iid=3171510&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Blue",
 		    "price": "Â£50.00",
@@ -136,7 +153,7 @@ exports.data = {
 		    "imageUrl": "/images/shoes/item4.jpg",
 			"type": "Shoe"
 		},
-   		 { 
+   		{ 
    		 	"url": "http://www.asos.com/ASOS/ASOS-PRIORITY-Pointed-High-Heels/Prod/pgeproduct.aspx?iid=2592661&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
 		    "price": "Â£22.50",
 		    "shop": "ASOS",
@@ -144,21 +161,7 @@ exports.data = {
 		    "imageUrl": "/images/shoes/item5.jpg",
 			"type": "Shoe"
 		},
-   		{
-            "url": "http://www.asos.com/Supra/Supra-Skytop-Grey-Multi-High-Top-Trainers/Prod/pgeproduct.aspx?iid=3155443&cid=4172&Rf947=2586&sh=0&pge=0&pgesize=204&sort=-1&clr=Greynubuck",
-            "price": "Â£75.00",
-            "shop": "ASOS",
-            "brand": "Supra",
-            "imageUrl": "/images/wildcard/wc22.jpg",
-            "type": "Shoe"
-        },
-        {
-            "url": "http://www.asos.com/New-Look/New-Look-Extreme-2-Studded-Back-Ankle-Boots/Prod/pgeproduct.aspx?iid=3102038&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Light+brown",
-            "price": "Â£27.99",
-            "shop": "ASOS",
-            "brand": "New Look",
-            "imageUrl": "/images/shoes/item34.jpg",
-            "type": "Shoe"
-        }
+
+
 	]
 };
