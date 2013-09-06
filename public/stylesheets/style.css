@@ -63,6 +63,15 @@ button.like {
   margin-top: 10px;
 }
 
+#tweet {
+  width: 100%;
+}
+
+#skip {
+  width: 100%;
+  margin-top: 10px;
+}
+
 #reveal {
   text-align: center;
 }
