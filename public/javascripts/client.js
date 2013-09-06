@@ -18,6 +18,8 @@ $(document).ready(function() {
 		var element = $(this).attr('data-number');
 
 		var likes = localStorage.getObj("likes");
+		var likeCount = localStorage.getObj("likes").length;
+		var dislikes = element - likeCount;
 		
 		var tmp = {};
 			tmp.url = $(this).attr("data-url");
@@ -34,6 +36,12 @@ $(document).ready(function() {
 			localStorage.setObj("likes", likes);
 		}
 
+		mixpanel.track("SeeItem", {
+			"Seen" : element,
+			"Likes" : likeCount,
+			"Dislikes" : element - likeCount
+		});
+
 		updateHanger();
 
 		// anything that has a data-number attr of element, hide it
@@ -44,6 +52,13 @@ $(document).ready(function() {
 	$(".dislike").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
+		var likeCount = localStorage.getObj("likes").length;
+		var dislikes = element - likeCount;
+		mixpanel.track("SeeItem", {
+			"Seen" : element,
+			"Likes" : likes,
+			"Dislikes" : dislikes
+		});
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
