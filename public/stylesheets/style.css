@@ -59,6 +59,29 @@ button.like {
   margin-top: 10px;
 }
 
+#reveal {
+  text-align: center;
+}
+
+#playAgain{
+  width: 100%;
+}
+
+#feedback {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.likeImage {
+  max-height: 150px;
+  width: auto;
+  padding: 5px;
+}
+
+.shop {
+  margin: 0px;
+}
+
 @media screen and (max-width: 480px) {
   body {
     padding: 60px 0 0 0;
