@@ -41,8 +41,8 @@ app.get('/', routes.index);
 app.post('/onboarding', routes.onboarding);
 app.get('/collection/:round', routes.collection);
 app.get('/likes', routes.likes);
-app.get('/share', routes.share);
-app.post('/share', routes.shareSend);
+app.get('/email', routes.email);
+app.post('/email', routes.emailSend);
 app.get('/feedback', routes.feedback);
 app.post('/feedback', routes.feedbackSend);
 

@@ -53,7 +53,7 @@ var changeProduct = function(currentProduct) {
 		next = num + 1,
 		nextId = "product" + next;
 	if($('[data-number=' + nextId + ']').length == 0) {
-		window.location = "/share";
+		window.location = "/email";
 	} else {
 		$('[data-number=' + nextId + ']').each(function() {
 			$(this).show();

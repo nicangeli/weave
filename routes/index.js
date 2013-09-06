@@ -37,13 +37,13 @@ exports.likes = function(req, res) {
 	res.render('likes');
 }
 
-exports.share = function(req, res) {
-	res.render('share');
+exports.email = function(req, res) {
+	res.render('email');
 }
 
-exports.shareSend = function(req, res) {
+exports.emailSend = function(req, res) {
 	var m = new mailer();
-	m.share(req.body.emailAddresses, function() {
+	m.email(req.body.emailAddress, function() {
 		res.send(200);
 	});
 }

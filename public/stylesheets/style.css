@@ -10,6 +10,7 @@ a {
 
 h1, h2, h3, h4 {
   color: black;
+  text-align: center;
 }
 
 h2 {
@@ -52,6 +53,10 @@ button.dislike {
 
 button.like {
   width: 100%;
+}
+
+#showHanger {
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 480px) {
