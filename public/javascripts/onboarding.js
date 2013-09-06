@@ -6,8 +6,7 @@ $(document).ready(function() {
 	}
 
 	var gender = "",
-		age = "",
-		email = "";
+		age = "";
 	
 	// hide onboarding elements
 	$("#Gender").hide();
@@ -15,7 +14,7 @@ $(document).ready(function() {
 	$(".female").hide();
 	$("#age-group").hide();
 	$("#almost").hide();
-	$("#emailForm").hide();
+	$("#Play").hide();
 	$("#explanation").hide();
 	$("#age").hide();
 
@@ -42,11 +41,27 @@ $(document).ready(function() {
 		localStorage.setItem("age", age);
 		$("#age").hide();
 		$("#age-group").hide();
-		$("#emailForm").show();
+		$("#Play").show();
 		$("#explanation").show();
 	});
 
-	//mouse click on email address go button
+	//mouse click on Play
+	$("#Play").click(function(e) {
+		e.preventDefault();
+		$.ajax({
+		  type: "POST",
+		  url: "/onboarding",
+		  data: {
+		  	"gender": gender,
+		  	"age": age
+		  },
+		  success: function() {
+		  	window.location = "/collection/1"
+		  }
+		});
+	});
+
+	/*//mouse click on email address go button
 	$("#emailButton").click(function(e) {
 		e.preventDefault();
 		email = $("#inputEmail").val();
@@ -64,6 +79,6 @@ $(document).ready(function() {
 		  }
 		});
 
-	});
+	});*/
 
 });
