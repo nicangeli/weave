@@ -14,6 +14,7 @@ $(document).ready(function() {
 
 	$("#tweet").click(function(e) {
 		e.preventDefault();
+		mixpanel.track('TwitterShare');
 		open($(this).attr('href'));
 		window.location = "/likes";
 	});
