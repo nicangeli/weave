@@ -31,7 +31,7 @@ exports.data = {
             "brand": "New Look",
             "imageUrl": "/images/shoes/item34.jpg",
             "type": "Shoe"
-        }
+        },
 		{
 			"url": "http://www.nastygal.com/whats-new_clothes_dresses/byzantine-dress",
 		    "price": "$198.00",
