@@ -1,6 +1,9 @@
 extends layout
 
 block content
+  script(type='text/javascript')
+    mixpanel.track("Landing Page Loaded")
+  
   .container
     .onboarding
       h1.Landing Weave
