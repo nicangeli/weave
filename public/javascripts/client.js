@@ -64,5 +64,5 @@ var changeProduct = function(currentProduct) {
 };
 
 var updateHanger = function() {
-	$("a.hanger").text(localStorage.getObj("likes").length + " Hanger").show();
+	$("a.hanger").text("(" + localStorage.getObj("likes").length + ") Hanger").show();
 }

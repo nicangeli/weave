@@ -9,6 +9,6 @@ $(document).ready(function() {
 	if(localStorage.getObj("likes") == null) {
 		$("a.hanger").hide();
 	} else {
-		$("a.hanger").text(localStorage.getObj("likes").length + " Hanger")
+		$("a.hanger").text("(" + localStorage.getObj("likes").length + ")" + " Hanger")
 	}
 })
