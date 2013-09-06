@@ -29,13 +29,13 @@ $(document).ready(function() {
 				header = "<h2 class='shop'>" + likes[i].shop + "</h2>",
 				price = "<h4>" + likes[i].price + "</h4>",
 				brand ="<span class='tagline'> - " + likes[i].brand + " - </span>",
-				anchor = '<a target="_blank" href="' + likes[i].url + '">Buy Now</a>';
+				anchor =  likes[i].url;
 
 			if (likes[i].brand == likes[i].shop) {
 				brand = "";
 			};
 			// grab the heading and start appending items after it
-			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><button type="button" class="btn btn-default buy">Buy</button></div></div>';
+			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" href="' + anchor + ' target="_blank">Buy</a></div></div>';
 			$("#reveal").append(element);
 		}
 	}
