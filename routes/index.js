@@ -3,8 +3,8 @@
  * GET home page.
  */
 
-var collection1 = require('../collections/first.js').data,
-	collection2 = require('../collections/second.js').data,
+var femaleCollection1 = require('../collections/female/first.js').data,
+	femaleCollection2 = require('../collections/female/second.js').data,
 	mailer = require('../libs/mailer.js');
 
 
@@ -18,15 +18,22 @@ exports.onboarding = function(req, res) {
 
 exports.collection = function(req, res) {
 	var round = req.params.round,
+		gender = req.params.gender,
 		products = null;
 
-	if(round == 1) {
-		products = collection1.products;
-	} else {
-		products = collection2.products;
+	if(gender == "male") {
+		if(round == 1) {
+			products = maleCollection1.products;
+		} else if(round == 2)  {
+			products = maleCollection2.products;
+		}
+	} else { // gender is female
+		if(round == 1) {
+			products = femaleCollection1.products;
+		} else {
+			products = femaleCollection2.products;
+		}
 	}
-
-	console.log(products);
 
 	res.render('collection', {
 		"products": products

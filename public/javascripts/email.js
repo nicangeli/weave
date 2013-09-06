@@ -1,23 +1,16 @@
 $(document).ready(function() {
 
 	var email = "";
+	// do we already have there email address?
+	if(localStorage.getItem("email") != null) {
+		window.location = "/likes";
+	}
 
 	$("#showHanger").click(function(e) {
 		e.preventDefault();
-
-		$("#showHanger").click(function(e) {
-		e.preventDefault();
 		email = $("#InputEmail").val();
 		localStorage.setItem("email", email);
-		$.ajax({
-		  type: "POST",
-		  url: "/email",
-		  data: {
-		  	"email": email,
-		  },
-		  success: function() {
-		  	window.location = "/likes";
-		  }
-		});
+		window.location = "/likes";
 	});
+
 });

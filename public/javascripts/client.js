@@ -34,6 +34,8 @@ $(document).ready(function() {
 			localStorage.setObj("likes", likes);
 		}
 
+		updateHanger();
+
 		// anything that has a data-number attr of element, hide it
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
@@ -60,3 +62,7 @@ var changeProduct = function(currentProduct) {
 		});
 	}
 };
+
+var updateHanger = function() {
+	$("a.hanger").text("(" + localStorage.getObj("likes").length + ") Hanger").show();
+}
