@@ -42,7 +42,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.missguided.eu/catalog/product/view/id/81572/s/taima-leopard-onesie/category/876/",
-			"price": "â‚¬32.22",
+			"price": "£32.22",
 			"shop": "Missguided",
 			"brand": "Taima",
 			"imageUrl": "/images/wildcard/wc12.jpg",
@@ -50,7 +50,7 @@ exports.data = {
 		},
 		{	
 			"url": "http://www.nastygal.com/whats-new_clothes_tops/high-and-mighty-muscle-tee",
-			"price": "Â£39.75",
+			"price": "£39.75",
 			"shop": "Nasty Gal",
 			"brand": "Nasty Gal",
 			"imageUrl": "/images/tops/top35.jpg",
@@ -58,7 +58,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.asos.com/Keds/Keds-Stripe-Plimsolls/Prod/pgeproduct.aspx?iid=2843249&cid=4172&Rf947=2586&sh=0&pge=0&pgesize=204&sort=-1&clr=Whiteblack",
-			"price": "Â£26.00",
+			"price": "£26.00",
 			"shop": "ASOS",
 			"brand": "Keds",
 			"imageUrl": "/images/wildcard/wc23.jpg",
@@ -74,7 +74,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.asos.com/Voodoo-Girl/Voodoo-Girl-American-Flag-Leggings/Prod/pgeproduct.aspx?iid=3172422&SearchQuery=lycra%20leggings%20american&sh=0&pge=0&pgesize=36&sort=-1&clr=Alloverprint",
-			"price": "Â£30.00",
+			"price": "£30.00",
 			"shop": "ASOS",
 			"brand": "Voodoo-Girl",
 			"imageUrl": "/images/wildcard/wc9.jpg",
@@ -82,7 +82,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.nastygal.com/whats-new_clothes_tops/fresh-twist-top-",
-			"price": "Â£30.78",
+			"price": "£30.78",
 			"shop": "Nasy Gal",
 			"brand": "Nasty Gal",
 			"imageUrl": "/images/tops/top37.jpg",
@@ -90,7 +90,7 @@ exports.data = {
 		},
 		{
 			 "url": "http://www.asos.com/Whistles/Whistles-French-75-Chilli-Red-Court-Shoes/Prod/pgeproduct.aspx?iid=3232373&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Red",
-			"price": "Â£125.00",
+			"price": "£125.00",
 			"shop": "ASOS",
 			"brand": "Whistles",
 			"imageUrl": "/images/shoes/item7.jpg",
@@ -98,7 +98,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.nastygal.com/whats-new_clothes_dresses/you-sent-me-dress",
-			"price": "Â£79.50",
+			"price": "£79.50",
 			"shop": "Nasty Gal",
 			"brand": "Nasty Gal",
 			"imageUrl": "/images/dresses/dress16.jpg",
@@ -106,7 +106,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.asos.com/Carrera/Carrera-5001-Craze-Oversized-Sunglasses/Prod/pgeproduct.aspx?iid=3023947&cid=4545&sh=0&pge=0&pgesize=204&sort=-1&clr=Aqua+and+pink",
-			"price": "Â£90.00",
+			"price": "£90.00",
 			"shop": "ASOS",
 			"brand": "Carrera",
 			"imageUrl": "/images/wildcard/wc24.jpg",
@@ -114,7 +114,7 @@ exports.data = {
 		},
 		{
 			  "url": "http://www.topshop.com/en/tsuk/product/clothing-427/hotshop-946/animal-print-mix-match-cami-2024749?bi=1&ps=200",
-			"price": "Â£26.00",
+			"price": "£26.00",
 			"shop": "Topshop",
 			"brand": "Topshop",
 			"imageUrl": "/images/tops/top13.jpg",
@@ -122,7 +122,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.asos.com/Carvela/Carvela-Georgina-Multi-Strap-Peeptoe-Platform-Shoes/Prod/pgeproduct.aspx?iid=3168327&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
-			"price": "Â£130.00",
+			"price": "£130.00",
 			"shop": "ASOS",
 			"brand": "Carvela",
 			"imageUrl": "/images/shoes/item32.jpg",
@@ -130,7 +130,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.frenchconnection.com/product/Woman+Collections+Dresses/71HV9/County+Cotton+Striped+Dress.htm",
-			"price": "Â£62.00",
+			"price": "£62.00",
 			"shop": "French Connection",
 			"brand": "French Connection",
 			"imageUrl": "/images/dresses/dress34.jpg",
@@ -138,7 +138,7 @@ exports.data = {
 		},
 		{	
 			"url": "http://www.urbanoutfitters.co.uk/anglomania-resurrection-maxi-dress/invt/5139473196794/",
-			"price": "Â£235.00",
+			"price": "£235.00",
 			"shop": "Urban Outfitters",
 			"brand": "Vivienne Westwood Anglomania",
 			"imageUrl": "/images/dresses/dress39.jpg",
@@ -146,7 +146,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.hm.com/gb/product/15918?article=15918-A",
-			"price": "Â£14.99",
+			"price": "£14.99",
 			"shop": "H&M",
 			"brand": "H&M",
 			"imageUrl": "/images/tops/top51.jpg",
@@ -154,7 +154,7 @@ exports.data = {
 		},
 		{
 			"url": "http://www.asos.com/ASOS/ASOS-HOLD-TIGHT-Heeled-Sandals/Prod/pgeproduct.aspx?iid=2941940&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
-			"price": "Â£50.00",
+			"price": "£50.00",
 			"shop": "ASOS",
 			"brand": "ASOS",
 			"imageUrl": "/images/shoes/item21.jpg",
