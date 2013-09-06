@@ -9,6 +9,6 @@ $(document).ready(function() {
 	if(localStorage.getObj("likes") == null) {
 		$("a.hanger").hide();
 	} else {
-		$("a.hanger").html("(" + localStorage.getObj("likes").length + ") <img src='/images/coat-hanger-white.png', style='width: 18px'>")
+		$("a.hanger").html("<img src='/images/coat-hanger-white.png', style='width: 18px'> My Collection (" + localStorage.getObj("likes").length + ")")
 	}
 })
