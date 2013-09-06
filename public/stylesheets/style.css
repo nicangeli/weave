@@ -8,6 +8,10 @@ a {
   color: #00B7FF;
 }
 
+.hanger {
+  display: inline-block;
+}
+
 h1, h2, h3, h4 {
   color: black;
   text-align: center;
@@ -72,14 +76,8 @@ button.like {
   margin-top: 10px;
 }
 
-.likeImage {
-  max-height: 150px;
-  width: auto;
-  padding: 5px;
-}
-
 .shop {
-  margin: 0px;
+  margin: 0;
 }
 
 @media screen and (max-width: 480px) {
@@ -96,6 +94,17 @@ button.like {
     margin: auto;
     max-height: 100%;
   }
+
+  .likeImage {
+  max-height: 100px;
+  max-width: 80px;
+  padding: 5px;
+  }
+
+  .buy{
+  margin-top: 31px;
+  margin-right: 5px;
+  }
 }
 @media screen and (min-width: 481px) {
   .image {
@@ -106,6 +115,14 @@ button.like {
     display: block;
     margin: auto;
     max-height: 100%;
+  }
+  .likeImage {
+  max-height: 150px;
+  width: auto;
+  padding: 5px;
+  }
+  .buy{
+  margin-top: 56px;
   }
 }
 

@@ -64,5 +64,5 @@ var changeProduct = function(currentProduct) {
 };
 
 var updateHanger = function() {
-	$("a.hanger").text("(" + localStorage.getObj("likes").length + ") Hanger").show();
+	$("a.hanger").html("(" + localStorage.getObj("likes").length + ") <img src='/images/coat-hanger-white.png', style='width: 18px'>").show();
 }
