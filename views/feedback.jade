@@ -3,15 +3,15 @@ extends layout
 block content
   .container
     h1#thanks Thanks!
-    h1 Help us out!
-    p We're constantly trying to make our product better for you. Tell us what you thought of it below and we'll make some improvements. 
+    h1 We'd love to hear from you! 
+    p Tell us your thoughts and we'll make some changes right away. 
     form(role='form')
       .form-group
         label(for='email', class="emailLabel") Email address
         input#email.form-control(type='email', placeholder='Enter email')
       .form-group
-        label(for='feedback') Feedback
-        textarea#feedback.form-control(placeholder='What did you think?')
+        
+        textarea#feedback.form-control(placeholder='What do you think of Weave?')
       button.btn.btn-default(id="feedbackButton", type='submit') Send
 
 
