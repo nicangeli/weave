@@ -21,8 +21,10 @@ $(document).ready(function() {
 	$("#showHanger").click(function(e) {
 		e.preventDefault();
 		email = $("#InputEmail").val();
-		localStorage.setItem("email", email);
-		window.location = "/likes";
+		if(validateEmail(email)) {
+			localStorage.setItem("email", email);
+			window.location = "/likes";
+		}
 	});
 
 	$("#skip").click(function(e) {
@@ -31,3 +33,9 @@ $(document).ready(function() {
 	})
 
 });
+
+function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
