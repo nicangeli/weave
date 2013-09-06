@@ -78,8 +78,16 @@ button.like {
   padding: 5px;
 }
 
+.info {
+  height: 150px;
+}
+
 .shop {
-  margin: 0px;
+  margin: 0;
+}
+
+.buy{
+  margin-top: 56px;
 }
 
 @media screen and (max-width: 480px) {
