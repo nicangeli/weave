@@ -9,12 +9,13 @@ $(document).ready(function() {
 		//window.location = "/likes";
 		//lets show the 
 		$("form, h4").hide();
-		$("#tweet, #multi").show();
+		$("#tweet, #multi, #skip").show();
 	}
 
 	$("#tweet").click(function(e) {
 		e.preventDefault();
 		open($(this).attr('href'));
+		window.location = "/likes";
 	});
 
 	$("#showHanger").click(function(e) {
