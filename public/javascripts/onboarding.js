@@ -56,6 +56,19 @@ $(document).ready(function() {
 	//mouse click on Play
 	$("#Play").click(function(e) {
 		e.preventDefault();
+		var d = new Date(),
+			dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+
+		var today = localStorage.getObj(dateString),
+			location = "";
+
+		if(today == null) { // we have not been through one
+			location = "/collection/" + gender + "/1"
+			localStorage.setObj(dateString, [true]);
+		} else {
+			location = "/collection/" + gender + "/2";
+			localStorage.setObj(dateString, [true, true]);
+		}
 		$.ajax({
 		  type: "POST",
 		  url: "/onboarding",
@@ -64,7 +77,7 @@ $(document).ready(function() {
 		  	"age": age
 		  },
 		  success: function() {
-		  	window.location = "/collection/1"
+		  	window.location = "/collection/" + gender + "/1"
 		  }
 		});
 	});
