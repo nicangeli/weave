@@ -9,19 +9,29 @@ $(document).ready(function() {
 		age = "",
 		email = "";
 	
-	// hide onboarding elements 
+	// hide onboarding elements
+	$("#Gender").hide();
+	$(".male").hide();
+	$(".female").hide();
 	$("#age-group").hide();
 	$("#almost").hide();
 	$("#emailForm").hide();
 	$("#explanation").hide();
 	$("#age").hide();
 
+	// mouse click on Let's Go
+	$("#LetsGo").click(function(){
+		$(".Landing").hide();
+		$("#Gender").show();
+		$("#male, #female").show();
+	});
+
 	// mouse click on male or female button
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
 		localStorage.setItem("gender", gender);
 		$("#male, #female").hide();
-		$("#Hello").hide();
+		$("#Gender").hide();
 		$("#age").show();
 		$("#age-group").show();
 	});
