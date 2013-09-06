@@ -35,7 +35,7 @@ $(document).ready(function() {
 				brand = "";
 			};
 			// grab the heading and start appending items after it
-			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '>Buy</a></div></div>';
+			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a></div></div>';
 			$("#reveal").append(element);
 		}
 	}
