@@ -28,7 +28,7 @@ exports.data={
             "url": "http://www.urbanoutfitters.co.uk/shore-leave-half-stripe-tee-in-white/invt/5214433472019/",
             "price": "Ã‚Â£22.00",
             "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt12.jpg"
+            "imageUrl": "/images/male_top/mt12.jpg",
             "type": "Top",
             "brand": "Shore Leave"
         },
@@ -44,7 +44,7 @@ exports.data={
             "url": "http://www.mrporter.com/product/374210",
             "price": "£290.00",
             "shop": "Mr Porter",
-            "imageUrl": "/images/josh/josh15.jpg"
+            "imageUrl": "/images/josh/josh15.jpg",
             "brand": "Pierre Hardy",
             "type": "Shoes"
         },

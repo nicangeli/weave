@@ -5,6 +5,8 @@
 
 var femaleCollection1 = require('../collections/female/first.js').data,
 	femaleCollection2 = require('../collections/female/second.js').data,
+	maleCollection1 = require('../collections/male/first.js').data,
+	maleCollection2 = require('../collections/male/second.js').data
 	mailer = require('../libs/mailer.js');
 
 

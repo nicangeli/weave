@@ -8,10 +8,12 @@ Storage.prototype.getObj = function(key) {
 $(document).ready(function() {
 
 	var email = "";
+	$("#email, .emailLabel").hide();
+		
 
 	$("#thanks").hide()
-	if(localStorage.getItem("email") != null) {
-		$("#email, .emailLabel").hide();
+	if(localStorage.getItem("email") == null || localStorage.getItem("email") == "") {
+		$("#email, .emailLabel").show();
 		email = localStorage.getItem("email");
 	}
 

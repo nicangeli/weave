@@ -36,6 +36,9 @@ $(document).ready(function() {
 	// mouse click on male or female button
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
+		mixpanel.track("Gender", {
+			"Sex": gender
+		});
 		localStorage.setItem("gender", gender);
 		$("#male, #female").hide();
 		$("#Gender").hide();
@@ -46,6 +49,9 @@ $(document).ready(function() {
 	//mouse click on age
 	$(".age").click(function() {
 		age = $(this).text();
+		mixpanel.track("Age", {
+			"Age": age
+		});
 		localStorage.setItem("age", age);
 		$("#age").hide();
 		$("#age-group").hide();
@@ -56,6 +62,7 @@ $(document).ready(function() {
 	//mouse click on Play
 	$("#Play").click(function(e) {
 		e.preventDefault();
+		mixpanel.track("Play");
 		var d = new Date(),
 			dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
