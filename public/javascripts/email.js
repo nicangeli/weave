@@ -15,6 +15,7 @@ $(document).ready(function() {
 	$("#tweet").click(function(e) {
 		e.preventDefault();
 		open($(this).attr('href'));
+		window.location = "/likes";
 	});
 
 	$("#showHanger").click(function(e) {

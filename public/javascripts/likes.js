@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
+	likes.reverse();
 	if(likes == null || likes.length == 0) {
 		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {

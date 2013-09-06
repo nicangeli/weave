@@ -1,6 +1,19 @@
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
 $(document).ready(function() {
 
+	var email = "";
+
 	$("#thanks").hide()
+	if(localStorage.getItem("email") != null) {
+		$("#email, .emailLabel").hide();
+		email = localStorage.getItem("email");
+	}
 
 	$("#feedbackButton").click(function(e) {
 		e.preventDefault();
