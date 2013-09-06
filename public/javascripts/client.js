@@ -8,12 +8,20 @@ Storage.prototype.getObj = function(key) {
 }
 
 $(document).ready(function() {
+
+	var firstLike = true;
+
+
 	// hide all elements at the start, bar the first one
 	for(var i = 1; i < AMOUNT_OF_PRODUCTS; i++) {
 		$('[data-number="product' + i + '"]').hide();
 	}
 
 	$(".like").click(function(e) {
+		if(firstLike) {
+			alertify.alert("You've liked something! We've added this to your collection (top right corner)");
+		}
+		firstLike = false;
 		e.preventDefault();
 		var element = $(this).attr('data-number');
 

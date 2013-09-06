@@ -147,7 +147,7 @@ exports.data={
         {
             "url": "http://www.urbanoutfitters.co.uk/suit-kalle-crew-neck-jumper-in-navy/invt/5231436446200/",
             "price": "£50.00",
-            "shop": "",
+            "shop": "Urban Outfitters",
             "imageUrl": "/images/male_top/mt19.jpg",
             "brand": "Suit Kalle",
             "type": "Jumper"
