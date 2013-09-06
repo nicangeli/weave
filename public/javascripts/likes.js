@@ -12,6 +12,15 @@ $(document).ready(function() {
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
 	likes.reverse();
+
+	var d = new Date(),
+		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+
+	var today = localStorage.getObj(dateString);
+	if(today != null && today.length == 2) {
+		$("#my").append("<p>Thanks for playing. Come back tomorrow for more collections.</p>");
+	}
+
 	if(likes == null || likes.length == 0) {
 		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {
