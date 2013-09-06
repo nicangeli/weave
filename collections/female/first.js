@@ -53,7 +53,7 @@ exports.data = {
 			"price": "Â£39.75",
 			"shop": "Nasty Gal",
 			"brand": "Nasty Gal",
-			"imageUrl": "/images/Tops/top35.jpg",
+			"imageUrl": "/images/tops/top35.jpg",
 			"type": "Top"
 		},
 		{
