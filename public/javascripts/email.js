@@ -1,10 +1,20 @@
 $(document).ready(function() {
 
 	var email = "";
+	$("#tweet").hide();
+	$("#multi").hide();
 	// do we already have there email address?
 	if(localStorage.getItem("email") != null) {
-		window.location = "/likes";
+		//window.location = "/likes";
+		//lets show the 
+		$("form, h4").hide();
+		$("#tweet, #multi").show();
 	}
+
+	$("#tweet").click(function(e) {
+		e.preventDefault();
+		open($(this).attr('href'));
+	});
 
 	$("#showHanger").click(function(e) {
 		e.preventDefault();
@@ -12,5 +22,10 @@ $(document).ready(function() {
 		localStorage.setItem("email", email);
 		window.location = "/likes";
 	});
+
+	$("#skip").click(function(e) {
+		e.preventDefault();
+		window.location = "/likes";
+	})
 
 });
