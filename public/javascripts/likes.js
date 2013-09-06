@@ -17,7 +17,7 @@ $(document).ready(function() {
 				header = "<h2>" + likes[i].shop + "</h2>",
 				paragraph = "<p>" + likes[i].price + "</p>",
 				brand ="<p>" + likes[i].brand + "</p>",
-				anchor = '<a href="' + likes[i].url + '">Buy Now</a>';
+				anchor = '<a target="_blank" href="' + likes[i].url + '">Buy Now</a>';
 
 			// grab the heading and start appending items after it
 			var element = '<div class="row"><div class="col-md-4">' + img + '</div><div class="col-md-8">' + header + paragraph + anchor + '</div></div><hr>';
