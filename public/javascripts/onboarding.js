@@ -1,3 +1,11 @@
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
+
+
 $(document).ready(function() {
 
 	if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) {
@@ -49,8 +57,21 @@ $(document).ready(function() {
 	//mouse click on email address go button
 	$("#emailButton").click(function(e) {
 		e.preventDefault();
-		email = $("#inputEmail").val();
+		email = $("#InputEmail").val();
 		localStorage.setItem("email", email);
+		var d = new Date(),
+			dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+
+		var today = localStorage.getObj(dateString),
+			location = "";
+
+		if(today == null) { // we have not been through one
+			location = "/collection/" + gender + "/1"
+			localStorage.setObj(dateString, [true]);
+		} else {
+			location = "/collection/" + gender + "/2";
+			localStorage.setObj(dateString, [true, true]);
+		}
 		$.ajax({
 		  type: "POST",
 		  url: "/onboarding",
@@ -60,7 +81,7 @@ $(document).ready(function() {
 		  	"email": email
 		  },
 		  success: function() {
-		  	window.location = "/collection/1"
+		  	window.location = location;
 		  }
 		});
 
