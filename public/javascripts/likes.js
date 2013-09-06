@@ -13,14 +13,17 @@ $(document).ready(function() {
 		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {
 		for(var i = 0; i < likes.length; i++) {
-			var img = "<img src=" + likes[i].imageUrl + " style='width: 200px; height: 400px;'>",
-				header = "<h2>" + likes[i].shop + "</h2>",
-				paragraph = "<p>" + likes[i].price + "</p>",
-				brand ="<p>" + likes[i].brand + "</p>",
+			var img = "<img src=" + likes[i].imageUrl + " class='likeImage'>",
+				header = "<h2 class='shop'>" + likes[i].shop + "</h2>",
+				price = "<h4>" + likes[i].price + "</h4>",
+				brand ="<span class='tagline'> - " + likes[i].brand + " - </span>",
 				anchor = '<a target="_blank" href="' + likes[i].url + '">Buy Now</a>';
 
+			if (likes[i].brand == likes[i].shop) {
+				brand = "";
+			};
 			// grab the heading and start appending items after it
-			var element = '<div class="row"><div class="col-md-4">' + img + '</div><div class="col-md-8">' + header + paragraph + anchor + '</div></div><hr>';
+			var element = '<div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6">' + header + brand + price + '</div><div class="col-xs-3"><span class="glyphicon glyphicon-icon-arrow-right"></span></div></div><hr>';
 			$("#reveal").append(element);
 		}
 	}
