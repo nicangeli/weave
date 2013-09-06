@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var email = "";
 	$("#tweet").hide();
 	$("#multi").hide();
+	$("#skip").hide();
 	// do we already have there email address?
 	if(localStorage.getItem("email") != null) {
 		//window.location = "/likes";

@@ -9,15 +9,15 @@ block content
       -var progressint = ((itemDisplayNumber - 1)/products.length) * 100;
       -var progress = "width: " + progressint.toString() + "%;";
       div(data-number="#{id}") 
-        p #{products[i].type}
-        .image
-          img.product(src=products[i].imageUrl, data-number="#{id}");
         .row
           .col-md-3.col-xs-2
           .col-md-6.col-xs-8
             .progress
               .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="#{itemDisplayNumber}", aria-valuemin="0", aria-valuemax="20", style="#{progress}")
           .col-md-3.col-xs-2
+        .image
+          img.product(src=products[i].imageUrl, data-number="#{id}");
+        p #{products[i].type}
         .row
           .col-xs-1
           .col-xs-5
