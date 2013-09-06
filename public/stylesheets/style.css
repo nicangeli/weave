@@ -44,7 +44,7 @@ img.male {
 }
 
 button.age {
-	margin: 2px;
+	margin: 8px;
 }
 
 .collections {
@@ -61,6 +61,7 @@ button.like {
 
 #showHanger {
   margin-top: 10px;
+  width:100%;
 }
 
 #tweet {
@@ -133,6 +134,7 @@ button.like {
   .buy{
   margin-top: 56px;
   }
+
 }
 
 
