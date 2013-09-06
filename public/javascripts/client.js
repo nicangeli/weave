@@ -25,6 +25,7 @@ $(document).ready(function() {
 			tmp.shop = $(this).attr("data-shop");
 			tmp.imageUrl = $(this).attr("data-imageUrl");
 			tmp.type = $(this).attr("data-type");
+			tmp.brand = $(this).attr("data-brand");
 		if(likes == null) {
 			likes = [tmp];
 			localStorage.setObj("likes", likes);

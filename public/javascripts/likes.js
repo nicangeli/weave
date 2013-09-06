@@ -9,13 +9,14 @@ $(document).ready(function() {
 
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
-	if(likes == "undefined" || likes.length == 0) {
+	if(likes == null || likes.length == 0) {
 		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {
 		for(var i = 0; i < likes.length; i++) {
 			var img = "<img src=" + likes[i].imageUrl + " style='width: 200px; height: 400px;'>",
 				header = "<h2>" + likes[i].shop + "</h2>",
-				paragraph = "<p>" + likes[i].price + "</h2>",
+				paragraph = "<p>" + likes[i].price + "</p>",
+				brand ="<p>" + likes[i].brand + "</p>",
 				anchor = '<a href="' + likes[i].url + '">Buy Now</a>';
 
 			// grab the heading and start appending items after it
