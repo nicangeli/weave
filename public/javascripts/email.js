@@ -24,6 +24,8 @@ $(document).ready(function() {
 		email = $("#InputEmail").val();
 		console.log(email);
 
+		mixpanel.track("Give Email");
+
 		mixpanel.alias(email);
 
 		mixpanel.identify(email);
