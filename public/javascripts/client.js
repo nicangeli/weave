@@ -24,10 +24,10 @@ $(document).ready(function() {
 		firstLike = false;
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		var num = parseInt(element.split("product")[1]);
+		//var num = parseInt(element.split("product")[1]);
 
 		// Define Mixpanel properties
-		var SeenCount = num + 1;
+		//var SeenCount = num + 1;
 		/*if(localStorage.getObj("likes") == null) {
 			var likeCount = 0;
 		} else {
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 		// Push to Mixpanel
 		mixpanel.track("Like Item", {
-			"Seen" : SeenCount
+			"Item" : $(this).attr("data-url")
 		});
 
 		var likes = localStorage.getObj("likes");
@@ -67,10 +67,10 @@ $(document).ready(function() {
 	$(".dislike").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		var num = parseInt(element.split("product")[1]);	
+		//var num = parseInt(element.split("product")[1]);	
 
 		// Define Mixpanel properties
-		var SeenCount = num + 1;
+		//var SeenCount = num + 1;
 		/*if(localStorage.getObj("likes") == null) {
 			var likeCount = 0;
 		} else {
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 		// Push to Mixpanel
 		mixpanel.track("Dislike Item", {
-			"Seen" : SeenCount
+			"Item" : $(this).attr("data-url")
 		});
 
 		$('[data-number=' + element + ']').hide();

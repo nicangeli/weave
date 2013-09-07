@@ -8,7 +8,7 @@ $(document).ready(function() {
 	if(localStorage.getItem("email") != null) {
 		//window.location = "/likes";
 		//lets show the 
-		$("form, h4").hide();
+		$("form, h4, #showHanger").hide();
 		$("#tweet, #multi, #skip").show();
 	}
 
@@ -22,13 +22,23 @@ $(document).ready(function() {
 	$("#showHanger").click(function(e) {
 		e.preventDefault();
 		email = $("#InputEmail").val();
+		console.log(email);
+
+		mixpanel.alias(email);
+
+		mixpanel.identify(email);
+
+		mixpanel.people.set({
+			"$email": email,
+			"Age" : localStorage.getItem("age"),
+			"Gender" : localStorage.getItem("gender")
+		});
+
 		if(validateEmail(email)) {
 			localStorage.setItem("email", email);
 			window.location = "/likes";
 		}
-		mixpanel.track("Give Email", {
-				"email" : email
-		});
+
 	});
 
 	$("#skip").click(function(e) {
