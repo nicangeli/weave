@@ -60,8 +60,7 @@ button.like {
 }
 
 #showHanger {
-  margin-top: 10px;
-  width:100%;
+  width: 100%;
 }
 
 #tweet {
@@ -103,6 +102,27 @@ button.like {
     display: block;
     margin: auto;
     max-height: 100%;
+  }
+
+  button.like {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  button.dislike {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  #feedback {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .likeImage {
