@@ -25,11 +25,10 @@ $(document).ready(function() {
 		if(validateEmail(email)) {
 			localStorage.setItem("email", email);
 			window.location = "/likes";
-
-			mixpanel.track("Give Email", {
-				"email" : email
-			});
 		}
+		mixpanel.track("Give Email", {
+				"email" : email
+		});
 	});
 
 	$("#skip").click(function(e) {
