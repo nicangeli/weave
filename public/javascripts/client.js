@@ -36,7 +36,7 @@ $(document).ready(function() {
 		var dislikeCount = SeenCount - likeCount;*/
 
 		// Push to Mixpanel
-		mixpanel.track("SeeItem", {
+		mixpanel.track("Like Item", {
 			"Seen" : SeenCount
 		});
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
 		var dislikeCount = SeenCount - likeCount;*/
 
 		// Push to Mixpanel
-		mixpanel.track("DislikeItem", {
+		mixpanel.track("Dislike Item", {
 			"Seen" : SeenCount
 		});
 

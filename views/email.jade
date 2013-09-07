@@ -1,6 +1,10 @@
 extends layout
 
 block content
+
+  script(type='text/javascript')
+    mixpanel.track("Collection Complete")
+
   .container
     h4 Before Weave reveals your collection, tell us who you are!
     .col-xs-3

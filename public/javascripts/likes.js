@@ -53,12 +53,14 @@ $(document).ready(function() {
 
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
+		mixpanel.track("Play Again");
 		today[1] = true;
 		localStorage.setObj(dateString, today);
 		window.location = "/collection/" + localStorage.getItem("gender") + "/2"
 	});
 
 	$("#feedback").click(function(e) {
+		mixpanel.track("Feedback Click");
 		e.preventDefault();
 		window.location = "/feedback";
 	})
