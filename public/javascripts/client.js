@@ -24,10 +24,23 @@ $(document).ready(function() {
 		firstLike = false;
 		e.preventDefault();
 		var element = $(this).attr('data-number');
+		var num = parseInt(element.split("product")[1]);
+
+		// Define Mixpanel properties
+		var SeenCount = num + 1;
+		/*if(localStorage.getObj("likes") == null) {
+			var likeCount = 0;
+		} else {
+			var likeCount = localStorage.getObj("likes").length;
+		};
+		var dislikeCount = SeenCount - likeCount;*/
+
+		// Push to Mixpanel
+		mixpanel.track("SeeItem", {
+			"Seen" : SeenCount
+		});
 
 		var likes = localStorage.getObj("likes");
-		var likeCount = localStorage.getObj("likes").length;
-		var dislikes = element - likeCount;
 		
 		var tmp = {};
 			tmp.url = $(this).attr("data-url");
@@ -44,12 +57,6 @@ $(document).ready(function() {
 			localStorage.setObj("likes", likes);
 		}
 
-		mixpanel.track("SeeItem", {
-			"Seen" : element,
-			"Likes" : likeCount,
-			"Dislikes" : element - likeCount
-		});
-
 		updateHanger();
 
 		// anything that has a data-number attr of element, hide it
@@ -60,13 +67,22 @@ $(document).ready(function() {
 	$(".dislike").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		var likeCount = localStorage.getObj("likes").length;
-		var dislikes = element - likeCount;
-		mixpanel.track("SeeItem", {
-			"Seen" : element,
-			"Likes" : likes,
-			"Dislikes" : dislikes
+		var num = parseInt(element.split("product")[1]);	
+
+		// Define Mixpanel properties
+		var SeenCount = num + 1;
+		/*if(localStorage.getObj("likes") == null) {
+			var likeCount = 0;
+		} else {
+			var likeCount = localStorage.getObj("likes").length;
+		};
+		var dislikeCount = SeenCount - likeCount;*/
+
+		// Push to Mixpanel
+		mixpanel.track("DislikeItem", {
+			"Seen" : SeenCount
 		});
+
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
