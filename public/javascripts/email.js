@@ -14,6 +14,7 @@ $(document).ready(function() {
 
 	$("#tweet").click(function(e) {
 		e.preventDefault();
+		mixpanel.track('Twitter Share');
 		open($(this).attr('href'));
 		window.location = "/likes";
 	});
@@ -25,10 +26,14 @@ $(document).ready(function() {
 			localStorage.setItem("email", email);
 			window.location = "/likes";
 		}
+		mixpanel.track("Give Email", {
+				"email" : email
+		});
 	});
 
 	$("#skip").click(function(e) {
 		e.preventDefault();
+		mixpanel.track("Ship Share");
 		window.location = "/likes";
 	})
 

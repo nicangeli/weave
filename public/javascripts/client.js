@@ -8,14 +8,37 @@ Storage.prototype.getObj = function(key) {
 }
 
 $(document).ready(function() {
+
+	var firstLike = true;
+
+
 	// hide all elements at the start, bar the first one
 	for(var i = 1; i < AMOUNT_OF_PRODUCTS; i++) {
 		$('[data-number="product' + i + '"]').hide();
 	}
 
 	$(".like").click(function(e) {
+		if(firstLike) {
+			alertify.alert("You've liked something! We've added this to your collection (top right corner)");
+		}
+		firstLike = false;
 		e.preventDefault();
 		var element = $(this).attr('data-number');
+		var num = parseInt(element.split("product")[1]);
+
+		// Define Mixpanel properties
+		var SeenCount = num + 1;
+		/*if(localStorage.getObj("likes") == null) {
+			var likeCount = 0;
+		} else {
+			var likeCount = localStorage.getObj("likes").length;
+		};
+		var dislikeCount = SeenCount - likeCount;*/
+
+		// Push to Mixpanel
+		mixpanel.track("Like Item", {
+			"Seen" : SeenCount
+		});
 
 		var likes = localStorage.getObj("likes");
 		
@@ -44,6 +67,22 @@ $(document).ready(function() {
 	$(".dislike").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
+		var num = parseInt(element.split("product")[1]);	
+
+		// Define Mixpanel properties
+		var SeenCount = num + 1;
+		/*if(localStorage.getObj("likes") == null) {
+			var likeCount = 0;
+		} else {
+			var likeCount = localStorage.getObj("likes").length;
+		};
+		var dislikeCount = SeenCount - likeCount;*/
+
+		// Push to Mixpanel
+		mixpanel.track("Dislike Item", {
+			"Seen" : SeenCount
+		});
+
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
@@ -64,5 +103,5 @@ var changeProduct = function(currentProduct) {
 };
 
 var updateHanger = function() {
-	$("a.hanger").html("(" + localStorage.getObj("likes").length + ") <img src='/images/coat-hanger-white.png', style='width: 18px'>").show();
+	$("a.hanger").html("<img src='/images/coat-hanger-white.png', style='width: 18px'> My Collection (" + localStorage.getObj("likes").length + ")").show();
 }

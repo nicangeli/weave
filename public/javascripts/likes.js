@@ -12,6 +12,15 @@ $(document).ready(function() {
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
 	likes.reverse();
+
+	var d = new Date(),
+		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+
+	var today = localStorage.getObj(dateString);
+	if(today != null && today.length == 2) {
+		$("#my").append("<p>Thanks for playing. Come back tomorrow for more collections.</p>");
+	}
+
 	if(likes == null || likes.length == 0) {
 		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {
@@ -26,7 +35,7 @@ $(document).ready(function() {
 				brand = "";
 			};
 			// grab the heading and start appending items after it
-			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" href="' + anchor + ' target="_blank">Buy</a></div></div>';
+			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a></div></div>';
 			$("#reveal").append(element);
 		}
 	}
@@ -44,12 +53,14 @@ $(document).ready(function() {
 
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
+		mixpanel.track("Play Again");
 		today[1] = true;
 		localStorage.setObj(dateString, today);
 		window.location = "/collection/" + localStorage.getItem("gender") + "/2"
 	});
 
 	$("#feedback").click(function(e) {
+		mixpanel.track("Feedback Click");
 		e.preventDefault();
 		window.location = "/feedback";
 	})

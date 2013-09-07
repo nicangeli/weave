@@ -19,6 +19,7 @@ $(document).ready(function() {
 
 	$("#feedbackButton").click(function(e) {
 		e.preventDefault();
+		mixpanel.track("Feedback Sent");
 		var email = $("#email").val(),
 			feedback = $("#feedback").val();
 
