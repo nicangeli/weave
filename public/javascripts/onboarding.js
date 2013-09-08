@@ -22,13 +22,15 @@ $(document).ready(function() {
 		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
 	var today = localStorage.getObj(dateString);
-	if(today != null) { // we have been here before
+	if(today != null) { // we have been here before today
 		//$("#my").append("<p>Thanks for playing. Come back tomorrow for more collections.</p>");
 		if(today.length == 2) { // we have been through both tracks
 			window.location = "/likes";
 		} else {
 			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
 		}
+	} else if(localStorage.getItem("gender") != null) { // we have been here before, but not today 
+		window.location = "/collection" + localstorage.getItem("gender") + "/1";
 	}
 
 
