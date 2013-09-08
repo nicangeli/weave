@@ -1,5 +1,3 @@
-var AMOUNT_OF_PRODUCTS = 20;
-
 Storage.prototype.setObj = function(key, obj) {
     return this.setItem(key, JSON.stringify(obj))
 }
@@ -13,7 +11,8 @@ $(document).ready(function() {
 
 
 	// hide all elements at the start, bar the first one
-	for(var i = 1; i < AMOUNT_OF_PRODUCTS; i++) {
+	for(var i = 1; i < $(".collections").children().length
+; i++) {
 		$('[data-number="product' + i + '"]').hide();
 	}
 
