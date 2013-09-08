@@ -6,12 +6,13 @@
 var femaleCollection1 = require('../collections/female/first.js').data,
 	femaleCollection2 = require('../collections/female/second.js').data,
 	maleCollection1 = require('../collections/male/first.js').data,
-	maleCollection2 = require('../collections/male/second.js').data
+	maleCollection2 = require('../collections/male/second.js').data,
+	winterCollection1 = require('../collections/female/winter.js').data,
 	mailer = require('../libs/mailer.js');
 
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+  res.render('index');
 };
 
 exports.onboarding = function(req, res) {
@@ -31,7 +32,7 @@ exports.collection = function(req, res) {
 		}
 	} else { // gender is female
 		if(round == 1) {
-			products = femaleCollection1.products;
+			products = winterCollection1.products;
 		} else {
 			products = femaleCollection2.products;
 		}
