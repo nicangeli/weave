@@ -8,10 +8,24 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
-	if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) {
+	//if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) {
 		// we have been through onboarding before, send to collection
-		window.location = "/likes"
+	//	window.location = "/likes"
+	//}
+
+	var d = new Date(),
+		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+
+	var today = localStorage.getObj(dateString);
+	if(today != null) { // we have been here before
+		//$("#my").append("<p>Thanks for playing. Come back tomorrow for more collections.</p>");
+		if(today.length == 2) { // we have been through both tracks
+			window.location = "/likes";
+		} else {
+			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
+		}
 	}
+
 
 	var gender = "",
 		age = "";
@@ -71,10 +85,10 @@ $(document).ready(function() {
 
 		if(today == null) { // we have not been through one
 			location = "/collection/" + gender + "/1"
-			localStorage.setObj(dateString, [true]);
+			//localStorage.setObj(dateString, [true]);
 		} else {
 			location = "/collection/" + gender + "/2";
-			localStorage.setObj(dateString, [true, true]);
+			//localStorage.setObj(dateString, [true, true]);
 		}
 		$.ajax({
 		  type: "POST",

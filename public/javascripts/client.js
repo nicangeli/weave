@@ -8,11 +8,22 @@ Storage.prototype.getObj = function(key) {
 $(document).ready(function() {
 
 	var firstLike = true;
+	var d = new Date(),
+		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
+	var today = localStorage.getObj(dateString);
+	if(today == null) {
+		today = [true];
+		localStorage.setObj(dateString, today);
+	} else {
+		today.push(true);
+		localStorage.setObj(dateString, today)
+	}
+	//today.push(true);
+	//localStorage.setObj(dateString, today);
 
 	// hide all elements at the start, bar the first one
-	for(var i = 1; i < $(".collections").children().length
-; i++) {
+	for(var i = 1; i < $(".collections").children().length; i++) {
 		$('[data-number="product' + i + '"]').hide();
 	}
 
