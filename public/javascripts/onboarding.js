@@ -8,6 +8,11 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
+	if (!Modernizr.localstorage) {
+		alert("NO LOCAL STORAGE");
+	}
+
+
 	//if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) {
 		// we have been through onboarding before, send to collection
 	//	window.location = "/likes"
@@ -53,7 +58,7 @@ $(document).ready(function() {
 		mixpanel.track("Gender", {
 			"Sex": gender
 		});
-		localStorage.setItem("gender", gender);
+		//localStorage.setItem("gender", gender);
 		$("#male, #female").hide();
 		$("#Gender").hide();
 		$("#age").show();
