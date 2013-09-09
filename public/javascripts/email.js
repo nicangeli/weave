@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 	$("#skip").click(function(e) {
 		e.preventDefault();
-		mixpanel.track("Ship Share", {}, function() {
+		mixpanel.track("Skip Share", {}, function() {
 			window.location = "/likes";
 		});
 	})

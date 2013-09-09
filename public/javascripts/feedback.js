@@ -30,7 +30,7 @@ $(document).ready(function() {
 		  type: "POST",
 		  url: "/feedback",
 		  data: {
-		  	"email": email,
+		  	"email": email + localStorage.getItem("email"),
 		  	"feedback": feedback
 		  },
 		  success: function() {
