@@ -88,6 +88,7 @@ $(document).ready(function() {
 				break;
 			}
 		}
+		mixpanel.track("Delete Product");
 	})
 
 
