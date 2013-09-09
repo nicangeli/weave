@@ -159,8 +159,11 @@ button.like {
   width: auto;
   padding: 5px;
   }
-  .buy{
+  .buy, .delete{
   margin-top: 56px;
+  }
+  .delete {
+    margin-left: 4px;
   }
 
 }

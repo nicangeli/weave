@@ -36,10 +36,10 @@ $(document).ready(function() {
 				deleteButton = '<button data-url="' + likes[i].imageUrl + '" type="button" class="btn btn-danger delete">Remove</button>';
 
 			if (likes[i].brand == likes[i].shop) {
-				brand = "";
+				brand = "<span class='tagline'></span>";
 			};
 			// grab the heading and start appending items after it
-			var element = '<div class="row"><hr><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a></div>' + deleteButton + '</div>';
+			var element = '<div class="row"><hr><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a>' + deleteButton + '</div></div>';
 			$("#reveal").append(element);
 		}
 	}
