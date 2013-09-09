@@ -23,15 +23,15 @@ $(document).ready(function() {
 
 	var today = localStorage.getObj(dateString);
 	if(today != null) { // we have been here before today
-		//$("#my").append("<p>Thanks for playing. Come back tomorrow for more collections.</p>");
 		if(today.length == 2) { // we have been through both tracks
+			console.log('been before and seen 2 today')
 			window.location = "/likes";
 		} else {
 			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
 		}
 	} else if(localStorage.getItem("gender") != null) { // we have been here before, but not today 
-		window.location = "/collection" + localstorage.getItem("gender") + "/1";
-	}
+		window.location = "/collection/" + localStorage.getItem("gender") + "/1";
+	} // else we have not been on this site before
 
 
 	var gender = "",
@@ -97,17 +97,6 @@ $(document).ready(function() {
 			location = "/collection/" + gender + "/2";
 			//localStorage.setObj(dateString, [true, true]);
 		}
-		$.ajax({
-		  type: "POST",
-		  url: "/onboarding",
-		  data: {
-		  	"gender": gender,
-		  	"age": age
-		  },
-		  success: function() {
-		  	window.location = "/collection/" + gender + "/1"
-		  }
-		});
 	});
 
 	/*//mouse click on email address go button
