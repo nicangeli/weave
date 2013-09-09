@@ -7,7 +7,7 @@ $(document).ready(function() {
 	if(localStorage.getItem("email") != null) {
 		//window.location = "/likes";
 		//lets show the 
-		$("form, h4, #showHanger").hide();
+		$("form, h4, #giveEmail").hide();
 		$("#tweet, #multi, #skip").show();
 	}
 
