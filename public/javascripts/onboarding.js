@@ -60,7 +60,7 @@ $(document).ready(function() {
 		mixpanel.track("Gender", {
 			"Sex": gender
 		});
-		//localStorage.setItem("gender", gender);
+		localStorage.setItem("gender", gender);
 		$("#male, #female").hide();
 		$("#Gender").hide();
 		$("#age").show();
@@ -82,19 +82,19 @@ $(document).ready(function() {
 
 	//mouse click on Play
 	$("#Play").click(function(e) {
+		console.log(e)
 		e.preventDefault();
 		mixpanel.track("Play");
 		var d = new Date(),
 			dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
-		var today = localStorage.getObj(dateString),
-			location = "";
+		var today = localStorage.getObj(dateString);
 
 		if(today == null) { // we have not been through one
-			location = "/collection/" + gender + "/1"
+			window.location = "/collection/" + gender + "/1"
 			//localStorage.setObj(dateString, [true]);
 		} else {
-			location = "/collection/" + gender + "/2";
+			window.location = "/collection/" + gender + "/2";
 			//localStorage.setObj(dateString, [true, true]);
 		}
 	});
