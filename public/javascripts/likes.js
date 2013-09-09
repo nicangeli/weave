@@ -8,6 +8,8 @@ Storage.prototype.getObj = function(key) {
 $(document).ready(function() {
 
 	$("#playAgain").hide();
+	$("#more").hide();
+	$("#or").hide();
 
 
 	// get the localstorage likes
@@ -49,6 +51,8 @@ $(document).ready(function() {
 
 	if(today[1] == undefined) { // not been through 
 		$("#playAgain").show();
+		$("#more").show();
+		$("#or").show();
 	}
 
 
