@@ -11,4 +11,8 @@ $(document).ready(function() {
 	} else {
 		$("a.hanger").html("<img src='/images/coat-hanger-white.png', style='width: 18px'> My Collection (" + localStorage.getObj("likes").length + ")")
 	}
-})
+
+	mixpanel.track_links("#hangerEarly", "Early Exit");
+
+
+});

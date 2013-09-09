@@ -9,6 +9,7 @@ $(document).ready(function() {
 
 	$("#playAgain").hide();
 
+
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
 	likes.reverse();
@@ -53,15 +54,17 @@ $(document).ready(function() {
 
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
-		mixpanel.track("Play Again");
-		window.location = "/collection/" + localStorage.getItem("gender") + "/2"
+		mixpanel.track("Play Again", {}, function() {
+			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
+		});
 	});
 
 	$("#feedback").click(function(e) {
 		e.preventDefault();
 
-		mixpanel.track("Feedback Click");
-		window.location = "/feedback";
+		mixpanel.track("Feedback Click", {}, function() {
+			window.location = "/feedback";
+		});
 	})
 
 

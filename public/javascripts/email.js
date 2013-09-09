@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-	var email = "";
 	$("#tweet").hide();
 	$("#multi").hide();
 	$("#skip").hide();
@@ -14,39 +13,52 @@ $(document).ready(function() {
 
 	$("#tweet").click(function(e) {
 		e.preventDefault();
-		mixpanel.track('Twitter Share');
-		open($(this).attr('href'));
-		window.location = "/likes";
+		mixpanel.track('Twitter Share', {}, function() {
+			open($(this).attr('href'));
+			window.location = "/likes";
+		});
 	});
 
-	$("#showHanger").click(function(e) {
+	$("#giveEmail").click(function(e) {
 		e.preventDefault();
-		email = $("#InputEmail").val();
-		console.log(email);
+		var email = $("#InputEmail").val();
 
-		mixpanel.track("Give Email");
-
-		mixpanel.alias(email);
-
-		mixpanel.identify(email);
-
-		mixpanel.people.set({
-			"$email": email,
-			"Age" : localStorage.getItem("age"),
-			"Gender" : localStorage.getItem("gender")
-		});
+	
 
 		if(validateEmail(email)) {
 			localStorage.setItem("email", email);
-			window.location = "/likes";
+			mixpanel.track('Given email',{}, function() {
+				
+
+				mixpanel.alias(email);
+				mixpanel.identify(email);
+
+
+				mixpanel.people.set({
+					"$email": email,
+					"Age" : localStorage.getItem("age"),
+					"Gender" : localStorage.getItem("gender")
+				}, function() {
+					window.location = "/likes";
+				});
+
+			});
+
+			//;
+
+
+
+
+			//window.location = "/likes";
 		}
 
 	});
 
 	$("#skip").click(function(e) {
 		e.preventDefault();
-		mixpanel.track("Ship Share");
-		window.location = "/likes";
+		mixpanel.track("Ship Share", {}, function() {
+			window.location = "/likes";
+		});
 	})
 
 });

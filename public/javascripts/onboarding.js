@@ -59,12 +59,13 @@ $(document).ready(function() {
 		gender = $(this).attr('id');
 		mixpanel.track("Gender", {
 			"Sex": gender
+		}, function() {
+			localStorage.setItem("gender", gender);
+			$("#male, #female").hide();
+			$("#Gender").hide();
+			$("#age").show();
+			$("#age-group").show();
 		});
-		localStorage.setItem("gender", gender);
-		$("#male, #female").hide();
-		$("#Gender").hide();
-		$("#age").show();
-		$("#age-group").show();
 	});
 
 	//mouse click on age
@@ -72,31 +73,34 @@ $(document).ready(function() {
 		age = $(this).text();
 		mixpanel.track("Age", {
 			"Age": age
+		}, function() {
+			localStorage.setItem("age", age);
+			$("#age").hide();
+			$("#age-group").hide();
+			$("#Play").show();
+			$("#explanation").show();
 		});
-		localStorage.setItem("age", age);
-		$("#age").hide();
-		$("#age-group").hide();
-		$("#Play").show();
-		$("#explanation").show();
 	});
 
 	//mouse click on Play
 	$("#Play").click(function(e) {
 		console.log(e)
 		e.preventDefault();
-		mixpanel.track("Play");
-		var d = new Date(),
-			dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+		mixpanel.track("Play", {}, function() {
+			var d = new Date(),
+				dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
-		var today = localStorage.getObj(dateString);
+			var today = localStorage.getObj(dateString);
 
-		if(today == null) { // we have not been through one
-			window.location = "/collection/" + gender + "/1"
-			//localStorage.setObj(dateString, [true]);
-		} else {
-			window.location = "/collection/" + gender + "/2";
-			//localStorage.setObj(dateString, [true, true]);
-		}
+			if(today == null) { // we have not been through one
+				window.location = "/collection/" + gender + "/1"
+				//localStorage.setObj(dateString, [true]);
+			} else {
+				window.location = "/collection/" + gender + "/2";
+				//localStorage.setObj(dateString, [true, true]);
+			}
+		});
+
 	});
 
 	/*//mouse click on email address go button
