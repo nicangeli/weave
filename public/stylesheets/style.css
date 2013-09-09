@@ -43,6 +43,14 @@ img.male {
   height: auto;
 }
 
+#maleButton {
+  margin-top: 4px;
+}
+
+#femaleButton {
+  margin-top: 5px;
+}
+
 button.age {
 	margin: 8px;
 }
