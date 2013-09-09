@@ -1,3 +1,9 @@
+Storage.prototype.setObj = function(key, obj) {
+    return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function(key) {
+    return JSON.parse(this.getItem(key))
+}
 $(document).ready(function() {
 
 	$("#tweet").hide();
@@ -10,6 +16,8 @@ $(document).ready(function() {
 		$("form, h4, #giveEmail").hide();
 		$("#tweet, #multi, #skip").show();
 	}
+
+	$(".itemsNumber").text(localStorage.getObj("likes").length);
 
 	$("#tweet").click(function(e) {
 		e.preventDefault();

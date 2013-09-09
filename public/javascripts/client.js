@@ -35,10 +35,6 @@ $(document).ready(function() {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
 
-		if() {
-
-		}
-
 		// Push to Mixpanel
 		mixpanel.track("Like Item", {
 			"Item" : $(this).attr("data-url")
