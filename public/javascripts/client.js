@@ -79,10 +79,12 @@ $(document).ready(function() {
 		var dislikeCount = SeenCount - likeCount;*/
 
 		// Push to Mixpanel
+		/*
 		mixpanel.track("Dislike Item", {
 			"Item" : $(this).attr("data-url")
 		});
-
+		*/
+		
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
