@@ -84,7 +84,9 @@ $(document).ready(function() {
 				likes.splice(i, 1); // remove element from likes array
 				localStorage.setObj("likes", likes);
 				likes = localStorage.getObj("likes");
-				$(this).parent().parent().remove();
+				$(this).parent().parent().fadeOut("slow", function() {
+					$(this).remove();
+				});
 				break;
 			}
 		}
