@@ -9,6 +9,10 @@ $(document).ready(function() {
 	$("#tweet").hide();
 	$("#multi").hide();
 	$("#skip").hide();
+
+	if(localStorage.getObj("likes") == null) {
+		$("#before").text("You didn't like anything. Enter your email address and we'll show you better items next time.");
+	}
 	// do we already have there email address?
 	if(localStorage.getItem("email") != null) {
 		//window.location = "/likes";

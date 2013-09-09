@@ -32,7 +32,8 @@ $(document).ready(function() {
 				header = "<h2 class='shop'>" + likes[i].shop + "</h2>",
 				price = "<h4>" + likes[i].price + "</h4>",
 				brand ="<span class='tagline'> - " + likes[i].brand + " - </span>",
-				anchor =  likes[i].url;
+				anchor =  likes[i].url,
+				deleteButton = "";
 
 			if (likes[i].brand == likes[i].shop) {
 				brand = "";
