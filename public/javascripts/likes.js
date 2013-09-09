@@ -33,13 +33,13 @@ $(document).ready(function() {
 				price = "<h4>" + likes[i].price + "</h4>",
 				brand ="<span class='tagline'> - " + likes[i].brand + " - </span>",
 				anchor =  likes[i].url,
-				deleteButton = "";
+				deleteButton = '<button data-url="' + likes[i].imageUrl + '" type="button" class="btn btn-danger delete">Remove</button>';
 
 			if (likes[i].brand == likes[i].shop) {
 				brand = "";
 			};
 			// grab the heading and start appending items after it
-			var element = '<hr><div class="row"><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a></div></div>';
+			var element = '<div class="row"><hr><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a></div>' + deleteButton + '</div>';
 			$("#reveal").append(element);
 		}
 	}
@@ -70,6 +70,24 @@ $(document).ready(function() {
 		mixpanel.track("Feedback Click", {}, function() {
 			window.location = "/feedback";
 		});
+	})
+
+	$(".delete").click(function(e) {
+		e.preventDefault();
+		// find the element in the likes array
+		// remove it
+		// resave the likes array
+		// reset likes to be the new array
+		for(var i = 0; i < likes.length; i++) {
+			var element = likes[i];
+			if(element.imageUrl == $(this).attr('data-url')) {
+				likes.splice(i, 1); // remove element from likes array
+				localStorage.setObj("likes", likes);
+				likes = localStorage.getObj("likes");
+				$(this).parent().remove();
+				break;
+			}
+		}
 	})
 
 
