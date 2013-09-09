@@ -34,16 +34,6 @@ $(document).ready(function() {
 		firstLike = false;
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		//var num = parseInt(element.split("product")[1]);
-
-		// Define Mixpanel properties
-		//var SeenCount = num + 1;
-		/*if(localStorage.getObj("likes") == null) {
-			var likeCount = 0;
-		} else {
-			var likeCount = localStorage.getObj("likes").length;
-		};
-		var dislikeCount = SeenCount - likeCount;*/
 
 		// Push to Mixpanel
 		mixpanel.track("Like Item", {

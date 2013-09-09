@@ -32,7 +32,7 @@ exports.collection = function(req, res) {
 		}
 	} else { // gender is female
 		if(round == 1) {
-			products = winterCollection1 .products;
+			products = femaleCollection1 .products;
 		} else {
 			products = femaleCollection2.products;
 		}
