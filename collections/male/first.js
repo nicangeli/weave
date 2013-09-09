@@ -26,7 +26,7 @@ exports.data = {
         },
         {
             "url" : "http://www.topman.com/en/tmuk/product/clothing-140502/mens-shirts-140515/indigo-flannel-long-sleeve-shirt-2154380?bi=1&ps=20", 
-            "price" : "Ã‚Â£30.00", 
+            "price" : "£30.00", 
             "shop" : "Topman", 
             "imageUrl" : "/images/male_top/mt2.jpg",
             "brand": "Topman",
@@ -34,7 +34,7 @@ exports.data = {
         },
         {
             "url" : "http://www.asos.com/G-Star/G-Star-Chinos-Correct-Nova-3d-Slim-Tapered-Micro-Twill/Prod/pgeproduct.aspx?iid=3032794&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Khaki",
-            "price" : "95.00",
+            "price" : "£95.00",
             "shop" : "ASOS",
             "imageUrl" : "/images/male_trousers/item2.jpg",
             "brand": "G-Star",

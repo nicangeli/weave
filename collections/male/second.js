@@ -26,7 +26,7 @@ exports.data={
         },
         {
             "url": "http://www.urbanoutfitters.co.uk/shore-leave-half-stripe-tee-in-white/invt/5214433472019/",
-            "price": "Ã‚Â£22.00",
+            "price": "£22.00",
             "shop": "Urban Outfitters",
             "imageUrl": "/images/male_top/mt12.jpg",
             "type": "Top",
@@ -34,7 +34,7 @@ exports.data={
         },
         {
             "url": "http://www.asos.com/ASOS/ASOS-Sweatpant-With-Ibiza-Print/Prod/pgeproduct.aspx?iid=3141813&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Burgandy",
-            "price": "25.00",
+            "price": "£25.00",
             "shop": "ASOS",
             "imageUrl": "/images/male_trousers/item7.jpg",
             "brand": "ASOS",
@@ -66,7 +66,7 @@ exports.data={
         },
         {
             "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-trousers-1906627/deep-purple-skinny-trousers-2141854?bi=1&ps=20",
-            "price": "34.00",
+            "price": "£34.00",
             "shop": "Top Man",
             "imageUrl": "/images/male_trousers/item8.jpg",
             "brand": "Top Man",
@@ -114,7 +114,7 @@ exports.data={
         },
         {
             "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-trousers-1906627/charcoal-flannel-checked-side-seam-skinny-trousers-2158107?bi=1&ps=20",
-            "price": "34.00",
+            "price": "£34.00",
             "shop": "Top Man",
             "imageUrl": "/images/male_trousers/item10.jpg",
             "type": "Trousers",
