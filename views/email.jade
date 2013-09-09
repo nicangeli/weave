@@ -3,7 +3,7 @@ extends layout
 block content
 
   script(type='text/javascript')
-    mixpanel.track("Collection Complete")
+    mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
 
   .container
     h4 Before Weave reveals the price & brand of the 
