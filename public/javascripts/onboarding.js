@@ -46,12 +46,14 @@ $(document).ready(function() {
 	$("#Play").hide();
 	$("#explanation").hide();
 	$("#age").hide();
+	$("#maleButton").hide();
+	$("#femaleButton").hide();
 
 	// mouse click on Let's Go
 	$("#LetsGo").click(function(){
 		$(".Landing").hide();
 		$("#Gender").show();
-		$("#male, #female").show();
+		$("#male, #female, #maleButton, #femaleButton").show();
 	});
 
 	// mouse click on male or female button
@@ -61,11 +63,19 @@ $(document).ready(function() {
 			"Sex": gender
 		}, function() {
 			localStorage.setItem("gender", gender);
-			$("#male, #female").hide();
+			$("#male, #female, #femaleButton, #maleButton").hide();
 			$("#Gender").hide();
 			$("#age").show();
 			$("#age-group").show();
 		});
+	});
+
+	$("#maleButton").click(function() {
+		$("#male").trigger("click");
+	});
+
+	$("#femaleButton").click(function() {
+		$("#female").trigger("click");
 	});
 
 	//mouse click on age
