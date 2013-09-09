@@ -166,8 +166,9 @@ button.like {
   cursor:pointer
 }
 
-
-
+#giveEmail {
+  width: 100%;
+}
 
 
 
