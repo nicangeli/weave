@@ -67,24 +67,6 @@ $(document).ready(function() {
 	$(".dislike").click(function(e) {
 		e.preventDefault();
 		var element = $(this).attr('data-number');
-		//var num = parseInt(element.split("product")[1]);	
-
-		// Define Mixpanel properties
-		//var SeenCount = num + 1;
-		/*if(localStorage.getObj("likes") == null) {
-			var likeCount = 0;
-		} else {
-			var likeCount = localStorage.getObj("likes").length;
-		};
-		var dislikeCount = SeenCount - likeCount;*/
-
-		// Push to Mixpanel
-		/*
-		mixpanel.track("Dislike Item", {
-			"Item" : $(this).attr("data-url")
-		});
-		*/
-		
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
@@ -96,7 +78,7 @@ var changeProduct = function(currentProduct) {
 		next = num + 1,
 		nextId = "product" + next;
 	if($('[data-number=' + nextId + ']').length == 0) {
-		window.location = "/email";
+		window.location = "/likes";
 	} else {
 		$('[data-number=' + nextId + ']').each(function() {
 			$(this).show();
