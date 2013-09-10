@@ -17,12 +17,12 @@ exports.data={
             "brand": "Topman"
         },
         {
-            "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-hoodies-sweatshirts-2179526/black-houndstooth-baroque-printed-bomber-sweatshirt-2060571?bi=1&ps=20",
-            "price": "£35.00",
-            "shop": "Topman",
+            "url": "http://www.johnlewis.com/john-lewis-co-harris-tweed-hip-flask/p231897681?colour=Green",
+            "price": "£25.00",
+            "shop": "John Lewis",
             "imageUrl": "/images/menDay2/item3.jpg",
-            "brand": "Topman",
-            "type": "Sweatshirt"
+            "brand": "John Lewis & Co.",
+            "type": "Hip Flask"
         },
         {
             "url": "http://www.asos.com/Jack-Jones/Jack-Jones-Hooded-Panel-Jacket/Prod/pgeproduct.aspx?iid=3147044&cid=3606&sh=0&pge=0&pgesize=36&sort=-1&clr=Spicy+orange",
