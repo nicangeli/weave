@@ -1,163 +1,163 @@
 exports.data = {
     "products": [
         {
-            "url" : "http://www.asos.com/ASOS/ASOS-Slim-Chino/Prod/pgeproduct.aspx?iid=3009623&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Moonlight+blue",
-            "price" : "£23.00",
-            "shop" : "ASOS", 
-            "imageUrl" : "/images/male_trousers/item1.jpg",
-            "brand": "ASOS",
-            "type": "Trousers"
+            "url" : "http://www.jolliesocks.com/",
+            "price" : "£10.00",
+            "shop" : "Jollies Socks", 
+            "imageUrl" : "/images/menDay2/item21.jpg",
+            "brand": "Jollies Socks",
+            "type": "Socks"
         },
         {
-            "url" : "http://www.asos.com/PS-by-Paul-Smith/PS-Paul-Smith-Carson-Suede-Brogues/Prod/pgeproduct.aspx?iid=3046397&cid=11941&Rf-200=3&sh=0&pge=0&pgesize=36&sort=-1&clr=Blue",
-            "price" : "£175.00",
-            "shop" : "ASOS",
-            "imageUrl" : "/images/dan/item2.jpg",
-            "brand": "Paul Smith",
-            "type": "Shoes"
+            "url" : "http://www.johnlewis.com/john-lewis-co-contrast-slim-stripe-short-sleeve-t-shirt/p535064?colour=Blue",
+            "price" : "£25.00",
+            "shop" : "John Lewis",
+            "imageUrl" : "/images/menDay2/item22.jpg",
+            "brand": "John Lewis & Co.",
+            "type": "T-shirt"
         },
         {  
-            "url" : "http://www.topman.com/en/tmuk/product/topman-picks-2063182/new-in-140500/indigo-flannel-long-sleeve-shirt-2154380?refinements=category~%5b1208134%7c207138%5d&bi=1&ps=20",
-            "price" : "£30.00", 
-            "shop" : "Topman", 
-            "imageUrl" : "/images/male_top/mt1.jpg",
-            "brand": "Topman",
-            "type": "Top"
-        },
-        {
-            "url" : "http://www.topman.com/en/tmuk/product/clothing-140502/mens-shirts-140515/indigo-flannel-long-sleeve-shirt-2154380?bi=1&ps=20", 
-            "price" : "£30.00", 
-            "shop" : "Topman", 
-            "imageUrl" : "/images/male_top/mt2.jpg",
-            "brand": "Topman",
-            "type": "Top"
-        },
-        {
-            "url" : "http://www.asos.com/G-Star/G-Star-Chinos-Correct-Nova-3d-Slim-Tapered-Micro-Twill/Prod/pgeproduct.aspx?iid=3032794&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Khaki",
-            "price" : "£95.00",
-            "shop" : "ASOS",
-            "imageUrl" : "/images/male_trousers/item2.jpg",
-            "brand": "G-Star",
-            "type": "Trousers"
-        },
-        {
-            "url" : "http://www.mrporter.com/product/378535", 
-            "price" : "£380.00",
-            "shop" : "Mr Porter",
-            "imageUrl" : "/images/josh/josh19.jpg",
-            "brand": "Officine Creative",
+            "url" : "http://www.mrporter.com/product/389528",
+            "price" : "£140.00", 
+            "shop" : "Mr. Porter", 
+            "imageUrl" : "/images/menDay2/item23.jpg",
+            "brand": "Nike",
             "type": "Shoes"
         },
         {
-            "url" : "http://www.howies.co.uk/mens/clothing/shirts/pendre-navy.html", 
-            "price" : "£49.00", 
-            "shop" : "Howies", 
-            "imageUrl" : "/images/male_top/mt3.jpg",
-            "brand": "Howies",
+            "url" : "http://www.urbanoutfitters.co.uk/bright-striped-short-sleeve-shirt/invt/5421444800002/", 
+            "price" : "£30.00", 
+            "shop" : "Urban Outfitters", 
+            "imageUrl" : "/images/menDay2/item24.jpg",
+            "brand": "Urban Outfitters",
+            "type": "Top"
+        },
+        {
+            "url" : "http://www.topman.com/en/tmuk/product/clothing-140502/latest-trend-140887/grey-burnout-varsity-stripe-long-sleeve-t-shirt-2153852?bi=1&ps=20",
+            "price" : "£18.00",
+            "shop" : "topman",
+            "imageUrl" : "/images/menDay2/item25.jpg",
+            "brand": "topman",
             "type": "Shirt"
         },
         {
-            "url" : "http://www.uniqlo.com/uk/store/goods/078821", 
-            "price" : "£19.99", 
-            "shop" : "UNIQLO", 
-            "imageUrl" : "/images/male_top/mt4.jpg",
-            "brand": "UNIQLO",
-            "type": "top"
+            "url" : "http://www.topman.com/en/tmuk/product/clothing-140502/latest-trend-140887/denim-mixed-yarn-fisherman-rib-beanie-2062447?bi=1&ps=20", 
+            "price" : "£10.00",
+            "shop" : "topman",
+            "imageUrl" : "/images/menDay2/item26.jpg",
+            "brand": "topman",
+            "type": "Hat"
         },
         {
-            "url" : "http://www.urbanoutfitters.co.uk/shore-leave-garment-dyed-chinos-in-navy/invt/5221441721004/", 
+            "url" : "http://www.johnlewis.com/john-lewis-co-abraham-moon-donegal-blazer/p477822?colour=Brown#default", 
+            "price" : "£299.00", 
+            "shop" : "John Lewis", 
+            "imageUrl" : "/images/menDay2/item27.jpg",
+            "brand": "John Lewis & Co.",
+            "type": "Blazer"
+        },
+        {
+            "url" : "http://www.asos.com/ASOS/ASOS-Bomber/Prod/pgeproduct.aspx?iid=3298179&cid=6993&sh=0&pge=0&pgesize=36&sort=-1&clr=Blue", 
+            "price" : "£30.00", 
+            "shop" : "ASOS", 
+            "imageUrl" : "/images/menDay2/item28.jpg",
+            "brand": "ASOS",
+            "type": "Jacket"
+        },
+        {
+            "url" : "http://www.asos.com/Ben-Sherman/Ben-Sherman-T-Shirt-With-Target-Print/Prod/pgeproduct.aspx?iid=3313229&cid=6993&sh=0&pge=0&pgesize=36&sort=-1&clr=Navy", 
+            "price" : "£10.00", 
+            "shop" : "ASOS", 
+            "imageUrl" : "/images/menDay2/item29.jpg",
+            "type": "T-shirt",
+            "brand": "Ben Sherman"
+        },
+        {
+            "url" : "http://www.asos.com/Ben-Sherman/Ben-Sherman-Union-Messenger-Bag/Prod/pgeproduct.aspx?iid=3003040&cid=17185&sh=0&pge=0&pgesize=36&sort=-1&clr=Navy", 
+            "price" : "£50.00", 
+            "shop" : "ASOS", 
+            "imageUrl" : "/images/dan/item30.jpg",
+            "brand": "Ben Sherman",
+            "type": "Bags"
+        },
+        {
+            "url" : "http://www.johnlewis.com/john-lewis-co-penny-collar-vintage-stripe-long-sleeve-shirt/p471465?colour=Beige#default", 
+            "price" : "£49.90", 
+            "shop" : "John Lewis", 
+            "imageUrl" : "/images/menDay2/item31.jpg",
+            "brand": "John Lewis & Co."
+        },
+        {
+            "url" : "http://www.urbanoutfitters.co.uk/two-thirds-pristis-waves-sweatshirt/invt/5216443785555/", 
+            "price" : "£90.00", 
+            "shop" : "Urban Outfitters", 
+            "imageUrl" : "/images/menDay2/item32.jpg",
+            "brand": "Urban Outfitters",
+            "type": "Jumper"
+        },
+        {
+            "url" : "http://www.topman.com/en/tmuk/product/clothing-140502/latest-trend-140887/purple-american-freshman-snapback-cap-2080572?bi=1&ps=20",
+            "price" : "£16.00",
+            "shop" : "topman",
+            "imageUrl" : "/images/menDay2/item33.jpg",
+            "brand": "topman",
+            "type": "Hat"
+        },
+        {
+            "url" : "http://www.johnlewis.com/elephant-branded-recycled-clipper-bag/p231687551", 
             "price" : "£45.00", 
-            "shop" : "Urban Outfitters", 
-            "imageUrl" : "/images/male_trousers/item3.jpg",
-            "type": "Trousers",
-            "brand": "Shore Leave"
+            "shop" : "John Lewis", 
+            "imageUrl" : "/images/menDay2/item34.jpg",
+            "brand": "Elephant Branded",
+            "type": "Bag"
         },
         {
-            "url" : "http://www.mrporter.com/product/357212?cm_mmc=Email-_-WNG-_-210513-_-INTL", 
-            "price" : "£330.00", 
-            "shop" : "Mr Porter", 
-            "imageUrl" : "/images/dan/item9.jpg",
-            "brand": "AMI",
+            "url" : "http://www.urbanoutfitters.co.uk/cheap-monday-oscar-square-neck-sweater-in-grey/invt/5231462117000/", 
+            "price" : "£80.00", 
+            "shop" : "Urban Outfitters", 
+            "imageUrl" : "/images/menDay2/item35.jpg",
+            "brand": "Cheap Monday",
+            "type": "Jumper"
+        },
+        {
+            "url" : "http://www.asos.com/Jack-Jones/Jack-Jones-Cardiff-Trainers/Prod/pgeproduct.aspx?iid=3236647&cid=17184&sh=0&pge=0&pgesize=36&sort=-1&clr=Grey", 
+            "price" : "£40.00",
+            "shop" : "ASOS", 
+            "imageUrl" : "/images/menDay2/item36.jpg",
+            "brand": "Jack & Jones",
             "type": "Shoes"
         },
         {
-            "url" : "http://www.uniqlo.com/uk/store/goods/078824003", 
-            "price" : "£19.90", 
-            "shop" : "UNIQLO", 
-            "imageUrl" : "/images/male_top/mt5.jpg",
-            "brand": "UNIQLO"
+            "url" : "http://www.johnlewis.com/john-lewis-co-harris-tweed-trapper-hat/p459736#default", 
+            "price" : "£40.00",
+            "shop" : "John Lewis", 
+            "imageUrl" : "/images/menDay2/item37.jpg",
+            "brand": "John Lewis & Co.",
+            "type": "Hat"
         },
         {
-            "url" : "http://www.uniqlo.com/uk/store/goods/078619", 
-            "price" : "£19.90", 
-            "shop" : "UNIQLO", 
-            "imageUrl" : "/images/male_top/mt6.jpg",
-            "brand": "UNIQLO",
-            "type": "Top"
-        },
-        {
-            "url" : "http://www.asos.com/Izzue/Izzue-Chinos-With-Contrast-Turn-Up/Prod/pgeproduct.aspx?iid=3101897&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Navy",
-            "price" : "£75.00",
-            "shop" : "ASOS",
-            "imageUrl" : "/images/male_trousers/item4.jpg",
-            "brand": "Izzue",
+            "url" : "http://www.topman.com/en/tmuk/product/new-in-140500/chinos-trousers-140559/villain-edison-chinos-2170735?bi=1&ps=20",
+            "price" : "£101.00", 
+            "shop" : "topman", 
+            "imageUrl" : "/images/menDay2/item38.jpg",
+            "brand": "topman",
             "type": "Trousers"
         },
         {
-            "url" : "http://www.office.co.uk/view/product/office_catalog/1,70/1320950012", 
-            "price" : "£74.99", 
-            "shop" : "Office", 
-            "imageUrl" : "/images/josh/josh9.jpg",
-            "brand": "Poste",
-            "type": "Shoes"
-        },
-        {
-            "url" : "http://www.uniqlo.com/uk/store/goods/078812001", 
-            "price" : "£19.90", 
-            "shop" : "UNIQLO", 
-            "imageUrl" : "/images/male_top/mt7.jpg",
-            "brand": "UNIQLO",
-            "type": "Top"
-        },
-        {
-            "url" : "http://www.urbanoutfitters.co.uk/obey-font-fleece-sweatshirt/invt/5216441238828/", 
-            "price" : "£60.00",
-            "shop" : "Obey", 
-            "imageUrl" : "/images/male_top/mt8.jpg",
-            "brand": "Obey",
-            "type": "Top"
-        },
-        {
-            "url" : "http://www.urbanoutfitters.co.uk/adidas-tonal-sweat-pants-in-leopard-print/invt/5221442653000/", 
-            "price" : "£65.00",
-            "shop" : "Urban Outfitters", 
-            "imageUrl" : "/images/male_trousers/item5.jpg",
-            "brand": "Adidas",
+            "url" : "http://www.asos.com/Cheap-Monday/Cheap-Monday-Jeans-Tight-Skinny-Fit-in-Brown-Acid-Wash/Prod/pgeproduct.aspx?iid=3347820&cid=6993&Rf900=1497&sh=0&pge=0&pgesize=36&sort=-1&clr=Brown", 
+            "price" : "£49.00", 
+            "shop" : "ASOS", 
+            "imageUrl" : "/images/menDay2/mt9.jpg",
+            "brand": "Cheap Monday",
             "type": "Trousers"
         },
         {
-            "url" : "http://www.office.co.uk/view/product/office_catalog/1,70/1277200078",
-            "price" : "£99.99", 
-            "shop" : "Office", 
-            "imageUrl" : "/images/josh/josh2.jpg",
-            "brand": "Ted Baker",
+            "url" : "http://www.topman.com/en/tmuk/product/new-in-140500/shoes-140506/brown-suede-brogue-boots-2224313?bi=1&ps=20", 
+            "price" : "£48.00", 
+            "shop" : "topman", 
+            "imageUrl" : "/images/menDay2/item40.jpg",
+            "brand": "topman",
             "type": "Shoes"
-        },
-        {
-            "url" : "http://www.urbanoutfitters.co.uk/selected-homme-neal-oxford-shirt/invt/5212443331050/", 
-            "price" : "£40.00", 
-            "shop" : "Urban Outfitters", 
-            "imageUrl" : "/images/male_top/mt9.jpg",
-            "brand": "Selected Homme",
-            "type": "Shirt"
-        },
-        {
-            "url" : "http://www.urbanoutfitters.co.uk/anerkjendt-wash-out-tee-in-black/invt/5214440681003/", 
-            "price" : "£25.00", 
-            "shop" : "Urban Outfitters", 
-            "imageUrl" : "/images/male_top/mt10.jpg",
-            "brand": "Anerkjendt",
-            "type": "Top"
         }
     ]
 };
