@@ -1,165 +1,165 @@
 exports.data = {
     "products": [
         {
-            "url": "http://www.asos.com/Supra/Supra-Skytop-Grey-Multi-High-Top-Trainers/Prod/pgeproduct.aspx?iid=3155443&cid=4172&Rf947=2586&sh=0&pge=0&pgesize=204&sort=-1&clr=Greynubuck",
-            "price": "£75.00",
+            "url": "http://www.topshop.com/webapp/wcs/stores/servlet/ProductDisplay?beginIndex=0&viewAllFlag=&catalogId=33057&storeId=12556&productId=11730266&langId=-1&categoryId=&parent_category_rn=&searchTerm=TS24J53EBLE&resultCount=1&geoip=home",
+            "price": "£38.00",
+            "shop": "Topshop",
+            "brand": "Topshop",
+            "imageUrl": "/images/femaleDay2/item1.jpg",
+            "type": "Bag"
+        },
+		{
+			"url": "http://www.topshop.com/en/tsuk/product/jet-stone-flower-earrings-2250043?siteID=gcdL_ATRVoE-PoWouwvS8_9KbKC6B3lwMw&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+		    "price": "£10.00",
+		    "shop": "Topshop",
+		     "brand": "Topshop",
+		    "imageUrl": "/images/femaleDay2/item2.jpg",
+		    "type": "Earings"
+		},
+        { 
+            "url": "http://www.asos.com/ASOS/ASOS-Assorted-Finger-Tip-Ring-Pack/Prod/pgeproduct.aspx?iid=2984005&cid=6992&sh=0&pge=0&pgesize=9999&sort=-1&clr=Gold&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-hTYDruCOSzl3HAOD8AZQCg",
+            "price": "£8.00",
             "shop": "ASOS",
-            "brand": "Supra",
-            "imageUrl": "/images/wildcard/wc22.jpg",
+            "brand": "ASOS",
+            "imageUrl": "/images/femaleDay2/item3.jpg",
+            "type": "Earings"
+        },
+        {
+            "url": "http://www.zara.com/uk/en/trf/shoes/flat-shoes/patent-leather-slip-on-shoes-c269221p1326285.html",
+            "price": "£19.00",
+            "shop": "Zara",
+            "brand": "Zara",
+            "imageUrl": "/images/femaleDay2/item4.jpg",
             "type": "Shoe"
         },
 		{
-			"url": "http://www.nastygal.com/whats-new_clothes_dresses/dark-daisy-dress",
-		    "price": "$48.00",
-		    "shop": "Nasty Gal",
-		     "brand": "Nasty Gal",
-		    "imageUrl": "/images/dresses/dress19.jpg",
-		    "type": "Dress"
+			"url": "http://www.zara.com/uk/en/woman/shoes/boots/combination-wellies-c269197p1295466.html",
+		    "price": "£39.00",
+		    "shop": "Zara",
+		    "brand": "Zara",
+		    "imageUrl": "/images/femaleDay2/item5.jpg",
+		    "type": "Boots"
 		},
-        { 
-            "url": "http://www.asos.com/ASOS/ASOS-Skater-Dress-With-Mesh-Inserts/Prod/pgeproduct.aspx?iid=3037732&cid=12708&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-gSn2r4JEThk7vEYuxjCbIw",
-            "price": "£35.00",
+        {
+            "url": "http://www.asos.com/ASOS/ASOS-Swing-Dress-In-Nepi-With-Long-Sleeves/Prod/pgeproduct.aspx?iid=3280643&cid=2623&sh=0&pge=0&pgesize=9999&sort=-1&clr=Red",
+            "price": "£28.00",
             "shop": "ASOS",
             "brand": "ASOS",
-            "imageUrl": "/images/dresses/dress11.jpg",
+            "imageUrl": "/images/femaleDay2/item6.jpg",
+            "type": "Dress"
+        },
+    	{
+    		"url": "http://www.topshop.com/en/tsuk/product/shelly-cutout-back-platforms-2252273?siteID=gcdL_ATRVoE-PH49AGahnVZiQdcFtSOW.A&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+	    	"price": "£60.00",
+		    "shop": "Topshop",
+		    "brand": "Shelly",
+		    "imageUrl": "/images/femaleDay2/item7.jpg",
+		    "type": "Shoes"
+        },
+ 		{
+            "url": "http://www.topshop.com/en/tsuk/product/alff-lace-up-wedge-boots-2248744?siteID=gcdL_ATRVoE-P1VfA_JhUJcqxa6Dcxog2g&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+            "price": "£70.00",
+            "shop": "Topshop",
+            "brand": "Alff",
+            "imageUrl": "/images/femaleDay2/item8.jpg",
+            "type": "Shoes"
+        },
+        {
+            "url": "http://www.topshop.com/en/tsuk/product/dolcie-playsuit-by-motel-2231783?siteID=gcdL_ATRVoE-6uBUowM9.SWTZ6fTGxK1Vg&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+            "price": "£45.00",
+            "shop": "Topshop",
+            "brand": "Motel",
+            "imageUrl": "/images/femaleDay2/item9.jpg",
+            "type": "Playsuit"
+        },
+        {
+            "url": "http://www.topshop.com/en/tsuk/product/floral-joggers-by-boutique-2236925?siteID=gcdL_ATRVoE-uY27bVik8fr242juvhyscw&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+            "price": "£100.00",
+            "shop": "Topshop",
+            "brand": "Boutique",
+            "imageUrl": "/images/femaleDay2/item10.jpg",
+            "type": "Joggers"
+        },
+        {
+            "url": "http://www.topshop.com/en/tsuk/product/colourblock-lace-back-playsuit-2246889?siteID=gcdL_ATRVoE-F_x7vK5Gsaax3XXMMNLrkg&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+            "price": "£48.00",
+            "shop": "Toshop",
+            "brand": "Topshop",
+            "imageUrl": "/images/femaleDay2/item11.jpg",
             "type": "Dress"
         },
         {
-            "url": "http://www.asos.com/New-Look/New-Look-Extreme-2-Studded-Back-Ankle-Boots/Prod/pgeproduct.aspx?iid=3102038&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Light+brown",
-            "price": "£27.99",
-            "shop": "ASOS",
-            "brand": "New Look",
-            "imageUrl": "/images/shoes/item34.jpg",
-            "type": "Shoe"
-        },
-		{
-			"url": "http://www.nastygal.com/whats-new_clothes_dresses/byzantine-dress",
-		    "price": "$198.00",
-		    "shop": "Nasty Gal",
-		    "brand": "Nasty Gal",
-		    "imageUrl": "/images/dresses/dress17.jpg",
-		    "type": "Dress"
-		},
-        {
-            "url": "http://www.topshop.com/en/tsuk/product/new-in-this-week-2169932/new-in-this-week-493/nylon-quilted-backpack-2194157?bi=1&ps=200",
-            "price": "£32.00",
-            "shop": "Topshop",
-            "brand": "Topshop",
-            "imageUrl": "/images/wildcard/wc6.jpg",
-            "type": "Bag"
-        },
-    	{
-    		"url": "http://www.urbanoutfitters.co.uk/stylestalker-space-jam-dress/invt/5139441181233/",
-	    	"price": "£135.00",
-		    "shop": "Urban Outfitters",
-		    "brand": "Stylestalker",
-		    "imageUrl": "/images/dresses/dress42.jpg",
-		    "type": "Dress"
-        },
- 		{
-            "url": "http://www.asos.com/AJ-Morgan/AJ-Morgan-Castro-Glittler-Round-Sunglasses/Prod/pgeproduct.aspx?iid=3149127&SearchQuery=sunglasses%20women&sh=0&pge=0&pgesize=36&sort=-1&clr=Silver",
-            "price": "£15.00",
-            "shop": "ASOS",
-            "brand": "AJ Morgan",
-            "imageUrl": "/images/wildcard/wc26.jpg",
-            "type": "Sunglasses"
-        },
-        {
-            "url": "http://www.topshop.com/en/tsuk/product/clothing-427/margots-world-2157871/stripe-bunny-scrunchie-2155944?bi=1&ps=200",
-            "price": "£4.00",
-            "shop": "Topshop",
-            "brand": "Topshop",
-            "imageUrl": "/images/wildcard/wc1.jpg",
-            "type": "Scrunchie"
-        },
-        {
-            "url": "http://www.asos.com/ASOS/ASOS-Mongolian-Dip-Dye-Lapel-Collar/Prod/pgeproduct.aspx?iid=3032724&cid=4174&sh=0&pge=1&pgesize=204&sort=-1&clr=Grey",
-            "price": "£55.00",
-            "shop": "ASOS",
-            "brand": "ASOS",
-            "imageUrl": "/images/wildcard/wc19.jpg",
-            "type": "Lapel Collar"
-        },
-        {
-            "url": "http://www.asos.com/Marc-By-Marc-Jacobs/Marc-by-Marc-Jacobs-Havana-Cat-Eye-Sunglasses/Prod/pgeproduct.aspx?iid=3032799&cid=4545&sh=0&pge=0&pgesize=204&sort=-1&clr=Tortoise+shell",
-            "price": "£87.00",
-            "shop": "ASOS",
-            "brand": "Marc by Marc Jacobs",
-            "imageUrl": "/images/wildcard/wc25.jpg",
-            "type": "Sunglasses"
-        },
-        {
-        	"url": "http://www.topshop.com/en/tsuk/product/clothing-427/tops-443/sleeveless-tops-2139019/colour-block-shell-2042093?refinements=category~%5b209725%7c208524%5d&bi=1&ps=20",
-		    "price": "£30.00",
+        	"url": "http://www.topshop.com/en/tsuk/product/miss-skater-skirt-by-motel-2245039?siteID=gcdL_ATRVoE-oDOh4.xb1dnbhgWuhx_vNQ&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+		    "price": "£35.00",
 		    "shop": "Topshop",
-		     "brand": "Topshop",
-		    "imageUrl": "/images/tops/top16.jpg",
-			"type": "Top"
+		     "brand": "Motel",
+		    "imageUrl": "/images/femaleDay2/item12.jpg",
+			"type": "Skirt"
 		},
    		{
-   			"url": "http://www.topshop.com/en/tsuk/product/clothing-427/margots-world-2157871/shell-top-with-collar-detail-1944542?bi=1&ps=200",
-		    "price": "£26.00",
-		    "shop": "Topshop",
-		    "brand": "Topshop",
-		    "imageUrl": "/images/tops/top4.jpg",
-			"type": "Top"
+   			"url": "http://www.asos.com/ASOS/ASOS-Exaggerated-Metal-Bridge-Round-Sunglasses-With-Mirrored-Lens/Prod/pgeproduct.aspx?iid=3288933&cid=6992&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-coWlMFvU6_7pKIkriUkXvw",
+		    "price": "£13.00",
+		    "shop": "ASOS",
+		    "brand": "ASOS",
+		    "imageUrl": "/images/femaleDay2/item13.jpg",
+			"type": "Sunglasses"
 		},
         {
-            "url": "http://www.asos.com/ASOS/ASOS-PORTLAND-Platforms/Prod/pgeproduct.aspx?iid=3013851&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
-            "price": "£45.00",
-            "shop": "ASOS",
-            "brand": "ASOS",
-            "imageUrl": "/images/shoes/item3.jpg",
-            "type": "Shoe"
+            "url": "http://www.zara.com/uk/en/woman/knitwear/square-cut-cable-knit-sweater-c269190p1296020.html",
+            "price": "£59.00",
+            "shop": "Zara",
+            "brand": "Zara",
+            "imageUrl": "/images/femaleDay2/item14.jpg",
+            "type": "Sweater"
         },
        	{
-            "url": "http://www.nastygal.com/whats-new_clothes_tops/sweet-charms-blouse",
-            "price": "£26.93",
-            "shop": "Nasty Gal",
-            "brand": "Nasty Gal",
-            "imageUrl": "/images/tops/top28.jpg",
+            "url": "http://www.asos.com/ASOS/ASOS-Secret-Garden-Floral-Fuller-Bust-50s-Halter-Padded-Bikini-Top-D-F/Prod/pgeproduct.aspx?iid=3239656&cid=2238&Rf900=1598&sh=0&pge=0&pgesize=9999&sort=-1&clr=Secretgardenfloral&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-MkURxnaBsX2ZVNiArwdMUA",
+            "price": "£20.00",
+            "shop": "ASOS",
+            "brand": "ASOS",
+            "imageUrl": "/images/femaleDay2/item15.jpg",
+            "type": "Bikini"
+        },
+        {
+            "url": "http://www.asos.com/ASOS/ASOS-Blouse-With-Double-Sequin-Collar/Prod/pgeproduct.aspx?iid=3010966&cid=2623&Rf900=1604&sh=0&pge=0&pgesize=9999&sort=-1&clr=Cream&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-3YQdg.mLei3iKpxieZqzCg",
+            "price": "£32.00",
+            "shop": "ASOS",
+            "brand": "ASOS",
+            "imageUrl": "/images/femaleDay2/item16.jpg",
             "type": "Blouse"
         },
         {
-            "url": "http://www.nastygal.com/whats-new_clothes_tops/dark-whisper-top",
-            "price": "£24.36",
-            "shop": "Nasty Gal",
-            "brand": "Nasty Gal",
-            "imageUrl": "/images/tops/top33.jpg",
-            "type": "Top"
-        },
-        {
-            "url": "http://www.hm.com/gb/product/15594?article=15594-A",
-            "price": "£14.99",
-            "shop": "H&M",
-            "brand": "H&M",
-            "imageUrl": "/images/tops/top52.jpg",
-            "type": "Top"
-        },
-
-        {
-            "url": "http://www.asos.com/ASOS/ASOS-Swing-Dress-With-Pockets-And-Short-Sleeves/Prod/pgeproduct.aspx?iid=3282458&cid=8799&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black",
+            "url": "http://www.asos.com/Asos/Asos-Sweatshirt-With-Drippy-Dollar/Prod/pgeproduct.aspx?iid=3337215&cid=2623&sh=0&pge=0&pgesize=9999&sort=-1&clr=Black&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-FabDeBlhbCTI8rstuvmB8Q",
             "price": "£25.00",
             "shop": "ASOS",
             "brand": "ASOS",
-            "imageUrl": "/images/dresses/dress4.jpg",
+            "imageUrl": "/images/femaleDay2/item17.jpg",
+            "type": "Jumper"
+        },
+
+        {
+            "url": "http://www.topshop.com/en/tsuk/product/chiffon-swing-slip-dress-2254031?siteID=gcdL_ATRVoE-52HClySb9NyYpDSJ1GIIqQ&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+            "price": "£40.00",
+            "shop": "Topshop",
+            "brand": "Topshop",
+            "imageUrl": "/images/femaleDay2/item18.jpg",
             "type": "Dress"
         },
     	{
-    		"url": "http://www.asos.com/River-Island/River-Island-Leather-Odil-Slingback-Court-Shoes/Prod/pgeproduct.aspx?iid=3171510&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Blue",
-		    "price": "£50.00",
-		    "shop": "ASOS",
-		    "brand": "River Island",
-		    "imageUrl": "/images/shoes/item4.jpg",
+    		"url": "http://www.topshop.com/en/tsuk/product/knitted-wool-bobble-jumper-2230231?siteID=gcdL_ATRVoE-DXepESgBp2gqte6ot5aZMw&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+		    "price": "£45.00",
+		    "shop": "Topshop",
+		    "brand": "Topshop",
+		    "imageUrl": "/images/femaleDay2/item19.jpg",
 			"type": "Shoe"
 		},
    		{ 
-   		 	"url": "http://www.asos.com/ASOS/ASOS-PRIORITY-Pointed-High-Heels/Prod/pgeproduct.aspx?iid=2592661&cid=6461&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
-		    "price": "£22.50",
-		    "shop": "ASOS",
-		    "brand": "ASOS",
-		    "imageUrl": "/images/shoes/item5.jpg",
-			"type": "Shoe"
+   		 	"url": "http://www.topshop.com/en/tsuk/product/strappy-satin-cami-2253342?siteID=gcdL_ATRVoE-GiCq2AQ7jPgtJIJyV1YS0g&cmpid=ukls_deeplink&_$ja=tsid:19906|prd:gcdL/ATRVoE",
+		    "price": "£20.00",
+		    "shop": "Topshop",
+		    "brand": "Topshop",
+		    "imageUrl": "/images/femaleDay2/item20.jpg",
+			"type": "Satin Cami"
 		},
 
 
