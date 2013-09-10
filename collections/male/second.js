@@ -73,92 +73,92 @@ exports.data={
             "type": "Jumper"
         },
         {
-            "url": "http://www.office.co.uk/view/product/office_catalog/1,71/1131245036",
-            "price": "£69.99",
-            "shop": "Office",
-            "imageUrl": "/images/josh/josh4.jpg",
-            "type": "Shoes",
-            "brand": "Ask the Missus"
-        },
-        {
-            "url": "http://www.urbanoutfitters.co.uk/suit-rune-wool-overshirt-in-burgundy/invt/5212436449800/",
-            "price": "£85.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt15.jpg",
-            "type": "Top",
-            "brand": "Suit Rune"
-        },
-        {
-            "url": "http://www.urbanoutfitters.co.uk/suit-rune-wool-overshirt-in-khaki/invt/5212436449700/",
-            "price": "£85.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt16.jpg",
-            "type": "Top",
-            "brand": "Suit Rune"
-        },
-        {
-            "url": "http://www.asos.com/ASOS/ASOS-Skinny-Chino-In-Heavyweight/Prod/pgeproduct.aspx?iid=3008894&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Black",
-            "price": "£25.00",
-            "shop": "ASOS",
-            "imageUrl": "/images/male_trousers/item9.jpg",
-            "brand": "ASOS",
-            "type": "Trousers"
-        },
-        {
-            "url": "http://www.mrporter.com/product/375636",
-            "price": "£565.00",
-            "shop": "Mr Porter",
-            "imageUrl": "/images/josh/josh20.jpg",
-            "type": "Shoes",
-            "brand": "O'KEEFFE"
-        },
-        {
-            "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-trousers-1906627/charcoal-flannel-checked-side-seam-skinny-trousers-2158107?bi=1&ps=20",
+            "url": "http://www.hollisterco.com/shop/uk/dudes-polos/newport-peninsula-polo-1155412_02",
             "price": "£34.00",
-            "shop": "Top Man",
-            "imageUrl": "/images/male_trousers/item10.jpg",
+            "shop": "Hollister",
+            "imageUrl": "/images/menDay2/item10.jpg",
+            "type": "Polo",
+            "brand": "Hollister"
+        },
+        {
+            "url": "http://www.hollisterco.com/shop/uk/dudes-sweaters/blacks-beach-sweater-1204778_01",
+            "price": "£69.00",
+            "shop": "Hollister",
+            "imageUrl": "/images/menDay2/item11.jpg",
+            "type": "Jumper",
+            "brand": "Hollister"
+        },
+        {
+            "url": "http://www.houseoffraser.co.uk/Criminal+Kale+garment+dyed+four+pocket+cargo+jacket/181032683,default,pd.html",
+            "price": "£149.00",
+            "shop": "House of Fraser",
+            "imageUrl": "/images/menDay2/item12.jpg",
+            "type": "Jacket",
+            "brand": "Criminal"
+        },
+        {
+            "url": "http://www.houseoffraser.co.uk/Hudson+Angus+washed+brogue+boot/188098101,default,pd.html",
+            "price": "£130.00",
+            "shop": "House of Fraser",
+            "imageUrl": "/images/menDay2/item13.jpg",
+            "brand": "Hudson",
+            "type": "Boots"
+        },
+        {
+            "url": "http://www.houseoffraser.co.uk/Linea+Leon+limited+edition+knit+with+hankerchief+pocket/180383730,default,pd.html",
+            "price": "£85.00",
+            "shop": "House of Fraser",
+            "imageUrl": "/images/menDay2/item14.jpg",
+            "type": "Jumper",
+            "brand": "Linea"
+        },
+        {
+            "url": "http://www.tedbaker.com/men%27s/shop_by/new_arrivals/list.aspx?int_cmpid=hp_mens_aw13newseason#-&styCode=105643&colRef=65-PURPLE&path=/men's/shop by/new arrivals/",
+            "price": "£95.00",
+            "shop": "Ted Baker",
+            "imageUrl": "/images/menDay2/item15.jpg",
             "type": "Trousers",
-            "brand": "Top Man"
+            "brand": "Ted Baker"
         },
         {
-            "url": "http://www.office.co.uk/view/product/office_catalog/1,70/1079250015",
-            "price": "£69.99",
-            "shop": "Office",
-            "imageUrl": "/images/josh/josh8.jpg",
-            "type": "Shoes",
-            "brand": "Ask the Missus"
+            "url": "http://www.gap.co.uk/browse/product.do?cid=57449&vid=1&pid=000603522000",
+            "price": "£34.95",
+            "shop": "Gap",
+            "imageUrl": "/images/menDay2/item16.jpg",
+            "type": "Shirt",
+            "brand": "Gap"
         },
         {
-            "url": "http://www.urbanoutfitters.co.uk/selected-homme-two-tone-hooded-jacket/invt/5232443330777/",
-            "price": "£140.00",
-            "shop": "Urband Outfitters",
-            "imageUrl": "/images/male_top/mt17.jpg",
-            "brand": "Selected Homme",
+            "url": "http://www.gap.co.uk/browse/product.do?cid=99237&vid=1&pid=000603311000",
+            "price": "£14.95",
+            "shop": "Gap",
+            "imageUrl": "/images/menDay2/item17.jpg",
+            "brand": "Gap",
             "type": "Top"
         },
         {
-            "url": "http://www.urbanoutfitters.co.uk/suit-sanders-teddy-lined-jacket-in-black/invt/5232436445700/",
-            "price": "£120.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt18.jpg",
-            "brand": "Suit Sanders",
-            "type": "Top"
+            "url": "http://www.gap.co.uk/browse/product.do?cid=99027&vid=1&pid=000630965001",
+            "price": "£29.95",
+            "shop": "Gap",
+            "imageUrl": "/images/menDay2/item18.jpg",
+            "brand": "Gap",
+            "type": "Cardigan"
         },
         {
-            "url": "http://www.urbanoutfitters.co.uk/suit-kalle-crew-neck-jumper-in-navy/invt/5231436446200/",
-            "price": "£50.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt19.jpg",
-            "brand": "Suit Kalle",
-            "type": "Jumper"
+            "url": "http://www.riverisland.com/men/shirts/denim-shirts/Pink-acid-wash-dip-dye-denim-shirt-273393",
+            "price": "£32.00",
+            "shop": "River Island",
+            "imageUrl": "/images/menDay2/item19.jpg",
+            "brand": "River Island",
+            "type": "Shirt"
         },
         {
-            "url": "http://www.howies.co.uk/mens/clothing/t-shirts/work-hard-ride-home-white.html",
-            "price": "£25.00",
-            "shop": "Howies",
-            "imageUrl": "/images/male_top/mt20.jpg",
-            "type": "Top",
-            "brand": "Howies"
+            "url": "http://www.riverisland.com/men/trousers/casual-trousers/Light-brown-chino-joggers-271872",
+            "price": "£30.00",
+            "shop": "River Island",
+            "imageUrl": "/images/menDay2/item20.jpg",
+            "type": "Chino Joggers",
+            "brand": "River Island"
         }
     ]
 };
