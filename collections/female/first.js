@@ -7,14 +7,16 @@ exports.data= {
             "brand": "ASOS",
             "imageUrl": "/images/dresses/dress7.jpg",
             "type": "Dress"
-        }{
+        },
+        {
             "url": "http://www.asos.com/ASOS/ASOS-Swing-Playsuit-in-Mono-Print/Prod/pgeproduct.aspx?iid=3156734&cid=2623&Rf900=4032&sh=0&pge=0&pgesize=9999&sort=-1&clr=Multi&utm_source=Affiliate&utm_medium=LinkShare&utm_content=UKNetwork.1&utm_campaign=gcdL/ATRVoE&cvosrc=Affiliate.LinkShare.gcdL/ATRVoE&link=10&promo=236989&source=linkshare&MID=35718&affid=2134&WT.tsrc=Affiliate&siteID=gcdL_ATRVoE-mxNu6dikOKFNaXx6RrvovA",
             "price": "Â£38.00",
             "shop": "ASOS",
             "brand": "ASOS",
             "imageUrl": "/images/dresses/dress10.jpg",
             "type": "Dress"
-        }{
+        },
+        {
             "url": "http://www.urbanoutfitters.co.uk/vintage-o+o-90s-button-dress/invt/5416465080131/",
             "price": "Â£45.00",
             "shop": "Urban Outfitters",
@@ -34,7 +36,8 @@ exports.data= {
             "url": "http://www.urbanoutfitters.co.uk/free-people-montana-india-crinkle-dress/invt/5139400024021/",
             "price": "Â£168.00",
             "shop": "Urban Outfitters",
-            "brand": "Free People""imageUrl": "/images/dresses/dress43.jpg",
+            "brand": "Free People",
+            "imageUrl": "/images/dresses/dress43.jpg",
             "type": "Dress"
         },
         {
@@ -57,7 +60,9 @@ exports.data= {
             "url": "http://www.asos.com/ASOS/ASOS-Ladybug-Stud-Earrings/Prod/pgeproduct.aspx?iid=3055882&cid=6992&sh=0&pge=0&pgesize=9999&sort=-1&clr=Multi",
             "price": "Â£6.00",
             "shop": "ASOS",
-            "brand": "ASOS""imageUrl": "/images/wildcard/wc3.jpg""type": "Earrings"
+            "brand": "ASOS",
+            "imageUrl": "/images/wildcard/wc3.jpg",
+            "type": "Earrings"
         },
         {
             "url": "http://www.asos.com/River-Island/River-Island-Iridescent-Diamond-Surround-Stud-Earrings/Prod/pgeproduct.aspx?iid=3400101&cid=6992&sh=0&pge=1&pgesize=36&sort=-1&clr=Blue",
