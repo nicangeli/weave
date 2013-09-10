@@ -1,76 +1,76 @@
 exports.data={
     "products": [
         {
-            "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-trousers-1906627/black-salt-and-pepper-varsity-look-joggers-2142960?bi=1&ps=20",
-            "price": "£30.00",
+            "url": "http://www.topman.com/en/tmuk/product/new-in-140500/black-and-white-pattern-beanie-2026455?bi=1&ps=20",
+            "price": "£12.00",
             "shop": "Top Man",
-            "imageUrl": "/images/male_trousers/item6.jpg",
+            "imageUrl": "/images/menDay2/item1.jpg",
             "brand": "Top Man",
-            "type": "Trousers"
+            "type": "Beanie"
         },
         {
-            "url": "http://www.office.co.uk/view/product/office_catalog/1,71/1131232578",
-            "price": "£69.99",
-            "shop": "Office",
-            "imageUrl": "/images/dan/item3.jpg",
-            "type": "Shoes",
-            "brand": "Ask the Missus"
+            "url": "http://www.topman.com/en/tmuk/product/new-in-140500/khaki-double-breasted-crop-mac-2052678?bi=21&ps=20",
+            "price": "£70.00",
+            "shop": "Topman",
+            "imageUrl": "/images/menDay2/item2.jpg",
+            "type": "Mac",
+            "brand": "Topman"
         },
         {
-            "url": "http://www.urbanoutfitters.co.uk/shore-leave-contrast-pocket-oxford-shirt-in-blue/invt/5212438041291/",
+            "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-hoodies-sweatshirts-2179526/black-houndstooth-baroque-printed-bomber-sweatshirt-2060571?bi=1&ps=20",
+            "price": "£35.00",
+            "shop": "Topman",
+            "imageUrl": "/images/menDay2/item3.jpg",
+            "brand": "Topman",
+            "type": "Sweatshirt"
+        },
+        {
+            "url": "http://www.asos.com/Jack-Jones/Jack-Jones-Hooded-Panel-Jacket/Prod/pgeproduct.aspx?iid=3147044&cid=3606&sh=0&pge=0&pgesize=36&sort=-1&clr=Spicy+orange",
             "price": "£50.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt11.jpg",
-            "brand": "Shore Leave",
-            "type": "Shirt"
-        },
-        {
-            "url": "http://www.urbanoutfitters.co.uk/shore-leave-half-stripe-tee-in-white/invt/5214433472019/",
-            "price": "£22.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt12.jpg",
-            "type": "Top",
-            "brand": "Shore Leave"
-        },
-        {
-            "url": "http://www.asos.com/ASOS/ASOS-Sweatpant-With-Ibiza-Print/Prod/pgeproduct.aspx?iid=3141813&cid=4910&sh=0&pge=0&pgesize=36&sort=-1&clr=Burgandy",
-            "price": "£25.00",
             "shop": "ASOS",
-            "imageUrl": "/images/male_trousers/item7.jpg",
+            "imageUrl": "/images/menDay2/item4.jpg",
+            "type": "Bomber Jacket",
+            "brand": "Jack & Jones"
+        },
+        {
+            "url": "http://www.asos.com/New-Balance/New-Balance-574-Trainers/Prod/pgeproduct.aspx?iid=3148756&abi=1&clr=grey",
+            "price": "£60.00",
+            "shop": "ASOS",
+            "imageUrl": "/images/menDay2/item5.jpg",
+            "brand": "New Balance",
+            "type": "Trainers"
+        },
+        {
+            "url": "http://www.asos.com/ASOS/ASOS-Leather-Bomber-Jacket/Prod/pgeproduct.aspx?iid=2942584&cid=11760&sh=0&pge=0&pgesize=36&sort=-1&clr=Tan",
+            "price": "£100.00",
+            "shop": "ASOS",
+            "imageUrl": "/images/menDay2/item6.jpg",
             "brand": "ASOS",
-            "type": "Trousers"
+            "type": "Leather Jacket"
         },
         {
-            "url": "http://www.mrporter.com/product/374210",
-            "price": "£290.00",
-            "shop": "Mr Porter",
-            "imageUrl": "/images/josh/josh15.jpg",
-            "brand": "Pierre Hardy",
-            "type": "Shoes"
+            "url": "http://www.asos.com/Minimum/Minimum-Jumper-with-Dash-Pattern/Prod/pgeproduct.aspx?iid=3228482&cid=7617&sh=0&pge=0&pgesize=36&sort=-1&clr=Green",
+            "price": "£75.00",
+            "shop": "ASOS",
+            "imageUrl": "/images/menDay2/item7.jpg",
+            "brand": "Minimum",
+            "type": "Jumper"
         },
         {
-            "url": "http://www.urbanoutfitters.co.uk/cuckoo-dawg-tee-in-white/invt/5213471140209/",
-            "price": "£30.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt13.jpg",
-            "brand": "Cuckoo",
-            "type": "Top"
+            "url": "http://www.next.co.uk/X522490s11#133153X52",
+            "price": "£55.00",
+            "shop": "Next",
+            "imageUrl": "/images/menDay2/item8.jpg",
+            "brand": "Next",
+            "type": "Blazer"
         },
         {
-            "url": "http://www.urbanoutfitters.co.uk/chunk-hi-tee-in-white/invt/5213421949192/",
-            "price": "£30.00",
-            "shop": "Urban Outfitters",
-            "imageUrl": "/images/male_top/mt14.jpg",
-            "brand": "Chunk",
-            "type": "Top"
-        },
-        {
-            "url": "http://www.topman.com/en/tmuk/product/clothing-140502/mens-trousers-1906627/deep-purple-skinny-trousers-2141854?bi=1&ps=20",
-            "price": "£34.00",
-            "shop": "Top Man",
-            "imageUrl": "/images/male_trousers/item8.jpg",
-            "brand": "Top Man",
-            "type": "Trousers"
+            "url": "http://www.next.co.uk/x522472s3#852281x52",
+            "price": "£35.00",
+            "shop": "Next",
+            "imageUrl": "/images/menDay2/item9.jpg",
+            "brand": "Next",
+            "type": "Jumper"
         },
         {
             "url": "http://www.office.co.uk/view/product/office_catalog/1,71/1131245036",
