@@ -59,9 +59,15 @@ $(document).ready(function() {
 
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
-		mixpanel.track("Play Again", {}, function() {
-			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
-		});
+		if(localStorage.getItem("email" != null)) { // we have already got their email
+			mixpanel.track("Play Again", {}, function() {
+				window.location = "/collection/" + localStorage.getItem("gender") + "/2";
+			});
+		} else {
+			localStorage.setItem("reason", "playAgain");
+			localStorage.setItem("collection", "/collection/" + localStorage.getItem("gender") + "/2")
+			window.location = "/email";
+		}
 	});
 
 	$("#feedback").click(function(e) {
@@ -91,7 +97,23 @@ $(document).ready(function() {
 			}
 		}
 		mixpanel.track("Delete Product");
-	})
+	});
+
+	$(".buy").click(function(e) {
+		e.preventDefault();
+		var href = $(this).attr('href');
+		if(localStorage.getItem("email") != null) {
+			mixpanel.people.increment("Buy Count");
+
+			mixpanel.track("Buy Item", {"url": href}, function() {
+				window.location = href;
+			})
+		} else {
+			localStorage.setItem("reason", "buy");
+			localStorage.setItem("buy", href);
+			window.location = "/email";
+		}
+	});
 
 
 });
