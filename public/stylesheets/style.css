@@ -106,6 +106,16 @@ button.like {
   background-color: white;
 }
 
+.shareLink {
+  text-align: center;
+  word-break: break-all;
+}
+
+.emailShare {
+  margin-bottom: 11px;
+  margin-right: 10px;
+}
+
 #feedback {
   width: 100%;
   margin-top: 10px;
