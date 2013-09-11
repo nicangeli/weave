@@ -46,8 +46,14 @@ $(document).ready(function() {
 					} else if(localStorage.getItem("reason") == "buy") {
 						// open in new tab
 						// redirect to their likes
-						open(localStorage.getItem("buy"), "_blank");
-						window.location = "/likes";
+
+						mixpanel.people.increment("Buy Count");
+
+						mixpanel.track("Buy Item", {"url": href}, function() {
+							open(localStorage.getItem("buy"), "_blank");
+							window.location = "/likes";
+						})
+
 					}
 				});
 
