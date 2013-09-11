@@ -72,6 +72,8 @@ $(document).ready(function() {
 	$("#nameCollection").click(function(e){
 		e.preventDefault();
 		if($("form")[0].checkValidity()) {
+			e.preventDefault();
+			console.log($("form")[0].checkValidity());
 			var collectionName = $("#collectionName").val();
 			var ownerName = $("#ownerName").val();
 
@@ -85,17 +87,17 @@ $(document).ready(function() {
 					"products": localStorage.getObj("likes")
 				}
 			};
-
-				$.post("/share", data)
-					.done(function(data) {
-		  				$(".modal-title").text("Share your first Collection");
-		  				$(".modal-body").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p>" + data + "</p> <p> Twitter & facebook buttons?</p>");
-					})
-					.fail(function(e) {
-						alert("Oops... Something went wrong")
-					});
-		} // close if
-	}); // close click handler
+	
+			$.post("/share", data)
+				.done(function(data) {
+	  				$(".modal-title").text("Share your first Collection");
+					$(".modal-body").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p>" + data + "</p> <p> Twitter & facebook buttons?</p>");
+				})
+				.fail(function() {
+					alert("Oops... Something went wrong")
+			});
+		}
+	});
 
 	$("#feedback").click(function(e) {
 		e.preventDefault();
