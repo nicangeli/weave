@@ -115,5 +115,46 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#shareCollection").click(function(e) {
+		console.log('heyllo')
+		e.preventDefault();
+		var data = {
+			"data": {
+				"ownerEmail": "nicangeli@gmail.com",
+				"ownerName": "Nicholas Angeli",
+				"ownerGender": "male",
+				"ownerAge": "16-20",
+				"collectionName": "My first collection",
+				"products": [
+					{
+						"url": "google.co.uk",
+						"imageUrl": "/images/1.jpg",
+						"shop": "ASOS",
+						"price": "£12.99",
+						"type": "Top",
+						"brand": "ASOS"
+					},
+					{
+						"url": "facebook.co.uk",
+						"imageUrl": "/images/2.jpg",
+						"shop": "FB",
+						"price": "£42.99",
+						"type": "Top",
+						"brand": "TES"
+					}
+				]
+			}
+		};
+
+		$.post("/share", data)
+		.done(function(data) {
+  			alert("URL: " + data);
+		})
+		.fail(function() {
+			alert("Oops... Something went wrong")
+		});
+
+	});
+
 
 });

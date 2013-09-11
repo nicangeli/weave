@@ -48,7 +48,7 @@ app.post('/email', routes.emailSend);
 app.get('/feedback', routes.feedback);
 app.post('/feedback', routes.feedbackSend);
 
-app.get('/share', routes.share);
+app.post('/share', routes.share);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

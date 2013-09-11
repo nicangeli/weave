@@ -7,10 +7,11 @@ var db = require('mongoskin').db('mongodb://nodescript:nodescript@ds043338.mongo
 
 module.exports = function() {
 
-	this.new = function(ownerEmail, ownerGender, ownerAge, collectionName, products, callback) {
+	this.new = function(ownerEmail, ownerName, ownerGender, ownerAge, collectionName, products, callback) {
 		db.collection('shares').insert(
 			{
 				"ownerEmail": ownerEmail,
+				"ownerName": ownerName,
 				"ownerGender": ownerGender,
 				"ownerAge": ownerAge,
 				"collectionName": collectionName,

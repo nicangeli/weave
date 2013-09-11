@@ -71,27 +71,10 @@ exports.feedbackSend = function(req, res) {
 };
 
 exports.share = function(req, res) {
+	var postData = req.body.data;
 	var s = new Share();
-	var products = [
-		{
-            "url": "http://www.topman.com/en/tmuk/product/new-in-140500/black-and-white-pattern-beanie-2026455?bi=1&ps=20",
-            "price": "£12.00",
-            "shop": "Top Man",
-            "imageUrl": "/images/menDay2/item1.jpg",
-            "brand": "Top Man",
-            "type": "Beanie"
-        },
-        {
-            "url": "http://www.topman.com/en/tmuk/product/new-in-140500/khaki-double-breasted-crop-mac-2052678?bi=21&ps=20",
-            "price": "£70.00",
-            "shop": "Topman",
-            "imageUrl": "/images/menDay2/item2.jpg",
-            "type": "Mac",
-            "brand": "Topman"
-        }
-	];
 	var base = "http://weaveuk.com/share/";
-	s.new("chloe@donegan.com", "female", "16-20", "My First Collection", products, function(_id) {
+	s.new(postData.ownerEmail, postData.ownerName, postData.ownerGender, postData.age, postData.collectionName, postData.products, function(_id) {
 		base += _id;
 		res.send(base);
 	});
