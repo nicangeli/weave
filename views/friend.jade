@@ -20,6 +20,13 @@ block content
         .col-xs-3
           img(src="#{results.products[i].imageUrl}")
         .col-xs-6.info
+        .row
+          .col-xs-1
+          .col-xs-5
+            button.dislike.btn.btn-danger.btn-lg(data-number="#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Not good
+          .col-xs-5
+            button.like.btn.btn-success.btn-lg(data-number="#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Suits them
+          .col-xs-1
       -}
 
   script(src="/javascripts/friend.js", type="text/javascript")
