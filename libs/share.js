@@ -32,7 +32,7 @@ module.exports = function() {
 	this.getShareDetails = function(id, callback) {
 		db.collection('shares').findOne({"_id": bson.ObjectID(id)}, function(err, result) {
 			if(err) {
-				res.status(404).send();
+				throw err;
 			}
 			callback(result);
 		});

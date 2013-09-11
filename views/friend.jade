@@ -6,13 +6,15 @@ block content
 
   .container
     h4#opinion Your friend #{results.ownerName} wants your opinion!
-    .row
-      p.explain Blah blah blah blah
-    .row
-      .col-xs-4
-      .col-xs-4
-        button.btn.btn-primary#understand Got it
-      .col-xs-4
+    #welcome
+      .row
+        p.explain Blah blah blah blah
+        input(type="text", value="Your name:", name="name", id="name")
+      .row
+        .col-xs-4
+        .col-xs-4
+          button.btn.btn-primary#understand Got it
+        .col-xs-4
     .collections
       -for(var i = 0; i < results.products.length; i++) {
       -var id = "product" + i;

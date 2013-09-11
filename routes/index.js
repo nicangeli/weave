@@ -91,7 +91,7 @@ exports.enterViaShare = function(req, res) {
 	s.getShareDetails(shareId, function(result) {
 		console.log(result);
 		if(result == null) {
-			res.status(404).send();
+			res.send("No such share");
 		}
 		res.render('friend', {"results": result});
 	});
