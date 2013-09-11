@@ -65,6 +65,7 @@ var changeProduct = function(currentProduct) {
 		var _id = $("[data-id]").attr('data-id');
 		var data = {
 			"data": {
+				"_id": _id, 
 				"friendName": localStorage.getItem("friendName"),
 				"products": localStorage.getObj(_id)
 			}

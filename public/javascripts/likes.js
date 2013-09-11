@@ -76,6 +76,7 @@ $(document).ready(function() {
 			console.log($("form")[0].checkValidity());
 			var collectionName = $("#collectionName").val();
 			var ownerName = $("#ownerName").val();
+			localStorage.setItem("email", $("#ownerEmail").val());
 
 			var data = {
 				"data": {
@@ -87,7 +88,9 @@ $(document).ready(function() {
 					"products": localStorage.getObj("likes")
 				}
 			};
-	
+
+			console.log(data);
+			
 			$.post("/share", data)
 				.done(function(data) {
 	  				$(".modal-title").text("Share your first Collection");

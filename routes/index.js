@@ -94,5 +94,14 @@ exports.enterViaShare = function(req, res) {
 }
 
 exports.feedbackReturned = function(req, res) {
-	
+	var data = req.body.data;
+	var s = new Share();
+	s.getShareDetails(data._id, function(result) {
+		console.log(data.products);
+		console.log(data.friendName);
+		console.log(result.ownerEmail);
+		console.log(result.ownerName);
+		//console.log(result);
+		res.status(200).send();
+	})
 }
