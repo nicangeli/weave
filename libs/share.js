@@ -4,6 +4,7 @@ file that accepts a collection and inserts them into a database, returning a uni
 */
 
 var db = require('mongoskin').db('mongodb://nodescript:nodescript@ds043338.mongolab.com:43338/heroku_app17946852');
+var bson = require('mongoskin').BSONPure;
 
 module.exports = function() {
 
@@ -22,11 +23,19 @@ module.exports = function() {
 				}
 				if(result) {
 					console.log('Inserted successfully')
-					//console.log(result[0]._id);
 					callback(result[0]._id);
 				}
 			}
 		)
+	};
+
+	this.getShareDetails = function(id, callback) {
+		db.collection('shares').findOne({"_id": bson.ObjectID(id)}, function(err, result) {
+			if(err) {
+				res.status(404).send();
+			}
+			callback(result);
+		});
 	};
 
 }

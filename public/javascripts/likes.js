@@ -73,8 +73,27 @@ $(document).ready(function() {
 		e.preventDefault();
 		var collectionName = $("#collectionName").val();
 		var ownerName = $("#ownerName").val();
-		$(".modal-title").text("Share your first Collection");
-		$(".modal-body").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p> Link GOES HERE</p> <p> Twitter & facebook buttons?</p>");
+
+		var data = {
+			"data": {
+				"ownerEmail": localStorage.getItem("email"),
+				"ownerName": ownerName,
+				"ownerGender": localStorage.getItem("gender"),
+				"ownerAge": localStorage.getItem("age"),
+				"collectionName": collectionName,
+				"products": localStorage.getObj("likes")
+			}
+		};
+
+		$.post("/share", data)
+		.done(function(data) {
+  			$(".modal-title").text("Share your first Collection");
+			$(".modal-body").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p>" + data + "</p> <p> Twitter & facebook buttons?</p>");
+		})
+		.fail(function() {
+			alert("Oops... Something went wrong")
+		});
+
 	})
 
 	$("#feedback").click(function(e) {
@@ -120,47 +139,6 @@ $(document).ready(function() {
 			localStorage.setItem("buy", href);
 			window.location = "/email";
 		}
-	});
-
-	$("#shareCollection").click(function(e) {
-		console.log('heyllo')
-		e.preventDefault();
-		var data = {
-			"data": {
-				"ownerEmail": "nicangeli@gmail.com",
-				"ownerName": "Nicholas Angeli",
-				"ownerGender": "male",
-				"ownerAge": "16-20",
-				"collectionName": "My first collection",
-				"products": [
-					{
-						"url": "google.co.uk",
-						"imageUrl": "/images/1.jpg",
-						"shop": "ASOS",
-						"price": "£12.99",
-						"type": "Top",
-						"brand": "ASOS"
-					},
-					{
-						"url": "facebook.co.uk",
-						"imageUrl": "/images/2.jpg",
-						"shop": "FB",
-						"price": "£42.99",
-						"type": "Top",
-						"brand": "TES"
-					}
-				]
-			}
-		};
-
-		$.post("/share", data)
-		.done(function(data) {
-  			alert("URL: " + data);
-		})
-		.fail(function() {
-			alert("Oops... Something went wrong")
-		});
-
 	});
 
 
