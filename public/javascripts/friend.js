@@ -7,12 +7,16 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 	
-	$("#products").hide();
+	$(".collections").hide();
+
 
 	$("#understand").click(function(e) {
 		e.preventDefault();
-		$("#products").show();
-		
+		$("#understand, #opinion, .explain").hide();
+		$(".collections").show();
+		for(var i = 1; i < $(".collections").children().length; i++) {
+			$('[data-number="product' + i + '"]').hide();
+		}
 	});
 
 });
