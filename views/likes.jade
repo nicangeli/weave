@@ -6,15 +6,13 @@ block content
 
 	.container
 		.row
-			.col-xs-1
-			.col-xs-4
-				a.btn.btn-primary#playAgain
+			.col-xs-5
+				button.btn.btn-primary#playAgain
 					span.buttonText Weave another Collection
 			.col-xs-2
-			.col-xs-4
+			.col-xs-5
 				button.btn.btn-primary#shareCollection(data-toggle="modal", href="#createCollection")
 					span.buttonText Share your Collection
-			.col-xs-1
 		#reveal
 		h3 Come back to Weave anytime to review your collection
 
@@ -29,9 +27,12 @@ block content
 						h3 Before we let other people Weave your collection, you need to give it a name...
 						form(role="form")
 							.form-group
-								input#collectionName(placeholder="Collection Name")
-								span.by by
-								input#ownerName(placeholder="Your name")
+								input.form-control#collectionName(placeholder="Collection Name" required)
+								label
+								input.form-control#ownerName(placeholder="Your name")
+								p.help-block To help your friends identify you
+								input.form-control#ownerEmail(type="email", placeholder="Your email" required)
+								p.help-block If you want us to send you what friends & followers like and dislike
 							.form-group
 								button.btn.btn-default#nameCollection(type="submit") OK
 
