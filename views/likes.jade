@@ -5,25 +5,35 @@ block content
 		//mixpanel.track_links(".buy", "Buy Item");
 
 	.container
-		h1#my
-		a(id="shareCollection", href="#") Share Collection
 		.row
-			.col-xs-3
-			.col-xs-6
-				h1#more Want to see more clothes? 
-				button.btn.btn-primary#playAgain(id="playAgain") Play Again!
-			.col-xs-3
-		.row
-
-			.col-xs-3
-			.col-xs-6
-				h3#or - OR - 
-				button.btn.btn-primary#feedback(id="feedback") Send Feedback
-			.col-xs-3
+			.col-xs-1
+			.col-xs-4
+				a.btn.btn-primary#playAgain
+					span.buttonText Weave another Collection
+			.col-xs-2
+			.col-xs-4
+				button.btn.btn-primary#shareCollection(data-toggle="modal", href="#createCollection")
+					span.buttonText Share your Collection
+			.col-xs-1
 		#reveal
 		h3 Come back to Weave anytime to review your collection
 
 
+		.modal.fade#createCollection
+			.modal-dialog.weave-modal
+				.modal-content.weave-modal-content
+					.modal-header
+						button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+						h4.modal-title Create your first Collection
+					.modal-body
+						h3 Before we let other people Weave your collection, you need to give it a name...
+						form(role="form")
+							.form-group
+								input#collectionName(placeholder="Collection Name")
+								span.by by
+								input#ownerName(placeholder="Your name")
+							.form-group
+								button.btn.btn-default#nameCollection(type="submit") OK
 
 
 

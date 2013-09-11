@@ -7,7 +7,6 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
-	$("#playAgain").hide();
 	$("#more").hide();
 	$("#or").hide();
 
@@ -69,6 +68,14 @@ $(document).ready(function() {
 			window.location = "/email";
 		}
 	});
+
+	$("#nameCollection").click(function(e){
+		e.preventDefault();
+		var collectionName = $("#collectionName").val();
+		var ownerName = $("#ownerName").val();
+		$(".modal-title").text("Share your first Collection");
+		$(".modal-body").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p> Link GOES HERE</p> <p> Twitter & facebook buttons?</p>");
+	})
 
 	$("#feedback").click(function(e) {
 		e.preventDefault();
