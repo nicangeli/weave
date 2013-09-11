@@ -66,7 +66,7 @@ var changeProduct = function(currentProduct) {
 		var data = {
 			"data": {
 				"friendName": localStorage.getItem("friendName"),
-				"products": localStorage.getObj(_id); 
+				"products": localStorage.getObj(_id)
 			}
 		};
 		$.post("/friend/feedback", data)
