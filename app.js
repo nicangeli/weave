@@ -49,6 +49,7 @@ app.get('/feedback', routes.feedback);
 app.post('/feedback', routes.feedbackSend);
 
 app.post('/share', routes.share);
+app.get('/share/:shareId', routes.enterViaShare);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
