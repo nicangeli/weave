@@ -13,7 +13,7 @@ module.exports = function() {
 			string += chars[Math.floor(Math.random() * chars.length)];
 		}
 
-		return generate;
+		return string;
 	}
 
 	this.isUnique = function(string) {
@@ -22,7 +22,11 @@ module.exports = function() {
 			if(err) {
 				throw err;
 			}
-			match != null ? return false; : return true;
+			if(match != null) {
+				return false;
+			} else {
+				return true;
+			}
 		});
 	}
 

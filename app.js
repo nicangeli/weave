@@ -11,6 +11,8 @@ var express = require('express'),
 
 var app = express();
 
+var StringTools = require('./libs/string-generator');
+
 // all environments
 
 // Stylus
@@ -45,6 +47,8 @@ app.get('/email', routes.email);
 app.post('/email', routes.emailSend);
 app.get('/feedback', routes.feedback);
 app.post('/feedback', routes.feedbackSend);
+
+app.get('/share', routes.share);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
