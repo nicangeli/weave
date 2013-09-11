@@ -24,17 +24,24 @@ block content
 						button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
 						h4.modal-title Create your first Collection
 					.modal-body
-						h3 Before we let other people Weave your collection, you need to give it a name...
-						form(role="form")
-							.form-group
-								input.form-control#collectionName(placeholder="Collection Name" required)
-								label
-								input.form-control#ownerName(placeholder="Your name")
-								p.help-block To help your friends identify you
-								input.form-control#ownerEmail(type="email", placeholder="Your email" required)
-								p.help-block If you want us to send you what friends & followers like and dislike
-							.form-group
-								button.btn.btn-default#nameCollection(type="submit") OK
+						.modal-body-content
+							h3 Before we let other people Weave your collection, you need to give it a name...
+							form(role="form")
+								.form-group
+									input.form-control#collectionName(placeholder="Collection Name" required)
+									label
+									input.form-control#ownerName(placeholder="Your name")
+									p.help-block To help your friends identify you
+									input.form-control#ownerEmail(type="email", placeholder="Your email" required)
+									p.help-block If you want us to send you what friends & followers like and dislike
+								.form-group
+									button.btn.btn-default#nameCollection(type="submit") OK
+						.shareButtons
+							span#emailShare
+							span#twitterShare
+								a(href="https://twitter.com/share", class="twitter-share-weave", style="display: none;" data-url="http://changethisshit.com", data-text="Review my Collection on Weave", data-via="weaveuk", data-count="none") Tweet
+								script
+									!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 
 
