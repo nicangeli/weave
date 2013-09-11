@@ -62,8 +62,22 @@ var changeProduct = function(currentProduct) {
 		//window.location = "/thanks";
 		// we have been through all of the products, show the thanks screens
 		//and email the originalOwner
-		$(".collections").hide();
-		$(".thanks").show();
+		var _id = $("[data-id]").attr('data-id');
+		var data = {
+			"data": {
+				"friendName": localStorage.getItem("friendName"),
+				"products": localStorage.getObj(_id); 
+			}
+		};
+		$.post("/friend/feedback", data)
+			.done(function(data) {
+				$(".collections").hide();
+				$(".thanks").show();
+			})
+			.fail(function() {
+				alert("Oops... Something went wrong")
+			});
+
 	} else {
 		$('[data-number=' + nextId + ']').each(function() {
 			$(this).show();

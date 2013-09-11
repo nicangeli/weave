@@ -92,3 +92,7 @@ exports.enterViaShare = function(req, res) {
 		res.render('friend', {"results": result});
 	});
 }
+
+exports.feedbackReturned = function(req, res) {
+	
+}
