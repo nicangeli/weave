@@ -85,5 +85,9 @@ exports.enterViaShare = function(req, res) {
 	var s = new Share();
 	s.getShareDetails(shareId, function(result) {
 		console.log(result);
+		if(result == null) {
+			res.status(404).send();
+		}
+		res.render('friend', {"results": result});
 	});
 }

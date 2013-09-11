@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  script(type='text/javascript')
+
+  .container
+    h4#before Your friend wants your opinion!
+    .row
+      p Blah blah blah blah
+    .row
+      .col-xs-4
+      .col-xs-4
+        button.btn.btn-primary#understand Got it
+      .col-xs-4
+    #products
+      -for(var i = 0; i < results.products.length; i++) {
+      .row
+        hr
+        .col-xs-3
+          img(src="#{results.products[i].imageUrl}")
+        .col-xs-6.info
+      -}
+
+  script(src="/javascripts/friend.js", type="text/javascript")
