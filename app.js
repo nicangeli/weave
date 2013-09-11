@@ -4,11 +4,11 @@
  */
 
 var express = require('express'),
-	stylus = require('stylus')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
-
+	stylus = require('stylus'),
+    routes = require('./routes'),
+    http = require('http'),
+    path = require('path');
+    
 var app = express();
 
 var StringTools = require('./libs/string-generator');
