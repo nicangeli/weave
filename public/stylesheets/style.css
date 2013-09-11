@@ -96,7 +96,6 @@ button.like {
 
 .buttonText {
   white-space: normal;
-  font-size: 12px;
 }
 
 .weave-modal {
@@ -105,12 +104,6 @@ button.like {
 
 .weave-modal-content {
   background-color: white;
-}
-
-span.by {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-style: italic;
 }
 
 #feedback {
@@ -168,6 +161,10 @@ span.by {
   margin-top: 31px;
   margin-right: 5px;
   }
+
+  .buttonText {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 481px) {
   .image {
@@ -189,6 +186,9 @@ span.by {
   }
   .delete {
     margin-left: 4px;
+  }
+  .buttonText {
+    font-size: 20px;
   }
 
 }
