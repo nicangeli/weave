@@ -76,6 +76,7 @@ exports.share = function(req, res) {
 	var base = "http://weaveuk.com/share/";
 	s.new(postData.ownerEmail, postData.ownerName, postData.ownerGender, postData.ownerAge, postData.collectionName, postData.products, function(_id) {
 		base += _id;
+		console.log(base);
 		res.send(base);
 	});
 }
@@ -85,5 +86,9 @@ exports.enterViaShare = function(req, res) {
 	var s = new Share();
 	s.getShareDetails(shareId, function(result) {
 		console.log(result);
+		if(result == null) {
+			res.status(404).send();
+		}
+		res.render('friend', {"results": result});
 	});
 }

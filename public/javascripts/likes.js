@@ -70,6 +70,7 @@ $(document).ready(function() {
 	});
 
 	$("#nameCollection").click(function(e){
+		e.preventDefault();
 		if($("form")[0].checkValidity()) {
 			e.preventDefault();
 			console.log($("form")[0].checkValidity());
