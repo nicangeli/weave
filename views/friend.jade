@@ -17,16 +17,19 @@ block content
       -for(var i = 0; i < results.products.length; i++) {
       .row
         .col-xs-3
-          img(src="#{results.products[i].imageUrl}", data-number="product#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}")
+          img(src="#{results.products[i].imageUrl}", data-id="#{results._id}", data-number="product#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}")
         .col-xs-6.info
         .row
           .col-xs-1
           .col-xs-5
-            button.dislike.btn.btn-danger.btn-lg(data-number="product#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Not good
+            button.dislike.btn.btn-danger.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Not good
           .col-xs-5
-            button.like.btn.btn-success.btn-lg(data-number="product#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Suits them
+            button.like.btn.btn-success.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Suits them
           .col-xs-1
         hr(data-number="product#{i}")
       -}
+    .thanks
+      h1 Thanks. We'll let #{results.ownerName} know
+      a(class="btn btn-primary", href="/") Play for yourself
 
   script(src="/javascripts/friend.js", type="text/javascript")
