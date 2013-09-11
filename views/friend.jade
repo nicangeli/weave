@@ -15,18 +15,27 @@ block content
       .col-xs-4
     .collections
       -for(var i = 0; i < results.products.length; i++) {
-      .row
-        .col-xs-3
-          img(src="#{results.products[i].imageUrl}", data-id="#{results._id}", data-number="product#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}")
-        .col-xs-6.info
+      -var id = "product" + i;
+      -var itemDisplayNumber = i+1;
+      -var progressint = ((itemDisplayNumber - 1)/results.products.length) * 100;
+      -var progress = "width: " + progressint.toString() + "%;";
+      div(data-number="#{id}")
         .row
-          .col-xs-1
-          .col-xs-5
-            button.dislike.btn.btn-danger.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Not good
-          .col-xs-5
-            button.like.btn.btn-success.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Suits them
-          .col-xs-1
-        hr(data-number="product#{i}")
+          .col-md-3.col-xs-2
+          .col-md-6.col-xs-8
+            .progress
+              .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="#{itemDisplayNumber}", aria-valuemin="0", aria-valuemax="20", style="#{progress}")   
+          .col-md-3.col-xs-2
+        .image
+          img.product(src="#{results.products[i].imageUrl}", data-id="#{results._id}", data-number="product#{i}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}")
+        p #{results.products[i].type}
+          .row
+            .col-xs-1
+            .col-xs-5
+              button.dislike.btn.btn-danger.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") Not for me
+            .col-xs-5
+              button.like.btn.btn-success.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") I'd wear this
+            .col-xs-1
       -}
     .thanks
       h1 Thanks. We'll let #{results.ownerName} know
