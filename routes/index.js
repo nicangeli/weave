@@ -9,7 +9,11 @@ var femaleCollection1 = require('../collections/female/first.js').data,
 	maleCollection2 = require('../collections/male/second.js').data,
 	winterCollection1 = require('../collections/female/winter.js').data,
 	mailer = require('../libs/mailer.js'),
-	Share = require('../libs/share.js');
+	Share = require('../libs/share.js'),
+	nodemailer = require('nodemailer'),
+	path = require('path'),
+	templatesDir = path.resolve(__dirname, '..', 'views/mailer/templates'),
+	emailTemplates = require('email-templates');
 
 
 exports.index = function(req, res){
@@ -87,12 +91,59 @@ exports.enterViaShare = function(req, res) {
 	s.getShareDetails(shareId, function(result) {
 		console.log(result);
 		if(result == null) {
-			res.status(404).send();
+			res.send("No such share");
 		}
 		res.render('friend', {"results": result});
 	});
 }
 
 exports.feedbackReturned = function(req, res) {
-	
+	var data = req.body.data;
+	var s = new Share();
+	s.getShareDetails(data._id, function(result) {
+		console.log(data.products);
+		console.log(data.friendName);
+		console.log(result.ownerEmail);
+		console.log(result.ownerName);
+		//console.log(result);
+		emailTemplates(templatesDir, function(err, template) {
+			if(err) {
+				throw err;
+			}
+			var smtpTransport = nodemailer.createTransport("SMTP", {
+				service: "Zoho", 
+				auth: {
+					user: "andy@weaveuk.com",
+					pass: "weave2013"
+				}
+			});
+
+			var locals = {
+				email: result.ownerEmail,
+				friend: data.friendName,
+				name: result.ownerName,
+				products: data.products
+			};
+
+			template('friend', locals, function(err, html) {
+				if(err) {
+					throw err;
+				}
+				smtpTransport.sendMail({
+					from: "Weave Team <andy@weaveuk.com>",
+					to: locals.email,
+					subject: locals.friend + " has completed your Collection",
+					html: html,
+					generateTextFromHTML: true
+				}, function(err, responseStatus) {
+					if(err) {
+						throw err;
+					}
+					console.log('SUCCESS');
+					console.log(responseStatus.message);
+				})
+			})
+		})
+		res.status(200).send();
+	})
 }
