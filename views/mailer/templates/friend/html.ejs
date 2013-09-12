@@ -11,5 +11,10 @@
 			<img class="product-image" src="www.weaveuk.com/images/menDay2/item1.jpg">
 			<span class="product-name">Test name</span>
 		</div>
+		<% for(var i=0; i<locals.product; i++) {%>
+			<div class="product-row">
+  				<img src="#{locals.product[i].imageUrl}">
+  			</div>
+		<% } %>
 	</div>
 </body>
