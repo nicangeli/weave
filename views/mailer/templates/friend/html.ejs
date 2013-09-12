@@ -7,13 +7,10 @@
 	</p>
 
 	<div class="products">
-		<div class="product-row">
-			<img class="product-image" src="www.weaveuk.com/images/menDay2/item1.jpg">
-			<span class="product-name">Test name</span>
-		</div>
-		<% for(var i=0; i<locals.product; i++) {%>
+		<h1><%= locals.email %></h1>
+		<% for(var i=0; i< locals.products.length; i++) { %>
 			<div class="product-row">
-  				<img src="#{locals.product[i].imageUrl}">
+  				<img src="http://weaveuk.com<%=locals.products[i].imageUrl%>">
   			</div>
 		<% } %>
 	</div>
