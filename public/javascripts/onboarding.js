@@ -76,28 +76,29 @@ $(document).ready(function() {
 	//mouse click on Play
 	$("#Play").click(function(e) {
 		e.preventDefault();
-		age = $("select option:selected").val();
-		mixpanel.track("Age", {
-			"Age": age
-		}); 
-		
-		localStorage.setItem("age", age);
+		if(localStorage.getItem("gender") == "male" || localStorage.getItem("gender") == "female") {
+			age = $("select option:selected").val();
+			mixpanel.track("Age", {
+				"Age": age
+			}); 
+			
+			localStorage.setItem("age", age);
 
-		mixpanel.track("Play", {}, function() {
-			var d = new Date(),
-				dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+			mixpanel.track("Play", {}, function() {
+				var d = new Date(),
+					dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
-			var today = localStorage.getObj(dateString);
+				var today = localStorage.getObj(dateString);
 
-			if(today == null) { // we have not been through one
-				window.location = "/collection/" + gender + "/1"
-				//localStorage.setObj(dateString, [true]);
-			} else {
-				window.location = "/collection/" + gender + "/2";
-				//localStorage.setObj(dateString, [true, true]);
-			}
-		});
-
+				if(today == null) { // we have not been through one
+					window.location = "/collection/" + gender + "/1"
+					//localStorage.setObj(dateString, [true]);
+				} else {
+					window.location = "/collection/" + gender + "/2";
+					//localStorage.setObj(dateString, [true, true]);
+				}
+			});
+		}
 	});
 
 });
