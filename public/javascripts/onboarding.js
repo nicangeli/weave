@@ -52,11 +52,17 @@ $(document).ready(function() {
 	// mouse click on male or female button
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
+		localStorage.setItem("gender", gender);
 		mixpanel.track("Gender", {
 			"Sex": gender
-		}, function() {
-			localStorage.setItem("gender", gender);
 		});
+		if(gender == "male") {
+			$("#male").attr("src", "/images/m-select.png")
+			$("#female").attr("src", "/images/f.png")
+		} else if(gender == "female") {
+			$("#female").attr("src", "/images/f-select.png")
+			$("#male").attr("src", "/images/m.png")
+		}
 	});
 
 	$("#maleButton").click(function() {
@@ -74,9 +80,10 @@ $(document).ready(function() {
 		age = $("select option:selected").val();
 		mixpanel.track("Age", {
 			"Age": age
-		}, function() {
-			localStorage.setItem("age", age);
-		});
+		}); 
+		
+		localStorage.setItem("age", age);
+
 		mixpanel.track("Play", {}, function() {
 			var d = new Date(),
 				dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
