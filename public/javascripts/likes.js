@@ -7,7 +7,6 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
-	$("#playAgain").hide();
 	$("#more").hide();
 	$("#or").hide();
 
@@ -64,6 +63,56 @@ $(document).ready(function() {
 		});
 	});
 
+	$("#nameCollection").click(function(e){
+		e.preventDefault();
+		if($("form")[0].checkValidity()) {
+			e.preventDefault();
+			console.log($("form")[0].checkValidity());
+			var collectionName = $("#collectionName").val();
+			var ownerName = $("#ownerName").val();
+			localStorage.setItem("email", $("#ownerEmail").val());
+
+			var data = {
+				"data": {
+					"ownerEmail": localStorage.getItem("email"),
+					"ownerName": ownerName,
+					"ownerGender": localStorage.getItem("gender"),
+					"ownerAge": localStorage.getItem("age"),
+					"collectionName": collectionName,
+					"products": localStorage.getObj("likes")
+				}
+			};
+
+			console.log(data);
+			
+			$.post("/share", data)
+				.done(function(data) {
+	  				$(".modal-title").text("Share your first Collection");
+					$(".modal-body-content").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p class='shareLink'>" + data + "</p>");
+					$(".shareButtons").show();
+					$("#emailShare").html("<a class='btn btn-primary btn-xs emailShare' href='mailto:?Subject=I%20want%20your%20opinion%20&body=Hey%20I%20created%20a%20collection%20on%20Weave%2C%20take%20a%20look%20and%20tell%20me%20what%20you%20think%20-%20" + data + "' target='_top'> Email the link</a>");
+
+					//clone twitter button
+					var clone = $('.twitter-share-weave').clone()
+
+					//fix up clone
+					clone.removeAttr("style"); // unhide the clone
+					clone.attr("data-url", data); 
+					clone.attr("class", "twitter-share-button"); 
+
+					// copy cloned button into span that we can clear later
+					$('#twitterShare').append(clone);
+
+					// reload twitter scripts to force them to run, converting a to iframe
+					$.getScript("http://platform.twitter.com/widgets.js");
+				})
+				.fail(function() {
+					alert("Oops... Something went wrong")
+			});
+		}
+	});
+
+
 	$("#feedback").click(function(e) {
 		e.preventDefault();
 
@@ -91,7 +140,17 @@ $(document).ready(function() {
 			}
 		}
 		mixpanel.track("Delete Product");
-	})
+	});
+
+	$(".buy").click(function(e) {
+		e.preventDefault();
+		var href = $(this).attr('href');
+		mixpanel.people.increment("Buy Count");
+
+		mixpanel.track("Buy Item", {"url": href}, function() {
+			window.location = href;
+		})
+	});
 
 
 });

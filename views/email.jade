@@ -6,9 +6,7 @@ block content
     mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
 
   .container
-    h4#before Before Weave reveals the price & brand of the 
-      span(class="itemsNumber") X 
-      |  items you've liked , tell us who you are!
+    h4#before Before you leave weave, tell us who you are!
     .row
       .col-xs-3
       .col-xs-6
@@ -21,19 +19,5 @@ block content
       .col-xs-4
         button.btn.btn-primary#giveEmail Go
       .col-xs-4
-
-
-    h4#multi If you like Weave maybe your friends will too. Spread the word!
-    .row
-      .col-xs-1.col-md-4
-      .col-xs-10.col-md-4
-        button#tweet.btn.btn-primary(href="http://clicktotweet.com/_bbna") Share on Twitter
-      .col-xs-1.col.md-4
-    .row
-      .col-xs-4
-      .col-xs-4
-        button#skip.btn Skip
-      .col-xs-4
-
 
   script(src="/javascripts/email.js", type="text/javascript")

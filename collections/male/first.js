@@ -76,7 +76,7 @@ exports.data = {
             "url" : "http://www.asos.com/Ben-Sherman/Ben-Sherman-Union-Messenger-Bag/Prod/pgeproduct.aspx?iid=3003040&cid=17185&sh=0&pge=0&pgesize=36&sort=-1&clr=Navy", 
             "price" : "£50.00", 
             "shop" : "ASOS", 
-            "imageUrl" : "/images/dan/item30.jpg",
+            "imageUrl" : "/images/menDay2/item30.jpg",
             "brand": "Ben Sherman",
             "type": "Bags"
         },
@@ -147,7 +147,7 @@ exports.data = {
             "url" : "http://www.asos.com/Cheap-Monday/Cheap-Monday-Jeans-Tight-Skinny-Fit-in-Brown-Acid-Wash/Prod/pgeproduct.aspx?iid=3347820&cid=6993&Rf900=1497&sh=0&pge=0&pgesize=36&sort=-1&clr=Brown", 
             "price" : "£49.00", 
             "shop" : "ASOS", 
-            "imageUrl" : "/images/menDay2/mt9.jpg",
+            "imageUrl" : "/images/menDay2/item39.jpg",
             "brand": "Cheap Monday",
             "type": "Trousers"
         },

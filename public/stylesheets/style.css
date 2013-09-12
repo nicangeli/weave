@@ -21,10 +21,20 @@ h2 {
   margin-top: 10px;
 }
 
+.collectionTitle {
+  display: block;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-top: -8px;
+}
+
 .tagline {
-  font-size: 20px;
+  font-size: 15px;
   font-style: italic;
-  margin-top: 10px;
+  margin-top: -10px;
+  color: grey;
 }
 
 .onboarding {
@@ -86,6 +96,34 @@ button.like {
 
 #playAgain{
   width: 100%;
+  height: 90px;
+}
+
+#shareCollection {
+  width: 100%;
+  height: 90px;
+}
+
+.buttonText {
+  white-space: normal;
+}
+
+.weave-modal {
+  padding-top: 60px;
+}
+
+.weave-modal-content {
+  background-color: white;
+}
+
+.shareLink {
+  text-align: center;
+  word-break: break-all;
+}
+
+.emailShare {
+  margin-bottom: 11px;
+  margin-right: 10px;
 }
 
 #feedback {
@@ -95,6 +133,10 @@ button.like {
 
 .shop {
   margin: 0;
+}
+
+.explain {
+  text-align: center
 }
 
 @media screen and (max-width: 480px) {
@@ -143,6 +185,10 @@ button.like {
   margin-top: 31px;
   margin-right: 5px;
   }
+
+  .buttonText {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 481px) {
   .image {
@@ -164,6 +210,9 @@ button.like {
   }
   .delete {
     margin-left: 4px;
+  }
+  .buttonText {
+    font-size: 20px;
   }
 
 }

@@ -7,10 +7,13 @@ block content
   .container
     .onboarding
       h1.Landing Weave
-      span.tagline.Landing - Discover clothes you love -
-      h4.Landing We bring you new threads. You pick the things you like
+      h4.tagline.Landing - Discover clothes you love -
+      h4.Landing Weave is Collections of clothes. 
+      h4.Landing.intro Weave is fashion discovery. 
+      h4.Landing.intro Weave is fun.
+      p.Landing We're going to take you through one of Weave's collections so you get the hang of it.
       button.btn.btn-primary.Landing#LetsGo Let's Go
-      h3#Gender Before we play, are you a girl or a boy?
+      h3#Questions Before we play, we need to know two things about you...
       .row
         .col-md-4
         .col-xs-6.col-md-2
@@ -29,16 +32,20 @@ block content
           a()
             a.btn.btn-primary#maleButton Boy
         .col-md-4
-
-      h3#age and how old are you?
-      .btn-group.btn-group-vertical(id="age-group")
-        button.btn.btn-primary.age under 18
-        button.btn.btn-primary.age 18-21
-        button.btn.btn-primary.age 22-25
-        button.btn.btn-primary.age 26-30
-        button.btn.btn-primary.age 30-40
-        button.btn.btn-primary.age 40+
-      h4#explanation Weave shows you a collection of 20 pieces. Tell us if you'd wear them or not. 
+      .row
+        .col-xs-2
+        .col-xs-8
+          form.age(role="form")
+            .form-group
+              label Age
+              select.form-control
+                option under 18
+                option 18-21
+                option 22-25
+                option 26-30
+                option 31-40
+                option 40+
+        .col-xs.2
       .row
         .col-xs-3
         .col-xs-6

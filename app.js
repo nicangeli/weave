@@ -4,12 +4,14 @@
  */
 
 var express = require('express'),
-	stylus = require('stylus')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
-
+	stylus = require('stylus'),
+    routes = require('./routes'),
+    http = require('http'),
+    path = require('path');
+    
 var app = express();
+
+var StringTools = require('./libs/string-generator');
 
 // all environments
 
@@ -45,6 +47,11 @@ app.get('/email', routes.email);
 app.post('/email', routes.emailSend);
 app.get('/feedback', routes.feedback);
 app.post('/feedback', routes.feedbackSend);
+
+app.post('/share', routes.share);
+app.get('/share/:shareId', routes.enterViaShare);
+app.post('/friend/feedback', routes.feedbackReturned);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

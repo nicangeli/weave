@@ -12,12 +12,6 @@ $(document).ready(function() {
 		alert("NO LOCAL STORAGE");
 	}
 
-
-	//if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) {
-		// we have been through onboarding before, send to collection
-	//	window.location = "/likes"
-	//}
-
 	var d = new Date(),
 		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
@@ -38,36 +32,37 @@ $(document).ready(function() {
 		age = "";
 	
 	// hide onboarding elements
-	$("#Gender").hide();
+	$("#Questions").hide();
 	$(".male").hide();
 	$(".female").hide();
-	$("#age-group").hide();
-	$("#almost").hide();
 	$("#Play").hide();
-	$("#explanation").hide();
-	$("#age").hide();
+	$(".age").hide();
 	$("#maleButton").hide();
 	$("#femaleButton").hide();
 
 	// mouse click on Let's Go
 	$("#LetsGo").click(function(){
 		$(".Landing").hide();
-		$("#Gender").show();
+		$("#Questions").show();
 		$("#male, #female, #maleButton, #femaleButton").show();
+		$(".age").show();
+		$("#Play").show();
 	});
 
 	// mouse click on male or female button
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
+		localStorage.setItem("gender", gender);
 		mixpanel.track("Gender", {
 			"Sex": gender
-		}, function() {
-			localStorage.setItem("gender", gender);
-			$("#male, #female, #femaleButton, #maleButton").hide();
-			$("#Gender").hide();
-			$("#age").show();
-			$("#age-group").show();
 		});
+		if(gender == "male") {
+			$("#male").attr("src", "/images/m-select.png")
+			$("#female").attr("src", "/images/f.png")
+		} else if(gender == "female") {
+			$("#female").attr("src", "/images/f-select.png")
+			$("#male").attr("src", "/images/m.png")
+		}
 	});
 
 	$("#maleButton").click(function() {
@@ -78,72 +73,32 @@ $(document).ready(function() {
 		$("#female").trigger("click");
 	});
 
-	//mouse click on age
-	$(".age").click(function() {
-		age = $(this).text();
-		mixpanel.track("Age", {
-			"Age": age
-		}, function() {
-			localStorage.setItem("age", age);
-			$("#age").hide();
-			$("#age-group").hide();
-			$("#Play").show();
-			$("#explanation").show();
-		});
-	});
-
 	//mouse click on Play
 	$("#Play").click(function(e) {
-		console.log(e)
 		e.preventDefault();
-		mixpanel.track("Play", {}, function() {
-			var d = new Date(),
-				dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+		if(localStorage.getItem("gender") == "male" || localStorage.getItem("gender") == "female") {
+			age = $("select option:selected").val();
+			mixpanel.track("Age", {
+				"Age": age
+			}); 
+			
+			localStorage.setItem("age", age);
 
-			var today = localStorage.getObj(dateString);
+			mixpanel.track("Play", {}, function() {
+				var d = new Date(),
+					dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
-			if(today == null) { // we have not been through one
-				window.location = "/collection/" + gender + "/1"
-				//localStorage.setObj(dateString, [true]);
-			} else {
-				window.location = "/collection/" + gender + "/2";
-				//localStorage.setObj(dateString, [true, true]);
-			}
-		});
+				var today = localStorage.getObj(dateString);
 
-	});
-
-	/*//mouse click on email address go button
-	$("#emailButton").click(function(e) {
-		e.preventDefault();
-		email = $("#InputEmail").val();
-		localStorage.setItem("email", email);
-		var d = new Date(),
-			dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
-
-		var today = localStorage.getObj(dateString),
-			location = "";
-
-		if(today == null) { // we have not been through one
-			location = "/collection/" + gender + "/1"
-			localStorage.setObj(dateString, [true]);
-		} else {
-			location = "/collection/" + gender + "/2";
-			localStorage.setObj(dateString, [true, true]);
+				if(today == null) { // we have not been through one
+					window.location = "/collection/" + gender + "/1"
+					//localStorage.setObj(dateString, [true]);
+				} else {
+					window.location = "/collection/" + gender + "/2";
+					//localStorage.setObj(dateString, [true, true]);
+				}
+			});
 		}
-		$.ajax({
-		  type: "POST",
-		  url: "/onboarding",
-		  data: {
-		  	"gender": gender,
-		  	"age": age,
-		  	"email": email
-		  },
-		  success: function() {
-		  	window.location = location;
-		  }
-		});
-
-	});*/
+	});
 
 });

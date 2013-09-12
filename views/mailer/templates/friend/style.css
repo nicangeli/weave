@@ -1,0 +1,62 @@
+.logo {
+	display: block;
+	margin: auto;
+	width: 70%;
+}
+
+.logo img {
+	width: 100%;
+	height: auto;
+}
+
+.product-row {
+	max-height: 100px;
+}
+
+.product-table {
+	width: 100%;
+}
+
+.image-cell {
+	width: 30%;
+}
+
+.info-cell {
+	width: 50%;
+	vertical-align: middle;
+	text-align: center
+}
+
+.shop-cell {
+	width: 20%;
+	vertical-align: middle;
+	text-align: center
+}
+
+.product-image {
+	max-height: 100px;
+	width: auto;
+	display: inline-block;
+}
+
+.product-name {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 45px;
+}
+
+.tagline {
+  font-size: 15px;
+  font-style: italic;
+  margin-top: -10px;
+  color: grey;
+}
+
+.signature {
+	font-style: italic;
+	color: grey;
+}
+
+.ps {
+	font-size: 12px;
+}
