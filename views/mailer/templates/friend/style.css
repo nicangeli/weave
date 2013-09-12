@@ -6,6 +6,19 @@ h1 {
 	max-height: 100px;
 }
 
+.product-table {
+	width: 100%;
+}
+
+.image-cell {
+	width: 30%;
+}
+
+.info-cell {
+	width: 70%;
+	vertical-align: middle;
+}
+
 .product-image {
 	max-height: 100px;
 	width: auto;
