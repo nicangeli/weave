@@ -122,7 +122,8 @@ exports.feedbackReturned = function(req, res) {
 				email: result.ownerEmail,
 				friend: data.friendName,
 				name: result.ownerName,
-				products: data.products
+				products: data.products,
+				collection: result.collectionName
 			};
 
 			template('friend', locals, function(err, html) {

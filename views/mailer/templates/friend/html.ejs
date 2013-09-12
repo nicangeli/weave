@@ -1,17 +1,45 @@
 <body>
+	<div class="logo">
+		<img src="http://weaveuk.com/weave.png">
+	</div>
 	<h1>
 		Hello <%= locals.name %>
 	</h1>
 	<p>
-		Intro text
+		Here are the items that <%= locals.friend %> liked from your Collection: <%= locals.collectionName %>...
 	</p>
 
 	<div class="products">
-		<h1><%= locals.email %></h1>
-		<% for(var i=0; i< locals.products.length; i++) { %>
-			<div class="product-row">
-  				<img src="http://weaveuk.com<%=locals.products[i].imageUrl%>">
-  			</div>
-		<% } %>
+		<table class="product-table">
+			<% for(var i=0; i< locals.products.length; i++) { %>
+				<tr class="product-row">
+  					<td class="image-cell">
+  						<img src="http://weaveuk.com<%=locals.products[i].imageUrl%>" class="product-image">
+  					</td>
+  					<td class="info-cell">
+  						<h2> 
+  							<%= locals.products[i].shop %> 
+  						</h2>
+  						<% if(locals.products[i].brand != locals.products[i].shop) { %>
+  							<h4 class="tagline">
+  								- <%= locals.products[i].brand %> -
+  							</h4>
+  						<% }; %>
+  						<h4>
+  							<%= locals.products[i].price %>
+  						</h4>
+  					</td>
+  					<td class="shop-cell">
+  						<a href="<%= locals.products[i].url %>">See in Store</a>
+  					</td>
+  				</tr>
+			<% } %>
+		</table>
 	</div>
+
+	<p>Team Weave,</p>
+
+	<p class="signature"> Chloe, Andy &amp; Nick </p>
+	<p class="ps">P.S. We're real people, we'd love to hear from you</p>
+	<a href="http://www.weaveuk.com">www.weaveuk.com</a>
 </body>
