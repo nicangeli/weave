@@ -7,7 +7,6 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
-	var firstLike = true;
 	var d = new Date(),
 		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
@@ -28,10 +27,10 @@ $(document).ready(function() {
 	}
 
 	$(".like").click(function(e) {
-		if(firstLike) {
+		if(localStorage.getItem("firstLike") != null && localStorage.getItem("firstLike") != "false") {
 			alertify.alert("You've liked something! We've added this to your collection (top right corner)");
+			localStorage.setItem("firstLike", "false");
 		}
-		firstLike = false;
 		e.preventDefault();
 		var element = $(this).attr('data-number');
 

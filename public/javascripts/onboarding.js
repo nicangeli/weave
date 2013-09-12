@@ -75,7 +75,6 @@ $(document).ready(function() {
 
 	//mouse click on Play
 	$("#Play").click(function(e) {
-		console.log(e)
 		e.preventDefault();
 		age = $("select option:selected").val();
 		mixpanel.track("Age", {
