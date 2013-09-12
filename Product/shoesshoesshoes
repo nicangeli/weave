@@ -1,0 +1,137 @@
+[
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-1",
+        "price": "£754",
+        "shop": "Stylists Pick",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item1.jpg",
+        "brand": "Valentino",
+        "type": "Hey Stud",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-2",
+        "price": "£513",
+        "shop": "mytheresa",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item2.jpg",
+        "brand": "Aquazzura",
+        "type": "Super Straps",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-3",
+        "price": "£815",
+        "shop": "Browns Fashion",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item3.jpg",
+        "brand": "Tabitha Simmons",
+        "type": "On Safari",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-4",
+        "price": "£795",
+        "shop": "Rupert Sanderson",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item4.jpg",
+        "brand": "Rupert Sanderson",
+        "type": "Neon Love",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-5",
+        "price": "£500",
+        "shop": "Net a Porter",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item5.jpg",
+        "brand": "McQueen",
+        "type": "Into the Blue",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-6",
+        "price": "£485.00",
+        "shop": "Selfridges",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item6.jpg",
+        "brand": "Sophia Webster",
+        "type": "IT Buy",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-7",
+        "price": "£575.00",
+        "shop": "Jimmy Choo",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item7.jpg",
+        "brand": "Jimmy Choo",
+        "type": "How Arresting",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-8",
+        "price": "£645.00",
+        "shop": "Charlotte Olympia",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item8.jpg",
+        "brand": "Charlotte Olympia",
+        "type": "Story Time",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-9",
+        "price": "£520",
+        "shop": "Harvey Nichols",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item9.jpg",
+        "brand": "Chloé",
+        "type": "Wedge of Glory",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-10",
+        "price": "£825.00",
+        "shop": "Gucci",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item10.jpg",
+        "brand": "Gucci",
+        "type": "Gold Crush",
+        ""collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-11",
+        "price": "£208.00",
+        "shop": "DKNY",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item11.jpg",
+        "brand": "DKNY",
+        "type": "Reboot",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-12",
+        "price": "£550.00",
+        "shop": "Prada",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item12.jpg",
+        "brand": "Prada",
+        "type": "Hot Foot",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-13",
+        "price": "£795.00",
+        "shop": "Louis Vuitton",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item13.jpg",
+        "brand": "Louis Vuitton",
+        "type": "Boy Meets Girl",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-14",
+        "price": "£505.00",
+        "shop": "Fendi",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item14.jpg",
+        "brand": "Fendi",
+        "type": "Flat Pack",
+        "collection": "Shoes,Shoes,Shoes"
+    },
+    {
+        "url": "http://stylist.co.uk/fashion/style-list/this-weeks-style-list-stylist-issue-189#item-15",
+        "price": "£185",
+        "shop": "my-wardrobe.com",
+        "imageUrl": "/images/mvp2/shoesshoesshoes/item15.jpg",
+        "brand": "Lucy Choi",
+        "type": "Rebel Rebel",
+        "collection": "Shoes,Shoes,Shoes"
+    }
+]
