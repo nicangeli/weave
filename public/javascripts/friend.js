@@ -13,8 +13,8 @@ $(document).ready(function() {
 	$("#understand").click(function(e) {
 		e.preventDefault();
 		$("#understand, #opinion, #welcome, .explain").hide();
-		$(".collections").show();
-		localStorage.setItem("friendName", $("#name").val());
+		$(".collections, .collectionTitle").show();
+		localStorage.setItem("friendName", $("#friendName").val());
 		for(var i = 1; i < $(".collections").children().length; i++) {
 			$('[data-number="product' + i + '"]').hide();
 		}

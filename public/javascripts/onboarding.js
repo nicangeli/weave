@@ -32,22 +32,21 @@ $(document).ready(function() {
 		age = "";
 	
 	// hide onboarding elements
-	$("#Gender").hide();
+	$("#Questions").hide();
 	$(".male").hide();
 	$(".female").hide();
-	$("#age-group").hide();
-	$("#almost").hide();
 	$("#Play").hide();
-	$("#explanation").hide();
-	$("#age").hide();
+	$(".age").hide();
 	$("#maleButton").hide();
 	$("#femaleButton").hide();
 
 	// mouse click on Let's Go
 	$("#LetsGo").click(function(){
 		$(".Landing").hide();
-		$("#Gender").show();
+		$("#Questions").show();
 		$("#male, #female, #maleButton, #femaleButton").show();
+		$(".age").show();
+		$("#Play").show();
 	});
 
 	// mouse click on male or female button
@@ -57,10 +56,6 @@ $(document).ready(function() {
 			"Sex": gender
 		}, function() {
 			localStorage.setItem("gender", gender);
-			$("#male, #female, #femaleButton, #maleButton").hide();
-			$("#Gender").hide();
-			$("#age").show();
-			$("#age-group").show();
 		});
 	});
 
@@ -72,24 +67,16 @@ $(document).ready(function() {
 		$("#female").trigger("click");
 	});
 
-	//mouse click on age
-	$(".age").click(function() {
-		age = $(this).text();
-		mixpanel.track("Age", {
-			"Age": age
-		}, function() {
-			localStorage.setItem("age", age);
-			$("#age").hide();
-			$("#age-group").hide();
-			$("#Play").show();
-			$("#explanation").show();
-		});
-	});
-
 	//mouse click on Play
 	$("#Play").click(function(e) {
 		console.log(e)
 		e.preventDefault();
+		age = $("select option:selected").val();
+		mixpanel.track("Age", {
+			"Age": age
+		}, function() {
+			localStorage.setItem("age", age);
+		});
 		mixpanel.track("Play", {}, function() {
 			var d = new Date(),
 				dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();

@@ -8,8 +8,19 @@ block content
     h4#opinion Your friend #{results.ownerName} wants your opinion!
     #welcome
       .row
-        p.explain Blah blah blah blah
-        input(type="text", value="Your name:", name="name", id="name")
+        .col-xs-1
+        .col-xs-10
+          p.explain Weave presents you with Collections of clothes. You move through a Collection by liking or disliking items. Your friend has created a Collection and they want your opinion on it.
+        .col-xs-1
+      .row
+        .col-xs-1
+        .col-xs-10 
+          form(role="form")
+            .form-group
+              label Please tell us your name
+              input.form-control#friendEmail(placeholder="Your Name")
+              p.help-block To help your friends identify you
+        .col-xs-1
       .row
         .col-xs-4
         .col-xs-4

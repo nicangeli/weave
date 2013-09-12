@@ -1,3 +1,19 @@
 h1 {
 	color: green;
 }
+
+.product-row {
+	max-height: 100px;
+}
+
+.product-image {
+	max-height: 100px;
+	width: auto;
+	display: inline-block;
+}
+
+.product-name {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 45px;
+}
