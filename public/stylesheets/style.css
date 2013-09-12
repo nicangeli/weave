@@ -21,6 +21,11 @@ h2 {
   margin-top: 10px;
 }
 
+.collectionTitle {
+  display: block;
+  margin: 0 auto;
+}
+
 .tagline {
   font-size: 20px;
   font-style: italic;
