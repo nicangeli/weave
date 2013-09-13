@@ -42,14 +42,27 @@ h1, h2, h3, h4 {
   top: 30px;
 }
 
-.weave-example {
-  width: 30%;
-  height: 250px;
+/*Overide bootstrap to give 100% width for container*/
+.container {
+  margin: 0px;
+  min-width: 100% !important; 
 }
 
-.weave-example img {
-  max-width: 100%;
-  max-height: 100%;
+.onboarding {
+  background: url('/images/landingPage/background.png');
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.caption {
+  z-index: 10;
+  background-image: url("/images/landingPage/heroBack.png");
+  border-radius: 1em;
+  display: block;
+  margin: auto;
+  width: 90%;
+  margin-top: 20px;
 }
 
 .collectionTitle {

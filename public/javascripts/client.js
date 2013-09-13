@@ -27,6 +27,18 @@ $(document).ready(function() {
 		$('[data-number="product' + i + '"]').hide();
 	}
 
+	$(".like").hover(function() {
+		$(this).attr("src", "/images/likeHeartClick.png");
+	}, function() {
+		$(this).attr("src", "/images/likeHeart.png")
+	});
+
+	$(".dislike").hover(function() {
+		$(this).attr("src", "/images/dislikeCrossClick.png");
+	}, function() {
+		$(this).attr("src", "/images/dislikeCross.png")
+	});
+
 	$(".like").click(function(e) {
 		if(firstLike) {
 			alertify.alert("You've liked something! We've added this to your collection (top right corner)");
