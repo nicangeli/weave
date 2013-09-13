@@ -29,16 +29,7 @@ html(lang='en')
       mixpanel.init("171f9debe2ee520bf0aa7c35455f5dba");
     // end Mixpanel
   body
-    .navbar.navbar-fixed-top
-      .container
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='/') Weave
-        .collapse.navbar-collapse
-          ul.nav.navbar-nav.navbar-right  
-            li.hanger
-              a.hanger(href='/likes', id="hangerEarly")
+    .header
+      h1.logo(href='/') Weave
+      a.hanger(href='/likes')
     block content

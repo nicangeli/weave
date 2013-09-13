@@ -21,7 +21,8 @@ block content
         .row
           .col-xs-1
           .col-xs-5
-            button.dislike.btn.btn-danger.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) Not for me
+            img(src="/images/likeHeart.png")
+            //- button.dislike.btn.btn-danger.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) Not for me
           .col-xs-5
             button.like.btn.btn-success.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) I'd wear this
           .col-xs-1
