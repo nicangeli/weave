@@ -8,6 +8,12 @@ Storage.prototype.getObj = function(key) {
 
 $(document).ready(function() {
 
+	$(".weaveButton").hover(function() {
+		$(this).attr("src", "/images/weaveClick.png");
+	}, function() {
+		$(this).attr("src", "/images/weave.png")
+	});
+
 	if (!Modernizr.localstorage) {
 		alert("NO LOCAL STORAGE");
 	}
@@ -32,21 +38,12 @@ $(document).ready(function() {
 		age = "";
 	
 	// hide onboarding elements
-	$("#Questions").hide();
-	$(".male").hide();
-	$(".female").hide();
-	$("#Play").hide();
-	$(".age").hide();
-	$("#maleButton").hide();
-	$("#femaleButton").hide();
+	$(".onboarding").hide();
 
 	// mouse click on Let's Go
-	$("#LetsGo").click(function(){
-		$(".Landing").hide();
-		$("#Questions").show();
-		$("#male, #female, #maleButton, #femaleButton").show();
-		$(".age").show();
-		$("#Play").show();
+	$(".goLogo, .iPhone, .caption ol").click(function(){
+		$(".landing").hide();
+		$(".onboarding").show();
 	});
 
 	// mouse click on male or female button

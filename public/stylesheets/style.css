@@ -6,7 +6,12 @@ body {
 
 @font-face {
   font-family: gandhiBold;
-  src: url("/font/gandhi/gandhiBold.otf");
+  src: url("/fonts/gandhi/gandhiBold.otf");
+}
+
+@font-face {
+  font-family: cantarell;
+  src: url("/fonts/cantarell/Cantarell-Regular.ttf");
 }
 
 a {
@@ -23,15 +28,12 @@ h1, h2, h3, h4 {
   height: 80px;
   background-color: #2ecc71;
   border-bottom: 6px solid #27ae60;
-  margin-bottom: 20px;
 }
 
 .logo {
   display: block;
   margin: auto;
   text-align: center;
-  font-family: gandhiBold;
-  font-size: 70px;
   padding-top: 4px;
 }
 
@@ -48,11 +50,11 @@ h1, h2, h3, h4 {
   min-width: 100% !important; 
 }
 
-.onboarding {
+.landing {
   background: url('/images/landingPage/background.png');
   background-size: cover;
-  height: 500px;
   width: 100%;
+  overflow: hidden;
 }
 
 .caption {
@@ -62,7 +64,55 @@ h1, h2, h3, h4 {
   display: block;
   margin: auto;
   width: 90%;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.caption ol {
+  color: #ccc;
+  list-style-type: none;
+  padding-top: 5%;
+  cursor: pointer;
+}
+ 
+.caption ol li {
+  position: relative;
+  font-family: cantarell;
+  font-size: 45px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+ 
+.caption li p {
+  padding-top: 10px;
+  font-family: cantarell;
+  font-size: 35px;
+  padding-left: 60px;
+  color: #e74c3c;
+}
+ 
+.caption span {
+  position: absolute;
+}
+
+.iPhone{
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  cursor: pointer;
+}
+
+.goLogo {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.goLogo img {
+  max-width: 150px;
+  cursor: pointer;
+}
+
+.onboarding {
+  text-align: center;
 }
 
 .collectionTitle {
@@ -106,6 +156,7 @@ button.age {
 }
 
 .collections {
+  padding-top: 20px;
 	text-align: center;
 }
 
@@ -119,10 +170,12 @@ button.like {
 
 .likeHeart {
   width: 100px;
+  cursor: pointer;
 }
 
 .dislikeCross {
   width: 100px;
+  cursor: pointer;
 }
 
 #showHanger {
@@ -190,6 +243,25 @@ button.like {
 @media screen and (max-width: 480px) {
   body {
     padding: 0px 0 0 0;
+  }
+
+  .iPhone {
+    display: none;
+  }
+
+  .caption ol {
+    padding-left: 25px;
+  }
+
+  .caption ol li {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+  .caption li p {
+    font-size: 18px;
+    padding-left: 30px;
+    padding-top: 4px;
   }
 
   .image {

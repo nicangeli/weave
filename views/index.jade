@@ -5,17 +5,29 @@ block content
     mixpanel.track("Landing Page Loaded")
   
   .container
+    .landing
+      .row
+        .xs-col-1.col-md-2
+        .xs-col-10.col-md-8
+          .caption
+            .row
+              .col-md-1
+              .col-xs-12.col-md-7
+                ol
+                  li 
+                    span 1. 
+                    p Weave Collections
+                  li 
+                    span 2.
+                    p Create Collections
+                  li 
+                    span 3.
+                    p Share Collections
+              .col-md-4
+                img.iPhone(src="/images/landingPage/blackiPhone.png")
+      .goLogo
+        img.weaveButton(src="/images/weave.png")
     .onboarding
-      .caption
-        .instructions
-          h1 Teachers
-          ul
-            li Sign up in minutes.
-            li Get supply offers from schools directly. 
-            li No more agency rates.
-          p
-            a.btn.btn-large.btn-primary(href='/teacher/signup') Sign up today
-        .iPhone
       h3#Questions Before we play, we need to know two things about you...
       .row
         .col-md-4
