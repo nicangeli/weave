@@ -19,13 +19,16 @@ block content
           img.product(src=products[i].imageUrl, data-number="#{id}");
         p #{products[i].type}
         .row
-          .col-xs-1
-          .col-xs-5
-            img(src="/images/likeHeart.png")
+          .col-xs-4
+          .col-xs-2
+            a(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand)
+              img.dislikeCross(src="/images/dislikeCross.png")
             //- button.dislike.btn.btn-danger.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) Not for me
-          .col-xs-5
-            button.like.btn.btn-success.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) I'd wear this
-          .col-xs-1
+          .col-xs-2
+            a(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand)
+              img.likeHeart(src="/images/likeHeart.png")
+            //- button.like.btn.btn-success.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) I'd wear this
+          .col-xs-4
       -}      
 
 
