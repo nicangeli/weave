@@ -26,33 +26,33 @@ block content
               .col-md-4
                 img.iPhone(src="/images/landingPage/blackiPhone.png")
       .goLogo
-        img.weaveButton(src="/images/weave.png")
+        img.weaveButton#step1(src="/images/weave.png")
     .onboarding
       h3#Questions Before we play, we need to know two things about you...
       .row
         .col-md-4
         .col-xs-6.col-md-2
           a()
-            img.female(src="/images/f.png", id="female")
+            img.female(src="/images/womanSymbol.png", id="female")
         .col-xs-6.col-md-2
           a()
-            img.male(src="/images/m.png", id="male")
+            img.male(src="/images/manSymbol.png", id="male")
         .col-md-4
-      .row
-        .col-md-4
-        .col-xs-6.col-md-2
-          a()
-            a.btn.btn-primary#femaleButton Girl
-        .col-xs-6.col-md-2
-          a()
-            a.btn.btn-primary#maleButton Boy
-        .col-md-4
-      .row
+      //- .row
+      //-   .col-md-4
+      //-   .col-xs-6.col-md-2
+      //-     a()
+      //-       a.btn.btn-primary#femaleButton Girl
+      //-   .col-xs-6.col-md-2
+      //-     a()
+      //-       a.btn.btn-primary#maleButton Boy
+      //-   .col-md-4
+      .row(style="margin-top: 10px;")
         .col-xs-2
         .col-xs-8
           form.age(role="form")
             .form-group
-              label Age
+              //- label Age
               select.form-control
                 option under 18
                 option 18-21
@@ -61,14 +61,16 @@ block content
                 option 31-40
                 option 40+
         .col-xs.2
-      .row
-        .col-xs-3
-        .col-xs-6
-          //- form(role='form', id="emailForm")
-          //-   .form-group
-          //-     input#InputEmail.form-control(type='email', placeholder='Enter email')
-          button.btn.btn-primary#Play Play
-        .col-xs-3
+      .goLogo
+        img.weaveButton#step2(src="/images/weave.png")
+      //- .row
+      //-   .col-xs-3
+      //-   .col-xs-6
+      //-     //- form(role='form', id="emailForm")
+      //-     //-   .form-group
+      //-     //-     input#InputEmail.form-control(type='email', placeholder='Enter email')
+      //-     button.btn.btn-primary#Play Play
+      //-   .col-xs-3
 
 
   script(src="/javascripts/onboarding.js", type="text/javascript")

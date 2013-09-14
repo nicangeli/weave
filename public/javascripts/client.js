@@ -99,5 +99,5 @@ var changeProduct = function(currentProduct) {
 };
 
 var updateHanger = function() {
-	$("a.hanger").html("<img src='/images/coat-hanger.png', style='width: 18px'> My Collection (" + localStorage.getObj("likes").length + ")").show();
+	$("a.hanger").html("<img src='/images/coat-hanger-white.png'> <span class='myCollection'>My Collection</span> (" + localStorage.getObj("likes").length + ")").show();
 }

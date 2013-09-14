@@ -1,7 +1,9 @@
 body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: white !important
+  background-color: white !important;
+  height: 1000px;
+  overflow: hidden;
 }
 
 @font-face {
@@ -21,6 +23,7 @@ a {
 h1, h2, h3, h4 {
   color: black;
   text-align: center;
+  font-family: cantarell;
 }
 
 .header {
@@ -42,19 +45,34 @@ h1, h2, h3, h4 {
   position: absolute;
   right: 5px;
   top: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.hange:hover {
+  text-decoration: none;
+}
+
+.hanger img {
+  width: 18px;
+  padding-bottom: 3px;
 }
 
 /*Overide bootstrap to give 100% width for container*/
 .container {
   margin: 0px;
-  min-width: 100% !important; 
+  min-width: 100% !important;
+  height: 1000px;
 }
 
 .landing {
-  background: url('/images/landingPage/background.png');
+  background: url('/images/landingPage/background.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  width: 100%;
-  overflow: hidden;
+  height: 1000px;
 }
 
 .caption {
@@ -243,6 +261,27 @@ button.like {
 @media screen and (max-width: 480px) {
   body {
     padding: 0px 0 0 0;
+  }
+
+  .header {
+    height: 40px;
+    background-color: #2ecc71;
+    border-bottom: 3px solid #27ae60;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .hanger {
+    z-index: 10;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+  }
+
+  .myCollection {
+    display: none;
   }
 
   .iPhone {

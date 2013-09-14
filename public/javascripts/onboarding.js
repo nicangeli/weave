@@ -41,12 +41,28 @@ $(document).ready(function() {
 	$(".onboarding").hide();
 
 	// mouse click on Let's Go
-	$(".goLogo, .iPhone, .caption ol").click(function(){
+	$("#step1, .iPhone, .caption ol").click(function(){
 		$(".landing").hide();
 		$(".onboarding").show();
 	});
 
-	// mouse click on male or female button
+	// mouse click on male or female button -- Can probably refactor this. Let's get an intern to do it.
+	$("#female").hover(function() {
+		$(this).attr("src", "/images/woman.png")
+	}, function() {
+		if(localStorage.getItem("gender") != "female") {
+			$(this).attr("src", "/images/womanSymbol.png")
+		}
+	});
+
+	$("#male").hover(function() {
+		$(this).attr("src", "/images/man.png")
+	}, function() {
+		if(localStorage.getItem("gender") != "male") {
+			$(this).attr("src", "/images/manSymbol.png")
+		}
+	});
+
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
 		localStorage.setItem("gender", gender);
@@ -54,11 +70,11 @@ $(document).ready(function() {
 			"Sex": gender
 		});
 		if(gender == "male") {
-			$("#male").attr("src", "/images/m-select.png")
-			$("#female").attr("src", "/images/f.png")
+			$("#male").attr("src", "/images/man.png")
+			$("#female").attr("src", "/images/womanSymbol.png")
 		} else if(gender == "female") {
-			$("#female").attr("src", "/images/f-select.png")
-			$("#male").attr("src", "/images/m.png")
+			$("#female").attr("src", "/images/woman.png")
+			$("#male").attr("src", "/images/manSymbol.png")
 		}
 	});
 
@@ -71,21 +87,24 @@ $(document).ready(function() {
 	});
 
 	//mouse click on Play
-	$("#Play").click(function(e) {
+	$("#step2").click(function(e) {
 		console.log(e)
 		e.preventDefault();
-		age = $("select option:selected").val();
-		mixpanel.track("Age", {
-			"Age": age
-		}); 
-		
-		localStorage.setItem("age", age);
-
-		mixpanel.track("Play", {}, function() {
-			var d = new Date(),
+		if (localStorage.getItem("gender") == null) {
+			alertify.alert("We need to know your gender");
+		} else {
+			age = $("select option:selected").val();
+			mixpanel.track("Age", {
+				"Age": age
+			}); 
+			
+			localStorage.setItem("age", age);
+	
+			mixpanel.track("Play", {}, function() {
+				var d = new Date(),
 				dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 
-			var today = localStorage.getObj(dateString);
+				var today = localStorage.getObj(dateString);
 
 			if(today == null) { // we have not been through one
 				window.location = "/collection/" + gender + "/1"
@@ -93,9 +112,8 @@ $(document).ready(function() {
 			} else {
 				window.location = "/collection/" + gender + "/2";
 				//localStorage.setObj(dateString, [true, true]);
-			}
-		});
-
+				}
+			});
+		};
 	});
-
 });
