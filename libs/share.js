@@ -3,7 +3,7 @@ share.js
 file that accepts a collection and inserts them into a database, returning a unique URL to them
 */
 
-var db = require('mongoskin').db('mongodb://nodescript:nodescript@ds043338.mongolab.com:43338/heroku_app17946852');
+var db = require('mongoskin').db('mongodb://nodescript:nodescript@ds045938.mongolab.com:45938/heroku_app18114381');
 var bson = require('mongoskin').BSONPure;
 
 module.exports = function() {
