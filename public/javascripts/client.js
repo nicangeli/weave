@@ -51,7 +51,6 @@ $(document).ready(function() {
 
 	// clicking either of the buttons should trigger localStorage seen count for this collection to increase
 	$(".like, .dislike").click(function(e) {
-		e.preventDefault();
 		var collection = $(".collections").attr('data-collectionName');
 		var seenCount = localStorage.getItem(collection);
 		if(seenCount == null) {
