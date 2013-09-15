@@ -3,10 +3,9 @@ extends layout
 block content
   .container
   ul
-  -console.log(data.length);
   -for(var i = 0; i < data.length; i++) {
   -var element = data[i];
-    li.collection
+    li.collection(data-collectionName="#{element.name}")
       a(href="/collection/#{element.name}") #{element.name}
       span.through 0/
       span.size #{element.size}
