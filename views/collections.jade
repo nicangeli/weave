@@ -3,9 +3,13 @@ extends layout
 block content
   .container
   ul
-  -for(var i = 0; i < collections.length; i++) {
-    li
-      a(href="/collection/#{collections[i]}") #{collections[i]} 
+  -console.log(data.length);
+  -for(var i = 0; i < data.length; i++) {
+  -var element = data[i];
+    li.collection
+      a(href="/collection/#{element.name}") #{element.name}
+      span.through 0/
+      span.size #{element.size}
   -}     
 
 

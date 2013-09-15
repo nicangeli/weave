@@ -2,15 +2,32 @@
 	Module that handles collections
 */
 
-var db = require('mongoskin').db(require('../common/db.js').db);
+var db = require('mongoskin').db(require('../common/db.js').db),
+	async = require('async');
 
 
 module.exports = function() {
 	
 	this.activeCollections = ['Trousers', 'Shirts', 'Tops'];
 
-	this.getActiveCollections = function() {
-		return this.activeCollections;
+	this.getActiveCollections = function(myCallback) {
+		var collections = [];
+		async.forEach(this.activeCollections, function(collection, callback){
+			db.collection(collection).find().toArray(function(err, result) {
+				if(err) {
+					throw err;
+				} 
+				collections.push({
+					"name": collection,
+					"size": result.length
+				});
+				callback();
+			});
+		}, function(err) {
+			if(err) 
+				throw err;
+			myCallback(collections);
+		})
 	}
 
 	this.getCollection = function(collection, callback) {

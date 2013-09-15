@@ -11,6 +11,7 @@
     "stylus": "*",
     "nodemailer": "0.5.2",
     "mongoskin": "0.6.0",
-    "email-templates": "*"
+    "email-templates": "*",
+    "async": "0.2.9"
   }
 }

@@ -26,7 +26,8 @@ exports.collection = function(req, res) {
 	var c = new Collections();
 	c.getCollection(collection, function(products) {
 		res.render('collection', {
-			"products": products
+			"products": products,
+			"collectionName": collection
 		});
 	})
 
@@ -35,7 +36,10 @@ exports.collection = function(req, res) {
 
 exports.showCollections = function(req, res) {
 	var c = new Collections();
-	res.render('collections', {collections: c.getActiveCollections()});
+	c.getActiveCollections(function(sizes) {
+		console.log(sizes);
+		res.render('collections', {"data": sizes});
+	});
 };
 
 exports.likes = function(req, res) {

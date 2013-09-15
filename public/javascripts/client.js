@@ -1,30 +1,16 @@
 $(document).ready(function() {
 
-	var d = new Date(),
-		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
-
-	var today = localStorage.getObj(dateString);
-	if(today == null) {
-		today = [true];
-		localStorage.setObj(dateString, today);
-	} else {
-		today.push(true);
-		localStorage.setObj(dateString, today)
-	}
-	//today.push(true);
-	//localStorage.setObj(dateString, today);
-
 	// hide all elements at the start, bar the first one
 	for(var i = 1; i < $(".collections").children().length; i++) {
 		$('[data-number="product' + i + '"]').hide();
 	}
 
 	$(".like").click(function(e) {
+		e.preventDefault();
 		if(localStorage.getItem("firstLike") != "false") {
 			alertify.alert("You've liked something! We've added this to your collection (top right corner)");
 			localStorage.setItem("firstLike", "false");
 		}
-		e.preventDefault();
 		var element = $(this).attr('data-number');
 
 		// Push to Mixpanel
@@ -62,6 +48,18 @@ $(document).ready(function() {
 		$('[data-number=' + element + ']').hide();
 		changeProduct(element);
 	});
+
+	// clicking either of the buttons should trigger localStorage seen count for this collection to increase
+	$(".like, .dislike").click(function(e) {
+		e.preventDefault();
+		var collection = $(".collections").attr('data-collectionName');
+		var seenCount = localStorage.getItem(collection);
+		if(seenCount == null) {
+			localStorage.setItem(collection, 1);
+		} else {
+			localStorage.setItem(collection, parseInt(localStorage.getItem(collection)) + 1);
+		}
+	})
 
 });
 
