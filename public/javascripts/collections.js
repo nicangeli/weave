@@ -22,7 +22,7 @@ $(document).ready(function() {
 		}
 		// are things still visible? 
 		if($("li.collection :visible").length == 0) {
-			$('body').append("<h1>No collections left to visit. Come back tomorrow</h1>")
+			$('.container').append("<h1>No collections left to visit. Come back tomorrow</h1>")
 		}
 
 	});

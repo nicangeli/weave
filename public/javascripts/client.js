@@ -19,6 +19,18 @@ $(document).ready(function() {
 
 
 
+	$(".like").hover(function() {
+		$(this).attr("src", "/images/likeHeartClick.png");
+	}, function() {
+		$(this).attr("src", "/images/likeHeart.png")
+	});
+
+	$(".dislike").hover(function() {
+		$(this).attr("src", "/images/dislikeCrossClick.png");
+	}, function() {
+		$(this).attr("src", "/images/dislikeCross.png")
+	});
+
 	$(".like").click(function(e) {
 		e.preventDefault();
 		if(localStorage.getItem("firstLike") != "false") {
@@ -90,5 +102,5 @@ var changeProduct = function(currentProduct) {
 };
 
 var updateHanger = function() {
-	$("a.hanger").html("<img src='/images/coat-hanger-white.png', style='width: 18px'> My Collection (" + localStorage.getObj("likes").length + ")").show();
+	$("a.hanger").html("<img src='/images/coat-hanger-white.png'> <span class='myCollection'>My Collection</span> (" + localStorage.getObj("likes").length + ")").show();
 }
