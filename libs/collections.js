@@ -15,7 +15,6 @@ module.exports = function() {
 
 	this.getCollection = function(collection, callback) {
 		db.collection(collection).find().toArray(function(err, result) {
-			console.log('I am through a loop')
 			if(err)
 				throw err;
 			callback(result);

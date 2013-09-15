@@ -1,10 +1,3 @@
-Storage.prototype.setObj = function(key, obj) {
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key))
-}
-
 $(document).ready(function() {
 
 	$("#more").hide();
@@ -14,14 +7,6 @@ $(document).ready(function() {
 	// get the localstorage likes
 	var likes = localStorage.getObj("likes");
 	likes.reverse();
-
-	var d = new Date(),
-		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
-
-	var today = localStorage.getObj(dateString);
-	if(today != null && today.length == 2) {
-		$("#my").append("<p>Thanks for playing. Come back tomorrow for more collections.</p>");
-	}
 
 	if(likes == null || likes.length == 0) {
 		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
@@ -43,23 +28,10 @@ $(document).ready(function() {
 		}
 	}
 
-	var d = new Date(),
-		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
-
-	var today = localStorage.getObj(dateString),
-		location = "";
-
-	if(today[1] == undefined) { // not been through 
-		$("#playAgain").show();
-		$("#more").show();
-		$("#or").show();
-	}
-
-
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
 		mixpanel.track("Play Again", {}, function() {
-			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
+			window.location = "/collections/";
 		});
 	});
 
@@ -82,8 +54,6 @@ $(document).ready(function() {
 					"products": localStorage.getObj("likes")
 				}
 			};
-
-			console.log(data);
 			
 			$.post("/share", data)
 				.done(function(data) {
