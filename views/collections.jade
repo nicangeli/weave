@@ -2,8 +2,10 @@ extends layout
 
 block content
   .container
+  ul
   -for(var i = 0; i < collections.length; i++) {
-    h1 #{collections[i]} 
+    li
+      a(href="/collection/#{collections[i]}") #{collections[i]} 
   -}     
 
 

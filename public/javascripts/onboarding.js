@@ -1,30 +1,11 @@
-Storage.prototype.setObj = function(key, obj) {
-    return this.setItem(key, JSON.stringify(obj))
-}
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key))
-}
-
-
 $(document).ready(function() {
 
 	if (!Modernizr.localstorage) {
 		alert("NO LOCAL STORAGE");
 	}
 
-	var d = new Date(),
-		dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
-
-	var today = localStorage.getObj(dateString);
-	if(today != null) { // we have been here before today
-		if(today.length == 2) { // we have been through both tracks
-			console.log('been before and seen 2 today')
-			window.location = "/likes";
-		} else {
-			window.location = "/collection/" + localStorage.getItem("gender") + "/2";
-		}
-	} else if(localStorage.getItem("gender") != null) { // we have been here before, but not today 
-		window.location = "/collection/" + localStorage.getItem("gender") + "/1";
+	if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) { // we have been here before, but not today 
+		window.location = "/collections";
 	} // else we have not been on this site before
 
 
@@ -85,18 +66,7 @@ $(document).ready(function() {
 			localStorage.setItem("age", age);
 
 			mixpanel.track("Play", {}, function() {
-				var d = new Date(),
-					dateString = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
-
-				var today = localStorage.getObj(dateString);
-
-				if(today == null) { // we have not been through one
-					window.location = "/collection/" + gender + "/1"
-					//localStorage.setObj(dateString, [true]);
-				} else {
-					window.location = "/collection/" + gender + "/2";
-					//localStorage.setObj(dateString, [true, true]);
-				}
+				window.location = "/collections";					
 			});
 		}
 	});

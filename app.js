@@ -42,7 +42,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.post('/onboarding', routes.onboarding);
 app.get('/collections', routes.showCollections);
-app.get('/collection/:gender/:round', routes.collection);
+app.get('/collection/:collectionName', routes.collection);
 app.get('/likes', routes.likes);
 app.get('/email', routes.email);
 app.post('/email', routes.emailSend);

@@ -3,12 +3,7 @@
  * GET home page.
  */
 
-var femaleCollection1 = require('../collections/female/first.js').data,
-	femaleCollection2 = require('../collections/female/second.js').data,
-	maleCollection1 = require('../collections/male/first.js').data,
-	maleCollection2 = require('../collections/male/second.js').data,
-	winterCollection1 = require('../collections/female/winter.js').data,
-	mailer = require('../libs/mailer.js'),
+var mailer = require('../libs/mailer.js'),
 	Share = require('../libs/share.js'),
 	nodemailer = require('nodemailer'),
 	path = require('path'),
@@ -27,27 +22,15 @@ exports.onboarding = function(req, res) {
 };
 
 exports.collection = function(req, res) {
-	var round = req.params.round,
-		gender = req.params.gender,
-		products = null;
+	var collection = req.params.collectionName;
+	var c = new Collections();
+	c.getCollection(collection, function(products) {
+		res.render('collection', {
+			"products": products
+		});
+	})
 
-	if(gender == "male") {
-		if(round == 1) {
-			products = maleCollection1.products;
-		} else if(round == 2)  {
-			products = maleCollection2.products;
-		}
-	} else { // gender is female
-		if(round == 1) {
-			products = femaleCollection1 .products;
-		} else {
-			products = femaleCollection2.products;
-		}
-	}
 
-	res.render('collection', {
-		"products": products
-	});
 };
 
 exports.showCollections = function(req, res) {
