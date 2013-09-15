@@ -67,12 +67,8 @@ h1, h2, h3, h4 {
 }
 
 .landing {
-  background: url('/images/landingPage/background.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 1000px;
+  background: url('/images/bg.png') repeat-y center;
+  height: 100%;
 }
 
 .caption {
@@ -86,26 +82,24 @@ h1, h2, h3, h4 {
 }
 
 .caption ol {
-  color: #ccc;
   list-style-type: none;
-  padding-top: 5%;
   cursor: pointer;
+  height: 300px;
+  padding-top: 20px;
 }
  
 .caption ol li {
   position: relative;
-  font-family: cantarell;
-  font-size: 45px;
-  color: #e74c3c;
+  font-family: "Georgia, Helvetica, Arial, Times-New-Roman";
+  font-size: 30pt;
+  color: #ffffff;
+  font-weight: lighter;
   margin-bottom: 20px;
 }
  
 .caption li p {
-  padding-top: 10px;
-  font-family: cantarell;
-  font-size: 35px;
   padding-left: 60px;
-  color: #e74c3c;
+  color: #e3e3e3;
 }
  
 .caption span {
@@ -113,10 +107,10 @@ h1, h2, h3, h4 {
 }
 
 .iPhone{
-  max-width: 100%;
-  height: auto;
-  max-height: 300px;
+  height: 530px;
+  width: auto;
   cursor: pointer;
+  padding-top: 30px;
 }
 
 .goLogo {
