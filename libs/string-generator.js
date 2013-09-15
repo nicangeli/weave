@@ -18,7 +18,7 @@ module.exports = function() {
 
 	this.isUnique = function(string) {
 		// get all strings from the db to check
-		mongo.db('mongodb://nodescript:nodescript@ds043338.mongolab.com:43338/heroku_app17946852').collection('shares').findOne({'shareId': string}, function(err, match) {
+		mongo.db(require('../common/dj.js').db).collection('shares').findOne({'shareId': string}, function(err, match) {
 			if(err) {
 				throw err;
 			}

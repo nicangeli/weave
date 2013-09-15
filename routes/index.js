@@ -13,7 +13,9 @@ var femaleCollection1 = require('../collections/female/first.js').data,
 	nodemailer = require('nodemailer'),
 	path = require('path'),
 	templatesDir = path.resolve(__dirname, '..', 'views/mailer/templates'),
-	emailTemplates = require('email-templates');
+	emailTemplates = require('email-templates'),
+	Collections = require('../libs/collections.js');
+
 
 
 exports.index = function(req, res){
@@ -46,6 +48,11 @@ exports.collection = function(req, res) {
 	res.render('collection', {
 		"products": products
 	});
+};
+
+exports.showCollections = function(req, res) {
+	var c = new Collections();
+	res.render('collections', {collections: c.getActiveCollections()});
 };
 
 exports.likes = function(req, res) {
