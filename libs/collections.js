@@ -2,7 +2,7 @@
 	Module that handles collections
 */
 
-var db = require('mongoskin').db(require('../common/dj.js').db);
+var db = require('mongoskin').db(require('../common/db.js').db);
 
 
 module.exports = function() {
