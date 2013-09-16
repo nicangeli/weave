@@ -10,7 +10,7 @@ block content
           img(src="#{element.imageUrl}")
         .col-xs-6.collectionsInfo
           h2.collections(data-collectionName="#{element.name}") #{element.name} 
-            span.collectionsDescription - "This is a description or tagline for the collection"
+            span.collectionsDescription - #{element.comment}
             br
             h4 A collection by Weave
             //- a(href="/collection/#{element.name}") #{element.name}
