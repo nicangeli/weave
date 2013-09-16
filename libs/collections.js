@@ -19,7 +19,8 @@ module.exports = function() {
 				} 
 				collections.push({
 					"name": collection,
-					"size": result.length
+					"size": result.length,
+					"imageUrl": result[0].imageUrl
 				});
 				callback();
 			});
