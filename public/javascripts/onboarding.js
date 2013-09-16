@@ -22,8 +22,8 @@ $(document).ready(function() {
 	$(".onboarding").hide();
 
 	// mouse click on Let's Go
-	$("#step1, .iPhone, .caption ol").click(function(){
-		$(".landing").hide();
+	$("#step1, .iPhone").click(function(){
+		$(".landingPage").hide();
 		$(".onboarding").show();
 	});
 

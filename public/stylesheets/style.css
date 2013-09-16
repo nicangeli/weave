@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
 ===========================================
 */
 
-.landing {
+.landingBackground {
   margin: 0px;
   min-width: 100% !important;
   height: 1000px;
@@ -89,35 +89,23 @@ h1, h2, h3, h4 {
   display: block;
   margin: auto;
   width: 90%;
-  margin-top: 40px;
+  margin-top: 110px;
 }
 
-.caption ol {
+.caption ul {
   color: #ccc;
-  list-style-type: none;
-  padding-top: 10px;
-  cursor: pointer;
+  list-style: none;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
  
-.caption ol li {
-  position: relative;
-  font-family: cantarell;
-  font-size: 35px;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
- 
-.caption li p {
-  padding-top: 10px;
+.caption ul li {
   font-family: cantarell;
   font-size: 25px;
-  padding-left: 60px;
   color: #ffffff;
-}
- 
-.caption span {
-  position: absolute;
+  margin-bottom: 15px;
 }
 
 .iPhone{
@@ -125,6 +113,43 @@ h1, h2, h3, h4 {
   width: auto;
   cursor: pointer;
   padding-top: 30px;
+}
+
+#step1 {
+  width: 80%;
+  height: 90px;
+  display: block;
+  margin: auto;
+  font-size: 40px;
+  font-family: cantarell;
+}
+
+#step2 {
+  width: 80%;
+  height: 90px;
+  display: block;
+  margin: auto;
+  font-size: 40px;
+  font-family: cantarell;
+}
+
+/* Twitter button restyle */
+
+.btn-custom {
+  background-color: hsl(357, 83%, 57%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec363f", endColorstr="#ec363f");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ec363f), to(#ec363f));
+  background-image: -moz-linear-gradient(top, #ec363f, #ec363f);
+  background-image: -ms-linear-gradient(top, #ec363f, #ec363f);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec363f), color-stop(100%, #ec363f));
+  background-image: -webkit-linear-gradient(top, #ec363f, #ec363f);
+  background-image: -o-linear-gradient(top, #ec363f, #ec363f);
+  background-image: linear-gradient(#ec363f, #ec363f);
+  border-color: #ec363f #ec363f hsl(357, 83%, 57%);
+  color: white;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  -webkit-font-smoothing: antialiased;
 }
 
 .goLogo {
@@ -163,6 +188,11 @@ h1, h2, h3, h4 {
   color: grey;
 }
 
+#Questions {
+  color: white;
+  padding-top: 10px;
+}
+
 img.female {
   width: 100%;
   max-width: 100px;
@@ -183,8 +213,8 @@ img.male {
   margin-top: 5px;
 }
 
-button.age {
-	margin: 8px;
+.age {
+  padding: 10px 0 10px 0;
 }
 
 /*
