@@ -12,19 +12,19 @@ module.exports = function() {
 	this.activeCollections = [
 									{
 										"name": "Rock & Roll",
-										"comment": "Rock out with your c**k out"
+										"comment": "A nod to Kate & Co"
 									},
 									{
 										"name": "Punk",
-										"comment": "Comment goes here"	
+										"comment": "Rip it up in tartan, leather & studs"	
 									},
 									{
 										"name": "Darling Dresses",
-										"comment": "You'll look fabulous darling"
+										"comment": "11 show stoppers"
 									},
 									{
 										"name": "Pretty",
-										"comment": "You're bound to look pretty in these..."
+										"comment": "Tea Dresses, mostly"
 									}
 							];
 
