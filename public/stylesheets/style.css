@@ -2,8 +2,6 @@ body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white !important;
-  height: 1000px;
-  overflow: hidden;
 }
 
 @font-face {
@@ -22,9 +20,14 @@ a {
 
 h1, h2, h3, h4 {
   color: black;
-  text-align: center;
   font-family: cantarell;
 }
+
+/*
+===========================================
+                Header
+===========================================
+*/
 
 .header {
   width: 100%;
@@ -50,7 +53,7 @@ h1, h2, h3, h4 {
   color: white;
 }
 
-.hange:hover {
+.hanger:hover {
   text-decoration: none;
 }
 
@@ -58,6 +61,16 @@ h1, h2, h3, h4 {
   width: 18px;
   padding-bottom: 3px;
 }
+
+#showHanger {
+  width: 100%;
+}
+
+/*
+===========================================
+              Landing Page
+===========================================
+*/
 
 .landing {
   margin: 0px;
@@ -69,6 +82,7 @@ h1, h2, h3, h4 {
   -o-background-size: cover;
   background-size: cover;
   height: 1000px;
+  overflow: hidden;
 }
 
 .caption {
@@ -125,6 +139,12 @@ h1, h2, h3, h4 {
   cursor: pointer;
 }
 
+/*
+===========================================
+              Onboarding
+===========================================
+*/
+
 .onboarding {
   text-align: center;
 }
@@ -169,7 +189,43 @@ button.age {
 	margin: 8px;
 }
 
-.collections {
+/*
+===========================================
+          Collections List
+===========================================
+*/
+
+.collectionsImage {
+  height: 200px;
+  text-align: center;
+}
+
+.collectionsImage img {
+  margin-top: 25px;
+  height: 150px;
+}
+
+.collectionsInfo {
+  text-align: left;
+}
+
+.collectionsDescription {
+  font-size: 13px;
+  font-style: italic;
+  color: grey;
+}
+
+.collectionsProgress {
+  max-width: 75%;
+}
+
+/*
+===========================================
+          Weave Collection
+===========================================
+*/
+
+.collection {
   padding-top: 20px;
 	text-align: center;
 }
@@ -190,10 +246,6 @@ button.like {
 .dislikeCross {
   width: 100px;
   cursor: pointer;
-}
-
-#showHanger {
-  width: 100%;
 }
 
 #tweet {

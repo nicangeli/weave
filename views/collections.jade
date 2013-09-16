@@ -6,13 +6,24 @@ block content
     -for(var i = 0; i < data.length; i++) {
     -var element = data[i];
       .row
-        .col-xs-1
-        .col-xs-10
+        .col-xs-3.collectionsImage
+          img(src="/images/dresses/dress1.jpg")
+        .col-xs-6.collectionsInfo
+          h2.collections(data-collectionName="#{element.name}") #{element.name} 
+            span.collectionsDescription - "This is a description or tagline for the collection"
+            br
+            h4 A collection by Weave
+            p Number of pieces in Collection: #{element.size}
+            //- a(href="/collection/#{element.name}") #{element.name}
+            //span.through 0/
+            //span.size #{element.size}
+            p Current progress: 1/#{element.size}
+            .progress.collectionsProgress
+              .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 30%;")
+      .row
+        .col-xs-2
+        .col-xs-8
           hr
-      li.collection(data-collectionName="#{element.name}")
-        a(href="/collection/#{element.name}") #{element.name}
-        span.through 0/
-        span.size #{element.size}
     -}     
 
 
