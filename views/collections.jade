@@ -5,7 +5,7 @@ block content
     ul
     -for(var i = 0; i < data.length; i++) {
     -var element = data[i];
-      .row.product
+      .row.product(data-collectionName="#{element.name}")
         .col-xs-3.collectionsImage
           img(src="#{element.imageUrl}")
         .col-xs-6.collectionsInfo

@@ -6,23 +6,24 @@ $(document).ready(function() {
 			size = $(this).find(".size");
 
 
+
 		var beenThrough = localStorage.getItem($(this).attr('data-collectionName')),
 			size = parseInt(size.text());
 
-		if(beenThrough != null) {
+		if(beenThrough != null) { // been through before
 			// hide the elements that we have seen all of
-			if(parseInt(beenThrough) === size) {
-				$(this).hide();
-				$(this).next().hide();
-			}
-
+			//if(parseInt(beenThrough) === size) { // have we seen all of the products
+			//	$(this).hide();
+			//	$(this).next().hide();
+			//}
 			through.text(beenThrough + '/');
-			$(".progress-bar").attr("style", "width: " + (through/size)*100 + "%;")
-		}
-		if(parseInt(size) === 0) {
-			$(this).hide();
-			$(this).next().hide();
+			var throughVal = parseInt(through.text().split('/')[0]);
+			$($(this).find('.progress-bar')[0]).attr('style', 'width: ' + (throughVal/parseInt(size))*100 + '%;');
+			//$(this).find('.progress-bar').css({"width": "cock"});
 
+			//through.text(beenThrough + '/');
+			//$(this).next('.progress-.attr("style", "width: " + (through/size)*100 + "%;");
+		} else {
 		}
 		// are things still visible? 
 		if($(".product :visible").length == 0) {
