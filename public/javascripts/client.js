@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var howFarThrough;
 	if(localStorage.getItem(collection) == null) {
 		// hide all elements at the start, bar the first one
-		for(var i = 1; i < $(".collections").children().length; i++) {
+		for(var i = 1; i < $(".collection").children().length; i++) {
 			$('[data-number="product' + i + '"]').hide();
 		}
 	} else {
@@ -12,7 +12,7 @@ $(document).ready(function() {
 		for(var i = 0; i < howFarThrough; i++) {
 			$('[data-number="product' + i + '"]').hide();
 		}
-		for(var i = howFarThrough+1; i < $(".collections").children().length; i++ ) {
+		for(var i = howFarThrough+1; i < $(".collection").children().length; i++ ) {
 			$('[data-number="product' + i + '"]').hide();
 		}
 	}
@@ -77,7 +77,7 @@ $(document).ready(function() {
 
 	// clicking either of the buttons should trigger localStorage seen count for this collection to increase
 	$(".like, .dislike").click(function(e) {
-		var collection = $(".collections").attr('data-collectionName');
+		var collection = $(".collection").attr('data-collectionName');
 		var seenCount = localStorage.getItem(collection);
 		if(seenCount == null) {
 			localStorage.setItem(collection, 1);
