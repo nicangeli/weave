@@ -16,12 +16,20 @@ module.exports = function() {
 			db.collection(collection).find().toArray(function(err, result) {
 				if(err) {
 					throw err;
-				} 
-				collections.push({
-					"name": collection,
-					"size": result.length,
-					"imageUrl": result[0].imageUrl
-				});
+				}
+				if(result[0] != undefined) {
+					collections.push({
+						"name": collection,
+						"size": result.length,
+						"imageUrl": result[0].imageUrl
+					});
+				} else {
+					collections.push({
+						"name": collection,
+						"size": result.length
+					});	
+				}
+				
 				callback();
 			});
 		}, function(err) {
