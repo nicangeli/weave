@@ -29,7 +29,6 @@ module.exports = function() {
 						"size": result.length
 					});	
 				}
-				
 				callback();
 			});
 		}, function(err) {

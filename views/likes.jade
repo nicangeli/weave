@@ -5,16 +5,22 @@ block content
 		//mixpanel.track_links(".buy", "Buy Item");
 
 	.container
-		.row
-			.col-xs-5
-				button.btn.btn-primary#playAgain
-					span.buttonText Weave another Collection
-			.col-xs-2
-			.col-xs-5
-				button.btn.btn-primary#shareCollection(data-toggle="modal", href="#createCollection")
-					span.buttonText Share your Collection
-		#reveal
-		h3 Come back to Weave anytime to review your collection
+		.myCollection
+			.row
+				.col-xs-5
+					button.btn.btn-primary#playAgain
+						span.buttonText Back to Collections
+				.col-xs-2
+				.col-xs-5
+					button.btn.btn-primary#shareCollection(data-toggle="modal", href="#createCollection")
+						span.buttonText Share my Collection
+			.reveal
+			h3 Come back to Weave anytime to review your collection
+			.row
+				.col-xs-3
+				.col-xs-6
+					a.btn.btn-primary#feedback
+						span.buttonText Give us Feedback
 
 
 		.modal.fade#createCollection

@@ -17,6 +17,7 @@ $(document).ready(function() {
 			}
 
 			through.text(beenThrough + '/');
+			$(".progress-bar").attr("style", "width: " + (through/size)*100 + "%;")
 		}
 		if(parseInt(size) === 0) {
 			$(this).hide();
@@ -25,9 +26,16 @@ $(document).ready(function() {
 		}
 		// are things still visible? 
 		if($(".product :visible").length == 0) {
-			$('.container').append("<h1>No collections left to visit. Come back tomorrow</h1>")
+			$('.container').append("<h2 style='text-align: center;'>You've Weaved us out, there are unplayed Collections</h2><h4 style='text-align: center'>Come back tomorrow for more Collections</h4>")
 		}
 
 	});
+
+	$(".playButton img").hover(function() {
+		$(this).attr("src", "/images/playButton-hover.png");
+	}, function() {
+		$(this).attr("src", "/images/playButton.png")
+	});
 	
+
 });
