@@ -384,7 +384,7 @@ button.like {
     top: 15px;
   }
 
-  span.myCollection {
+  .collectionTag {
     display: none;
   }
 
@@ -392,19 +392,17 @@ button.like {
     display: none;
   }
 
-  .caption ol {
+  .caption {
+    margin-top: 20px;
+  }
+
+  .caption ul {
     padding-left: 25px;
   }
 
-  .caption ol li {
-  font-size: 23px;
+  .caption ul li {
+  font-size: 20px;
   margin-bottom: 10px;
-}
-
-  .caption li p {
-    font-size: 18px;
-    padding-left: 30px;
-    padding-top: 4px;
   }
 
   .image {
