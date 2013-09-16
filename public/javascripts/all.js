@@ -9,7 +9,7 @@ $(document).ready(function() {
 	if(localStorage.getObj("likes") == null) {
 		$("a.hanger").hide();
 	} else {
-		$("a.hanger").html("<img src='/images/coat-hanger-white.png', style='width: 18px'> My Collection (" + localStorage.getObj("likes").length + ")")
+		$("a.hanger").html("<img src='/images/coat-hanger.png', style='width: 18px'> <span='myCollection'> My Collection </span> (" + localStorage.getObj("likes").length + ")")
 	}
 
 	mixpanel.track_links("#hangerEarly", "Early Exit");
