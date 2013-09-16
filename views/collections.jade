@@ -5,6 +5,10 @@ block content
     ul
     -for(var i = 0; i < data.length; i++) {
     -var element = data[i];
+      .row
+        .col-xs-1
+        .col-xs-10
+          hr
       li.collection(data-collectionName="#{element.name}")
         a(href="/collection/#{element.name}") #{element.name}
         span.through 0/

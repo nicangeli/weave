@@ -59,14 +59,10 @@ h1, h2, h3, h4 {
   padding-bottom: 3px;
 }
 
-/*Overide bootstrap to give 100% width for container*/
-.container {
+.landing {
   margin: 0px;
   min-width: 100% !important;
   height: 1000px;
-}
-
-.landing {
   background: url('/images/landingPage/background.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
