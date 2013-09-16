@@ -17,6 +17,7 @@ $(document).ready(function() {
 			}
 
 			through.text(beenThrough + '/');
+			$(".progress-bar").attr("style", "width: " + (through/size)*100 + "%;")
 		}
 		if(parseInt(size) === 0) {
 			$(this).hide();
