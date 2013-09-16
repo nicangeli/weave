@@ -419,13 +419,22 @@ button.like {
   margin-bottom: 10px;
   }
 
+  .collectionsImage {
+    padding: 0px;
+    width: 5px;
+  }
+
   .collectionsImage img {
     display: none;
   }
 
+  .playButton {
+  width: 100%;
+  }
+
   .image {
     width: 100%;
-    height: 250px;
+    height: 220px;
   }
   .image img.product {
     display: block;
@@ -433,20 +442,14 @@ button.like {
     max-height: 100%;
   }
 
-  button.like {
-    font-size: 12px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 0px;
-    padding-left: 0px;
+  .likeHeart {
+  width: 75px;
+  cursor: pointer;
   }
 
-  button.dislike {
-    font-size: 12px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 0px;
-    padding-left: 0px;
+  .dislikeCross {
+    width: 75px;
+    cursor: pointer;
   }
 
   #feedback {
