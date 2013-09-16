@@ -62,10 +62,6 @@ h1, h2, h3, h4 {
   padding-bottom: 3px;
 }
 
-#showHanger {
-  width: 100%;
-}
-
 /*
 ===========================================
               Landing Page
@@ -237,7 +233,6 @@ button.age {
 */
 
 .collection {
-  padding-top: 20px;
 	text-align: center;
 }
 
@@ -259,6 +254,24 @@ button.like {
   cursor: pointer;
 }
 
+/*
+===========================================
+          My Collection
+===========================================
+*/
+
+.myCollection {
+  margin-top: 10px;
+}
+
+.myCollection h3 {
+  text-align: center;
+}
+
+.reveal {
+  text-align: center;
+}
+
 #tweet {
   width: 100%;
 }
@@ -266,10 +279,6 @@ button.like {
 #skip {
   width: 100%;
   margin-top: 10px;
-}
-
-#reveal {
-  text-align: center;
 }
 
 #playAgain{
@@ -317,6 +326,12 @@ button.like {
   text-align: center
 }
 
+/*
+===========================================
+          Mobile Phone Styling
+===========================================
+*/
+
 @media screen and (max-width: 480px) {
   body {
     padding: 0px 0 0 0;
@@ -339,7 +354,7 @@ button.like {
     top: 15px;
   }
 
-  .myCollection {
+  span.myCollection {
     display: none;
   }
 

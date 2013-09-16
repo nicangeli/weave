@@ -22,7 +22,8 @@ block content
             .progress.collectionsProgress
               .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 0")
         .col-xs-3.playButton
-          img(src="/images/playButton.png")
+          a(href="/collection/#{element.name}")
+            img(src="/images/playButton.png")
       .row
         .col-xs-2
         .col-xs-8

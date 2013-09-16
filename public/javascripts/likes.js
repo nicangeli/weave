@@ -11,7 +11,7 @@ $(document).ready(function() {
 	}
 
 	if(likes == null || likes.length == 0) {
-		$("#reveal").append("<p>Looks like you didn't like anything!</p>");
+		$(".reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {
 		for(var i = 0; i < likes.length; i++) {
 			var img = "<img src=" + likes[i].imageUrl + " class='likeImage'>",
@@ -26,7 +26,7 @@ $(document).ready(function() {
 			};
 			// grab the heading and start appending items after it
 			var element = '<div class="row"><hr><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a>' + deleteButton + '</div></div>';
-			$("#reveal").append(element);
+			$(".reveal").append(element);
 		}
 	}
 

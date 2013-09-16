@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$("#email, .emailLabel").hide();
 		
 
-	$("#thanks").hide()
+	$(".feedbackThanks").hide()
 	if(localStorage.getItem("email") == null || localStorage.getItem("email") == "") {
 		$("#email, .emailLabel").show();
 		email = localStorage.getItem("email");
@@ -17,7 +17,7 @@ $(document).ready(function() {
 			feedback = $("#feedback").val();
 
 		$("form, p, h1").hide();
-		$("#thanks").show();
+		$(".feedbackThanks").show();
 
 		$.ajax({
 		  type: "POST",
