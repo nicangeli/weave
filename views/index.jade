@@ -3,53 +3,53 @@ extends layout
 block content
   script(type='text/javascript')
     mixpanel.track("Landing Page Loaded")
-  .landing
-      .row
-        .col-md-8
-          .caption
-                ol
-                  li 
-                    span 1) 
-                    p Browse and judge highstreet fashion
-                  li 
-                    span 2)
-                    p Create your own collections
-                  li 
-                    span 3)
-                    p See what your friends think of
-                      br
-                      | your collections
-        .xs-col-3
-          img.iPhone(src="/images/landingPage/blackiPhone.png")
-      .goLogo
-        img.weaveButton#step1(src="/images/weave.png")
-  .onboarding
-    h3#Questions Before we play, we need to know two things about you...
-    .row
-      .col-md-4
-      .col-xs-6.col-md-2
-        a()
-          img.female(src="/images/womanSymbol.png", id="female")
-      .col-xs-6.col-md-2
-        a()
-          img.male(src="/images/manSymbol.png", id="male")
-      .col-md-4
-    .row(style="margin-top: 10px;")
-      .col-xs-2
-      .col-xs-8
-        form.age(role="form")
-          .form-group
-            //- label Age
-            select.form-control
-              option under 18
-              option 18-21
-              option 22-25
-              option 26-30
-              option 31-40
-              option 40+
-      .col-xs.2
-    .goLogo
-      img.weaveButton#step2(src="/images/weave.png")
+  .landingBackground
+    .container
+      .landingPage
+        .row
+          .col-xs-2
+          .col-xs-6
+            .caption
+              ul
+                li Browse and judge highstreet fashion
+                li Create your own Collections
+                li See what your friends think of your Collections
+            br    
+            button.btn.btn-custom#step1 Play
+  
+          .xs-col-4
+            img.iPhone(src="/images/landingPage/blackiPhone.png")
+      .onboarding
+        .row
+          .col-xs-2
+          .col-xs-8
+            .caption
+              h3#Questions Before we play, we need to know two things about you...
+              .row
+                .col-md-2
+                .col-xs-6.col-md-4
+                  a()
+                    img.female(src="/images/womanSymbol.png", id="female")
+                .col-xs-6.col-md-4
+                  a()
+                    img.male(src="/images/manSymbol.png", id="male")
+                .col-md-2
+              .row(style="margin-top: 10px;")
+                .col-xs-2
+                .col-xs-8
+                  form.age(role="form")
+                    .form-group
+                      //- label Age
+                      select.form-control
+                        option under 18
+                        option 18-21
+                        option 22-25
+                        option 26-30
+                        option 31-40
+                        option 40+
+                .col-xs.2
+            br
+            button.btn.btn-custom#step2 Enter
     //- .row
     //-   .col-xs-3
     //-   .col-xs-6
