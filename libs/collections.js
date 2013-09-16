@@ -25,6 +25,10 @@ module.exports = function() {
 									{
 										"name": "Pretty",
 										"comment": "You're bound to look pretty in these..."
+									},
+									{
+										"name": "Shoes-Shoes-Shoes",
+										"comment": " Designer Designs"
 									}
 							];
 
