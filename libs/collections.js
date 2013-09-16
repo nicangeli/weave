@@ -8,7 +8,7 @@ var db = require('mongoskin').db(require('../common/db.js').db),
 
 module.exports = function() {
 	
-	this.activeCollections = ['Trousers', 'Shirts', 'Tops'];
+	this.activeCollections = ['Trousers', 'Shirts', 'Tops', 'Winter Coats'];
 
 	this.getActiveCollections = function(myCallback) {
 		var collections = [];
