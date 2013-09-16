@@ -26,5 +26,11 @@ $(document).ready(function() {
 		}
 
 	});
+
+	$(".playButton img").hover(function() {
+		$(this).attr("src", "/images/playButton-hover.png");
+	}, function() {
+		$(this).attr("src", "/images/playButton.png")
+	});
 	
 });

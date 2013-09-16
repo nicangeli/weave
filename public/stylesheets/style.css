@@ -220,6 +220,16 @@ button.age {
   max-width: 75%;
 }
 
+.playButton {
+  text-align: center;
+}
+
+.playButton img {
+  margin-top: 68px;
+  width: 200px;
+  height: 64px;
+}
+
 /*
 ===========================================
           Weave Collection
