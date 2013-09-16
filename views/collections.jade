@@ -5,7 +5,7 @@ block content
     ul
     -for(var i = 0; i < data.length; i++) {
     -var element = data[i];
-      .row
+      .row.product
         .col-xs-3.collectionsImage
           img(src="/images/dresses/dress1.jpg")
         .col-xs-6.collectionsInfo
@@ -13,10 +13,17 @@ block content
             span.collectionsDescription - "This is a description or tagline for the collection"
             br
             h4 A collection by Weave
+<<<<<<< HEAD
+=======
+            p Number of pieces in Collection: 
+              span.size #{element.size}
+>>>>>>> 6029fbeea876d1e72215f10d33712a587ea7682d
             //- a(href="/collection/#{element.name}") #{element.name}
             //span.through 0/
             //span.size #{element.size}
-            p Current progress: 1/#{element.size}
+            p Current progress: 
+              span.through 1/
+              span.size #{element.size}
             .progress.collectionsProgress
               .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 30%;")
         .col-xs-3.playButton
