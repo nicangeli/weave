@@ -102,5 +102,5 @@ var changeProduct = function(currentProduct) {
 };
 
 var updateHanger = function() {
-	$("a.hanger").html("<img src='/images/coat-hanger-white.png'> <span class='myCollection1'>My Collectiuhuh</span> (" + localStorage.getObj("likes").length + ")").show();
+	$("a.hanger").html("<img src='/images/coat-hanger.png'> <span class='myCollection1'>My Collectiuhuh</span> (" + localStorage.getObj("likes").length + ")").show();
 }
