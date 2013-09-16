@@ -3,7 +3,7 @@ extends layout
 block content
   .container
     .collection(data-collectionName="#{collectionName}")
-      h1 #{collectionName}
+      h2 #{collectionName}
       -for(var i = 0; i < products.length; i++) {
       -var id = "product" + i;
       -var itemDisplayNumber = i+1;

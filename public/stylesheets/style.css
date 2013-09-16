@@ -1,7 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white !important;
+  height: 100%;
 }
 
 @font-face {
@@ -72,14 +77,13 @@ h1, h2, h3, h4 {
 .landingBackground {
   margin: 0px;
   min-width: 100% !important;
-  height: 1000px;
   background: url('/images/landingPage/background.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 1000px;
   overflow: hidden;
+  height: 100%;
 }
 
 .caption {
@@ -121,7 +125,6 @@ h1, h2, h3, h4 {
   display: block;
   margin: auto;
   font-size: 40px;
-  font-family: cantarell;
 }
 
 #step2 {
@@ -130,36 +133,37 @@ h1, h2, h3, h4 {
   display: block;
   margin: auto;
   font-size: 40px;
-  font-family: cantarell;
 }
 
 /* Twitter button restyle */
 
 .btn-custom {
-  background-color: hsl(357, 83%, 57%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec363f", endColorstr="#ec363f");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#ec363f), to(#ec363f));
-  background-image: -moz-linear-gradient(top, #ec363f, #ec363f);
-  background-image: -ms-linear-gradient(top, #ec363f, #ec363f);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ec363f), color-stop(100%, #ec363f));
-  background-image: -webkit-linear-gradient(top, #ec363f, #ec363f);
-  background-image: -o-linear-gradient(top, #ec363f, #ec363f);
-  background-image: linear-gradient(#ec363f, #ec363f);
-  border-color: #ec363f #ec363f hsl(357, 83%, 57%);
+  background-color: #ef3a42;
+  border-color: #ef3a42;
   color: white;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
-  -webkit-font-smoothing: antialiased;
+  font-family: cantarell;
 }
-
-.goLogo {
-  margin-top: 5px;
-  text-align: center;
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #ed222b;
+  border-color: #e4121c;
 }
-
-.goLogo img {
-  max-width: 150px;
-  cursor: pointer;
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #ef3a42;
+  border-color: #ef3a42;
 }
 
 /*
@@ -237,7 +241,12 @@ img.male {
   text-align: left;
 }
 
-.collectionsDescription {
+.tagline {
+  margin-bottom: 0px;
+}
+
+.collectionsAuthor {
+  text-align: right;
   font-size: 13px;
   font-style: italic;
   color: grey;
@@ -247,15 +256,16 @@ img.male {
   max-width: 75%;
 }
 
-.playButton {
+.collectionsPlay {
   text-align: center;
+  height: 200px;
 }
 
-.playButton img {
-  margin-top: 68px;
-  width: 200px;
-  height: 64px;
+.playButton {
+  margin-top: 81px;
+  width: 80%;
 }
+
 
 /*
 ===========================================
@@ -265,6 +275,10 @@ img.male {
 
 .collection {
 	text-align: center;
+}
+
+.collection h2 {
+  margin-top: 10px;
 }
 
 /*button.dislike {
@@ -403,6 +417,10 @@ button.like {
   .caption ul li {
   font-size: 20px;
   margin-bottom: 10px;
+  }
+
+  .collectionsImage img {
+    display: none;
   }
 
   .image {

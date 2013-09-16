@@ -6,13 +6,11 @@ block content
     -for(var i = 0; i < data.length; i++) {
     -var element = data[i];
       .row.product(data-collectionName="#{element.name}")
-        .col-xs-3.collectionsImage
+        .col-xs-1.col-md-3.collectionsImage
           img(src="#{element.imageUrl}")
-        .col-xs-6.collectionsInfo
+        .col-xs-8.col-md-6.collectionsInfo
           h2.collections(data-collectionName="#{element.name}") #{element.name} 
-            span.collectionsDescription - #{element.comment}
-            br
-            h4 A collection by Weave
+            h4 - #{element.comment} -
             //- a(href="/collection/#{element.name}") #{element.name}
             //span.through 0/
             //span.size #{element.size}
@@ -21,9 +19,9 @@ block content
               span.size #{element.size}
             .progress.collectionsProgress
               .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 0")
-        .col-xs-3.playButton
-          a(href="/collection/#{element.name}")
-            img(src="/images/playButton.png")
+            p.collectionsAuthor A collection by Weave
+        .col-xs-3.col-md-3collectionsPlay
+          a.btn.btn-custom.playButton(href="/collection/#{element.name}") Play
       .row
         .col-xs-2
         .col-xs-8
