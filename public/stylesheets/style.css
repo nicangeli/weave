@@ -98,24 +98,25 @@ h1, h2, h3, h4 {
 .caption ol {
   color: #ccc;
   list-style-type: none;
-  padding-top: 5%;
+  padding-top: 10px;
   cursor: pointer;
+  padding-bottom: 10px;
 }
  
 .caption ol li {
   position: relative;
   font-family: cantarell;
-  font-size: 45px;
-  color: #e74c3c;
+  font-size: 35px;
+  color: #ffffff;
   margin-bottom: 20px;
 }
  
 .caption li p {
   padding-top: 10px;
   font-family: cantarell;
-  font-size: 35px;
+  font-size: 25px;
   padding-left: 60px;
-  color: #e74c3c;
+  color: #ffffff;
 }
  
 .caption span {
@@ -123,10 +124,10 @@ h1, h2, h3, h4 {
 }
 
 .iPhone{
-  max-width: 100%;
-  height: auto;
-  max-height: 300px;
+  height: 530px;
+  width: auto;
   cursor: pointer;
+  padding-top: 30px;
 }
 
 .goLogo {

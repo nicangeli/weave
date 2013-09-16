@@ -7,7 +7,7 @@ block content
     -var element = data[i];
       .row
         .col-xs-3.collectionsImage
-          img(src="/images/dresses/dress1.jpg")
+          img(src="#{element.imageUrl}")
         .col-xs-6.collectionsInfo
           h2.collections(data-collectionName="#{element.name}") #{element.name} 
             span.collectionsDescription - "This is a description or tagline for the collection"

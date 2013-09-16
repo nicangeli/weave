@@ -37,7 +37,6 @@ exports.collection = function(req, res) {
 exports.showCollections = function(req, res) {
 	var c = new Collections();
 	c.getActiveCollections(function(sizes) {
-		console.log(sizes);
 		res.render('collections', {"data": sizes});
 	});
 };
