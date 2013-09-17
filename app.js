@@ -53,6 +53,9 @@ app.post('/share', routes.share);
 app.get('/share/:shareId', routes.enterViaShare);
 app.post('/friend/feedback', routes.feedbackReturned);
 
+app.get('/skim', function(req, res) {
+	res.render('skim');
+})
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
