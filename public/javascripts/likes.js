@@ -41,9 +41,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		if($("form")[0].checkValidity()) {
 			e.preventDefault();
-			console.log($("form")[0].checkValidity());
 			var collectionName = $("#collectionName").val();
 			var ownerName = $("#ownerName").val();
+
 			localStorage.setItem("email", $("#ownerEmail").val());
 
 			var data = {

@@ -93,12 +93,10 @@ exports.enterViaShare = function(req, res) {
 
 exports.feedbackReturned = function(req, res) {
 	var data = req.body.data;
+	console.log(data);
 	var s = new Share();
 	s.getShareDetails(data._id, function(result) {
-		console.log(data.products);
-		console.log(data.friendName);
-		console.log(result.ownerEmail);
-		console.log(result.ownerName);
+
 		//console.log(result);
 		emailTemplates(templatesDir, function(err, template) {
 			if(err) {
@@ -117,7 +115,8 @@ exports.feedbackReturned = function(req, res) {
 				friend: data.friendName,
 				name: result.ownerName,
 				products: data.products,
-				collection: result.collectionName
+				collection: result.collectionName,
+				comment: data.comment
 			};
 
 			template('friend', locals, function(err, html) {
@@ -127,6 +126,7 @@ exports.feedbackReturned = function(req, res) {
 				smtpTransport.sendMail({
 					from: "Weave Team <andy@weaveuk.com>",
 					to: locals.email,
+					bcc: 'Admin <nick@weaveuk.com>',
 					subject: locals.friend + " has completed your Collection",
 					html: html,
 					generateTextFromHTML: true
@@ -136,9 +136,11 @@ exports.feedbackReturned = function(req, res) {
 					}
 					console.log('SUCCESS');
 					console.log(responseStatus.message);
+					res.status(200).send();
+
 				})
 			})
 		})
-		res.status(200).send();
+		//res.status(200).send();
 	})
 }

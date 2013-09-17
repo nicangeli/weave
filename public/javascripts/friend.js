@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	
 	$(".collections, .thanks").hide();
+	$('.comment').hide();
 
 
 	$("#understand").click(function(e) {
@@ -46,6 +47,29 @@ $(document).ready(function() {
 		changeProduct(element);
 	});
 
+	$("#sendComment").click(function(e) {
+		e.preventDefault();
+		var _id = $("[data-id]").attr('data-id');
+		var data = {
+			"data": {
+				"_id": _id, 
+				"friendName": localStorage.getItem("friendName"),
+				"products": localStorage.getObj(_id),
+				"comment": $("#comment").val()
+			}
+		};
+		$.post("/friend/feedback", data)
+			.done(function(data) {
+				$(".collections").hide();
+				$('.comment').hide();
+				$(".thanks").show();
+			})
+			.fail(function(e) {
+				console.log(e)
+				alert("Oops... Something went wrong")
+			});
+	}) 
+
 });
 
 var changeProduct = function(currentProduct) {
@@ -56,22 +80,7 @@ var changeProduct = function(currentProduct) {
 		//window.location = "/thanks";
 		// we have been through all of the products, show the thanks screens
 		//and email the originalOwner
-		var _id = $("[data-id]").attr('data-id');
-		var data = {
-			"data": {
-				"_id": _id, 
-				"friendName": localStorage.getItem("friendName"),
-				"products": localStorage.getObj(_id)
-			}
-		};
-		$.post("/friend/feedback", data)
-			.done(function(data) {
-				$(".collections").hide();
-				$(".thanks").show();
-			})
-			.fail(function() {
-				alert("Oops... Something went wrong")
-			});
+		$('.comment').show();
 
 	} else {
 		$('[data-number=' + nextId + ']').each(function() {
