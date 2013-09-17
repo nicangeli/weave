@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-	var collection = $(".collections").attr("data-collectionName")
+	var collection = $(".collection").attr("data-collectionName")
 	var howFarThrough;
+	console.log(collection);
 	if(localStorage.getItem(collection) == null) {
 		// hide all elements at the start, bar the first one
 		for(var i = 1; i < $(".collection").children().length; i++) {
