@@ -28,6 +28,7 @@ block content
         .col-xs-4
     .collections
       -for(var i = 0; i < results.products.length; i++) {
+      -console.log(results.products[i]);
       -var id = "product" + i;
       -var itemDisplayNumber = i+1;
       -var progressint = ((itemDisplayNumber - 1)/results.products.length) * 100;

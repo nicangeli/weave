@@ -83,7 +83,11 @@ exports.enterViaShare = function(req, res) {
 	var shareId = req.params.shareId;
 	var s = new Share();
 	s.getShareDetails(shareId, function(result) {
-		console.log(result);
+		//console.log(result);
+		for(var i = 0; i < result.products.length; i++) {
+			console.log(i);
+			console.log(result.products[i].imageUrl);
+		}
 		if(result == null) {
 			res.send("No such share");
 		}
