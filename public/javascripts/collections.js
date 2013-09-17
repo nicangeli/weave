@@ -45,6 +45,10 @@ $(document).ready(function() {
 		});
 	});
 	
+	$(".createCollection").click(function(e) {
+		alertify.alert("We are currently in Beta and this feature has not yet been built. It will be soon!")
+		mixpanel.track("Create Collection");
+	});
 	
 
 });
