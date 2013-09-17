@@ -85,7 +85,13 @@ $(document).ready(function() {
 				"Age" : age,
 				"Gender" : gender
 			}, function() {
-				window.location = "/collections";
+				if(gender == "male") {
+					alertify.alert("Currently Weave focuses on womans clothing. We'll be adding men shortly, please have a play.");
+					window.location = "/collections";
+				} else {
+					window.location = "/collections";
+				}
+				
 			});
 
 			/*mixpanel.track("Gender", {
