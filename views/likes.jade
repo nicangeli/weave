@@ -18,7 +18,7 @@ block content
 				.col-xs-3
 				.col-xs-6
 					button.btn.btn-primary#feedback
-						span.buttonText Give us Feedback
+						span.buttonText Give Feedback
 			.reveal
 			h3 Come back to Weave anytime to review your collection
 			
@@ -29,20 +29,20 @@ block content
 				.modal-content.weave-modal-content
 					.modal-header
 						button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
-						h4.modal-title Create your first Collection
+						h4.modal-title Send your Collection
 					.modal-body
 						.modal-body-content
-							h3 Before we let other people Weave your collection, you need to give it a name...
+							h3 Before other people can review your collection, you need to name it...
 							form(role="form")
 								.form-group
 									input.form-control#collectionName(placeholder="Collection Name" required)
+									p.help-block So your friends know who this collection is from 
 									label
 									input.form-control#ownerName(placeholder="Your name")
-									p.help-block To help your friends identify you
+									p.help-block Provide your email below so we can send you what your friends say!
 									input.form-control#ownerEmail(type="email", placeholder="Your email" required)
-									p.help-block If you want us to send you what friends & followers like and dislike
 								.form-group
-									button.btn.btn-default#nameCollection(type="submit") OK
+									button.btn.btn-default#nameCollection(type="submit") GO
 						.shareButtons
 							span#emailShare
 							span#twitterShare
