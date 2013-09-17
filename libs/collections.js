@@ -12,7 +12,7 @@ module.exports = function() {
 	this.activeCollections = [
 									{
 										"name": "Winter Coats",
-										"comment": "24 reasons to hit the shops"
+										"comment": "24 reasons to leave the house"
 									},
 									{
 										"name": "Punk",
@@ -20,7 +20,7 @@ module.exports = function() {
 									},
 									{
 										"name": "Nasty Gal",
-										"comment": "New In"
+										"comment": "New In!"
 									},
 									{
 										"name": "Pretty",
@@ -28,14 +28,14 @@ module.exports = function() {
 									},
 									{
 										"name": "Shoes-Shoes-Shoes",
-										"comment": "Caveat Emptor - $$$! "
+										"comment": "Caveat Emptor - $$$ "
 									},
 									{
 										"name": "Weekend",
-										"comment": "Cute Comfy Casuals"
+										"comment": "Cute comfy casuals"
 									},
 									{
-										"name": "WildCard",
+										"name": "Wildcard",
 										"comment": "Feeling Lucky?"
 									}
 							];

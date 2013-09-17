@@ -35,39 +35,16 @@ $(document).ready(function() {
 	$(".like").click(function(e) {
 		e.preventDefault();
 		if(localStorage.getItem("firstLike") != "false") {
-			alertify.alert("You've liked something! We've added this to your collection (top right corner)");
-			localStorage.setItem("firstLike", "false");
+			alertify.alert("You've liked something! We've added this to your collection (top right corner)", function() {
+				localStorage.setItem("firstLike", "false");
+				var that = this;
+				l(that);
+			});
 		}
-		var element = $(this).attr('data-number');
-
-		// Push to Mixpanel
-		/*mixpanel.track("Like Item", {
-			"Item" : $(this).attr("data-url")
-		});*/
-
-		var likes = localStorage.getObj("likes");
-		
-		var tmp = {};
-			tmp.url = $(this).attr("data-url");
-			tmp.price = $(this).attr("data-price");
-			tmp.shop = $(this).attr("data-shop");
-			tmp.imageUrl = $(this).attr("data-imageUrl");
-			tmp.type = $(this).attr("data-type");
-			tmp.brand = $(this).attr("data-brand");
-		if(likes == null) {
-			likes = [tmp];
-			localStorage.setObj("likes", likes);
-		} else {
-			likes.push(tmp);
-			localStorage.setObj("likes", likes);
-		}
-
-		updateHanger();
-
-		// anything that has a data-number attr of element, hide it
-		$('[data-number=' + element + ']').hide();
-		changeProduct(element);
+		l(this);
 	});
+
+		
 
 	$(".dislike").click(function(e) {
 		e.preventDefault();
@@ -88,6 +65,33 @@ $(document).ready(function() {
 	})
 
 });
+
+var l = function(that) {
+	var element = $(that).attr('data-number');
+
+			var likes = localStorage.getObj("likes");
+			
+			var tmp = {};
+				tmp.url = $(this).attr("data-url");
+				tmp.price = $(this).attr("data-price");
+				tmp.shop = $(this).attr("data-shop");
+				tmp.imageUrl = $(this).attr("data-imageUrl");
+				tmp.type = $(this).attr("data-type");
+				tmp.brand = $(this).attr("data-brand");
+			if(likes == null) {
+				likes = [tmp];
+				localStorage.setObj("likes", likes);
+			} else {
+				likes.push(tmp);
+				localStorage.setObj("likes", likes);
+			}
+
+			updateHanger();
+
+			// anything that has a data-number attr of element, hide it
+			$('[data-number=' + element + ']').hide();
+			changeProduct(element);
+}
 
 var changeProduct = function(currentProduct) {
 	var num = parseInt(currentProduct.split("product")[1]),
