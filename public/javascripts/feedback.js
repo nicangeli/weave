@@ -12,9 +12,14 @@ $(document).ready(function() {
 
 	$("#feedbackButton").click(function(e) {
 		e.preventDefault();
-		mixpanel.track("Feedback Sent");
 		var email = $("#email").val(),
 			feedback = $("#feedback").val();
+
+		localStorage.setItem("email", email);
+
+		mixpanel.identify();
+		mixpanel.people.set({"$email" : email})
+		mixpanel.track("Feedback Sent");
 
 		$("form, p, h1").hide();
 		$(".feedbackThanks").show();

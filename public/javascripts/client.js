@@ -41,9 +41,9 @@ $(document).ready(function() {
 		var element = $(this).attr('data-number');
 
 		// Push to Mixpanel
-		mixpanel.track("Like Item", {
+		/*mixpanel.track("Like Item", {
 			"Item" : $(this).attr("data-url")
-		});
+		});*/
 
 		var likes = localStorage.getObj("likes");
 		

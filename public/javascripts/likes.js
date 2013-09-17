@@ -32,19 +32,21 @@ $(document).ready(function() {
 
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
-		mixpanel.track("Play Again", {}, function() {
+		window.location = "/collections/";
+		/*mixpanel.track("Play Again", {}, function() {
 			window.location = "/collections/";
-		});
+		});*/
 	});
 
 	$("#nameCollection").click(function(e){
 		e.preventDefault();
 		if($("form")[0].checkValidity()) {
 			e.preventDefault();
-			var collectionName = $("#collectionName").val();
-			var ownerName = $("#ownerName").val();
+			var collectionName = $("#collectionName").val(),
+				ownerName = $("#ownerName").val(),
+				email = $("#ownerEmail").val();
 
-			localStorage.setItem("email", $("#ownerEmail").val());
+			localStorage.setItem("email", email);
 
 			var data = {
 				"data": {
@@ -56,6 +58,12 @@ $(document).ready(function() {
 					"products": localStorage.getObj("likes")
 				}
 			};
+
+			mixpanel.identify();
+			mixpanel.people.set({"$email" : email});
+			mixpanel.people.increment("Share Count");
+
+			mixpanel.track("Collection Share");
 			
 			$.post("/share", data)
 				.done(function(data) {
@@ -117,6 +125,7 @@ $(document).ready(function() {
 	$(".buy").click(function(e) {
 		e.preventDefault();
 		var href = $(this).attr('href');
+		mixpanel.identify();
 		mixpanel.people.increment("Buy Count");
 
 		mixpanel.track("Buy Item", {"url": href}, function() {

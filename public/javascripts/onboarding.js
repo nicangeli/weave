@@ -84,7 +84,7 @@ $(document).ready(function() {
 			mixpanel.identify();
 			mixpanel.people.set({
 				"Age" : age,
-				"Gender" : gender,
+				"Gender" : gender
 			});
 
 			mixpanel.track("Onbaording Complete", {
