@@ -34,11 +34,13 @@ $(document).ready(function() {
 
 	$(".like").click(function(e) {
 		e.preventDefault();
+		var that = this;
 		if(localStorage.getItem("firstLike") != "false") {
 			alertify.alert("You've liked something! We've added this to your collection (top right corner)", function() {
 				localStorage.setItem("firstLike", "false");	
-				var element = $(this).attr('data-number');
-
+				var element = $(that).attr('data-number');
+				console.log('FIRST ELEMENT');
+				console.log(element);
 				// Push to Mixpanel
 				/*mixpanel.track("Like Item", {
 					"Item" : $(this).attr("data-url")
@@ -70,7 +72,7 @@ $(document).ready(function() {
 
 		} else {
 			var element = $(this).attr('data-number');
-
+			console.log(element);
 			// Push to Mixpanel
 			/*mixpanel.track("Like Item", {
 				"Item" : $(this).attr("data-url")
