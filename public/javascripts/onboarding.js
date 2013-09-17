@@ -85,7 +85,6 @@ $(document).ready(function() {
 			mixpanel.people.set({
 				"Age" : age,
 				"Gender" : gender,
-				"test" : "This is fucking test"
 			});
 
 			mixpanel.track("Onbaording Complete", {
