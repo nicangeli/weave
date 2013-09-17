@@ -10,9 +10,7 @@ $(document).ready(function() {
 		alert("NO LOCAL STORAGE");
 	}
 
-	if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) { // we have been here before, but not today 
-		window.location = "/collections";
-	} // else we have not been on this site before
+	// else we have not been on this site before
 
 
 	var gender = "",
@@ -23,6 +21,10 @@ $(document).ready(function() {
 
 	// mouse click on Let's Go
 	$("#step1, .iPhone").click(function(){
+		
+		if(localStorage.getItem("gender") != null && localStorage.getItem("age") != null) { // we have been here before, but not today 
+			window.location = "/collections";
+		} 
 		mixpanel.track("Onboarding Start");
 		$(".landingPage").hide();
 		$(".onboarding").show();
