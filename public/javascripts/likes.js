@@ -68,7 +68,7 @@ $(document).ready(function() {
 			$.post("/share", data)
 				.done(function(data) {
 	  				$(".modal-title").text("Share your first Collection");
-					$(".modal-body-content").html("<p>Your Collection is now ready, share this link with people and they'll weave through it. We'll let you know what they like and dislike</p> <p class='shareLink'>" + data + "</p>");
+					$(".modal-body-content").html("<p> Share the link below with your friends. They will be able to review your collection. We'll let you know the items they liked and disliked</p> <p class='shareLink'>" + data + "</p>");
 					$(".shareButtons").show();
 					$("#emailShare").html("<a class='btn btn-primary btn-xs emailShare' href='mailto:?Subject=I%20want%20your%20opinion%20&body=Hey%20I%20created%20a%20collection%20on%20Weave%2C%20take%20a%20look%20and%20tell%20me%20what%20you%20think%20-%20" + data + "' target='_top'> Email the link</a>");
 
