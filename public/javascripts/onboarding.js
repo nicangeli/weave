@@ -29,10 +29,12 @@ $(document).ready(function() {
 
 	// mouse click on male or female button -- Can probably refactor this. Let's get an intern to do it.
 	$("#female").hover(function() {
-		$(this).attr("src", "/images/woman.png")
+		if(localStorage.getItem("gender") != "male") {
+			$(this).attr("src", "/images/woman-hover.png");	
+		}
 	}, function() {
 		if(localStorage.getItem("gender") != "female") {
-			$(this).attr("src", "/images/womanSymbol.png")
+			$(this).attr("src", "/images/woman.png");
 		}
 	});
 
@@ -54,7 +56,7 @@ $(document).ready(function() {
 			$("#male").attr("src", "/images/man.png")
 			$("#female").attr("src", "/images/womanSymbol.png")
 		} else if(gender == "female") {
-			$("#female").attr("src", "/images/woman.png")
+			$("#female").attr("src", "/images/woman-selected.png")
 			$("#male").attr("src", "/images/manSymbol.png")
 		}
 	});
