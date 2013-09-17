@@ -27,7 +27,6 @@ $(document).ready(function() {
 			localStorage.setItem("email", email);
 			mixpanel.track('Given email',{}, function() {
 				mixpanel.alias(email);
-				mixpanel.identify(email);
 
 
 				mixpanel.people.set({

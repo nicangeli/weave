@@ -23,6 +23,7 @@ $(document).ready(function() {
 
 	// mouse click on Let's Go
 	$("#step1, .iPhone").click(function(){
+		mixpanel.track("Onboarding Start");
 		$(".landingPage").hide();
 		$(".onboarding").show();
 	});
@@ -49,9 +50,9 @@ $(document).ready(function() {
 	$("#male, #female").click(function() {
 		gender = $(this).attr('id');
 		localStorage.setItem("gender", gender);
-		mixpanel.track("Gender", {
+		/*mixpanel.track("Gender", {
 			"Sex": gender
-		});
+		});*/
 		if(gender == "male") {
 			$("#male").attr("src", "/images/man.png")
 			$("#female").attr("src", "/images/womanSymbol.png")
@@ -72,19 +73,37 @@ $(document).ready(function() {
 	//mouse click on Play
 	$("#step2").click(function(e) {
 		e.preventDefault();
+
 		if (localStorage.getItem("gender") == null) {
 			alertify.alert("We need to know your gender");
 		} else {
 			age = $("select option:selected").val();
-			mixpanel.track("Age", {
+			gender = localStorage.getItem("gender");
+
+			// Start tracking User
+			mixpanel.identify();
+			mixpanel.people.set({
+				"Age" : age,
+				"Gender" : gender,
+				"test" : "This is fucking test"
+			});
+
+			mixpanel.track("Onbaording Complete", {
+				"Age" : age,
+				"Gender" : gender
+			}, function() {
+				window.location = "/collections";
+			});
+
+			/*mixpanel.track("Gender", {
 				"Age": age
-			}); 
+			}); */
 			
 			localStorage.setItem("age", age);
 
-			mixpanel.track("Play", {}, function() {
+			/*mixpanel.track("Play", {}, function() {
 				window.location = "/collections";					
-			});
+			});*/
 		}
 	});
 });
