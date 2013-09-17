@@ -250,6 +250,10 @@ img.male {
   border: solid 1px black;  
 }
 
+.progress-bar-success {
+  background-color: #2ecc71;
+}
+
 .collectionsProgress {
   max-width: 75%;
 }
