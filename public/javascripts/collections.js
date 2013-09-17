@@ -29,14 +29,22 @@ $(document).ready(function() {
 		if($(".product :visible").length == 0) {
 			$('.container').append("<h2 style='text-align: center;'>You've Weaved us out, there are unplayed Collections</h2><h4 style='text-align: center'>Come back tomorrow for more Collections</h4>")
 		}
-
 	});
 
-	$(".playButton img").hover(function() {
-		$(this).attr("src", "/images/playButton-hover.png");
-	}, function() {
-		$(this).attr("src", "/images/playButton.png")
+	$(".playButton").click(function(e) {
+		e.preventDefault();
+		var collectionUrl = $(this).data("url"),
+			collectionName = collectionUrl.split("/")[2];
+
+		mixpanel.identify();
+		mixpanel.people.increment("Collections Played");
+		mixpanel.track("Play Collection", {
+			"Collection Name": collectionName
+		}, function() {
+			window.location = collectionUrl;
+		});
 	});
+	
 	
 
 });

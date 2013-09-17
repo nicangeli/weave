@@ -33,7 +33,7 @@ module.exports = function() {
 									{
 										"name": "Weekend",
 										"comment": "Cute Comfy Casuals"
-									},
+									},-
 									{
 										"name": "WildCard",
 										"comment": "Feeling Lucky?"
