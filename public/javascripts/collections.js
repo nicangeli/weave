@@ -27,7 +27,7 @@ $(document).ready(function() {
 		}
 		// are things still visible? 
 		if($(".product :visible").length == 0) {
-			$('.container').append("<h2 style='text-align: center;'>You've Weaved us out, there are unplayed Collections</h2><h4 style='text-align: center'>Come back tomorrow for more Collections</h4>")
+			$('.container').append("<h2 style='text-align: center;'>You've Weaved us out, there are no unplayed Collections</h2><h4 style='text-align: center'>Come back tomorrow for more Collections</h4>")
 		}
 	});
 
