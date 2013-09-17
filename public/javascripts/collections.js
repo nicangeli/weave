@@ -12,10 +12,10 @@ $(document).ready(function() {
 
 		if(beenThrough != null) { // been through before
 			// hide the elements that we have seen all of
-			//if(parseInt(beenThrough) === size) { // have we seen all of the products
-			//	$(this).hide();
-			//	$(this).next().hide();
-			//}
+			if(parseInt(beenThrough) >= size) { // have we seen all of the products
+				$(this).hide();
+				$($(this).siblings('.row')[0]).hide();
+			}
 			through.text(beenThrough + '/');
 			var throughVal = parseInt(through.text().split('/')[0]);
 			$($(this).find('.progress-bar')[0]).attr('style', 'width: ' + (throughVal/parseInt(size))*100 + '%;');
