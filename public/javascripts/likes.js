@@ -120,7 +120,7 @@ $(document).ready(function() {
 		mixpanel.people.increment("Buy Count");
 
 		mixpanel.track("Buy Item", {"url": href}, function() {
-			window.location = href;
+			window.open(href,'_blank');
 		})
 	});
 
