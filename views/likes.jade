@@ -2,7 +2,7 @@ extends layout
 
 block content
 	script(type='text/javascript')
-    mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
+ 		mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
 
 	.container
 		.myCollection
