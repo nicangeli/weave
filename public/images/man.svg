@@ -14,8 +14,8 @@
    id="svg4089"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="woman-selected.svg"
-   inkscape:export-filename="/home/brownie3003/Programming/weave/public/images/woman.png"
+   sodipodi:docname="man-selected.svg"
+   inkscape:export-filename="/home/brownie3003/Programming/weave/public/images/woman-selected.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -42,9 +42,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="91.046446"
-     inkscape:cy="131.78571"
+     inkscape:zoom="0.84355469"
+     inkscape:cx="169.40037"
+     inkscape:cy="135.24373"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
      showgrid="false"
@@ -93,7 +93,7 @@
      style="display:inline">
     <path
        sodipodi:type="arc"
-       style="fill:#ef3a42;fill-opacity:1;stroke:none"
+       style="fill:#57cac2;fill-opacity:1;stroke:none"
        id="path4099-7"
        sodipodi:cx="411.42856"
        sodipodi:cy="586.64789"
@@ -109,16 +109,16 @@
      style="display:inline">
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fff8f0;stroke:#fff8f0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:14.09999999999999964;font-family:Bello-Script;-inkscape-font-specification:Bello-Script;fill-opacity:1"
-       x="65.900002"
-       y="208.7"
+       style="font-size:175px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#fff8f0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:24,12;stroke-dashoffset:0;font-family:Bello-Script;-inkscape-font-specification:Bello-Script"
+       x="50.162502"
+       y="212.125"
        id="text4884"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4886"
-         x="65.900002"
-         y="208.7"
-         style="font-size:200px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#fff8f0;stroke:#fff8f0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:14.09999999999999964;font-family:Bello-Script;-inkscape-font-specification:Bello-Script;fill-opacity:1">F</tspan></text>
+         x="50.162502"
+         y="212.125"
+         style="font-size:175px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#fff8f0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:24,12;stroke-dashoffset:0;font-family:Bello-Script;-inkscape-font-specification:Bello-Script">M</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4888"
@@ -129,5 +129,25 @@
            height="378.80722"
            x="-30.304577"
            y="-34.360493" /></flowRegion><flowPara
-         id="flowPara4894" /></flowRoot>  </g>
+         id="flowPara4894" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3817"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Colaborate-Medium;font-style:italic;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Colaborate-Medium Italic;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+         id="flowRegion3819"><rect
+           id="rect3821"
+           width="435.71429"
+           height="414.28571"
+           x="-59.285713"
+           y="-37.142857" /></flowRegion><flowPara
+         id="flowPara3823"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3825"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Colaborate-Medium;font-style:italic;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Colaborate-Medium Italic;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+         id="flowRegion3827"><rect
+           id="rect3829"
+           width="366.42856"
+           height="344.28571"
+           x="-32.142857"
+           y="-10.714286" /></flowRegion><flowPara
+         id="flowPara3831"></flowPara></flowRoot>  </g>
 </svg>

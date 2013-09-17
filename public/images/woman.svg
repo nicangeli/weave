@@ -14,7 +14,7 @@
    id="svg4089"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="woman-selected.svg">
+   sodipodi:docname="woman.svg">
   <defs
      id="defs4091">
     <clipPath
@@ -40,7 +40,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="24.506617"
+     inkscape:cx="132.83216"
      inkscape:cy="133.13601"
      inkscape:document-units="px"
      inkscape:current-layer="layer5"
@@ -62,7 +62,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -106,16 +106,16 @@
      style="display:inline">
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#fff8f0;font-family:Bello-Script;-inkscape-font-specification:Bello-Script;stroke-opacity:1;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:24,12;stroke-linejoin:round;stroke-linecap:round;stroke-dashoffset:14.1"
-       x="44.600002"
-       y="221.8"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#fff8f0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:24, 12;stroke-dashoffset:14.1;font-family:Bello-Script;-inkscape-font-specification:Bello-Script"
+       x="65.900002"
+       y="208.7"
        id="text4884"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4886"
-         x="44.600002"
-         y="221.8"
-         style="font-size:200px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bello-Script;-inkscape-font-specification:Bello-Script;fill:none;fill-opacity:1;stroke:#fff8f0;stroke-opacity:1;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:24,12;stroke-linejoin:round;stroke-linecap:round;stroke-dashoffset:14.1">W</tspan></text>
+         x="65.900002"
+         y="208.7"
+         style="font-size:200px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#fff8f0;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:24, 12;stroke-dashoffset:14.1;font-family:Bello-Script;-inkscape-font-specification:Bello-Script">F</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4888"
@@ -126,5 +126,5 @@
            height="378.80722"
            x="-30.304577"
            y="-34.360493" /></flowRegion><flowPara
-         id="flowPara4894"></flowPara></flowRoot>  </g>
+         id="flowPara4894" /></flowRoot>  </g>
 </svg>

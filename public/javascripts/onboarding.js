@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 	// mouse click on male or female button -- Can probably refactor this. Let's get an intern to do it.
 	$("#female").hover(function() {
-		if(localStorage.getItem("gender") != "male") {
+		if(localStorage.getItem("gender") != "female") {
 			$(this).attr("src", "/images/woman-hover.png");	
 		}
 	}, function() {
@@ -40,10 +40,12 @@ $(document).ready(function() {
 	});
 
 	$("#male").hover(function() {
-		$(this).attr("src", "/images/man.png")
+		if(localStorage.getItem("gender") != "male") {
+			$(this).attr("src", "/images/man-hover.png");	
+		}
 	}, function() {
 		if(localStorage.getItem("gender") != "male") {
-			$(this).attr("src", "/images/manSymbol.png")
+			$(this).attr("src", "/images/man.png");
 		}
 	});
 
@@ -54,20 +56,12 @@ $(document).ready(function() {
 			"Sex": gender
 		});*/
 		if(gender == "male") {
-			$("#male").attr("src", "/images/man.png")
-			$("#female").attr("src", "/images/womanSymbol.png")
+			$("#male").attr("src", "/images/man-selected.png")
+			$("#female").attr("src", "/images/woman.png")
 		} else if(gender == "female") {
 			$("#female").attr("src", "/images/woman-selected.png")
-			$("#male").attr("src", "/images/manSymbol.png")
+			$("#male").attr("src", "/images/man.png")
 		}
-	});
-
-	$("#maleButton").click(function() {
-		$("#male").trigger("click");
-	});
-
-	$("#femaleButton").click(function() {
-		$("#female").trigger("click");
 	});
 
 	//mouse click on Play
