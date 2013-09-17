@@ -96,6 +96,16 @@ h1, h2, h3, h4 {
   margin-top: 110px;
 }
 
+.captionTitle {
+  color: lightgrey;
+  font-family: cantarell;
+  padding-top: 15px;
+  margin-bottom: 3px;
+  font-style: italic;
+  font-size: 30px;
+  text-align: center
+}
+
 .caption ul {
   color: #ccc;
   list-style: none;
