@@ -32,7 +32,6 @@ $(document).ready(function() {
 
 	$("#playAgain").click(function(e) {
 		e.preventDefault();
-		window.location = "/collections/";
 		mixpanel.track("Play Again", {}, function() {
 			window.location = "/collections/";
 		});
