@@ -12,7 +12,7 @@ module.exports = function() {
 	this.activeCollections = [
 									{
 										"name": "Winter Coats",
-										"comment": "24 reasons to hit the Shops"
+										"comment": "24 reasons to hit the shops"
 									},
 									{
 										"name": "Punk",
@@ -32,7 +32,7 @@ module.exports = function() {
 									},
 									{
 										"name": "Weekend",
-										"comment": "Cute Comfy Casuals :)"
+										"comment": "Cute Comfy Casuals"
 									}
 									{
 										"name": "WildCard",
