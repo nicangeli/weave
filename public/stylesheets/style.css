@@ -425,6 +425,10 @@ button.like {
     display: none;
   }
 
+  .captionTitle {
+    font-size: 24px;
+  }
+
   .iPhone {
     display: none;
   }
@@ -438,7 +442,7 @@ button.like {
   }
 
   .caption ul li {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 10px;
   }
 
