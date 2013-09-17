@@ -11,16 +11,16 @@ module.exports = function() {
 	//this.activeCollections = ['Rock & Roll', 'Punk', 'Darling Dresses', 'Pretty'];
 	this.activeCollections = [
 									{
-										"name": "Rock & Roll",
-										"comment": "A nod to Kate & Co"
+										"name": "Winter Coats",
+										"comment": "24 reasons to hit the shops"
 									},
 									{
 										"name": "Punk",
 										"comment": "Rip it up in tartan, leather & studs"	
 									},
 									{
-										"name": "Darling Dresses",
-										"comment": "11 show stoppers"
+										"name": "Nasty Gal",
+										"comment": "New In"
 									},
 									{
 										"name": "Pretty",
@@ -28,11 +28,15 @@ module.exports = function() {
 									},
 									{
 										"name": "Shoes-Shoes-Shoes",
-										"comment": " Designer Designs"
+										"comment": "Caveat Emptor - $$$! "
 									},
 									{
 										"name": "Weekend",
-										"comment": "Chill"
+										"comment": "Cute Comfy Casuals"
+									}
+									{
+										"name": "WildCard",
+										"comment": "Feeling Lucky?"
 									}
 							];
 
