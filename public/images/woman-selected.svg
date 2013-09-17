@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   id="svg4089"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="woman.svg">
+  <defs
+     id="defs4091">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4742">
+      <path
+         sodipodi:type="arc"
+         style="opacity:0.50597606;fill:#ef3a42;fill-opacity:1;stroke:none;display:inline"
+         id="path4744"
+         sodipodi:cx="411.42856"
+         sodipodi:cy="586.64789"
+         sodipodi:rx="182.85715"
+         sodipodi:ry="182.85715"
+         d="m 594.28571,586.64789 a 182.85715,182.85715 0 1 1 -365.7143,0 182.85715,182.85715 0 1 1 365.7143,0 z"
+         transform="matrix(0.76562498,0,0,0.76562498,-164.99998,-299.15228)" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="24.506617"
+     inkscape:cy="133.13601"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4094">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-228.57141,-469.50503)"
+     style="display:inline">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="path4099"
+       sodipodi:cx="411.42856"
+       sodipodi:cy="586.64789"
+       sodipodi:rx="182.85715"
+       sodipodi:ry="182.85715"
+       d="m 594.28571,586.64789 c 0,100.98921 -81.86794,182.85715 -182.85715,182.85715 -100.98922,0 -182.85715,-81.86794 -182.85715,-182.85715 0,-100.98922 81.86793,-182.85715 182.85715,-182.85715 100.98921,0 182.85715,81.86793 182.85715,182.85715 z"
+       transform="matrix(0.82031248,0,0,0.82031248,41.07143,138.27045)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ef3a42;fill-opacity:1;stroke:none"
+       id="path4099-7"
+       sodipodi:cx="411.42856"
+       sodipodi:cy="586.64789"
+       sodipodi:rx="182.85715"
+       sodipodi:ry="182.85715"
+       d="m 594.28571,586.64789 a 182.85715,182.85715 0 1 1 -365.7143,0 182.85715,182.85715 0 1 1 365.7143,0 z"
+       transform="matrix(0.76562498,0,0,0.76562498,-164.99998,-299.15227)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Layer3"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fff8f0;fill-opacity:1;stroke:none;font-family:Bello-Script;-inkscape-font-specification:Bello-Script"
+       x="44.600002"
+       y="221.8"
+       id="text4884"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4886"
+         x="44.600002"
+         y="221.8"
+         style="font-size:200px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bello-Script;-inkscape-font-specification:Bello-Script;fill:#fff8f0;fill-opacity:1">W</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4888"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bello-Script;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:Bello-Script;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+         id="flowRegion4890"><rect
+           id="rect4892"
+           width="373.75644"
+           height="378.80722"
+           x="-30.304577"
+           y="-34.360493" /></flowRegion><flowPara
+         id="flowPara4894"></flowPara></flowRoot>  </g>
+</svg>
