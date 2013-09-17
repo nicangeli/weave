@@ -86,8 +86,9 @@ $(document).ready(function() {
 				"Gender" : gender
 			}, function() {
 				if(gender == "male") {
-					alertify.alert("Currently Weave focuses on womans clothing. We'll be adding men shortly, please have a play.");
-					window.location = "/collections";
+					alertify.alert("Currently Weave focuses on womans clothing. We'll be adding men shortly, please have a play.", function() {
+						window.location = "/collections";	
+					});
 				} else {
 					window.location = "/collections";
 				}
