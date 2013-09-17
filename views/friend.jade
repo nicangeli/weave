@@ -51,6 +51,13 @@ block content
               button.like.btn.btn-success.btn-lg(data-number="product#{i}", data-id="#{results._id}", data-url="#{results.products[i].url}", data-price="#{results.products[i].price}", data-shop="#{results.products[i].shop}", data-imageUrl="#{results.products[i].imageUrl}", data-type="#{results.products[i].type}", data-brand="#{results.products[i].brand}") I'd wear this
             .col-xs-1
       -}
+    .comment
+      form(role="form", method="post")
+        .form-group
+          label(for="comment") Any comments?
+          textarea.form-control(name="comment", id="comment")
+        .form-group
+          input.btn.btn-defaul(type="submit", id="sendComment") Send
     .thanks
       h1 Thanks. We'll let #{results.ownerName} know
       a(class="btn btn-primary", href="/") Play for yourself
