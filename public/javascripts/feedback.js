@@ -12,29 +12,32 @@ $(document).ready(function() {
 
 	$("#feedbackButton").click(function(e) {
 		e.preventDefault();
-		var email = $("#email").val(),
-			feedback = $("#feedback").val();
+		if($("form")[0].checkValidity()) {
+			e.preventDefault();
+			var email = $("#email").val(),
+				feedback = $("#feedback").val();
 
-		localStorage.setItem("email", email);
+			localStorage.setItem("email", email);
 
-		mixpanel.identify();
-		mixpanel.people.set({"$email" : email})
-		mixpanel.track("Feedback Sent");
+			mixpanel.identify();
+			mixpanel.people.set({"$email" : email})
+			mixpanel.track("Feedback Sent");
 
-		$("form, p, h1").hide();
-		$(".feedbackThanks").show();
+			$("form, p, h1").hide();
+			$(".feedbackThanks").show();
 
-		$.ajax({
-		  type: "POST",
-		  url: "/feedback",
-		  data: {
-		  	"email": email + localStorage.getItem("email"),
-		  	"feedback": feedback
-		  },
-		  success: function() {
-		  	window.location = "/";
-		  }
-		});
+			$.ajax({
+			  type: "POST",
+			  url: "/feedback",
+			  data: {
+			  	"email": email + localStorage.getItem("email"),
+			  	"feedback": feedback
+			  },
+			  success: function() {
+			  	window.location = "/";
+			  }
+			});
+		}
 	});
 
 
