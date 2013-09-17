@@ -19,8 +19,8 @@ module.exports = function() {
 										"comment": "Rip it up in tartan, leather & studs"	
 									},
 									{
-										"name": "New in:",
-										"comment": "@Nasty Gal"
+										"name": "Nasty Gal",
+										"comment": "New In"
 									},
 									{
 										"name": "Pretty",
