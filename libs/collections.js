@@ -11,32 +11,24 @@ module.exports = function() {
 	//this.activeCollections = ['Rock & Roll', 'Punk', 'Darling Dresses', 'Pretty'];
 	this.activeCollections = [
 									{
-										"name": "Winter Coats",
-										"comment": "24 reasons to leave the house"
+										"name": "Date Night",
+										"comment": "Look special"
 									},
 									{
-										"name": "Punk",
-										"comment": "Rip it up in tartan, leather & studs"	
+										"name": "Glam-Rock",
+										"comment": ""	
 									},
 									{
-										"name": "Nasty Gal",
-										"comment": "New In!"
+										"name": "Punk-II",
+										"comment": "Rip it up in tartan, leather & studs"
 									},
 									{
-										"name": "Pretty",
-										"comment": "Tea Dresses, mostly"
+										"name": "Statement Sweatshirts",
+										"comment": "Be bold"
 									},
 									{
-										"name": "Shoes-Shoes-Shoes",
-										"comment": "Caveat Emptor - $$$ "
-									},
-									{
-										"name": "Weekend",
-										"comment": "Cute comfy casuals"
-									},
-									{
-										"name": "Wildcard",
-										"comment": "Feeling Lucky?"
+										"name": "Party",
+										"comment": "A small collection of party pieces"
 									}
 							];
 
