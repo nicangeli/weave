@@ -25,7 +25,7 @@ $(document).ready(function() {
 				//$(this).parent().remove();
 				//$($(this).siblings('.row')[0]).hide();
 				//$('.stamped[data-collectionName=" ' + $(this).attr('data-collectionName') + ' "]').show();
-				$(".stamped[data-collectionName='"+ $(this).attr('data-collectionName') +"']").show()
+				$(".stamped[data-collectionName='"+ $(this).attr('data-collectionName') +"']").show().next().addClass("greyedOut")
 			}
 			through.text(beenThrough + '/');
 			var throughVal = parseInt(through.text().split('/')[0]);

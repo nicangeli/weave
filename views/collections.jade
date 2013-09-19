@@ -12,9 +12,9 @@ block content
         //- .collectionContainer
         //-   .collectionHover
         //-     .weaveLogo
+        img.stamped(src="/images/stamp.png", data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
         .collection(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
           button.close(type="button", aria-hidden="true") &times;
-          img.stamped(src="/images/stamp.png", data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
           h3 #{element.name}
           h4 - #{element.comment} -
           .collectionImages

@@ -713,10 +713,15 @@ img.male {
   width: 100%;
 }
 
+.greyedOut {
+  background-color: #b3b5b7;
+  opacity: 0.3;
+}
+
 .stamped {
   position: absolute;
-  left: 65px;
-  top: 40px;
+  left: 55px;
+  top: 50px;
 }
 
 
