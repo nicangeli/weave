@@ -12,7 +12,8 @@ block content
         //- .collectionContainer
         //-   .collectionHover
         //-     .weaveLogo
-        img.stamped(src="/images/stamp.png", data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
+        .stamped(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
+          img(src="/images/stamp.png")
         .collection(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
           button.close(type="button", aria-hidden="true") &times;
           h3 #{element.name}
