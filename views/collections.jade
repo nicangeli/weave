@@ -2,36 +2,96 @@ extends layout
 
 block content
   .container
-    h1(style="text-align: center") Here are your collections, they change daily:
-    ul
+    h1(style="text-align: center") Collections Feed
     -for(var i = 0; i < data.length; i++) {
     -var element = data[i];
-      .row.product(data-collectionName="#{element.name}")
-        .col-xs-2.col-md-3.collectionsImage
-          img(src="#{element.imageUrl}")
-        .col-xs-7.col-md-6.collectionsInfo
-          h2.collections(data-collectionName="#{element.name}") #{element.name} 
-            h4 - #{element.comment} -
-            //- a(href="/collection/#{element.name}") #{element.name}
-            //span.through 0/
-            //span.size #{element.size}
-            p Current progress: 
-              span.through 1/
-              span.size #{element.size}
-            .progress.collectionsProgress
-              .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 0")
-            p.collectionsAuthor A collection by Weave
-        .col-xs-3.col-md-3.collectionsPlay
-          a.btn.btn-custom.playButton(data-url="/collection/#{element.name}") Play
-      .row
-        .col-xs-2
-        .col-xs-8
-          hr
-    -}
+    - if( i%3 == 0) {
     .row
-      .col-xs-2.col-md-3
-      .col-xs-8.col-md-6
-        button.btn.btn-custom.createCollection Create your own Collection
+    - }
+      .col-sm-4.col-md-4.collectionTile
+        //- .collectionContainer
+        //-   .collectionHover
+        //-     .weaveLogo
+        .collection(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
+          button.close(type="button", aria-hidden="true") &times;
+          h3 #{element.name}
+          h4 - #{element.comment} -
+          .collectionImages
+            .mainCollectionImage  
+              img.main(src="#{element.imageUrls[0]}")
+            .miniCollectionImages
+              .miniCollectionImage
+                img.mini(src="#{element.imageUrls[1]}")
+              .miniCollectionImage
+                img.mini(src="#{element.imageUrls[2]}")
+              .miniCollectionImage
+                img.mini(src="#{element.imageUrls[3]}")
+              .miniCollectionImage
+                img.mini(src="#{element.imageUrls[4]}")
+            .collectionClearfix
+          .collectionInfo
+            .collectionProgress
+              .progress
+                .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 0")
+              .progressText
+                p Current progress: 
+                  span.through 0/ 
+                  span.size #{element.size}
+            .collectionAuthor 
+              p A collection by Weave
+    - }
+
+    .modal.fade#weaveIntro
+      .modal-dialog.weave-modal
+        .modal-content.weave-modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+            h4.modal-title Welcome to Weave
+          .modal-body
+            .modal-body-content
+              h3 This page has your collection feed. The feed will update as users create more collections.
+              h3 Whats a collection? Great question!
+              p A collection is between 10 - 20 pieces of clothing that have been curated by other users for you to weave through.
+              h3 What the hell does weave through mean? We love the curious ones
+              p When we say weave through we mean review by liking or disliking... Not clear? Pick a collection and it'll become obvious.  
+              
+              button.btn.btn-custom#closeIntro(type="submit") Close
+
+
+
+
+
+
+
+    //- ul
+    //- -for(var i = 0; i < data.length; i++) {
+    //- -var element = data[i];
+    //-   .row.product(data-collectionName="#{element.name}")
+    //-     .col-xs-2.col-md-3.collectionsTile
+    //-       img(src="#{element.imageUrl}")
+    //-     .col-xs-7.col-md-6.collectionsInfo
+    //-       h2.collections(data-collectionName="#{element.name}") #{element.name} 
+    //-         h4 - #{element.comment} -
+    //-         //- a(href="/collection/#{element.name}") #{element.name}
+    //-         //span.through 0/
+    //-         //span.size #{element.size}
+    //-         p Current progress: 
+    //-           span.through 1/
+    //-           span.size #{element.size}
+    //-         .progress.collectionsProgress
+    //-           .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 0")
+    //-         p.collectionsAuthor A collection by Weave
+    //-     .col-xs-3.col-md-3.collectionsPlay
+    //-       a.btn.btn-custom.playButton(data-url="/collection/#{element.name}") Play
+    //-   .row
+    //-     .col-xs-2
+    //-     .col-xs-8
+    //-       hr
+    //- -}
+    //- .row
+    //-   .col-xs-2.col-md-3
+    //-   .col-xs-8.col-md-6
+    //-     button.btn.btn-custom.createCollection Create your own Collection
 
 
 

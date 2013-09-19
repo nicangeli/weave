@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+	// It's a new visitor variable so we can show introduction modal to new users on Collection feed.
+	if(localStorage.getItem("newVisitor") == null) {
+		localStorage.setItem("newVisitor", "true");
+	}
+
 	$(".weaveButton").hover(function() {
 		$(this).attr("src", "/images/weaveClick.png");
 	}, function() {

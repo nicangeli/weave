@@ -5,22 +5,22 @@ block content
 		mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
 
 	.container
-		.myCollection
-			.row
-				.col-xs-5
-					button.btn.btn-custom#playAgain
-						span.buttonText Back to Collections
-				.col-xs-2
-				.col-xs-5
-					button.btn.btn-custom#shareCollection(data-toggle="modal", href="#createCollection")
-						span.buttonText Share my Collection
-			.row
-				.col-xs-3
-				.col-xs-6
-					button.btn.btn-primary#feedback
-						span.buttonText Give Feedback
-			.reveal
-			h3 Come back to Weave anytime to review your collection
+		h1(style="text-align: center") Product Feed
+		//- .row
+		//- 	.col-sm-4.col-md-4.productTile
+		//- 		.product
+		//- 			button.close(type="button", aria-hidden="true") &times;
+		//- 			.productImage
+		//- 				img(src="/images/dresses/dress1.jpg")
+		//- 			.productInfo
+		//- 				h4 
+		//- 					span.brand FCUK 
+		//- 					span.shop from 
+		//- 						a Top Shop 
+		//- 				.price 
+		//- 					span $20.00 
+		//- 					button.btn.btn-primary.btn-sm View in Store
+		.reveal
 			
 
 
@@ -53,3 +53,18 @@ block content
 
 
 	script(src="/javascripts/likes.js", type="text/javascript")
+		//- .row
+		//- 	.col-xs-5
+		//- 		button.btn.btn-custom#playAgain
+		//- 			span.buttonText Back to Collections
+		//- 	.col-xs-2
+		//- 	.col-xs-5
+		//- 		button.btn.btn-custom#shareCollection(data-toggle="modal", href="#createCollection")
+		//- 			span.buttonText Share my Collection
+		//- .row
+		//- 	.col-xs-3
+		//- 	.col-xs-6
+		//- 		button.btn.btn-primary#feedback
+		//- 			span.buttonText Give Feedback
+		//- .reveal
+		//- h3 Come back to Weave anytime to review your collection

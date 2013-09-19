@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-	var collection = $(".collection").attr("data-collectionName")
+	var collection = $(".weaveFrame").attr("data-collectionName")
 	var howFarThrough;
 	console.log(collection);
 	if(localStorage.getItem(collection) == null) {
 		// hide all elements at the start, bar the first one
-		for(var i = 1; i < $(".collection").children().length; i++) {
+		for(var i = 1; i < $(".weaveFrame").children().length; i++) {
 			$('[data-number="product' + i + '"]').hide();
 		}
 	} else {
@@ -13,7 +13,7 @@ $(document).ready(function() {
 		for(var i = 0; i < howFarThrough; i++) {
 			$('[data-number="product' + i + '"]').hide();
 		}
-		for(var i = howFarThrough+1; i < $(".collection").children().length; i++ ) {
+		for(var i = howFarThrough+1; i < $(".weaveFrame").children().length; i++ ) {
 			$('[data-number="product' + i + '"]').hide();
 		}
 	}
@@ -34,73 +34,37 @@ $(document).ready(function() {
 
 	$(".like").click(function(e) {
 		e.preventDefault();
-		var that = this;
-		if(localStorage.getItem("firstLike") != "false") {
-			alertify.alert("You've liked something! We've added this to your collection (top right corner)", function() {
-				localStorage.setItem("firstLike", "false");	
-				var element = $(that).attr('data-number');
-				console.log('FIRST ELEMENT');
-				console.log(element);
-				// Push to Mixpanel
-				/*mixpanel.track("Like Item", {
-					"Item" : $(this).attr("data-url")
-				});*/
+		localStorage.setItem("firstLike", "false");	
+		var element = $(this).attr('data-number');
+		console.log('FIRST ELEMENT');
+		console.log(element);
+		// Push to Mixpanel
+		/*mixpanel.track("Like Item", {
+			"Item" : $(this).attr("data-url")
+		});*/
 
-				var likes = localStorage.getObj("likes");
+		var likes = localStorage.getObj("likes");
 
-				var tmp = {};
-					tmp.url = $(this).attr("data-url");
-					tmp.price = $(this).attr("data-price");
-					tmp.shop = $(this).attr("data-shop");
-					tmp.imageUrl = $(this).attr("data-imageUrl");
-					tmp.type = $(this).attr("data-type");
-					tmp.brand = $(this).attr("data-brand");
-				if(likes == null) {
-					likes = [tmp];
-					localStorage.setObj("likes", likes);
-				} else {
-					likes.push(tmp);
-					localStorage.setObj("likes", likes);
-				}
-
-				updateHanger();
-
-				// anything that has a data-number attr of element, hide it
-				$('[data-number=' + element + ']').hide();
-				changeProduct(element);			
-			});
-
+		var tmp = {};
+			tmp.url = $(this).attr("data-url");
+			tmp.price = $(this).attr("data-price");
+			tmp.shop = $(this).attr("data-shop");
+			tmp.imageUrl = $(this).attr("data-imageUrl");
+			tmp.type = $(this).attr("data-type");
+			tmp.brand = $(this).attr("data-brand");
+		if(likes == null) {
+			likes = [tmp];
+			localStorage.setObj("likes", likes);
 		} else {
-			var element = $(this).attr('data-number');
-			console.log(element);
-			// Push to Mixpanel
-			/*mixpanel.track("Like Item", {
-				"Item" : $(this).attr("data-url")
-			});*/
-
-			var likes = localStorage.getObj("likes");
-
-			var tmp = {};
-				tmp.url = $(this).attr("data-url");
-				tmp.price = $(this).attr("data-price");
-				tmp.shop = $(this).attr("data-shop");
-				tmp.imageUrl = $(this).attr("data-imageUrl");
-				tmp.type = $(this).attr("data-type");
-				tmp.brand = $(this).attr("data-brand");
-			if(likes == null) {
-				likes = [tmp];
-				localStorage.setObj("likes", likes);
-			} else {
-				likes.push(tmp);
-				localStorage.setObj("likes", likes);
-			}
-
-			updateHanger();
-
-			// anything that has a data-number attr of element, hide it
-			$('[data-number=' + element + ']').hide();
-			changeProduct(element);
+			likes.push(tmp);
+			localStorage.setObj("likes", likes);
 		}
+
+		updateHanger();
+
+		// anything that has a data-number attr of element, hide it
+		$('[data-number=' + element + ']').hide();
+		changeProduct(element);
 
 	});
 
@@ -115,7 +79,7 @@ $(document).ready(function() {
 
 	// clicking either of the buttons should trigger localStorage seen count for this collection to increase
 	$(".like, .dislike").click(function(e) {
-		var collection = $(".collection").attr('data-collectionName');
+		var collection = $(".weaveFrame").attr('data-collectionName');
 		var seenCount = localStorage.getItem(collection);
 		if(seenCount == null) {
 			localStorage.setItem(collection, 1);
