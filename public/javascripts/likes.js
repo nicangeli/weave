@@ -14,19 +14,23 @@ $(document).ready(function() {
 		$(".reveal").append("<p>Looks like you didn't like anything!</p>");
 	} else {
 		for(var i = 0; i < likes.length; i++) {
-			var img = "<img src=" + likes[i].imageUrl + " class='likeImage'>",
+			/*var img = "<img src=" + likes[i].imageUrl + " class='likeImage'>",
 				header = "<h2 class='shop'>" + likes[i].shop + "</h2>",
 				price = "<h4>" + likes[i].price + "</h4>",
 				brand ="<span class='tagline'> - " + likes[i].brand + " - </span>",
 				anchor =  likes[i].url,
-				deleteButton = '<button data-url="' + likes[i].imageUrl + '" type="button" class="btn btn-danger delete">Remove</button>';
+				deleteButton = '<button data-url="' + likes[i].imageUrl + '" type="button" class="btn btn-danger delete">Remove</button>';*/
 
-			if (likes[i].brand == likes[i].shop) {
-				brand = "<span class='tagline'></span>";
-			};
 			// grab the heading and start appending items after it
-			var element = '<div class="row"><hr><div class="col-xs-3">' + img + '</div><div class="col-xs-6 info">' + header + brand + price + '</div><div class="col-xs-3"><a type="button" class="btn btn-default buy" target="_blank" href="' + anchor + '">Buy</a>' + deleteButton + '</div></div>';
-			$(".reveal").append(element);
+			var productRow = '<div class="row rowNumber">',
+				product = '<div class="col-sm-4 col-md-4 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a>' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><button class="btn btn-primary btn-sm">View in Store</button></div></div></div></div></div>';
+			if(i%3 == 0) {
+				$(".reveal").append(productRow);
+			}
+
+			var rows = $(".row"),
+				row = rows[rows.length - 1];
+			$(row).append(product);
 		}
 	}
 
@@ -102,6 +106,7 @@ $(document).ready(function() {
 
 	$(".delete").click(function(e) {
 		e.preventDefault();
+		console.log("you are trying to delete this")
 		// find the element in the likes array
 		// remove it
 		// resave the likes array
@@ -114,6 +119,7 @@ $(document).ready(function() {
 				likes = localStorage.getObj("likes");
 				$(this).parent().parent().fadeOut("slow", function() {
 					$(this).remove();
+					/*window.location = "/likes";*/
 				});
 				break;
 			}

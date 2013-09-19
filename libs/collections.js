@@ -39,11 +39,12 @@ module.exports = function() {
 				if(err) {
 					throw err;
 				}
+				var imageUrls = [result[0].imageUrl, result[1].imageUrl, result[2].imageUrl, result[3].imageUrl, result[4].imageUrl];
 				if(result[0] != undefined) {
 					collections.push({
 						"name": collection.name,
 						"size": result.length,
-						"imageUrl": result[0].imageUrl,
+						"imageUrls": imageUrls,
 						"comment": collection.comment
 					});
 				} else {

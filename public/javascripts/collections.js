@@ -1,7 +1,13 @@
 $(document).ready(function() {
 	// for each collection name, check that we've not seen it all 
 	// and that it is not empty
-	$(".product").each(function() {
+	if(localStorage.getItem("newVisitor") == "true") {
+		$("#weaveIntro").modal("show");
+		localStorage.setItem("newVisitor", "false")
+	}
+	
+
+	$(".collection").each(function() {
 		var through = $(this).find(".through"),
 			size = $(this).find(".size");
 
@@ -13,7 +19,7 @@ $(document).ready(function() {
 		if(beenThrough != null) { // been through before
 			// hide the elements that we have seen all of
 			if(parseInt(beenThrough) >= size) { // have we seen all of the products
-				$(this).hide();
+				$(this).parent().remove();
 				$($(this).siblings('.row')[0]).hide();
 			}
 			through.text(beenThrough + '/');
@@ -26,12 +32,24 @@ $(document).ready(function() {
 		} else {
 		}
 		// are things still visible? 
-		if($(".product :visible").length == 0) {
+		if($(".collection :visible").length == 0) {
 			$('.container').append("<h2 style='text-align: center;'>You've Weaved us out, there are no unplayed Collections</h2><h4 style='text-align: center'>Come back tomorrow for more Collections</h4>")
 		}
 	});
+	
+	// Attempt to get it to dim when you mouseover and present the weave logo
 
-	$(".playButton").click(function(e) {
+	/*$(".collectionHover").hide();
+
+	$(".collectionHover").hover(function() {
+		$(this).show();
+		console.log("hovering successful");
+	}, function() {
+		$(this).hide();
+		console.log("exit successful");
+	});*/
+
+	$(".collection").click(function(e) {
 		e.preventDefault();
 		var collectionUrl = $(this).data("url"),
 			collectionName = collectionUrl.split("/")[2];

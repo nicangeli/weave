@@ -2,33 +2,34 @@ extends layout
 
 block content
   .container
-    .collection(data-collectionName="#{collectionName}")
-      h2 #{collectionName}
-      -for(var i = 0; i < products.length; i++) {
-      -var id = "product" + i;
-      -var itemDisplayNumber = i+1;
-      -var progressint = ((itemDisplayNumber - 1)/products.length) * 100;
-      -var progress = "width: " + progressint.toString() + "%;";
-      div(data-number="#{id}") 
-        .row
-          .col-md-3.col-xs-2
-          .col-md-6.col-xs-8
-            .progress
-              .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="#{itemDisplayNumber}", aria-valuemin="0", aria-valuemax="20", style="#{progress}")
-          .col-md-3.col-xs-2
-        .image
-          img.product(src=products[i].imageUrl, data-number="#{id}");
-        p #{products[i].type}
-        .row
-          .col-xs-1.col-md-4
-          .col-xs-5.col-md-2
-            img.dislikeCross.dislike(src="/images/dislikeCross.png", data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand)
-            //- button.dislike.btn.btn-danger.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) Not for me
-          .col-xs-5.col-md-2
-            img.likeHeart.like(src="/images/likeHeart.png", data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand)
-            //- button.like.btn.btn-success.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) I'd wear this
-          .col-xs-1.col-md-4
-      -}      
+    .weaveCollection
+      .weaveFrame(data-collectionName="#{collectionName}")
+        h2 #{collectionName}
+        -for(var i = 0; i < products.length; i++) {
+        -var id = "product" + i;
+        -var itemDisplayNumber = i+1;
+        -var progressint = ((itemDisplayNumber - 1)/products.length) * 100;
+        -var progress = "width: " + progressint.toString() + "%;";
+        div(data-number="#{id}") 
+          .row
+            .col-md-3.col-xs-2
+            .col-md-6.col-xs-8
+              .progress
+                .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="#{itemDisplayNumber}", aria-valuemin="0", aria-valuemax="20", style="#{progress}")
+            .col-md-3.col-xs-2
+          .image
+            img(src=products[i].imageUrl, data-number="#{id}");
+          p #{products[i].type}
+          .row
+            .col-xs-1
+            .col-xs-5
+              img.dislikeCross.dislike(src="/images/dislikeCross.png", data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand)
+              //- button.dislike.btn.btn-danger.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) Not for me
+            .col-xs-5
+              img.likeHeart.like(src="/images/likeHeart.png", data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand)
+              //- button.like.btn.btn-success.btn-lg(data-number="#{id}", data-url=products[i].url, data-price=products[i].price, data-shop=products[i].shop, data-imageUrl=products[i].imageUrl, data-type=products[i].type, data-brand=products[i].brand) I'd wear this
+            .col-xs-1
+        -}      
 
 
 
