@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	$(".stamped").hide();
+
 	// for each collection name, check that we've not seen it all 
 	// and that it is not empty
 
@@ -26,8 +29,10 @@ $(document).ready(function() {
 		if(beenThrough != null) { // been through before
 			// hide the elements that we have seen all of
 			if(parseInt(beenThrough) >= size) { // have we seen all of the products
-				$(this).parent().remove();
-				$($(this).siblings('.row')[0]).hide();
+				//$(this).parent().remove();
+				//$($(this).siblings('.row')[0]).hide();
+				//$('.stamped[data-collectionName=" ' + $(this).attr('data-collectionName') + ' "]').show();
+				$(".stamped[data-collectionName='"+ $(this).attr('data-collectionName') +"']").show().next().addClass("greyedOut")
 			}
 			through.text(beenThrough + '/');
 			var throughVal = parseInt(through.text().split('/')[0]);
