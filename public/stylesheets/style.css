@@ -713,6 +713,11 @@ img.male {
   width: 100%;
 }
 
+.stamped {
+  position: absolute;
+  left: 65px;
+  top: 40px;
+}
 
 
 /* Css for changing navbar to black on bootstrap
