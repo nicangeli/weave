@@ -5,7 +5,7 @@ block content
 		mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
 
 	.container
-		h1(style="text-align: center") Product Feed
+		h1(style="text-align: center") Product Board
 		//- .row
 		//- 	.col-sm-4.col-md-4.productTile
 		//- 		.product
@@ -21,6 +21,22 @@ block content
 		//- 					span $20.00 
 		//- 					button.btn.btn-primary.btn-sm View in Store
 		.reveal
+
+
+		.modal.fade#weaveIntro
+			.modal-dialog.weave-modal
+				.modal-content.weave-modal-content
+					.modal-header
+						button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+						h4.modal-title Product Board
+					.modal-body
+						.modal-body-content
+							h3 This page shows the items you liked.
+							ul
+								li Price and brand are displayed on each product.
+								li Remove items from your board by clicking &times;.
+								li Go to the collections feed to weave again and find more great products for your board
+							button.btn.btn-custom#closeIntro(type="button", data-dismiss="modal") Close
 			
 
 

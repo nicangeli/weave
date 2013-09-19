@@ -13,7 +13,6 @@ block content
         //-   .collectionHover
         //-     .weaveLogo
         .collection(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
-          button.close(type="button", aria-hidden="true") &times;
           h3 #{element.name}
           h4 - #{element.comment} -
           .collectionImages
@@ -46,16 +45,15 @@ block content
         .modal-content.weave-modal-content
           .modal-header
             button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
-            h4.modal-title Welcome to Weave
+            h4.modal-title Collections Feed
           .modal-body
             .modal-body-content
-              h3 This page has your collection feed. The feed will update as users create more collections.
-              h3 Whats a collection? Great question!
-              p A collection is between 10 - 20 pieces of clothing that have been curated by other users for you to weave through.
-              h3 What the hell does weave through mean? We love the curious ones
-              p When we say weave through we mean review by liking or disliking... Not clear? Pick a collection and it'll become obvious.  
+              h3 As users create collections, your feed will update.
+              ul
+                li Weave through a collection by liking or disliking items.
+                li Liked items will be saved to your board.
               
-              button.btn.btn-custom#closeIntro(type="submit") Close
+              button.btn.btn-custom#closeIntro(type="button", data-dismiss="modal") Close
 
 
 

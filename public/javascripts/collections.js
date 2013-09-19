@@ -1,11 +1,18 @@
 $(document).ready(function() {
 	// for each collection name, check that we've not seen it all 
 	// and that it is not empty
+
+	//make this active page for Navigation -- how horrible.
+	$("#collections-nav").find(" div.navItem ").addClass("activeNav");
+	$("#collections-nav").find(" div.icon ").addClass("activeIcon");
+
 	if(localStorage.getItem("newVisitor") == "true") {
 		$("#weaveIntro").modal("show");
-		localStorage.setItem("newVisitor", "false")
 	}
-	
+
+	$("#closeIntro").click(function() {
+		$(".collectionTile").effect("shake", "slow");
+	});
 
 	$(".collection").each(function() {
 		var through = $(this).find(".through"),

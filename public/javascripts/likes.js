@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+	if(localStorage.getItem("newVisitor") == "true") {
+		$("#weaveIntro").modal("show");
+		localStorage.setItem("newVisitor", "false")
+	}
+
+	//make this active page for Navigation -- how horrible.
+	$("#board-nav").find(" div.navItem ").addClass("activeNav");
+	$("#board-nav").find(" div.icon ").addClass("activeIcon");
+
 	$("#more").hide();
 	$("#or").hide();
 
@@ -23,8 +32,8 @@ $(document).ready(function() {
 
 			// grab the heading and start appending items after it
 			var productRow = '<div class="row rowNumber">',
-				product = '<div class="col-sm-4 col-md-4 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a>' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><button class="btn btn-primary btn-sm">View in Store</button></div></div></div></div></div>';
-			if(i%3 == 0) {
+				product = '<div class="col-sm-3 col-md-3 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a>' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><a class="btn btn-primary btn-sm" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div></div>';
+			if(i%4 == 0) {
 				$(".reveal").append(productRow);
 			}
 

@@ -20,12 +20,17 @@ body {
   src: url("/fonts/cantarell/Cantarell-Regular.ttf");
 }
 
+@font-face {
+  font-family: entypo;
+  src: url("/fonts/entypo/entypo.ttf");
+}
+
 a {
   color: #00B7FF;
 }
 
 h1, h2, h3, h4 {
-  color: black;
+  color: darkslategrey;
   font-family: cantarell;
 }
 
@@ -54,11 +59,58 @@ h1, h2, h3, h4 {
 }
 
 .logo {
-  display: block;
-  margin: auto;
-  text-align: center;
+  float: left;
+}
+
+.logo img {
+  margin-left: 25px;
   padding-top: 5px;
   height: 70px;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: darkslategrey;
+  margin: 12px 0 10px -165px;
+}
+
+.navigation li {
+  color: darkslategrey;
+  opacity: 0.55;
+  float: left;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.navigation li:hover {
+  opacity: 1;
+}
+
+.activeNav {
+  opacity: 1;
+  color: black;
+  border-bottom: 4px solid black;
+}
+
+.activeIcon {
+  opacity: 1 !important;
+}
+
+.icon {
+  float: left;
+  font-family: entypo;
+  opacity: .55;
+  font-size: 50px;
+  padding-right: 5px;
+}
+
+.navItem {
+  float: left;
+  padding-top: 12px;
 }
 
 .hanger {
@@ -531,6 +583,15 @@ img.male {
 
 .weave-modal-content {
   background-color: white;
+  text-align: center;
+}
+
+.modal-body-content ul {
+  text-align: left;
+}
+
+.modal-body-content h3 {
+  margin-top: 0px;
 }
 
 .shareLink {
@@ -575,7 +636,7 @@ img.male {
     border-bottom: 1px solid lightgrey;
   }
 
-  .logo {
+  .logo img {
     height: 35px;
   }
 
@@ -584,6 +645,19 @@ img.male {
     position: absolute;
     right: 5px;
     top: 15px;
+  }
+
+  .navigation {
+    font-size: 12px;
+    margin: 6px 0 10px -83px;
+  }
+
+  .icon {
+  font-size: 32px;
+  } 
+
+  .navItem {
+  padding-top: 8px;
   }
 
   .collectionTag {
@@ -610,15 +684,6 @@ img.male {
   font-size: 16px;
   margin-bottom: 10px;
   }
-
-/*  .collectionsImage {
-    padding: 0px;
-    width: 5px;
-  }*/
-
-/*  .collectionsImage img {
-    display: none;
-  }*/
 
   .playButton {
   width: 100%;
@@ -712,18 +777,3 @@ img.male {
 #giveEmail {
   width: 100%;
 }
-
-
-
-/* Css for changing navbar to black on bootstrap
-/* .navbar {
-  background-color: #000; /* background color will be black for all browsers 
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none;
-}
-
-.navbar a, .navbar li {
-	color: white; !important
-} */
-
