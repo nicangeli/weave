@@ -4,6 +4,9 @@ block content
   script(type='text/javascript')
     mixpanel.track("Landing Page Loaded")
   .landingBackground
+    - if(user != null) {
+      h1 #{user.email}
+    -}
     .container
       .landingPage
         .row
