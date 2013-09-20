@@ -92,7 +92,7 @@ module.exports = function(app, passport) {
 	app.get("/auth/facebook/callback", 
 		passport.authenticate("facebook",{ failureRedirect: '/login'}),
 		function(req,res){
-			res.render("/collections", {user : req.user});
+			res.render("collections", {user : req.user});
 		}
 	);
 
