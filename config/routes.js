@@ -87,6 +87,15 @@ module.exports = function(app, passport) {
 		});
 	});
 
+	app.get("/auth/facebook", passport.authenticate("facebook",{ scope : "email"}));
+
+	app.get("/auth/facebook/callback", 
+		passport.authenticate("facebook",{ failureRedirect: '/login'}),
+		function(req,res){
+			res.render("/collections", {user : req.user});
+		}
+	);
+
 	app.post('/friend/feedback', function(req, res) {
 			var data = req.body.data;
 			var s = new Share();
