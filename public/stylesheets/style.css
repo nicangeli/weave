@@ -193,12 +193,17 @@ h1, h2, h3, h4 {
   padding-top: 30px;
 }
 
-#step1 {
+.play {
+  text-decoration: none;
   width: 80%;
   height: 90px;
   display: block;
   margin: auto;
   font-size: 40px;
+}
+
+.play:hover {
+  text-decoration: none;
 }
 
 #step2 {
