@@ -23,4 +23,6 @@ module.exports = function (passport, config) {
     	User.isValidUserPassword(email, password, done);
     }));
 
+    
+
 }

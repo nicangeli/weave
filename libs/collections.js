@@ -12,13 +12,13 @@ module.exports = function() {
 	this.activeCollections = [
 									{
 										"name": "Date Night",
-										"comment": "Look special",
+										"comment": "Something special",
 										"author": "Weave Original"
 									},
 									{
 										"name": "Glam-Rock",
-										"comment": "",
-										"author": "Chloe Donegan"
+										"comment": "Inspired by Kate & Co",
+										"author": "Alexa Felix"
 									},
 									{
 										"name": "Punk-II",
@@ -58,7 +58,7 @@ module.exports = function() {
 									{
 										"name": "Shoes-Shoes-Shoes",
 										"comment": "Caveat Emptor - $$$ ",
-										"author": "Chloe Donegan"
+										"author": "Stylist"
 									},
 									{
 										"name": "Weekend",
@@ -77,24 +77,20 @@ module.exports = function() {
 									},
 									{
 										"name": "Skater",
-										"comment": "",
+										"comment": "Trending",
 										"author": "Weave Original"
 									},
 									{
 										"name": "Work",
-										"comment": "Smart work wear for the professional lady",
+										"comment": "Suits are boring",
 										"author": "Weave Original"
 									},
 									{
 										"name": "Work Bag",
-										"comment": "Essentials for the handbag",
+										"comment": "Smart Style",
 										"author": "Chloe Donegan"
-									},
-									{
-										"name": "Pretty",
-										"comment": "All things georgeous",
-										"author": "Laura Marton"
 									}
+
 							];
 
 	this.getActiveCollections = function(myCallback) {
