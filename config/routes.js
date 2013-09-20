@@ -53,11 +53,91 @@ module.exports = function(app, passport) {
 		res.render('feedback');
 	});
 
-	//app.post('/feedback', routes.feedbackSend);
+	app.post('/feedback', function(req, res) {
+		var m = new mailer();
+			m.feedback(req.body.email, req.body.feedback, function() {
+			res.send(200);
+		})
+	});
 
-	//app.post('/share', routes.share);
-	//app.get('/share/:shareId', routes.enterViaShare);
-	//app.post('/friend/feedback', routes.feedbackReturned);
+	app.post('/share', function(req, res) {
+		var postData = req.body.data;
+		var s = new Share();
+		var base = "http://weaveuk.com/share/";
+		s.new(postData.ownerEmail, postData.ownerName, postData.ownerGender, postData.ownerAge, postData.collectionName, postData.products, function(_id) {
+			base += _id;
+			console.log(base);
+			res.send(base);
+		});
+	});
+
+	app.get('/share/:shareId', function(req, res) {
+		var shareId = req.params.shareId;
+		var s = new Share();
+		s.getShareDetails(shareId, function(result) {
+			//console.log(result);
+			for(var i = 0; i < result.products.length; i++) {
+				console.log(i);
+				console.log(result.products[i].imageUrl);
+			}
+			if(result == null) {
+				res.send("No such share");
+			}
+			res.render('friend', {"results": result});
+		});
+	});
+
+	app.post('/friend/feedback', function(req, res) {
+			var data = req.body.data;
+			var s = new Share();
+			s.getShareDetails(data._id, function(result) {
+
+			//console.log(result);
+			emailTemplates(templatesDir, function(err, template) {
+				if(err) {
+					throw err;
+				}
+				var smtpTransport = nodemailer.createTransport("SMTP", {
+					service: "Zoho", 
+					auth: {
+						user: "andy@weaveuk.com",
+						pass: "weave2013"
+					}
+				});
+
+				var locals = {
+					email: result.ownerEmail,
+					friend: data.friendName,
+					name: result.ownerName,
+					products: data.products,
+					collection: result.collectionName,
+					comment: data.comment
+				};
+
+				template('friend', locals, function(err, html) {
+					if(err) {
+						throw err;
+					}
+					smtpTransport.sendMail({
+						from: "Weave Team <andy@weaveuk.com>",
+						to: locals.email,
+						bcc: 'Admin <nick@weaveuk.com>',
+						subject: locals.friend + " has completed your Collection",
+						html: html,
+						generateTextFromHTML: true
+					}, function(err, responseStatus) {
+						if(err) {
+							throw err;
+						}
+						console.log('SUCCESS');
+						console.log(responseStatus.message);
+						res.status(200).send();
+
+					})
+				})
+			})
+		});
+	});
 
 	app.get('/skim', function(req, res) {
 		res.render('skim');

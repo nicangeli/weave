@@ -1,11 +1,14 @@
 extends layout
 
 block content
-	h1 Login to Weave
 	.container
-		form(method="POST", action"/login")
-			label(for="email") Email
-				input(type="email", name="email")
-			label(for-"password") Password	
-				input(type="password", name="password")
-			input(type="submit", name="submit", value="Sign In!")
+		h1 Login to Weave
+		form(role="form", id="signup", method="POST", action="/login")
+			.form-group
+				label(for='email') Email
+				input.form-control#email(type='email', name='email')
+			.form-group
+				label(for='password') Password
+				input.form-control#password(type='password', name='password')
+			.form-group
+				input.btn.btn-default(type="submit", value="Login")
