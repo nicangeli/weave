@@ -40,6 +40,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/clear', function(req, res) {
+  res.render('clear');
+});
 app.post('/onboarding', routes.onboarding);
 app.get('/collections', routes.showCollections);
 app.get('/collection/:collectionName', routes.collection);
