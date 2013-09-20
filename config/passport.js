@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
   	LocalStrategy = require('passport-local').Strategy,
   	FacebookStrategy = require('passport-facebook').Strategy,
-  	User = mongoose.model('User');
+	User = mongoose.model('User');
 
 
 module.exports = function (passport, config) {
@@ -27,7 +27,7 @@ module.exports = function (passport, config) {
     passport.use(new FacebookStrategy({
     	clientID: config.facebook.clientID,
     	clientSecret: config.facebook.clientSecret,
-    	callbackUrl: config.facebook.callbackUrl
+    	callbackURL: config.facebook.callbackURL
     }, 
     function(accessToken, refreshToken, profile, done) {
     	User.findOrCreateFaceBookUser(profile, done);
