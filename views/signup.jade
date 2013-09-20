@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.container
+		h1 Register with Weave to store your likes
+		form(role="form", id="signup", method="POST", action="/signup")
+			.form-group
+				label(for='email') Email
+				input.form-control#email(type='email', name='email')
+			.form-group
+				label(for='password') Password
+				input.form-control#password(type='password', name='password')
+			.form-group
+				input.btn.btn-default(type="submit", value="Register")

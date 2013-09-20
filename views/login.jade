@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.container
+		h1 Login to Weave
+		form(role="form", id="signup", method="POST", action="/login")
+			.form-group
+				label(for='email') Email
+				input.form-control#email(type='email', name='email')
+			.form-group
+				label(for='password') Password
+				input.form-control#password(type='password', name='password')
+			.form-group
+				input.btn.btn-default(type="submit", value="Login")

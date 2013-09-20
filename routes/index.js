@@ -3,13 +3,7 @@
  * GET home page.
  */
 
-var mailer = require('../libs/mailer.js'),
-	Share = require('../libs/share.js'),
-	nodemailer = require('nodemailer'),
-	path = require('path'),
-	templatesDir = path.resolve(__dirname, '..', 'views/mailer/templates'),
-	emailTemplates = require('email-templates'),
-	Collections = require('../libs/collections.js');
+
 
 
 
