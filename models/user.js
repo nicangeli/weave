@@ -7,7 +7,12 @@ UserSchema = mongoose.Schema({
 	lastName:   String,
 	email:      String,
 	salt:       String,
-	hash:       String
+	hash:       String,
+	facebook:{
+		id:       String,
+		email:    String,
+		name:     String
+	}
 });
 
 UserSchema.statics.signup = function(email, password, done){
@@ -41,6 +46,31 @@ UserSchema.statics.isValidUserPassword = function(email, password, done) {
 		});
 	});
 }
+
+UserSchema.statics.findOrCreateFaceBookUser = function(profile, done){
+	var User = this;
+	this.findOne({ 'facebook.id' : profile.id }, function(err, user){
+		if(err) throw err;
+		// if (err) return done(err);
+		if(user){
+			done(null, user);
+		}else{
+			User.create({
+				email : profile.emails[0].value,
+				facebook : {
+					id:    profile.id,
+					email: profile.emails[0].value,
+					name:  profile.displayName
+				}
+			}, function(err, user){
+				if(err) throw err;
+				// if (err) return done(err);
+				done(null, user);
+			});
+		}
+	});	
+}
+
 
 var User = mongoose.model("User", UserSchema);
 module.exports = User;
