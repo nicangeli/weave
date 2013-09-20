@@ -29,6 +29,54 @@ module.exports = function() {
 									{
 										"name": "Party",
 										"comment": "A small collection of party pieces"
+									},
+										{
+										"name": "Winter Coats",
+										"comment": "24 reasons to leave the house"
+									},
+									{
+										"name": "Punk",
+										"comment": "Rip it up in tartan, leather & studs"	
+									},
+									{
+										"name": "Nasty Gal",
+										"comment": "New In!"
+									},
+									{
+										"name": "Pretty",
+										"comment": "Tea Dresses, mostly"
+									},
+									{
+										"name": "Shoes-Shoes-Shoes",
+										"comment": "Caveat Emptor - $$$ "
+									},
+									{
+										"name": "Weekend",
+										"comment": "Cute comfy casuals"
+									},
+									{
+										"name": "Wildcard",
+										"comment": "Feeling Lucky?"
+									},
+									{
+										"name": "Rock & Roll",
+										"comment": ""
+									},
+									{
+										"name": "Skater",
+										"comment": ""
+									},
+									{
+										"name": "Work",
+										"comment": "Smart work wear for the professional lady"
+									},
+									{
+										"name": "Work Bag",
+										"comment": "Essentials for the handbag"
+									},
+									{
+										"name": "Pretty",
+										"comment": "All things georgeous"
 									}
 							];
 
