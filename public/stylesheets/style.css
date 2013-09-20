@@ -617,6 +617,26 @@ img.male {
 
 /*
 ===========================================
+          Sign up
+===========================================
+*/
+
+.signup {
+  font-family: "Montserrat", sans-serif;
+  font-style: bold;
+}
+
+.signup input {
+
+}
+
+/*::-webkit-input-placeholder {
+    font-size: 30px;
+}*/
+
+
+/*
+===========================================
           Mobile Phone Styling
 ===========================================
 */
