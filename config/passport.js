@@ -24,4 +24,13 @@ module.exports = function (passport, config) {
     	User.isValidUserPassword(email, password, done);
     }));
 
+    passport.use(new FacebookStrategy({
+    	clientID: config.facebook.clientID,
+    	clientSecret: config.facebook.clientSecret,
+    	callbackUrl: config.facebook.callbackUrl
+    }, 
+    function(accessToken, refreshToken, profile, done) {
+    	User.findOrCreateFaceBookUser(profile, done);
+    }))
+
 }
