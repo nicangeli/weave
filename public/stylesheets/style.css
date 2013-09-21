@@ -392,7 +392,11 @@ img.male {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url('/images/landingPage/heroBack.png');
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .stamped img{
