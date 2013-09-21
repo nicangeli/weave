@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 			// grab the heading and start appending items after it
 			var productRow = '<div class="row rowNumber">',
-				product = '<div class="col-sm-3 col-md-3 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a>' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><a class="btn btn-primary btn-sm" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div></div>';
+				product = '<div class="col-sm-3 col-md-3 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a href="' + likes[i].url + '">' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><a class="btn btn-primary btn-sm buy" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div></div>';
 			if(i%4 == 0) {
 				$(".reveal").append(productRow);
 			}
