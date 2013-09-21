@@ -775,10 +775,19 @@ img.male {
   width: 100%;
   }
 
+  .onboardingDesktop {
+    display: none;
+  }
+
+  .weave-modal-body {
+    padding: 5px;
+  }
+
   .image {
     width: 100%;
     height: 200px;
   }
+
   .image img {
     display: block;
     margin: auto;
