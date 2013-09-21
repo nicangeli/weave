@@ -9,12 +9,12 @@ block content
     .row
     - }
       .col-sm-4.col-md-4.collectionTile
-        //- .collectionContainer
-        //-   .collectionHover
-        //-     .weaveLogo
         .stamped(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
           img(src="/images/stamp.png")
         .collection(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
+          .collectionOverlay
+            .weaveLogo
+              img(src="/images/w-twitter.png")
           h3 #{element.name}
           h4 - #{element.comment} -
           .collectionImages
@@ -48,12 +48,48 @@ block content
           .modal-header
             button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
             h4.modal-title Collections Feed
-          .modal-body
+          .modal-body.weave-modal-body
             .modal-body-content
-              h3 As users create collections, your feed will update.
+              h4 As stylists you follow create collections, your feed will update.
               ul
                 li Weave through a collection by liking or disliking items.
                 li Liked items will be saved to your board.
+              h4 Ready to start weaving? Select the intro track
+              .row
+                .col-xs1.col-md-1
+                .col-xs-10.col-md-10.collectionTile
+                  .stamped(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
+                    img(src="/images/stamp.png")
+                  .collection(data-collectionName="#{element.name}", data-url="/collection/#{element.name}")
+                    .collectionOverlay
+                      .weaveLogo
+                        img(src="/images/w-twitter.png")
+                    h3 Intro Track
+                    h4 - This track should help you figure out what weave is... -
+                    .collectionImages
+                      .mainCollectionImage  
+                        img.main(src="#{element.imageUrls[0]}")
+                      .miniCollectionImages
+                        .miniCollectionImage
+                          img.mini(src="#{element.imageUrls[1]}")
+                        .miniCollectionImage
+                          img.mini(src="#{element.imageUrls[2]}")
+                        .miniCollectionImage
+                          img.mini(src="#{element.imageUrls[3]}")
+                        .miniCollectionImage
+                          img.mini(src="#{element.imageUrls[4]}")
+                      .collectionClearfix
+                    .collectionInfo
+                      .collectionProgress
+                        .progress
+                          .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="6", aria-valuemin="0", aria-valuemax="20", style="width: 0")
+                        .progressText
+                          p Current progress: 
+                            span.through 0/ 
+                            span.size #{element.size}
+                      .collectionAuthor 
+                        p A collection by #{element.author}
+
               
               button.btn.btn-custom#closeIntro(type="button", data-dismiss="modal") Close
 

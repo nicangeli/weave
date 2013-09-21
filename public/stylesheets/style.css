@@ -343,7 +343,6 @@ img.male {
   -moz-box-shadow: 3px 3px 4px rgba(0,0,0,0.8);
   -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,0.8);*/
   overflow: hidden;
-  position: relative;
 }
 
 .collection {
@@ -352,9 +351,41 @@ img.male {
   padding: 10px;
   background-color: white;
   cursor: pointer;
+  position: relative;
 }
 
-.greyedOut {
+.collection:hover .collectionOverlay {
+  display: block;
+}
+
+.collection:active .collectionOverlay {
+  display: block;
+}
+
+.collectionOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.weaveLogo {
+  width: 101px;
+  height: 101px;
+  opacity: 1;
+  display: block;
+  margin: auto;
+  margin-top: 107px;
+  text-align: center;
+}
+
+.weaveLogo img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .stamped {
@@ -610,6 +641,10 @@ img.male {
 
 .weave-modal {
   padding-top: 60px;
+}
+
+.weave-modal-body {
+  background: url("/images/bg_texture.jpg")
 }
 
 .weave-modal-content {
