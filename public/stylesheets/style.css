@@ -502,25 +502,6 @@ img.male {
   margin-top: 10px;
 }
 
-.tagline {
-  margin-bottom: 0px;
-}
-
-.collectionsPlay {
-  text-align: center;
-  height: 200px;
-}
-
-.playButton {
-  margin-top: 81px;
-  width: 80%;
-}
-
-.createCollection {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
 /*
 ===========================================
           Weave Collection
@@ -576,19 +557,23 @@ img.male {
 }
 
 .productImage {
-  height: 275px;
+  height: 75%;
   text-align: center;
 }
 
 .productImage img {
-  height: 265px;
+  height: 100%;
   max-width: 90%;
 }
 
 .productInfo {
-  height: 55px;
+  height: 25%;
   text-align: center;
   position: relative;
+}
+
+.productInfo h4 {
+  height: 40%;
 }
 
 .price span {
@@ -817,11 +802,6 @@ img.male {
   max-height: 100px;
   max-width: 80px;
   padding: 5px;
-  }
-
-  .buy{
-  margin-top: 31px;
-  margin-right: 5px;
   }
 
   .buttonText {
