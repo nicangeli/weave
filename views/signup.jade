@@ -2,15 +2,17 @@ extends layout
 
 block content
 	.container
-		h1(style="text-align: center;") Register with Weave to store your likes
 		.row
 			.col-md-3.col-xs-1
 			.col-md-6.col-xs-10
-				form.signup(role="form", id="signup", method="POST", action="/signup")
-					.form-group
-						input.form-control#email(type='email', name='email', placeholder="Email")
-					.form-group
-						input.form-control#password(type='password', name='password', placeholder="Password")
-					.form-group
-						input.btn.btn-default(type="submit", value="Register")
-				a.btn.btn-facebook(href="/auth/facebook") Register With Facebook
+				.flat-form-container
+					h1(style="text-align: center;") Register with Weave to store your likes
+					form.weave-flat-form
+						ul
+							li
+								input(type='text', placeholder='Username')
+							li
+								input(type='password', placeholder='Password')
+							li
+								input.btn-custom(type='submit', value='Login')
+						a.btn.btn-facebook(href="/auth/facebook") Register With Facebook
