@@ -29,10 +29,13 @@ $(document).ready(function() {
 				brand ="<span class='tagline'> - " + likes[i].brand + " - </span>",
 				anchor =  likes[i].url,
 				deleteButton = '<button data-url="' + likes[i].imageUrl + '" type="button" class="btn btn-danger delete">Remove</button>';*/
+			var pinitUrl = likes[i].imageUrl.replace(/\//g, "%2F");
+			var pinitUrl = pinitUrl.replace(/:/g, "%3A");
+			console.log(pinitUrl);
 
 			// grab the heading and start appending items after it
 			var productRow = '<div class="row rowNumber">',
-				product = '<div class="col-sm-3 col-md-3 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a class="buy" href="' + likes[i].url + '">' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><a class="btn btn-primary btn-sm buy" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div></div>';
+				product = '<div class="col-sm-3 col-md-3 productTile"><div class="product"><a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.weaveuk.com&media=' + pinitUrl + '&description=Something%20I%20found%20on%20Weave" data-pin-do="buttonPin" data-pin-config="none" target="_blank" class="pinitButton"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span><span class="shop">from <a class="buy" href="' + likes[i].url + '">' + likes[i].shop + ' </a></span></h4><div class="price"> <span> ' + likes[i].price + '</span><a class="btn btn-primary btn-sm buy" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div></div>';
 			if(i%4 == 0) {
 				$(".reveal").append(productRow);
 			}

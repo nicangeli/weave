@@ -556,6 +556,11 @@ img.male {
   background-color: white;
 }
 
+.pinitButton {
+  position: absolute;
+  left: 25px;
+}
+
 .productImage {
   height: 75%;
   text-align: center;
