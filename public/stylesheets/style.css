@@ -718,6 +718,7 @@ img.male {
 .weave-flat-form ul {
   list-style: none;
   padding: 0px;
+  margin-bottom: 0px;
 }
 
 .weave-flat-form li {
@@ -758,7 +759,7 @@ form input[type=password] {
 .signup {
   font-size: 25px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 
