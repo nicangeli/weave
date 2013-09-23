@@ -8,18 +8,19 @@ block content
 			.col-md-2.col-xs-1
 			.col-md-8.col-xs-10
 				h1.signupHeader Sign up with Email
-				form.weave-flat-form(role="form", method="post", action="/signup")
+				form.weave-flat-form(role="form", method="post", action="/signup", id="signUpForm")
 					ul
 						li
-							input(type='text', placeholder='Full Name', name="name")
+							input(type='text', placeholder='Full Name', name="name", id="name")
 							span Your first and last name, e.g. Chloe Donegan
 						li
-							input(type='email', placeholder='Email', name="email")
+							input(type='email', placeholder='Email', name="email", id="email")
 						li
-							input(type='password', placeholder='Password', name="password")
-						input.btn.btn-custom.signup(type="submit", name="submit", value="Create Account")
+							input(type='password', placeholder='Password', name="password", id="password")
+						input.btn.btn-custom.signup#peopleSignup(type="submit", name="submit", value="Create Account")
 					br
 					a.btn.btn-facebook.signup(href="/auth/facebook") Facebook Sign up
 					span Already have an account? 
 						a(href="/login") Log in here
+
 	script(src="/javascripts/signup.js", type="text/javascript")
