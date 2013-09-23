@@ -93,3 +93,13 @@ block content
 
 
   script(src="/javascripts/collections.js", type="text/javascript")
+  script(type="text/javascript")
+    var user = eval(#{user})
+    console.log(user)
+    //console.log(#{user});
+  //  if(user.facebook.email != null) {
+      //mixpanel.identify();
+    //  mixpanel.people.set({
+        //"$email": user.facebook.email
+      //});
+    }

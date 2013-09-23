@@ -8,7 +8,9 @@ var User = require('../models/user.js'),
 	path = require('path'),
 	templatesDir = path.resolve(__dirname, '..', 'views/mailer/templates'),
 	emailTemplates = require('email-templates'),
-	Collections = require('../libs/collections.js');
+	Collections = require('../libs/collections.js'),
+	Mixpanel = require('mixpanel'),
+	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba');
 
 module.exports = function(app, passport) {
 	
@@ -17,7 +19,6 @@ module.exports = function(app, passport) {
 	*/
 
 	app.get('/collections', function(req, res) {
-		console.log(req.user);
 		var c = new Collections();
 		c.getActiveCollections(function(sizes) {
 			if(req.isAuthenticated()) {
@@ -73,7 +74,6 @@ module.exports = function(app, passport) {
 		var base = "http://weaveuk.com/share/";
 		s.new(postData.ownerEmail, postData.ownerName, postData.ownerGender, postData.ownerAge, postData.collectionName, postData.products, function(_id) {
 			base += _id;
-			console.log(base);
 			res.send(base);
 		});
 	});
@@ -82,11 +82,6 @@ module.exports = function(app, passport) {
 		var shareId = req.params.shareId;
 		var s = new Share();
 		s.getShareDetails(shareId, function(result) {
-			//console.log(result);
-			for(var i = 0; i < result.products.length; i++) {
-				console.log(i);
-				console.log(result.products[i].imageUrl);
-			}
 			if(result == null) {
 				res.send("No such share");
 			}
@@ -109,7 +104,6 @@ module.exports = function(app, passport) {
 			var s = new Share();
 			s.getShareDetails(data._id, function(result) {
 
-			//console.log(result);
 			emailTemplates(templatesDir, function(err, template) {
 				if(err) {
 					throw err;
@@ -146,8 +140,6 @@ module.exports = function(app, passport) {
 						if(err) {
 							throw err;
 						}
-						console.log('SUCCESS');
-						console.log(responseStatus.message);
 						res.status(200).send();
 
 					})
@@ -168,7 +160,6 @@ module.exports = function(app, passport) {
 	*/
 
 	app.get('/', function(req, res) {
-		console.log(req.user);
 		if(req.isAuthenticated()) {
 			res.render('index', {user: req.user});
 		} else {
@@ -195,6 +186,11 @@ module.exports = function(app, passport) {
 			if(err) throw err;
 			req.login(user, function(err){
 				if(err) return next(err);
+				mixpanel.identify();
+				mixpanel.people.set({
+					"$email": req.body.email,
+					"name": req.body.name
+				});
 				return res.redirect("/collections");
 			});
 		});
