@@ -716,6 +716,7 @@ img.male {
 .signupHeader{
   font-weight: 800;
   text-align: center;
+  margin-top: 0px;
 }
 
 .weave-flat-form {
