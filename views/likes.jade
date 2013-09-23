@@ -5,7 +5,10 @@ block content
 		mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
 
 	.container
-		h1(style="text-align: center") Product Board
+		.row
+			.col-md-4.col-xs-1
+			.col-md-4.col-xs-10
+				a.btn.btn-custom.weaveAgain Weave another Collection
 		//- .row
 		//- 	.col-sm-4.col-md-4.productTile
 		//- 		.product

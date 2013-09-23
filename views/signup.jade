@@ -5,7 +5,7 @@ block content
 		.row
 			.col-md-2.col-xs-1
 			.col-md-8.col-xs-10
-				h1#signupHeader Sign up with Email
+				h1.signupHeader Sign up with Email
 				form.weave-flat-form(method="POST", action="/signup")
 					ul
 						li
@@ -18,3 +18,5 @@ block content
 					input.btn.btn-custom.signup(type="submit", value="Create Account")
 					br
 					a.btn.btn-facebook.signup(href="/auth/facebook") Facebook Sign up
+					span Already have an account? 
+						a(href="/login") Log in here
