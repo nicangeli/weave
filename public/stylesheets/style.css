@@ -121,6 +121,15 @@ h1, h2, h3, h4 {
   margin-right: 30px;
 }
 
+.feedback {
+  float: right;
+}
+
+.feedback a {
+  margin-top: 21px;
+  margin-right: 15px;
+}
+
 .hanger {
   z-index: 10;
   position: absolute;
