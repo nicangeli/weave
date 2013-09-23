@@ -9,12 +9,17 @@ block content
 		.row
 			.col-md-4.col-xs-1
 			.col-md-4.col-xs-10
-				a.btn.btn-custom.weaveAgain Weave another Collection
+				-if(user == null) {
+				a.btn.btn-custom.weaveAgain(href="/signup") Weave another Collection
+				-} else {
+				a.btn.btn-custom.weaveAgain(href="/collections") Weave another Collection
+				-}
+				a.btn.btn-primary#feedback.weaveAgain Give Us Feedback
 		.reveal
-		.row
-			.col-md-4.col-xs-1
-			.col-md-4.col-xs-10
-				a.btn.btn-primary#feedback
+		//- .row
+		//- 	.col-md-4.col-xs-1
+		//- 	.col-md-4.col-xs-10
+		//- 		a.btn.btn-primary#feedback Give Us Feedback
 
 		.modal.fade#weaveIntro
 			.modal-dialog.weave-modal
