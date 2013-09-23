@@ -1,6 +1,8 @@
 extends layout
 
 block content
+	script(type='text/javascript')
+		mixpanel.track_links(".signup", "Create Account");
 	.container
 		.row
 			.col-md-2.col-xs-1
