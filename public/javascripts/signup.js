@@ -22,8 +22,8 @@ $(document).ready(function() {
 					alert("Oops... Something went wrong");
 				});
 			}
-		});
-	})
+		);
+	});
 
 
 });
