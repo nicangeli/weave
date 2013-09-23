@@ -17,8 +17,8 @@ block content
               .progress
                 .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="#{itemDisplayNumber}", aria-valuemin="0", aria-valuemax="20", style="#{progress}")
             .col-md-3.col-xs-2
+          p #{products[i].type}
           .image
-            p #{products[i].type}
             img(src=products[i].imageUrl, data-number="#{id}");
           .row
             .col-xs-1

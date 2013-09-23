@@ -532,6 +532,11 @@ img.male {
   margin-top: 10px;
 }
 
+.weaveFrame p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .likeHeart {
   width: 100px;
   cursor: pointer;
