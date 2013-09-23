@@ -551,6 +551,14 @@ img.male {
 ===========================================
 */
 
+.weaveAgain {
+  font-size: 25px;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+
 .productTile {
   height: 360px;
   margin-bottom: 40px;
