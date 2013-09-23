@@ -18,6 +18,9 @@ $(document).ready(function() {
 				password: $("#password").val()
 			}
 			$.post("/signup", data)
+				.done(function(data) {
+					window.location = "/login";
+				})
 				.fail(function() {
 					alert("Oops... Something went wrong");
 				});
