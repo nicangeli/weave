@@ -19,7 +19,12 @@ module.exports = function(app, passport) {
 	app.get('/collections', function(req, res) {
 		var c = new Collections();
 		c.getActiveCollections(function(sizes) {
-			res.render('collections', {"data": sizes});
+			if(req.isAuthenticated()) {
+				res.render('collections', {user: req.user, "data": sizes});
+			} else {
+				res.render('collections', {user: null, "data": sizes});
+			}
+			//res.render('collections', {"data": sizes});
 		});
 	});
 
