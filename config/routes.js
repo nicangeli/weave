@@ -186,11 +186,11 @@ module.exports = function(app, passport) {
 			if(err) throw err;
 			req.login(user, function(err){
 				if(err) return next(err);
-				mixpanel.identify();
-				mixpanel.people.set(req.body.email, {
-					$email: req.body.email,
-					name: req.body.name
-				});
+				mixpanel.track("facebook login")
+				//mixpanel.people.set(req.body.email, {
+				//	$email: req.body.email,
+				//	name: req.body.name
+				//});
 				return res.redirect("/collections");
 			});
 		});
