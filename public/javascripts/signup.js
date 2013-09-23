@@ -18,12 +18,15 @@ $(document).ready(function() {
 				password: $("#password").val()
 			}
 			$.post("/signup", data)
+				.done(function(data) {
+					window.location = "/collections";
+				})
 				.fail(function() {
 					alert("Oops... Something went wrong");
 				});
 			}
-		});
-	})
+		);
+	});
 
 
 });

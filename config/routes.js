@@ -99,7 +99,7 @@ module.exports = function(app, passport) {
 			console.log(req.user);
 			mixpanel.track("facebook login")
 			mixpanel.people.set({
-				$email: req.user.facebook.email,
+				$email: req.user.facgebook.email,
 				name: req.user.facebook.name
 			});
 			res.redirect('/collections');
@@ -193,7 +193,10 @@ module.exports = function(app, passport) {
 			if(err) throw err;
 			req.login(user, function(err){
 				if(err) return next(err);
-				return res.redirect("/collections");
+				//return res.redirect("/collections");
+				//res.status(200).send();
+				//res.render('collections', {user: user, data: 0});
+				res.status(200).send();
 			});
 		});
 	});
