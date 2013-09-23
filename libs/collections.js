@@ -11,6 +11,21 @@ module.exports = function() {
 	//this.activeCollections = ['Rock & Roll', 'Punk', 'Darling Dresses', 'Pretty'];
 	this.activeCollections = [
 									{
+										"name": "Autumn",
+										"comment": "",
+										"author": "Miranda Hadfield"
+									},
+									{
+										"name": "Chic",
+										"comment": "",
+										"author": "Madeleine Nosworthy"
+									},
+									{
+										"name": "Pic-n-Mix",
+										"comment": "",
+										"author": "Alice Bentinck"
+									},
+									{
 										"name": "Date Night",
 										"comment": "Something special",
 										"author": "Weave Original"
