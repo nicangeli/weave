@@ -34,17 +34,18 @@ module.exports = function(app, passport) {
 		c.getCollection(collection, function(products) {
 			res.render('collection', {
 				"products": products,
-				"collectionName": collection
+				"collectionName": collection,
+				user: req.user
 			});
 		});
 	});
 
 	app.get('/likes', function(req, res) {
-		res.render('likes');
+		res.render('likes', {user: req.user});
 	});
 
 	app.get('/email', function(req, res) {
-		res.render('email');
+		res.render('email', {user: req.user});
 	});
 
 	app.post('/email', function(req, res) {
@@ -55,7 +56,7 @@ module.exports = function(app, passport) {
 	});
 
 	app.get('/feedback', function(req, res) {
-		res.render('feedback');
+		res.render('feedback', {user: req.user});
 	});
 
 	app.post('/feedback', function(req, res) {
@@ -88,7 +89,7 @@ module.exports = function(app, passport) {
 			if(result == null) {
 				res.send("No such share");
 			}
-			res.render('friend', {"results": result});
+			res.render('friend', {"results": result, user: req.user});
 		});
 	});
 
@@ -175,7 +176,7 @@ module.exports = function(app, passport) {
 	});
 
 	app.get("/login", function(req, res){ 
-		res.render("login");
+		res.render("login", {user: req.user});
 	});
 
 	app.post("/login", passport.authenticate('local',{
@@ -185,7 +186,7 @@ module.exports = function(app, passport) {
 	);
 
 	app.get("/signup", function (req, res) {
-		res.render("signup");
+		res.render("signup", {user: req.user});
 	});
 
 	app.post("/signup", Auth.userExist, function (req, res, next) {
@@ -197,6 +198,7 @@ module.exports = function(app, passport) {
 			});
 		});
 	});
+
 
 	app.get("/profile", Auth.isAuthenticated , function(req, res){ 
 		res.render("profile", { user : req.user});
