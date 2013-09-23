@@ -112,6 +112,15 @@ h1, h2, h3, h4 {
   padding-top: 12px;
 }
 
+.account {
+  float: right;
+}
+
+.login {
+  margin-top: 21px;
+  margin-right: 30px;
+}
+
 .hanger {
   z-index: 10;
   position: absolute;
