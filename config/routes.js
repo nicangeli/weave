@@ -96,9 +96,9 @@ module.exports = function(app, passport) {
 		function(req,res){
 			//res.render("collections", {user : req.user});
 			mixpanel.track("facebook login")
-			mixpanel.people.set(req.body.email, {
-				$email: req.body.email,
-				name: req.body.name
+			mixpanel.people.set(req.user.facebook.email, {
+				$email: req.user.facebook.email,
+				name: req.user.facebook.name
 			});
 			res.redirect('/collections');
 		}
