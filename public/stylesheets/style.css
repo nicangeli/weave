@@ -161,7 +161,6 @@ h1, h2, h3, h4 {
 .caption {
   z-index: 10;
   background-image: url("/images/landingPage/heroBack.png");
-  border-radius: 1em;
   display: block;
   margin: auto;
   width: 90%;
