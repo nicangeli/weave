@@ -18,8 +18,8 @@ block content
                 .progress-bar.progress-bar-success(role="progressbar", aria-valuenow="#{itemDisplayNumber}", aria-valuemin="0", aria-valuemax="20", style="#{progress}")
             .col-md-3.col-xs-2
           .image
+            p #{products[i].type}
             img(src=products[i].imageUrl, data-number="#{id}");
-          p #{products[i].type}
           .row
             .col-xs-1
             .col-xs-5
