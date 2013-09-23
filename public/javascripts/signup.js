@@ -19,7 +19,7 @@ $(document).ready(function() {
 			}
 			$.post("/signup", data)
 				.done(function(data) {
-					window.location = "/login";
+					window.location = "/collections";
 				})
 				.fail(function() {
 					alert("Oops... Something went wrong");
