@@ -2,28 +2,19 @@ extends layout
 
 block content
 	script(type='text/javascript')
-		mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length})
+		mixpanel.track("Collection Complete", {"likes": localStorage.getObj("likes"), "like count": localStorage.getObj("likes").length});
+		mixpanel.track_links(".weaveAgain", "Play Again");
 
 	.container
 		.row
 			.col-md-4.col-xs-1
 			.col-md-4.col-xs-10
 				a.btn.btn-custom.weaveAgain Weave another Collection
-		//- .row
-		//- 	.col-sm-4.col-md-4.productTile
-		//- 		.product
-		//- 			button.close(type="button", aria-hidden="true") &times;
-		//- 			.productImage
-		//- 				img(src="/images/dresses/dress1.jpg")
-		//- 			.productInfo
-		//- 				h4 
-		//- 					span.brand FCUK 
-		//- 					span.shop from 
-		//- 						a Top Shop 
-		//- 				.price 
-		//- 					span $20.00 
-		//- 					button.btn.btn-primary.btn-sm View in Store
 		.reveal
+		.row
+			.col-md-4.col-xs-1
+			.col-md-4.col-xs-10
+				a.btn.btn-primary#feedback
 
 		.modal.fade#weaveIntro
 			.modal-dialog.weave-modal
