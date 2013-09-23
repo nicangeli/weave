@@ -95,6 +95,8 @@ module.exports = function(app, passport) {
 		passport.authenticate("facebook",{ failureRedirect: '/login'}),
 		function(req,res){
 			//res.render("collections", {user : req.user});
+			console.log('FB DETAILS');
+			console.log(req.user);
 			mixpanel.track("facebook login")
 			mixpanel.people.set(req.user.facebook.email, {
 				$email: req.user.facebook.email,
