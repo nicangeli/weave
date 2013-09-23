@@ -21,7 +21,7 @@ module.exports = function() {
 										"author": "Madeleine Nosworthy"
 									},
 									{
-										"name": "Pic-n-Mix",
+										"name": "Pick-n-Mix",
 										"comment": "",
 										"author": "Alice Bentinck"
 									},
@@ -109,6 +109,7 @@ module.exports = function() {
 							];
 
 	this.getActiveCollections = function(myCallback) {
+		this.activeCollections = shuffle(this.activeCollections);
 		var collections = [];
 		async.forEach(this.activeCollections, function(collection, callback){
 			db.collection(collection.name).find().toArray(function(err, result) {
@@ -151,3 +152,8 @@ module.exports = function() {
 
 
 }
+
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
