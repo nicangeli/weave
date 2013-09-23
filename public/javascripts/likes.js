@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 			// grab the heading and start appending items after it
 			var productRow = '<div class="row rowNumber">',
-				product = '<div class="col-sm-4 col-md-3 productTile"><div class="product"><a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.weaveuk.com&media=' + pinitUrl + '&description=Something%20I%20found%20on%20Weave" data-pin-do="buttonPin" data-pin-config="none" target="_blank" class="pinitButton"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span> - <span> ' + likes[i].price + '</span> </h4><a class="btn btn-primary btn-sm buy" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div>';
+				product = '<div class="col-sm-4 col-md-3 productTile"><div class="product"><button type="button" aria-hidden="true" data-url="' +  likes[i].imageUrl + '" class="close delete">&times;</button><div class="productImage"><img src="' + likes[i].imageUrl + '"/></div><div class="productInfo"><h4> <span class="brand">' + likes[i].brand + ' </span> - <span> ' + likes[i].price + '</span> </h4><a class="btn btn-primary btn-sm buy" href="' + likes[i].url + '" target="_blank">View in Store</a></div></div></div></div>';
 
 			// clever stuff to make it 3 colums on a tablet (i.e. procrastination)
 			var widthRow = parseInt($(".row").css("width")),
@@ -54,12 +54,12 @@ $(document).ready(function() {
 		}
 	}
 
-	$("#playAgain").click(function(e) {
+	/*$(".weaveAgain").click(function(e) {
 		e.preventDefault();
 		mixpanel.track("Play Again", {}, function() {
 			window.location = "/collections/";
 		});
-	});
+	});*/
 
 	$("#nameCollection").click(function(e){
 		e.preventDefault();
