@@ -11,8 +11,63 @@ UserSchema = mongoose.Schema({
 		id:       String,
 		email:    String,
 		name:     String
-	}
+	},
+	collectionsPlayed: [
+		{
+			name: String,
+			likes: [
+				{
+					url: String,
+					imageUrl: String,
+					price: String,
+					brand: String,
+					shop: String,
+					title: String,
+					type: String,
+					tags: [String],
+					comment: String
+				}
+			],
+			dislikes: [
+				{
+					url: String,
+					imageUrl: String,
+					price: String,
+					brand: String,
+					shop: String,
+					title: String,
+					type: String,
+					tags: [String],
+					comment: String
+				}
+			]
+		}
+	]
 });
+
+UserSchema.statics.insertLike = function(user, collectionName, product, done) {
+	console.log('inserting like')
+	var User = user;
+	//User.findOne({})
+	// find the correct collection
+	var collections = User.collectionsPlayed;
+	var collection = findCollection(collections, collectionName);
+	if(collection != null) {
+		// correct collection, insert into likes
+		collection.likes.push(product);
+	} else {
+		// must be the first like / dislike on this collection
+		var tmp = {
+			name: collectionName,
+			likes: [
+				product
+			]
+		}
+		collections.push(tmp);
+	}
+	User.save();
+	console.log(collections);
+}
 
 UserSchema.statics.signup = function(name, email, password, done){
 	var User = this;
@@ -69,6 +124,15 @@ UserSchema.statics.findOrCreateFaceBookUser = function(profile, done){
 			});
 		}
 	});	
+}
+
+var findCollection = function(collectionsArr, collectionName) {
+	for(var i = 0; i < collectionsArr.length; i++) {
+		if(collectionsArr[i].name == collectionName) {
+			return collectionsArr[i];
+		}
+		return null;
+	}
 }
 
 

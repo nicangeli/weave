@@ -36,35 +36,34 @@ $(document).ready(function() {
 		e.preventDefault();
 		localStorage.setItem("firstLike", "false");	
 		var element = $(this).attr('data-number');
-		console.log('FIRST ELEMENT');
-		console.log(element);
-		// Push to Mixpanel
-		/*mixpanel.track("Like Item", {
-			"Item" : $(this).attr("data-url")
-		});*/
 
-		var likes = localStorage.getObj("likes");
 
-		var tmp = {};
-			tmp.url = $(this).attr("data-url");
-			tmp.price = $(this).attr("data-price");
-			tmp.shop = $(this).attr("data-shop");
-			tmp.imageUrl = $(this).attr("data-imageUrl");
-			tmp.type = $(this).attr("data-type");
-			tmp.brand = $(this).attr("data-brand");
-		if(likes == null) {
-			likes = [tmp];
-			localStorage.setObj("likes", likes);
-		} else {
-			likes.push(tmp);
-			localStorage.setObj("likes", likes);
-		}
 
-		updateHanger();
 
-		// anything that has a data-number attr of element, hide it
-		$('[data-number=' + element + ']').hide();
-		changeProduct(element);
+		var product = {};
+			product.url = $(this).attr("data-url");
+			product.price = $(this).attr("data-price");
+			product.shop = $(this).attr("data-shop");
+			product.imageUrl = $(this).attr("data-imageUrl");
+			product.type = $(this).attr("data-type");
+			product.brand = $(this).attr("data-brand");
+
+		var data = {
+			collectionName: $(".weaveFrame").attr('data-collectionName'),
+			product: product
+		};
+
+		
+		$.post('/likeProduct', data)
+			.done(function() {
+				updateHanger();
+				// anything that has a data-number attr of element, hide it
+				$('[data-number=' + element + ']').hide();
+				changeProduct(element);
+			})
+			.fail(function() {
+				alert('Oops... something went wrong');
+			});
 
 	});
 

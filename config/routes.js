@@ -9,6 +9,8 @@ var User = require('../models/user.js'),
 	templatesDir = path.resolve(__dirname, '..', 'views/mailer/templates'),
 	emailTemplates = require('email-templates'),
 	Collections = require('../libs/collections.js'),
+	mongoose = require('mongoose'),
+	User = mongoose.model('User'),
 	Mixpanel = require('mixpanel'),
 	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba');
 
@@ -46,13 +48,14 @@ module.exports = function(app, passport) {
 		res.render('likes', {user: req.user});
 	});
 
-	app.get('/likeProduct', function(req, res) {
+	app.post('/likeProduct', function(req, res) {
 		var data = req.body;
 		if(req.isAuthenticated()) {
-			res.send(req.user._id);
-		} else {
-			res.send('Not loggged in');
+			User.insertLike(req.user, {}, function() {
+				console.log('hey');
+			});
 		}
+		res.status(200).send();
 	});
 
 	app.get('/email', function(req, res) {
@@ -108,7 +111,7 @@ module.exports = function(app, passport) {
 			console.log(req.user);
 			mixpanel.track("facebook login")
 			mixpanel.people.set({
-				$email: req.user.facgebook.email,
+				$email: req.user.facebook.email,
 				name: req.user.facebook.name
 			});
 			res.redirect('/collections');
