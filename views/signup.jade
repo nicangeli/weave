@@ -9,15 +9,19 @@ block content
 			.col-md-8.col-xs-10
 				p(style="text-align: center; margin-top: 10px;") In order to save your liked items...
 				h1.signupHeader Sign up with Email
+				.row.signupError
+					.col-md-4.col-xs-1
+					.col-md-4.col-xs-10
+						.alert.alert-danger The form is not correct.
 				form.weave-flat-form(role="form", method="post", action="/signup", id="signUpForm")
 					ul
 						li
-							input(type='text', placeholder='Full Name', name="name", id="name")
+							input(type='text', placeholder='Full Name', name="name", id="name" required)
 							span Your first and last name, e.g. Chloe Donegan
 						li
-							input(type='email', placeholder='Email', name="email", id="email")
+							input(type='email', placeholder='Email', name="email", id="email" required)
 						li
-							input(type='password', placeholder='Password', name="password", id="password")
+							input(type='password', placeholder='Password', name="password", id="password" required)
 						input.btn.btn-custom.signup#peopleSignup(type="submit", name="submit", value="Create Account")
 					br
 					a.btn.btn-facebook.signup(href="/auth/facebook") Facebook Sign up

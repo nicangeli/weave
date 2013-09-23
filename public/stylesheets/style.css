@@ -719,10 +719,17 @@ img.male {
   margin-top: 20px;
 }
 
+.signupError {
+  text-align: center;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
 .weave-flat-form {
   max-width: 400px;
   margin: auto;
-  margin-top: 30px;
 }
 
 .weave-flat-form ul {
