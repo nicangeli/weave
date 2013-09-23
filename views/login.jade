@@ -2,15 +2,16 @@ extends layout
 
 block content
 	.container
-		h1 Login to Weave
-		form(role="form", id="signup", method="POST", action="/login")
-			.form-group
-				label(for='email') Email
-				input.form-control#email(type='email', name='email')
-			.form-group
-				label(for='password') Password
-				input.form-control#password(type='password', name='password')
-			.form-group
-				input.btn.btn-default(type="submit", value="Login")
-
-		a.btn.btn-default(href="/auth/facebook") Login With Facebook
+		.row
+			.col-md-2.col-xs-1
+			.col-md-8.col-xs-10
+				h1.signupHeader Log in with Email
+				form.weave-flat-form(role="form", method="POST", action="/login")
+					ul
+						li
+							input(type='email', name='email', placeholder='Email')
+						li
+							input(type='password', name='password', placeholder='Password')
+					input.btn.btn-custom.signup(type='submit') Log in
+					br
+					a.btn.btn-facebook.signup(href="/auth/facebook") Facebook Log in

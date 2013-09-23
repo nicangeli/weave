@@ -688,11 +688,11 @@ img.male {
 
 /*
 ===========================================
-          Sign up
+          Sign up & Login
 ===========================================
 */
 
-#signupHeader{
+.signupHeader{
   font-weight: 800;
   text-align: center;
 }
