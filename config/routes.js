@@ -17,6 +17,7 @@ module.exports = function(app, passport) {
 	*/
 
 	app.get('/collections', function(req, res) {
+		console.log(req.user);
 		var c = new Collections();
 		c.getActiveCollections(function(sizes) {
 			if(req.isAuthenticated()) {
