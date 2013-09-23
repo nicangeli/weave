@@ -46,6 +46,15 @@ module.exports = function(app, passport) {
 		res.render('likes', {user: req.user});
 	});
 
+	app.get('/likeProduct', function(req, res) {
+		var data = req.body;
+		if(req.isAuthenticated()) {
+			res.send(req.user._id);
+		} else {
+			res.send('Not loggged in');
+		}
+	});
+
 	app.get('/email', function(req, res) {
 		res.render('email', {user: req.user});
 	});
