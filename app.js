@@ -65,6 +65,7 @@ app.get('/skim', function(req, res) {
 	res.render('skim');
 });
 */
+/*
 app.use(function(err, req, res, next){
   res.status(err.status || 500);
   res.render('500', { error: err });
@@ -82,7 +83,7 @@ app.use(function(req, res, next){
   }
   res.type('txt').send('Not found');
 });
-
+*/
 require('./config/routes')(app, passport);
 
 

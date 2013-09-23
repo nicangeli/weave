@@ -6,8 +6,8 @@ html(lang='en')
     meta(name='description', content='Weave is a fun fashion discovery experience.')
     meta(name='author', content='')
     link(rel="image_src" href="http://www.weaveuk.com/images/weave-red.png")
-    link(rel="icon" href="www.weaveuk.com/favicon.ico" type="image/x-icon")
-    link(rel="shortcut icon" href="www.weaveuk.com/favicon.ico" type="image/x-icon")
+    link(rel="icon" href="http://www.weaveuk.com/favicon.ico" type="image/x-icon")
+    link(rel="shortcut icon" href="http://www.weaveuk.com/favicon.ico" type="image/x-icon")
     title Weave
     script(type="text/javascript", src="/javascripts/Modernizr.js")
     script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js") 
@@ -39,6 +39,7 @@ html(lang='en')
         a(href="/signup")
           img(src="/images/weave-red.png")
         -} else {
+        -console.log(user);
         a(href="/collections")
           img(src="/images/weave-red.png")
         -}
