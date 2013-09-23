@@ -187,9 +187,9 @@ module.exports = function(app, passport) {
 			req.login(user, function(err){
 				if(err) return next(err);
 				mixpanel.identify();
-				mixpanel.people.set({
-					"$email": req.body.email,
-					"name": req.body.name
+				mixpanel.people.set(req.body.email, {
+					$email: req.body.email,
+					name: req.body.name
 				});
 				return res.redirect("/collections");
 			});
