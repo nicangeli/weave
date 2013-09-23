@@ -3,6 +3,7 @@ extends layout
 block content
   script(type='text/javascript')
     mixpanel.track("Landing Page Loaded")
+    mixpanel.track_links(".play", "Clicked Play")
   .landingBackground
     - if(user != null) {
       h1 #{user.email}
@@ -19,50 +20,9 @@ block content
                 li Judge what's trending
                 li See if your friends agree
             br
-            a.play(href="/collections")    
-              button.btn.btn-custom.play Play
+            a.btn.btn-custom.play(href="/collections") Play
   
           .xs-col-1.col-md-4
             img.iPhone(src="/images/landingPage/blackiPhone.png")
-      .onboarding
-        .row
-          .col-md-2
-          .col-xs-12.col-md-8
-            .caption
-              h3#Questions Two questions before we play
-              .row
-                .col-md-2
-                .col-xs-6.col-md-4
-                  a()
-                    img.female(src="/images/woman.png", id="female")
-                .col-xs-6.col-md-4
-                  a()
-                    img.male(src="/images/man.png", id="male")
-                .col-md-2
-              .row(style="margin-top: 10px;")
-                .col-xs-2
-                .col-xs-8
-                  form.age(role="form")
-                    .form-group
-                      //- label Age
-                      select.form-control
-                        option under 18
-                        option 18-21
-                        option 22-25
-                        option 26-30
-                        option 31-40
-                        option 40+
-                .col-xs.2
-            br
-            button.btn.btn-custom#step2 Enter
-    //- .row
-    //-   .col-xs-3
-    //-   .col-xs-6
-    //-     //- form(role='form', id="emailForm")
-    //-     //-   .form-group
-    //-     //-     input#InputEmail.form-control(type='email', placeholder='Enter email')
-    //-     button.btn.btn-primary#Play Play
-    //-   .col-xs-3
-
 
   script(src="/javascripts/onboarding.js", type="text/javascript")
