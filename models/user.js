@@ -3,8 +3,7 @@ var mongoose = require('mongoose');
 var hash = require('../common/hash');
 
 UserSchema = mongoose.Schema({
-	firstName:  String,
-	lastName:   String,
+	name: 		String,
 	email:      String,
 	salt:       String,
 	hash:       String,
@@ -15,12 +14,13 @@ UserSchema = mongoose.Schema({
 	}
 });
 
-UserSchema.statics.signup = function(email, password, done){
+UserSchema.statics.signup = function(name, email, password, done){
 	var User = this;
 	hash(password, function(err, salt, hash){
 		if(err) throw err;
 		// if (err) return done(err);
 		User.create({
+			name: name,
 			email : email,
 			salt : salt,
 			hash : hash

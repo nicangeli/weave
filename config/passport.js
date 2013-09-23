@@ -17,6 +17,7 @@ module.exports = function (passport, config) {
 	});
 
   	passport.use(new LocalStrategy({
+        nameField: 'name',
 		usernameField: 'email',
 		passwordField: 'password'
     },

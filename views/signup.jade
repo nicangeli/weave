@@ -6,15 +6,15 @@ block content
 			.col-md-2.col-xs-1
 			.col-md-8.col-xs-10
 				h1#signupHeader Sign up with Email
-				form.weave-flat-form
+				form.weave-flat-form(method="POST", action="/signup")
 					ul
 						li
-							input(type='text', placeholder='Full Name')
+							input(type='text', placeholder='Full Name', name="name")
 							span Your first and last name, e.g. Chloe Donegan
 						li
-							input(type='email', placeholder='Email')
+							input(type='email', placeholder='Email', name="email")
 						li
-							input(type='password', placeholder='Password')
+							input(type='password', placeholder='Password', name="password")
 					a.btn.btn-custom.signup Create Account
 					br
 					a.btn.btn-facebook.signup(href="/auth/facebook") Facebook Sign up
