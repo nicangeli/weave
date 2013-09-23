@@ -189,11 +189,11 @@ module.exports = function(app, passport) {
 	});
 
 	app.post("/signup", Auth.userExist, function (req, res, next) {
-		User.signup(req.body.email, req.body.password, function(err, user){
+		User.signup(req.body.name, req.body.email, req.body.password, function(err, user){
 			if(err) throw err;
 			req.login(user, function(err){
 				if(err) return next(err);
-				return res.redirect("profile");
+				return res.redirect("/collections");
 			});
 		});
 	});

@@ -63,6 +63,10 @@ html(lang='en')
       .account
         .login
           a.btn.btn-custom(href="/login") Log in
+      -} else {
+      .account
+        .login
+          a.btn.btn-custom(href="/logout") Log out
       -}
     block content
     script(type="text/javascript", src="http://s.skimresources.com/js/57657X1350582.skimlinks.js")
