@@ -97,7 +97,6 @@ module.exports = function(app, passport) {
 			//res.render("collections", {user : req.user});
 			console.log('FB DETAILS');
 			console.log(req.user);
-			mixpanel.identify();
 			mixpanel.track("facebook login")
 			mixpanel.people.set({
 				$email: req.user.facebook.email,
