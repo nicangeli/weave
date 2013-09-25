@@ -56,7 +56,6 @@ $(document).ready(function() {
 		
 		$.post('/likeProduct', data)
 			.done(function() {
-				updateHanger();
 				// anything that has a data-number attr of element, hide it
 				$('[data-number=' + element + ']').hide();
 				changeProduct(element);
@@ -101,7 +100,3 @@ var changeProduct = function(currentProduct) {
 		});
 	}
 };
-
-var updateHanger = function() {
-	$("a.hanger").html("<img src='/images/coat-hanger.png'> <span class='collectionTag'>My Collection</span> (" + localStorage.getObj("likes").length + ")").show();
-}

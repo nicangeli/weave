@@ -131,8 +131,9 @@ var findCollection = function(collectionsArr, collectionName) {
 		if(collectionsArr[i].name == collectionName) {
 			return collectionsArr[i];
 		}
-		return null;
 	}
+	return null;
+
 }
 
 

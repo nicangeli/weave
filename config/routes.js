@@ -51,7 +51,7 @@ module.exports = function(app, passport) {
 	app.post('/likeProduct', function(req, res) {
 		var data = req.body;
 		if(req.isAuthenticated()) {
-			User.insertLike(req.user, {}, function() {
+			User.insertLike(req.user, data.collectionName, data.product, function() {
 				console.log('hey');
 			});
 		}
