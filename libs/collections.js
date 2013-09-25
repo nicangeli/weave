@@ -21,6 +21,11 @@ module.exports = function() {
 										"author": "@lesliepants"
 									},
 									{
+										"name": "Thats-Peachy",
+										"comment": "",
+										"author": "That's Peachy Blogger"
+									},
+									{
 										"name": "Chic",
 										"comment": "",
 										"author": "Madeleine Nosworthy"
