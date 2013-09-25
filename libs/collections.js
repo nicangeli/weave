@@ -16,6 +16,12 @@ module.exports = function() {
 										"author": "Miranda Hadfield"
 									},
 									{
+
+										"name": "The Pink Coat",
+										"comment": "",
+										"author": "Sandra Hagelstam"
+									},
+									{
 										"name": "Birthday Lust List",
 										"comment": "",
 										"author": "Fashion Influx"
