@@ -26,6 +26,11 @@ module.exports = function() {
 										"author": "That's Peachy Blogger"
 									},
 									{
+										"name":"Watches",
+										"comment": "9 cute eBay watches",
+										"author": "Strike A Pose"
+									},
+									{
 										"name": "Chic",
 										"comment": "",
 										"author": "Madeleine Nosworthy"
