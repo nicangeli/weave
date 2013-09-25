@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+	var playCount = localStorage.getItem("playCount");
+	if(playCount == null) {
+		localStorage.setItem("playCount", "0");
+		playCount = localStorage.getItem("playCount");
+	} else {
+		playCount = parseInt(playCount) + 1;
+		localStorage.setItem("playCount", playCount)
+	}
+
+ 	if (parseInt(playCount) >= 3) {
+		window.location = "/signup";
+	}
+
 	$(".stamped").hide();
 
 	// for each collection name, check that we've not seen it all 
