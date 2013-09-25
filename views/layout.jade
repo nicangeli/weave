@@ -35,27 +35,14 @@ html(lang='en')
   body
     .header
       .logo
-        -if(user == null) {
-        a(href="/signup")
-          img(src="/images/weave-red.png")
-        -} else {
-        -console.log(user);
         a(href="/collections")
           img(src="/images/weave-red.png")
-        -}
       .navigation
         ul
-          -if(user == null) {  
-          a(href="/signup")
-            li#collections-nav 
-              div.icon &#59243;
-              div.navItem collections
-          -} else {
           a(href="/collections")
             li#collections-nav 
               div.icon &#59243;
               div.navItem collections
-          -}
           a(href="/likes")
             li#board-nav
               div.icon &hearts;
