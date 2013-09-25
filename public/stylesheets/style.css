@@ -805,6 +805,11 @@ form input[type=password] {
   body {
     padding: 0px 0 0 0;
   }
+  
+  .feedback, .login {
+  	display: none;
+  }
+
 
   .container {
   /*background-color: #fff8f0;
