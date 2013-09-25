@@ -16,6 +16,11 @@ module.exports = function() {
 										"author": "Miranda Hadfield"
 									},
 									{
+										"name": "Birthday Lust List",
+										"comment": "",
+										"author": "Fashion Influx"
+									},
+									{
 										"name": "Leslie",
 										"comment": "A SVPPLY Collection",
 										"author": "@lesliepants"
