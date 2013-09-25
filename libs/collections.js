@@ -16,9 +16,15 @@ module.exports = function() {
 										"author": "Miranda Hadfield"
 									},
 									{
+
 										"name": "The Pink Coat",
 										"comment": "",
 										"author": "Sandra Hagelstam"
+									},
+									{
+										"name": "Birthday Lust List",
+										"comment": "",
+										"author": "Fashion Influx"
 									},
 									{
 										"name": "Leslie",
@@ -29,6 +35,11 @@ module.exports = function() {
 										"name": "Thats-Peachy",
 										"comment": "",
 										"author": "That's Peachy Blogger"
+									},
+									{
+										"name":"Watches",
+										"comment": "9 cute eBay watches",
+										"author": "Strike A Pose"
 									},
 									{
 										"name": "Chic",
