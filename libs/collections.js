@@ -16,6 +16,11 @@ module.exports = function() {
 										"author": "Miranda Hadfield"
 									},
 									{
+										"name": "The Pink Coat",
+										"comment": "",
+										"author": "Sandra Hagelstam"
+									},
+									{
 										"name": "Leslie",
 										"comment": "A SVPPLY Collection",
 										"author": "@lesliepants"
