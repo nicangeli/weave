@@ -9,7 +9,7 @@ $(document).ready(function() {
 		localStorage.setItem("playCount", playCount)
 	}
 
- 	if (parseInt(playCount) >= 4) {
+ 	if (parseInt(playCount) >= 4 && $(".login").text() == "Log In") {
 		window.location = "/signup";
 	}
 
