@@ -117,6 +117,11 @@ module.exports = function() {
 										"author": "Marsha Lewitt"
 									},
 									{
+										"name": "VIPXO",
+										"comment": "",
+										"author": "Victoria India Price"
+									},
+									{
 										"name": "Rock & Roll",
 										"comment": "",
 										"author": "Weave Originals"
