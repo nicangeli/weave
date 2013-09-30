@@ -16,6 +16,11 @@ module.exports = function() {
 										"author": "Miranda Hadfield"
 									},
 									{
+										"name": "New In",
+										"comment": "",
+										"author": "Weave"
+									},
+									{
 
 										"name": "The Pink Coat",
 										"comment": "",
