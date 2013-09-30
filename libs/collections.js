@@ -21,6 +21,11 @@ module.exports = function() {
 										"author": "Weave"
 									},
 									{
+										"name": "Winter Wish List",
+										"comment": "",
+										"author": "Skeena"
+									},
+									{
 
 										"name": "The Pink Coat",
 										"comment": "",
@@ -74,12 +79,12 @@ module.exports = function() {
 									{
 										"name": "Statement Sweatshirts",
 										"comment": "Be bold",
-										"author": "Lucy Gardner"
+										"author": "Lucy Bobbles"
 									},
 									{
 										"name": "Party",
 										"comment": "A small collection of party pieces",
-										"author": "Lucy Gardner"
+										"author": "Lucy Bobbles"
 									},
 										{
 										"name": "Winter Coats",
@@ -117,19 +122,24 @@ module.exports = function() {
 										"author": "Marsha Lewitt"
 									},
 									{
+										"name": "VIPXO",
+										"comment": "",
+										"author": "Victoria India Price"
+									},
+									{
 										"name": "Rock & Roll",
 										"comment": "",
-										"author": "Weave Original"
+										"author": "Weave Originals"
 									},
 									{
 										"name": "Skater",
 										"comment": "Trending",
-										"author": "Weave Original"
+										"author": "Weave Originals"
 									},
 									{
 										"name": "Work",
 										"comment": "Suits are boring",
-										"author": "Weave Original"
+										"author": "Weave Originals"
 									},
 									{
 										"name": "Work Bag",

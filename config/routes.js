@@ -174,8 +174,12 @@ module.exports = function(app, passport) {
 		}
 	});
 
-	app.get("/login", function(req, res){ 
-		res.render("login", {user: req.user});
+	app.get("/login", function(req, res){
+		if(req.isAuthenticated()) {
+			res.redirect('/collections');
+		} else {
+			res.render("login", {user: req.user});
+		}
 	});
 
 	app.post("/login", passport.authenticate('local',{
@@ -185,7 +189,11 @@ module.exports = function(app, passport) {
 	);
 
 	app.get("/signup", function (req, res) {
-		res.render("signup", {user: req.user});
+		if(req.isAuthenticated()) {
+			res.redirect('/collections');
+		} else {
+			res.render("signup", {user: req.user});
+		}
 	});
 
 	app.post("/signup", Auth.userExist, function (req, res, next) {
