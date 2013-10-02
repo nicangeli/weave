@@ -4,25 +4,9 @@ block content
   script(type='text/javascript')
     mixpanel.track("Landing Page Loaded")
     mixpanel.track_links(".play", "Clicked Play")
-  .landingBackground
-    - if(user != null) {
-      h1 #{user.email}
-    -}
-    .container
-      .landingPage
-        .row
-          .col-xs-1.col-md-2
-          .col-xs-10.col-md-6
-            .caption
-              h3.captionTitle Fun Fashion Discovery
-              ul
-                li Find High Street gems
-                li Judge what's trending
-                li See if your friends agree
-            br
-            a.btn.btn-custom.play(href="/collections") Play
-  
-          .xs-col-1.col-md-4
-            img.iPhone(src="/images/landingPage/blackiPhone.png")
+  <!-- Begin LaunchRock Widget -->
+  div#lr-widget(rel="81SHJTYE")
+  script(type="text/javascript" src="//ignition.launchrock.com/ignition-current.min.js")
+  <!-- End LaunchRock Widget -->
 
   script(src="/javascripts/onboarding.js", type="text/javascript")
