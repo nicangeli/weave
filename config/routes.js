@@ -218,4 +218,15 @@ module.exports = function(app, passport) {
 		req.logout();
 		res.redirect('/login');
 	});
+
+	/* API */
+
+	app.get("/api/get", function (req, res) {
+		db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/weave');
+		db.collection("products").find().toArray(function (err, result) {
+			if (err) throw err;
+			var allTheShit = result;
+			res.json(allTheShit);
+		});
+	})
 }
