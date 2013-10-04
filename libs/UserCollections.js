@@ -18,7 +18,6 @@ module.exports = function() {
 	}
 
 	this.allCollections = function(callback) {
-		console.log("dadada")
 		db.collection("products").find().toArray(function (err, result) {
 			if (err) throw err;
 			var collections = [];
@@ -33,25 +32,26 @@ module.exports = function() {
 		});
 	}
 
-	this.userCollections = function(userUDID, callback) {
+	this.userCollections = function(userUDID, cb) {
 		db.collection("userCollections").find({UDID: userUDID}).toArray(function (err, result) {
 			if (err) throw err;
-			callback(result[0].collectionsSeen);
+			//console.log('User Collections');
+			//cb(result[0].collectionsSeen);
+			console.log('hello world');
+			cb(result[0].collectionsSeen);
+			//var seen = result[0].collectionsSeen;
+			//callback(seen);
 		})
 	}
 
 	this.userToSee = function(userUDID, callback) {
 		var that = this
 		that.allCollections(function (result) {
-			console.log(result);
 			that.userCollections(userUDID, function(userCollections) {
-				console.log(userCollections);
-				console.log(userCollections.indexOf(result[i]));
 				var toSee = [];
 				for (var i = 0; i < result.length; i++) {
 					if (result.indexOf(userCollections[i]) == -1) {
 						toSee.push(result[i]);
-						console.log("Testing logic");
 					}
 				}
 				callback(toSee);

@@ -95,9 +95,6 @@ module.exports = function(app, passport) {
 	app.get("/auth/facebook/callback", 
 		passport.authenticate("facebook",{ failureRedirect: '/login'}),
 		function(req,res){
-			//res.render("collections", {user : req.user});
-			console.log('FB DETAILS');
-			console.log(req.user);
 			mixpanel.track("facebook login")
 			mixpanel.people.set({
 				$email: req.user.facgebook.email,
@@ -237,9 +234,8 @@ module.exports = function(app, passport) {
 		// 	res.json(result);
 		// })
 
-		user.userToSee("CHIFS-DHUIFSHF-DHSF-DBKJSF", function(result) {
-			var tmp = user;
-		 	tmp.toSend(result, function(toSend) {
+		user.userCollections("CHIFS-DHUIFSHF-DHSF-DBKJSF", function(result) {
+		 	user.userToSee(result, function(toSend) {
 		 		res.json(toSend);
 		 	})
 		});
