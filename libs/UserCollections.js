@@ -6,12 +6,10 @@ var db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/we
 
 module.exports = function() {
 	
-	this.getCollections = function(callback) {
-		var collectionRequired = "Fri Oct 04 2013";
-		var shopArray = ["H&M", "Zara", "ASOS"];
+	this.getCollections = function(collectionName, callback) {
+		var shopArray = ["H&M", "ASOS"];
 
-
-		db.collection("products").find({collectionDate: collectionRequired, shop:{$in:shopArray}}).toArray(function (err, result) {
+		db.collection("products").find({collectionDate: collectionName, shop:{$in:shopArray}}).toArray(function (err, result) {
 			if (err) throw err;
 			callback(result);
 		});

@@ -234,10 +234,11 @@ module.exports = function(app, passport) {
 		// 	res.json(result);
 		// })
 
-		user.userCollections("CHIFS-DHUIFSHF-DHSF-DBKJSF", function(result) {
-		 	user.userToSee(result, function(toSend) {
-		 		res.json(toSend);
-		 	})
+		user.userToSee("CHIFS-DHUIFSHF-DHSF-DBKJSF", function(result) {
+		 	user.getCollections(result[0], function(data) {
+		 		res.json(data);
+
+		 	});
 		});
 	})
 }
