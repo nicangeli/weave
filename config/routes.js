@@ -10,7 +10,8 @@ var User = require('../models/user.js'),
 	emailTemplates = require('email-templates'),
 	Collections = require('../libs/collections.js'),
 	Mixpanel = require('mixpanel'),
-	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba');
+	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba'),
+	UserCollections = require('../libs/UserCollections.js');
 
 module.exports = function(app, passport) {
 	
@@ -222,11 +223,25 @@ module.exports = function(app, passport) {
 	/* API */
 
 	app.get("/api/get", function (req, res) {
-		db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/weave');
-		db.collection("products").find().toArray(function (err, result) {
-			if (err) throw err;
-			var allTheShit = result;
-			res.json(allTheShit);
+		var user = new UserCollections();
+		// user.getCollections(function (result) {
+		// 	res.json(result);
+		// });
+
+		// user.allCollections(function (result) {
+		// 	res.json(result);
+		// });
+
+		// user.userCollections("CHIFS-DHUIFSHF-DHSF-DBKJSF", function (result) {
+
+		// 	res.json(result);
+		// })
+
+		user.userToSee("CHIFS-DHUIFSHF-DHSF-DBKJSF", function(result) {
+			var tmp = user;
+		 	tmp.toSend(result, function(toSend) {
+		 		res.json(toSend);
+		 	})
 		});
 	})
 }
