@@ -220,11 +220,12 @@ module.exports = function(app, passport) {
 	/* API */
 
 	app.post("/api/get", function (req, res) {
-		var data = req.body;
+		var request = req.body;
 		var user = new UserCollections();
-		user.userToSee(data.UDID, function(result) {
-		 	user.getCollections(result[0], data.shops, function(data) {
-		 		user.updateUserSeen(data.UDID, result[0]);
+		user.userToSee(request.UDID, function(result) {
+		 	user.getCollections(result[0], request.shops, function(data) {
+		 		if(result[0] != null)
+		 			user.updateUserSeen(request.UDID, result[0]);
 		 		res.json(data);
 		 	});
 		});
