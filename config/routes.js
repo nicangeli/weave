@@ -225,8 +225,8 @@ module.exports = function(app, passport) {
 		user.userToSee(data.UDID, function(result) {
 			console.log(result[0]);
 		 	user.getCollections(result[0], data.shops, function(data) {
+		 		user.updateUserSeen(data.UDID, result[0]);
 		 		res.json(data);
-
 		 	});
 		});
 	})

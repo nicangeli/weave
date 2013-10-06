@@ -6,6 +6,9 @@ var db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/we
 
 module.exports = function() {
 	
+	/*
+		Get collection out of db
+	*/
 	this.getCollections = function(collectionName, shops, callback) {
 		var shopArray = shops;
 
@@ -15,6 +18,10 @@ module.exports = function() {
 		});
 	}
 
+	/*
+		List of all the collections in the database, 
+		['Thu 04 Oct 2012', 'Tue 02 Nov 2011'] etc
+	*/
 	this.allCollections = function(callback) {
 		db.collection("products").find().toArray(function (err, result) {
 			if (err) throw err;
@@ -30,19 +37,45 @@ module.exports = function() {
 		});
 	}
 
+	/*
+		Called to update which collections the user has seen
+	*/
+	this.updateUserSeen = function(userUDID, collectionSeen) {
+		db.collection('userCollections').update({UDID: userUDID}, {'$push': {collectionsSeen: collectionSeen}}, function(err) {
+			if(err) throw err;
+			console.log('Successfully updated ' + collectionSeen);
+		})
+	}
+
+	/*
+		Which collections has the user seen?
+	*/
 	this.userCollections = function(userUDID, cb) {
 		db.collection("userCollections").find({UDID: userUDID}).toArray(function (err, result) {
 			if (err) throw err;
 			//console.log('User Collections');
 			//cb(result[0].collectionsSeen);
-			console.log('hello world');
+			if(result.length == 0) { // UDID not in db, must be first request
+				var doc = {
+					UDID: userUDID,
+					collectionsSeen: []
+				};
+				db.collection('userCollections').insert(doc, function(err, result) {
+					if(err) throw err;
+					if(result) 
+						console.log('Added new UDID to db');
+				})
+			}
 			cb(result[0].collectionsSeen);
 			//var seen = result[0].collectionsSeen;
 			//callback(seen);
 		})
 	}
 
-	this.userToSee = function(userUDID, callback) {
+	/*
+		Which date should the user be shown next?
+	*/
+	this.userToSee = function(userUDID, callback) { 
 		var that = this
 		that.allCollections(function (result) {
 			console.log('All collections: ' + result);
