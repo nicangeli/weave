@@ -12,7 +12,14 @@ module.exports = function() {
 	this.getCollections = function(collectionName, shops, callback) {
 		var shopArray = shops;
 
-		db.collection("products").find({collectionDate: collectionName, shop:{$in:shopArray}}).toArray(function (err, result) {
+		var query = {
+			collectionDate: collectionName
+		};
+		if(shopArray != null) {
+			query.shop = {$in:shopArray}
+		}
+
+		db.collection("products").find(query).toArray(function (err, result) {
 			if (err) throw err;
 			callback(result);
 		});
@@ -53,7 +60,6 @@ module.exports = function() {
 	this.userCollections = function(userUDID, cb) {
 		db.collection("userCollections").find({UDID: userUDID}).toArray(function (err, result) {
 			if (err) throw err;
-			//console.log('User Collections');
 			//cb(result[0].collectionsSeen);
 			if(result.length == 0) { // UDID not in db, must be first request
 				var doc = {
@@ -62,11 +68,14 @@ module.exports = function() {
 				};
 				db.collection('userCollections').insert(doc, function(err, result) {
 					if(err) throw err;
-					if(result) 
+					if(result) {
 						console.log('Added new UDID to db');
+						cb(result[0].collectionsSeen);
+					}
 				})
+			} else {
+				cb(result[0].collectionsSeen);
 			}
-			cb(result[0].collectionsSeen);
 			//var seen = result[0].collectionsSeen;
 			//callback(seen);
 		})

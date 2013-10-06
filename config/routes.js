@@ -223,7 +223,6 @@ module.exports = function(app, passport) {
 		var data = req.body;
 		var user = new UserCollections();
 		user.userToSee(data.UDID, function(result) {
-			console.log(result[0]);
 		 	user.getCollections(result[0], data.shops, function(data) {
 		 		user.updateUserSeen(data.UDID, result[0]);
 		 		res.json(data);
