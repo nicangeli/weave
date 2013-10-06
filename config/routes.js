@@ -219,23 +219,12 @@ module.exports = function(app, passport) {
 
 	/* API */
 
-	app.get("/api/get", function (req, res) {
+	app.post("/api/get", function (req, res) {
+		var data = req.body;
 		var user = new UserCollections();
-		// user.getCollections(function (result) {
-		// 	res.json(result);
-		// });
-
-		// user.allCollections(function (result) {
-		// 	res.json(result);
-		// });
-
-		// user.userCollections("CHIFS-DHUIFSHF-DHSF-DBKJSF", function (result) {
-
-		// 	res.json(result);
-		// })
-
-		user.userToSee("CHIFS-DHUIFSHF-DHSF-DBKJSF", function(result) {
-		 	user.getCollections(result[0], function(data) {
+		user.userToSee(data.UDID, function(result) {
+			console.log(result[0]);
+		 	user.getCollections(result[0], data.shops, function(data) {
 		 		res.json(data);
 
 		 	});

@@ -6,8 +6,8 @@ var db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/we
 
 module.exports = function() {
 	
-	this.getCollections = function(collectionName, callback) {
-		var shopArray = ["H&M", "ASOS"];
+	this.getCollections = function(collectionName, shops, callback) {
+		var shopArray = shops;
 
 		db.collection("products").find({collectionDate: collectionName, shop:{$in:shopArray}}).toArray(function (err, result) {
 			if (err) throw err;
@@ -45,10 +45,12 @@ module.exports = function() {
 	this.userToSee = function(userUDID, callback) {
 		var that = this
 		that.allCollections(function (result) {
+			console.log('All collections: ' + result);
 			that.userCollections(userUDID, function(userCollections) {
+				console.log('User Collections: ' + userCollections);
 				var toSee = [];
 				for (var i = 0; i < result.length; i++) {
-					if (result.indexOf(userCollections[i]) == -1) {
+					if (userCollections.indexOf(result[i]) == -1) {
 						toSee.push(result[i]);
 					}
 				}
