@@ -96,9 +96,22 @@ module.exports = function() {
 						toSee.push(result[i]);
 					}
 				}
+
+				for(var i = 0; i < toSee.length; i++) {
+					toSee[i] = new Date(toSee[i]);
+				}
+				toSee.sort(date_sort_desc);
 				callback(toSee);
 			});
 		});
 	}
 
 }
+
+var date_sort_desc = function (date1, date2) {
+  // This is a comparison function that will result in dates being sorted in
+  // DESCENDING order.
+  if (date1 > date2) return -1;
+  if (date1 < date2) return 1;
+  return 0;
+};
