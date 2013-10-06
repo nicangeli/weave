@@ -16,8 +16,10 @@ module.exports = function() {
 			collectionDate: collectionName
 		};
 		if(shopArray != null) {
-			query.shop = {$in:shopArray}
+			//{"name":{$in:[1,2,3]}}
+			query.shop = {"$in":shopArray}
 		}
+		console.log('QUERY: ' + JSON.stringify(query));
 
 		db.collection("products").find(query).toArray(function (err, result) {
 			if (err) throw err;
