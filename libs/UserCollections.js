@@ -10,16 +10,13 @@ module.exports = function() {
 		Get collection out of db
 	*/
 	this.getCollections = function(collectionName, shops, callback) {
-		var shopArray = shops;
 
 		var query = {
 			collectionDate: collectionName
 		};
-		if(shopArray != null) {
-			//{"name":{$in:[1,2,3]}}
-			query.shop = {"$in":shopArray}
+		if(shops != null) {
+			query.shop = {"$in":shops}
 		}
-		console.log('QUERY: ' + JSON.stringify(query));
 
 		db.collection("products").find(query).toArray(function (err, result) {
 			if (err) throw err;
@@ -28,10 +25,15 @@ module.exports = function() {
 	}
 
 	/*
-		List of all the collections in the database, 
+		List of all the collections in the database that have at least one of 
+		the given shops in them
 		['Thu 04 Oct 2012', 'Tue 02 Nov 2011'] etc
 	*/
-	this.allCollections = function(callback) {
+	this.allCollections = function(shops, callback) {
+		var query = {};
+		if(shops != null) {
+			query.shops = {"$in":shops}
+		}
 		db.collection("products").find().toArray(function (err, result) {
 			if (err) throw err;
 			var collections = [];
