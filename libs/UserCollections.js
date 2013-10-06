@@ -32,9 +32,10 @@ module.exports = function() {
 	this.allCollections = function(shops, callback) {
 		var query = {};
 		if(shops != null) {
-			query.shops = {"$in":shops}
+			//console.log('SHOPS: ' + shops);
+			query.shop = {"$in":shops}
 		}
-		db.collection("products").find().toArray(function (err, result) {
+		db.collection("products").find(query).toArray(function (err, result) {
 			if (err) throw err;
 			var collections = [];
 
@@ -88,9 +89,9 @@ module.exports = function() {
 	/*
 		Which date should the user be shown next?
 	*/
-	this.userToSee = function(userUDID, callback) { 
+	this.userToSee = function(shops, userUDID, callback) { 
 		var that = this
-		that.allCollections(function (result) {
+		that.allCollections(shops, function (result) {
 			console.log('All collections: ' + result);
 			that.userCollections(userUDID, function(userCollections) {
 				console.log('User Collections: ' + userCollections);

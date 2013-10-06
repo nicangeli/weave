@@ -221,11 +221,13 @@ module.exports = function(app, passport) {
 
 	app.post("/api/get", function (req, res) {
 		var request = req.body;
+		var shops; 
 		if(request.shops != null) {
-			var shops = request.shops.split(",");
+			shops = request.shops.split(",");
+			console.log('REquested shops: ' + shops);
 		}
 		var user = new UserCollections();
-		user.userToSee(request.UDID, function(result) {
+		user.userToSee(shops, request.UDID, function(result) {
 		 	user.getCollections(result[0], shops, function(data) {
 		 		if(result[0] != null)
 		 			user.updateUserSeen(request.UDID, result[0]);
