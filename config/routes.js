@@ -231,7 +231,10 @@ module.exports = function(app, passport) {
 		 	user.getCollections(result[0], shops, function(data) {
 		 		if(result[0] != null)
 		 			user.updateUserSeen(request.UDID, result[0]);
-		 		res.json(data);
+		 		var products = {
+		 			"products": data
+		 		}
+		 		res.json(products);
 		 	});
 		});
 	})
