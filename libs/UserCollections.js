@@ -101,6 +101,10 @@ module.exports = function() {
 					toSee[i] = new Date(toSee[i]);
 				}
 				toSee.sort(date_sort_desc);
+
+				for(var i = 0; i < toSee.length; i++) {
+					toSee[i] = toSee[i].toDateString();
+				}
 				callback(toSee);
 			});
 		});
