@@ -234,7 +234,7 @@ module.exports = function(app, passport) {
 		 		var products = {
 		 			"products": data
 		 		}
-		 		res.json(products);
+		 		res.json(data);
 		 	});
 		});
 	})
