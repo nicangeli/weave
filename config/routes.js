@@ -43,6 +43,13 @@ module.exports = function(app, passport) {
 		});
 	});
 
+	app.get('/api/new', function(req, res) {
+		var c = new UserCollections();
+		c.run("HEHfsfsIDBKNSF", ["Topshop", "Zara"], function(data) {
+			res.json(data);
+		})
+	});
+
 	app.get('/likes', function(req, res) {
 		res.render('likes', {user: req.user});
 	});

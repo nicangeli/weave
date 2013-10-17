@@ -1,120 +1,294 @@
 /*
 	Module that handles collections
 */
-
-var db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/weave');
+var config = require('../config/config.js'),
+	db = require('mongoskin').db(config.db),
+	async = require('async');
 
 module.exports = function() {
 	
 	/*
-		Get collection out of db
+		Get last collection for a shop
 	*/
-	this.getCollections = function(collectionName, shops, callback) {
-
-		var query = {
-			collectionDate: collectionName
-		};
-		if(shops != null) {
-			query.shop = {"$in":shops}
-		}
-
-		db.collection("products").find(query).toArray(function (err, result) {
-			if (err) throw err;
-			callback(result);
-		});
-	}
-
-	/*
-		List of all the collections in the database that have at least one of 
-		the given shops in them
-		['Thu 04 Oct 2012', 'Tue 02 Nov 2011'] etc
-	*/
-	this.allCollections = function(shops, callback) {
-		var query = {};
-		if(shops != null) {
-			//console.log('SHOPS: ' + shops);
-			query.shop = {"$in":shops}
-		}
-		db.collection("products").find(query).toArray(function (err, result) {
-			if (err) throw err;
+	this.lastCollectionForShop = function(shopName, callback) {
+		db.collection('products').find({shop: shopName}).toArray(function(err, result) {
+			if(err) throw err;
 			var collections = [];
 
 			for(var i = 0; i < result.length; i++) {
 				var date = result[i].collectionDate;
 				if (collections.indexOf(date) ==  -1) {
-					collections.push(date);
+					//collections.push(date);
+					collections.push(new Date(date));
 				}
 			}
-			callback(collections);
+
+			collections.sort(date_sort_desc);
+
+			for(var i = 0; i < collections.length; i++) {
+					collections[i] = collections[i].toDateString();
+			}
+			callback({
+				shop: shopName,
+				collectionDate: collections[0]
+			}); // send the most recent back
 		});
 	}
 
-	/*
-		Called to update which collections the user has seen
-	*/
-	this.updateUserSeen = function(userUDID, collectionSeen) {
-		db.collection('userCollections').update({UDID: userUDID}, {'$push': {collectionsSeen: collectionSeen}}, function(err) {
+	this.getCollection = function(forWhat, callback) {
+		/*
+			forWhat is of the form
+			{
+				shop: "ShopName",
+				collectionDate: "Thu Oct 12 2013"
+			}
+		*/
+		db.collection('products').find({shop: forWhat.shop, collectionDate: forWhat.collectionDate}).toArray(function(err, result) {
 			if(err) throw err;
-			console.log('Successfully updated ' + collectionSeen);
-		})
-	}
-
-	/*
-		Which collections has the user seen?
-	*/
-	this.userCollections = function(userUDID, cb) {
-		db.collection("userCollections").find({UDID: userUDID}).toArray(function (err, result) {
-			if (err) throw err;
-			//cb(result[0].collectionsSeen);
-			if(result.length == 0) { // UDID not in db, must be first request
-				var doc = {
-					UDID: userUDID,
-					collectionsSeen: []
-				};
-				db.collection('userCollections').insert(doc, function(err, result) {
-					if(err) throw err;
-					if(result) {
-						console.log('Added new UDID to db');
-						cb(result[0].collectionsSeen);
-					}
-				})
-			} else {
-				cb(result[0].collectionsSeen);
-			}
-			//var seen = result[0].collectionsSeen;
-			//callback(seen);
-		})
-	}
-
-	/*
-		Which date should the user be shown next?
-	*/
-	this.userToSee = function(shops, userUDID, callback) { 
-		var that = this
-		that.allCollections(shops, function (result) {
-			console.log('All collections: ' + result);
-			that.userCollections(userUDID, function(userCollections) {
-				console.log('User Collections: ' + userCollections);
-				var toSee = [];
-				for (var i = 0; i < result.length; i++) {
-					if (userCollections.indexOf(result[i]) == -1) {
-						toSee.push(result[i]);
-					}
-				}
-
-				for(var i = 0; i < toSee.length; i++) {
-					toSee[i] = new Date(toSee[i]);
-				}
-				toSee.sort(date_sort_desc);
-
-				for(var i = 0; i < toSee.length; i++) {
-					toSee[i] = toSee[i].toDateString();
-				}
-				callback(toSee);
-			});
+			callback(result);
 		});
 	}
 
+	this.hasUserSeenShopForDate = function(UDID, forWhat, callback) {
+		/*
+			For what is of the form: {
+				shop: "Shop name",
+				collectionDate: "Thu Oct 12 2013"
+			}
+		*/
+		db.collection('Users').find({UDID: UDID}).toArray(function(err, result) {
+			if(err) throw err;
+			result = result[0];
+			// get the right object out of the seen array
+			if(result == undefined) {
+				callback(false);
+			} else {
+				var seen = result.seen; // everything that the user has seen
+				//console.log(seen);
+				var shopObject = null;
+				for(var i = 0; i < seen.length; i++) {
+					//console.log(i)
+					var element = seen[i];
+					console.log('here');
+					console.log(forWhat.shop);
+					if(element.shop == forWhat.shop) {
+						// this is the object we care about
+						shopObject = element;
+					}
+				}
+				if(shopObject == null) {
+					// we have never seen this shop before
+					console.log("this one");
+
+					callback(false);
+				} else {
+					if(shopObject.collectionDate == forWhat.collectionDate) {
+						// we have seen todays data..
+						callback(true);
+					} else {
+						callback(true);
+					}
+				}
+			}
+		});
+	}
+
+	this.updateUserSeen = function(UDID, forWhat, cb) {
+		/*
+			forwhat is of the form {
+				shop: "ASOS",
+				collectionDate: "Thur Oct 12 2013"
+			}
+		*/
+		var toInput = {};
+		toInput.UDID = UDID;
+
+		async.series([
+
+			function(callback) {
+				// find the user and save the data that we want
+				db.collection('Users').find({UDID: UDID}).toArray(function(err, result) {
+					result = result[0];
+					if(err)throw err;			
+					if(result  == undefined) {
+						// first time for user
+						toInput.seen = [forWhat];
+					} else {
+						var seen = result.seen;
+						for(var i = 0; i < seen.length; i++) {
+							var element = seen[i];
+							if(element.shop == forWhat.shop) {
+								seen.splice(i, 1);
+							}
+						}
+						seen.push(forWhat);
+						toInput.seen = seen;
+					}
+					console.log(toInput);
+					callback();
+				});
+			},
+
+			function(callback) {
+				// remove the old user 
+				db.collection('Users').remove({UDID: UDID}, function(err, result) {
+					if(err) throw err;
+					callback();
+
+				});
+			},
+
+			function(callback) {
+				// insert the new user details
+				db.collection('Users').insert(toInput, function(err, result) {
+					if(err) throw err;
+					callback();
+				});
+			}
+
+		], function(err) {
+			if(err) throw err;
+			// else we have done the two above tasks... notifiy
+
+			cb(true);
+		})
+
+	}
+
+	this.updateAllForWhats = function(UDID, forWhats) {
+		/*
+			I want to update all of the forWhats in the db
+			Get the user out of the db
+			Go through their seen array
+			if the forwhat shop exists, update it in the pulled out stores
+			Remove the user
+			Add the new user
+		*/
+		var user;
+		var userSeen; 
+
+		async.series([
+			function(callback) {
+				db.collection('Users').find({UDID: UDID}).toArray(function(err, result) {
+					result = result[0];
+					if(err) throw err;
+					if(result != null) {
+						user = result;
+					} else {
+						user =  { UDID : UDID };
+					}
+					callback();
+				});
+			},
+
+			function(callback) {
+				/*
+					Go through forWhats
+					if the shop exists in the user, update the collectionDate
+					if the shop does not exist in the user, push it in
+				*/
+				var shops = [];
+				if(user.seen == undefined) {
+					userSeen = [];
+				} else {
+					userSeen = user.seen;
+				} 
+				for(var i = 0; i < userSeen.length; i++) {
+					var element = user.seen[i];
+					shops.push(element);
+				}
+				console.log(shops);
+				for(var i = 0; i < forWhats.length; i++) {
+					var forWhat = forWhats[i];
+					console.log(forWhat);
+
+					// does the shop name of this forWhat exist in the user? 
+					if(shops.indexOf(forWhat.shop) == -1) { // not in the db, push it
+						userSeen.push(forWhat);
+					} else {
+						// already exists in the seen array, replace it
+						userSeen.splice(i, 1);
+						userSeen.push(forWhat);
+					}
+				}
+
+				callback();
+				
+			},
+
+			function(callback) {
+				db.collection('Users').remove({UDID: UDID}, function(err) {
+					if(err) throw err;
+					callback();
+				})
+			},
+
+			function(callback) {
+				console.log('Inserting user: ...')
+				db.collection('Users').insert({UDID: UDID, seen: userSeen}, function(err) {
+					if(err) throw err;
+				});
+			}
+
+		], function(err) {
+			if(err) throw err;
+		})
+	}
+
+
+	this.getAllCollections = function(UDID, forWhats, callback) {
+		/*
+			forWhats is [] of {}
+			{
+				shop: "ShopName",
+				collectionDate: "Thu Oct 12 2013"
+			}
+		*/
+		var products = [];
+		var that = this;
+		async.forEach(forWhats, function(forWhat, callback) {
+			that.getCollection(forWhat, function(result) {
+				for(var i = 0; i < result.length; i++) {
+					products.push(result[i]);
+				}
+				callback();
+			})
+		}, function(err) {
+			if(err) throw err;
+			callback(products);
+		});
+	}
+
+	/*
+		Entry script
+	*/
+	this.run = function(UDID, shops, cb) {
+		console.log(UDID);
+		var forWhats = [];
+		var that = this;
+		async.forEach(shops, function(shop, callback) {
+			// get the last collection in the db for each shop
+			that.lastCollectionForShop(shop, function(result) {
+				// has the user seen that shop
+				that.hasUserSeenShopForDate(UDID, result, function(seen) {
+					//console.log(shop);
+					//console.log(seen);
+					if(!seen) { // if the user has not seen the shop for today
+						forWhats.push(result);
+					}
+					callback();
+				})
+			})
+		}, function(err) {
+			if(err) throw err;
+			// do something here after success... got all of the forWhats
+			that.getAllCollections(UDID, forWhats, function(products) { // get all the products
+				// update all forWhats so that the user has seen them
+				that.updateAllForWhats(UDID, forWhats);
+				cb(products);
+			});
+		})
+	}
 }
 
 var date_sort_desc = function (date1, date2) {
