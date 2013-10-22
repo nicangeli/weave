@@ -246,6 +246,12 @@ module.exports = function(app, passport) {
 			shops = request.shops.split(',');
 		}
 
+		if(request.version != null) {
+			// need to use the new API
+		} else {
+			// use the old API
+		}
+
 		var c = new UserCollections();
 		c.run(request.UDID, shops, function(data) {
 			res.json(data);
