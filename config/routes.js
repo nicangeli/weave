@@ -11,7 +11,8 @@ var User = require('../models/user.js'),
 	Collections = require('../libs/collections.js'),
 	Mixpanel = require('mixpanel'),
 	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba'),
-	UserCollections = require('../libs/UserCollections.js');
+	UserCollections = require('../libs/UserCollections.js'),
+	APIMVP2 = require('../libs/APIMVP2.js');
 
 module.exports = function(app, passport) {
 	
@@ -220,22 +221,41 @@ module.exports = function(app, passport) {
 	/* API */
 
 	app.post("/api/get", function (req, res) {
-		var request = req.body;
-		var shops; 
-		if(request.shops != null) {
-			shops = request.shops.split(",");
-			console.log('REquested shops: ' + shops);
+		if(req.body.version != null) {
+			console.log('Using new API');
+			// need to use the new API
+			var request = req.body,
+				shops;
+			console.log(request);
+			if(request.shops != null) {
+				shops = request.shops.split(',');
+			}
+			var c = new APIMVP2();
+			c.run(request.UDID, shops, function(data) {
+				res.json(data);
+			})
+		} else {
+			console.log('Using old API');
+			// use the old API
+		      var request = req.body;
+                var shops; 
+                if(request.shops != null) {
+                        shops = request.shops.split(",");
+                        console.log('REquested shops: ' + shops);
+                }
+                var user = new UserCollections();
+                user.userToSee(shops, request.UDID, function(result) {
+                         user.getCollections(result[0], shops, function(data) {
+                                 if(result[0] != null)
+                                         user.updateUserSeen(request.UDID, result[0]);
+                                 var products = {
+                                         "products": data
+                                 }
+                                 res.json(data);
+                         });
+                });
 		}
-		var user = new UserCollections();
-		user.userToSee(shops, request.UDID, function(result) {
-		 	user.getCollections(result[0], shops, function(data) {
-		 		if(result[0] != null)
-		 			user.updateUserSeen(request.UDID, result[0]);
-		 		var products = {
-		 			"products": data
-		 		}
-		 		res.json(data);
-		 	});
-		});
+
+	
 	})
 }

@@ -2,7 +2,7 @@
 	Module that handles collections
 */
 
-var db = require('mongoskin').db('weave:weave2013@ds047948.mongolab.com:47948/weave');
+var db = require('mongoskin').db('weave:weave2013@ds049568.mongolab.com:49568/weave-development');
 
 module.exports = function() {
 	
