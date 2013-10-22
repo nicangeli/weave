@@ -235,27 +235,18 @@ module.exports = function(app, passport) {
 				res.json(data);
 			})
 		} else {
-			console.log('Using old API');
-			// use the old API
-		      var request = req.body;
-                var shops; 
-                if(request.shops != null) {
-                        shops = request.shops.split(",");
-                        console.log('REquested shops: ' + shops);
-                }
-                var user = new UserCollections();
-                user.userToSee(shops, request.UDID, function(result) {
-                         user.getCollections(result[0], shops, function(data) {
-                                 if(result[0] != null)
-                                         user.updateUserSeen(request.UDID, result[0]);
-                                 var products = {
-                                         "products": data
-                                 }
-                                 res.json(data);
-                         });
-                });
+			var user = new UserCollections();
+			user.userToSee(shops, request.UDID, function(result) {
+			 	user.getCollections(result[0], shops, function(data) {
+			 		if(result[0] != null)
+			 			user.updateUserSeen(request.UDID, result[0]);
+			 		var products = {
+			 			"products": data
+			 		}
+			 		res.json(data);
+			 	});
+			});
 		}
+	});
 
-	
-	})
 }

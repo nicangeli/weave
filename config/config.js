@@ -1,7 +1,7 @@
 //config/config.js
 
 module.exports = {
-	db: 'mongodb://nodescript:nodescript@ds045938.mongolab.com:45938/heroku_app18114381',
+	db: 'mongodb://weave:weave2013@paulo.mongohq.com:10025/weave-dev_copy',
 	app: {
 		name: 'Weave - Fashion discovery'
 	},
