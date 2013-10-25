@@ -28,6 +28,7 @@ module.exports = function() {
 			for(var i = 0; i < collections.length; i++) {
 					collections[i] = collections[i].toDateString();
 			}
+			console.log('Last inserted collection: ' + collections[0]);
 			callback({
 				shop: shopName,
 				collectionDate: collections[0]
@@ -69,7 +70,6 @@ module.exports = function() {
 				for(var i = 0; i < seen.length; i++) {
 					//console.log(i)
 					var element = seen[i];
-					console.log('here');
 					console.log(forWhat.shop);
 					if(element.shop == forWhat.shop) {
 						// this is the object we care about
@@ -84,9 +84,11 @@ module.exports = function() {
 				} else {
 					if(shopObject.collectionDate == forWhat.collectionDate) {
 						// we have seen todays data..
+						console.log("so = fw")
 						callback(true);
 					} else {
-						callback(true);
+						console.log('so != fw')
+						callback(false);
 					}
 				}
 			}

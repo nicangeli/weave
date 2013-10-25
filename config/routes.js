@@ -249,4 +249,12 @@ module.exports = function(app, passport) {
 		}
 	});
 
+	app.post('/api/email_brands', function(req, res) {
+		console.log(req.body);
+		var j = {
+			"status": "200"
+		}
+		res.json(j);
+	});
+
 }
