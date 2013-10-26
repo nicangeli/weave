@@ -1,0 +1,41 @@
+!!! 5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Weave is a fun fashion discovery experience.')
+    meta(name='author', content='')
+    link(rel="image_src" href="http://www.weaveuk.com/images/weave-red.png")
+    link(rel="icon" href="http://www.weaveuk.com/favicon.ico" type="image/x-icon")
+    link(rel="shortcut icon" href="http://www.weaveuk.com/favicon.ico" type="image/x-icon")
+    title Weave
+    script(type="text/javascript", src="/javascripts/Modernizr.js")
+    script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js") 
+    script(type="text/javascript", src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js")
+    script(type="text/javascript", src="/javascripts/alertify.min.js")
+    script(type="text/javascript", src="/javascripts/all.js") 
+    link(rel="stylesheet", media="screen", href="http://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="/stylesheets/alertify.core.css")
+    link(rel="stylesheet", href="/stylesheets/alertify.default.css")
+    link(rel="stylesheet", href="/stylesheets/alertify.bootstrap.css")
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway:800,600,300', rel='stylesheet', type='text/css')
+
+    // Twitter Share
+    script
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+    // start Mixpanel
+    script(type='text/javascript')
+      (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+      typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+      b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+      mixpanel.init("171f9debe2ee520bf0aa7c35455f5dba");
+    // end Mixpanel
+
+    block content
+
+    footer(style="height: 100px; background: white; bottom: 0; width: 100%")
+        div(style="height: 1px; opacity: 0.4; background: slategrey; width: 100%")
+        h2 This is the footer

@@ -166,11 +166,12 @@ module.exports = function(app, passport) {
 	*/
 
 	app.get('/', function(req, res) {
-		if(req.isAuthenticated()) {
-			res.render('index', {user: req.user});
+		res.render('landing');
+		/*if(req.isAuthenticated()) {
+			res.render('landing', {user: req.user});
 		} else {
-			res.render('index', {user: null});
-		}
+			res.render('', {user: null});
+		}*/
 	});
 
 	app.get("/login", function(req, res){
