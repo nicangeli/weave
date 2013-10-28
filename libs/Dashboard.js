@@ -9,6 +9,7 @@ module.exports = function() {
 
 	this.getData = function(callback) {
 		var shopArray = [];
+		var magicObject = {};
 		
 		async.series([
 			function (callback) {
@@ -30,20 +31,57 @@ module.exports = function() {
 				});
 			},
 			function (callback) {
-				shopArray.each(function(shopName) {
-					db.collection('products').find({shop : shopName}).toArray(function (err, result) {
-						console.log("In the second async operation")
-						if (err) throw err;
+				shopArray.each(function (shopName) {
+					dayArray = []
+					async.series([
+						function (callback) {
+							db.collection('products').find({shop : shopName}).toArray(function (err, result) {
+								console.log("In the second async operation")
+								if (err) throw err;
 
-						var shopData = result
-						var shopCount = result.length
+								var shopData = result
+								
+								for (var element in shopData) {
+									var product = shopData[element];
+									if (dayArray.indexOf(product.collectionDate) == -1) {
+										dayArray.push(product.collectionDate);
+									};
+								};
+								console.log(shopName);
+								console.log(dayArray);
 
-						result.each(function(key, value) {
-							console.log(key, value)
-						})
+								dayArray.each(function (day) {
+									db.collection('products').find({shop : shopName, collectionDate : day}).toArray(function (err, result) {
+										if (err) throw err;
+										console.log("In the final section hopefully");
+										console.log("Shop name: " + shopName + ", Collection Date: " + day);
+										var dayData = result;
+										var numberOfProducts = dayData.length;
+										console.log("This day has: " + numberOfProducts + " products");
+									})
+								})
 
-						console.log(shopName + " has this many items " + shopCount);
-					});
+								magicObject[shopName] = dayArray
+
+								console.log(magicObject);
+
+								// result.each(function(key, value) {
+								// 	console.log(key, value)
+								// })
+
+								// console.log(shopName + " has this many items " + shopCount);
+							});							
+						},
+						function (callback) {
+							console.log("In the final section of async")
+							magicObject[shopName] = dayArray;
+
+							console.log(magicObject);
+						}
+					], function (err) {
+						if (err) return next(err);
+						callback(magicObject)
+					})
 				});
 			}
 		], function (err) {
