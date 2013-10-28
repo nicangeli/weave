@@ -12,7 +12,8 @@ var User = require('../models/user.js'),
 	Mixpanel = require('mixpanel'),
 	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba'),
 	UserCollections = require('../libs/UserCollections.js'),
-	APIMVP2 = require('../libs/APIMVP2.js');
+	APIMVP2 = require('../libs/APIMVP2.js'),
+	Dashboard = require('../libs/Dashboard.js');
 
 module.exports = function(app, passport) {
 	
@@ -218,6 +219,19 @@ module.exports = function(app, passport) {
 		req.logout();
 		res.redirect('/login');
 	});
+
+	/* Products Dashboard */
+
+	app.get("/dashboard", function(req, res) {
+		 var dashboard = new Dashboard();
+		dashboard.getData(function (shopArray) {
+			res.render("dashboard", { title : {title : "Test Title", value : 3}, product : data});
+			//console.log("in router")
+			//console.log(data);
+			console.log(shopArray);
+		});
+		// res.render("dashboard");
+	})
 
 	/* API */
 
