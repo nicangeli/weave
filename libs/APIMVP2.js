@@ -2,10 +2,62 @@
 	Module that handles collections
 */
 var config = require('../config/config.js'),
-	db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10000/weave-dev"),
+	db = require('mongoskin').db("mongodb://weave:weave2013@ds051658.mongolab.com:51658/weave-clone"),
 	async = require('async');
 
 module.exports = function() {
+
+
+	this.getAllShops = function(cb) {
+		db.collection('products').find().toArray(function(err, products) {
+			if(err) throw err;
+			var shops = [];
+			for(var i = 0; i < products.length; i++) {
+				var product = products[i];
+				if(shops.indexOf(product.shop) == -1) {
+					shops.push(product.shop);
+				}
+			}
+			cb(shops);
+		})
+	}
+
+	this.all = function(cb) {
+		var collectionDatePairings = [],
+			shops = [ 'Topshop',
+					  'Zara',
+					  'H&M',
+					  'ASOS',
+					  '& Other Stories',
+					  'Anthropologie',
+					  'Mango'],
+			that = this,
+			products = [];
+
+			async.forEach(shops, function(shop, callback) {
+				that.lastCollectionForShop(shop, function(data) {
+					collectionDatePairings.push(data);
+					callback();
+				})
+			}, function(err) {
+				if(err) throw err;
+				// do somethinng at the end 
+				async.forEach(collectionDatePairings, function(cdp, callback) {
+					that.getCollection(cdp, function(result) {
+						//console.log(result);
+						for(var i = 0; i < result.length; i++) {
+							products.push(result[i]);
+						}
+						callback();
+
+					});
+				}, function(err) {
+					if (err) throw err;
+					cb(products);
+				})
+			});
+	}
+	
 	
 	/*
 		Get last collection for a shop
@@ -28,7 +80,7 @@ module.exports = function() {
 			for(var i = 0; i < collections.length; i++) {
 					collections[i] = collections[i].toDateString();
 			}
-			console.log('Last inserted collection: ' + collections[0]);
+
 			callback({
 				shop: shopName,
 				collectionDate: collections[0]
@@ -70,7 +122,6 @@ module.exports = function() {
 				for(var i = 0; i < seen.length; i++) {
 					//console.log(i)
 					var element = seen[i];
-					console.log(forWhat.shop);
 					if(element.shop == forWhat.shop) {
 						// this is the object we care about
 						shopObject = element;
@@ -78,16 +129,13 @@ module.exports = function() {
 				}
 				if(shopObject == null) {
 					// we have never seen this shop before
-					console.log("this one");
 
 					callback(false);
 				} else {
 					if(shopObject.collectionDate == forWhat.collectionDate) {
 						// we have seen todays data..
-						console.log("so = fw")
 						callback(true);
 					} else {
-						console.log('so != fw')
 						callback(false);
 					}
 				}
@@ -126,7 +174,6 @@ module.exports = function() {
 						seen.push(forWhat);
 						toInput.seen = seen;
 					}
-					console.log(toInput);
 					callback();
 				});
 			},
@@ -199,10 +246,8 @@ module.exports = function() {
 					var element = user.seen[i];
 					shops.push(element);
 				}
-				console.log(shops);
 				for(var i = 0; i < forWhats.length; i++) {
 					var forWhat = forWhats[i];
-					console.log(forWhat);
 
 					// does the shop name of this forWhat exist in the user? 
 					if(shops.indexOf(forWhat.shop) == -1) { // not in the db, push it
@@ -226,7 +271,6 @@ module.exports = function() {
 			},
 
 			function(callback) {
-				console.log('Inserting user: ...')
 				db.collection('Users').insert({UDID: UDID, seen: userSeen}, function(err) {
 					if(err) throw err;
 				});

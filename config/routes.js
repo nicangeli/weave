@@ -249,6 +249,13 @@ module.exports = function(app, passport) {
 		}
 	});
 
+	app.get('/api/get/all', function(req, res) {
+		var a = new APIMVP2();
+		a.all(function(result) {
+			res.json(result);
+		});
+	});
+
 	app.post('/api/email_brands', function(req, res) {
 		console.log(req.body);
 		var j = {
