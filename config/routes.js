@@ -12,7 +12,8 @@ var User = require('../models/user.js'),
 	Mixpanel = require('mixpanel'),
 	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba'),
 	UserCollections = require('../libs/UserCollections.js'),
-	APIMVP2 = require('../libs/APIMVP2.js');
+	APIMVP2 = require('../libs/APIMVP2.js'),
+	Dashboard = require('../libs/Dashboard.js');
 
 module.exports = function(app, passport) {
 	
@@ -218,6 +219,14 @@ module.exports = function(app, passport) {
 		req.logout();
 		res.redirect('/login');
 	});
+
+	/* Dashboard */
+	app.get("/dashboard", function (req, res) {
+		var dashboard = new Dashboard();
+		data.getData(function (response) {
+			res.json(response[0]);
+		})
+	})
 
 	/* API */
 
