@@ -220,17 +220,14 @@ module.exports = function(app, passport) {
 		res.redirect('/login');
 	});
 
-	/* Products Dashboard */
-
-	app.get("/dashboard", function(req, res) {
-		 var dashboard = new Dashboard();
-		dashboard.getData(function (shopArray) {
-			res.render("dashboard", { title : {title : "Test Title", value : 3}, product : data});
-			//console.log("in router")
-			//console.log(data);
-			console.log(shopArray);
-		});
-		// res.render("dashboard");
+	/* Dashboard */
+	app.get("/dashboard", function (req, res) {
+		var dashboard = new Dashboard();
+		data.getData(function (response) {
+			res.json(response[0]);
+		})
+		// How to render view with variables that jade can use
+		//res.render("dashboard", { title : {title : "Test Title", value : 3}, product : data});
 	})
 
 	/* API */

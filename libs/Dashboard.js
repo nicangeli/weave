@@ -8,6 +8,7 @@ module.exports = function() {
 	/* Pull and display the database */
 
 	this.getData = function(callback) {
+<<<<<<< HEAD
 		var shopArray = [];
 		var magicObject = {};
 		
@@ -89,4 +90,12 @@ module.exports = function() {
 			callback(shopArray);
 		});
 	};
+=======
+		db.collection('product-dashboard').find().toArray(function (err, result) {
+			if (err) throw err;
+			
+			callback(result);
+		});
+	}		
+>>>>>>> Dashboard
 };
