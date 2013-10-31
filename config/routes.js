@@ -261,9 +261,9 @@ module.exports = function(app, passport) {
 		}
 	});
 
-	app.get('/api/get/all', function(req, res) {
+	app.post('/api/get/all', function(req, res) {
 		var a = new APIMVP2();
-		a.all(function(result) {
+		a.all(req.body.UDID, function(result) {
 			res.json(result);
 		});
 	});

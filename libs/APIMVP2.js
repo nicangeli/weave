@@ -22,7 +22,54 @@ module.exports = function() {
 		})
 	}
 
-	this.all = function(cb) {
+
+	this.hasUserSeenShopForDate = function(UDID, shopDate, callback) {
+		/*
+			For what is of the form: {
+				shop: "Shop name",
+				collectionDate: "Thu Oct 12 2013"
+			}
+		*/
+		db.collection('Users').find({UDID: UDID}).toArray(function(err, result) {
+			if(err) throw err;
+			result = result[0];
+			// get the right object out of the seen array
+			if(result == undefined) {
+				console.log("MEMMEME")
+				callback(false);
+			} else {
+				var seen = result.seen; // everything that the user has seen
+				//console.log(seen);
+				var shopObject = null;
+				for(var i = 0; i < seen.length; i++) {
+					//console.log(i)
+					var element = seen[i];
+					if(element.shop == shopDate.shop) {
+						// this is the object we care about
+						shopObject = element;
+					}
+				}
+				if(shopObject == null) {
+					// we have never seen this shop before
+					console.log("this one");
+
+					callback(false);
+				} else {
+					if(shopObject.collectionDate == shopDate.collectionDate) {
+						// we have seen todays data..
+						console.log(shopObject.collectionDate);
+						console.log(shopDate.collectionDate);
+						callback(true);
+					} else {
+						console.log("Not seen");
+						callback(false);
+					}
+				}
+			}
+		});
+	}
+
+	this.all = function(UDID, cb) {
 		var collectionDatePairings = [],
 			shops = [ 'Topshop',
 					  'Zara',
@@ -43,16 +90,24 @@ module.exports = function() {
 				if(err) throw err;
 				// do somethinng at the end 
 				async.forEach(collectionDatePairings, function(cdp, callback) {
-					that.getCollection(cdp, function(result) {
-						//console.log(result);
-						for(var i = 0; i < result.length; i++) {
-							products.push(result[i]);
+					that.hasUserSeenShopForDate(UDID, cdp, function(seen) {
+						var thus = that;
+						if(!seen) {
+							thus.getCollection(cdp, function(result) {
+								//console.log(result);
+								for(var i = 0; i < result.length; i++) {
+									products.push(result[i]);
+								}
+								callback();
+							});
+						} else {
+							callback();
 						}
-						callback();
-
 					});
+					
 				}, function(err) {
 					if (err) throw err;
+					that.updateAllForWhats(UDID, collectionDatePairings);
 					cb(products);
 				})
 			});
@@ -99,47 +154,6 @@ module.exports = function() {
 		db.collection('products').find({shop: forWhat.shop, collectionDate: forWhat.collectionDate}).toArray(function(err, result) {
 			if(err) throw err;
 			callback(result);
-		});
-	}
-
-	this.hasUserSeenShopForDate = function(UDID, forWhat, callback) {
-		/*
-			For what is of the form: {
-				shop: "Shop name",
-				collectionDate: "Thu Oct 12 2013"
-			}
-		*/
-		db.collection('Users').find({UDID: UDID}).toArray(function(err, result) {
-			if(err) throw err;
-			result = result[0];
-			// get the right object out of the seen array
-			if(result == undefined) {
-				callback(false);
-			} else {
-				var seen = result.seen; // everything that the user has seen
-				//console.log(seen);
-				var shopObject = null;
-				for(var i = 0; i < seen.length; i++) {
-					//console.log(i)
-					var element = seen[i];
-					if(element.shop == forWhat.shop) {
-						// this is the object we care about
-						shopObject = element;
-					}
-				}
-				if(shopObject == null) {
-					// we have never seen this shop before
-
-					callback(false);
-				} else {
-					if(shopObject.collectionDate == forWhat.collectionDate) {
-						// we have seen todays data..
-						callback(true);
-					} else {
-						callback(false);
-					}
-				}
-			}
 		});
 	}
 
