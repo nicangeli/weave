@@ -315,7 +315,7 @@ module.exports = function(app, passport) {
 							    from: "Weave Fashion <hello@weaveuk.com>", // sender address
 							    to: req.body.email, // list of receivers
 							    bcc: "hello@weaveuk.com",
-							    subject: "Great fashion finds", // Subject line
+							    subject: "Weave Fashion Finds", // Subject line
 							    html: html, // html body
 							    generateTextFromHTML: true
 							};
