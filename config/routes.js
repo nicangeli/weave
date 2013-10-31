@@ -13,7 +13,8 @@ var User = require('../models/user.js'),
 	mixpanel = Mixpanel.init('171f9debe2ee520bf0aa7c35455f5dba'),
 	UserCollections = require('../libs/UserCollections.js'),
 	APIMVP2 = require('../libs/APIMVP2.js'),
-	Dashboard = require('../libs/Dashboard.js');
+	Dashboard = require('../libs/Dashboard.js'),
+	async = require('async');
 
 module.exports = function(app, passport) {
 	
@@ -270,10 +271,99 @@ module.exports = function(app, passport) {
 
 	app.post('/api/email_brands', function(req, res) {
 		console.log(req.body);
+
+
+
+		emailTemplates(templatesDir, function (err, template) {
+			if (err) throw err;
+
+			var db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10000/weave-dev"),
+				smtpTransport = nodemailer.createTransport("SMTP", {
+					service: "Zoho", 
+					auth: {
+						user: "hello@weaveuk.com",
+						pass: "weave2013"
+					}
+				}),
+				products = [];
+
+				console.log(products);
+				console.log(req.body.urls);
+
+			async.series([
+				function (callback) {
+					// console.log(products);
+					async.forEach(req.body.urls, function (link, cb) {
+						db.collection('products').find({url : link}).toArray(function (err, result) {
+							products.push(result[0]);
+							cb();
+						});
+					}, function (err) {
+						if (err) return next(err);
+						callback();
+					});
+				},
+				function (callback) {
+					// console.log("in the second function");
+					// console.log(products);
+					var locals = products
+
+					// apparently local variables for template have to be called locals, products doesn't work?
+					template('app', locals, function (err, html, text) {
+						
+						var mailOptions = {
+							    from: "Weave Fashion <hello@weaveuk.com>", // sender address
+							    to: req.body.email, // list of receivers
+							    bcc: "hello@weaveuk.com",
+							    subject: "Great fashion finds", // Subject line
+							    html: html, // html body
+							    generateTextFromHTML: true
+							};
+
+						// console.log(mailOptions)
+
+
+						if (err) throw err;
+
+						smtpTransport.sendMail(mailOptions, function (error, responseStatus) {
+							if (error) throw error;
+
+							console.log(responseStatus.message);
+						});
+					});
+
+					callback();
+				},
+			],
+			function (err) {
+				if (err) return next(err);
+				console.log("finished")
+			});			
+
+
+			
+
+		})
+
+
+
+		// // send mail with defined transport object
+		// smtpTransport.sendMail(mailOptions, function(error, response){
+		//     if(error){
+		//         console.log(error);
+		//     } else {
+		//         console.log("Message sent: " + response.message);
+		//     }
+
+		//     // if you don't want to use this transport object anymore, uncomment following line
+		//     //smtpTransport.close(); // shut down the connection pool, no more messages
+		// });
+
+		// console.log(req.body.email);
+
 		var j = {
 			"status": "200"
 		}
 		res.json(j);
 	});
-
 }

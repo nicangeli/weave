@@ -1,0 +1,48 @@
+<body>
+	<div class="logo">
+		<a href="http://www.weaveuk.com">
+			<img src="http://weaveuk.com/images/weave-red.png">
+		</a>
+	</div>
+	<h1>
+		Hey there!
+	</h1>
+
+	<p>
+		Here are your weave favourites (or a friend from <a href="http://www.weaveuk.com">weave</a> might have sent these to you...)
+	</p>
+
+	<div class="products">
+		<table class="product-table">
+			<% for(var i=0; i< locals.length; i++) { %>
+				<tr class="product-row">
+  					<td class="image-cell">
+  						<img src="<%=locals[i].images[0]%>" class="product-image">
+  					</td>
+  					<td class="info-cell">
+  						<h2> 
+  							<%= locals[i].shop %> 
+  						</h2>
+  						<% if(locals[i].brand != locals[i].shop) { %>
+  							<h4 class="tagline">
+  								- <%= locals[i].brand %> -
+  							</h4>
+  						<% }; %>
+  						<h4>
+  							<%= locals[i].price %>
+  						</h4>
+  					</td>
+  					<td class="shop-cell">
+  						<a href="<%= locals[i].url %>">See in Store</a>
+  					</td>
+  				</tr>
+			<% } %>
+		</table>
+	</div>
+
+	<p>Team Weave,</p>
+
+	<p class="signature"> Chloe, Andy &amp; Nick </p>
+	<p class="ps">P.S. We're real people, we'd love to hear from you</p>
+	<a href="http://www.weaveuk.com">www.weaveuk.com</a>
+</body>
