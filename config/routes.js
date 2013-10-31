@@ -223,7 +223,7 @@ module.exports = function(app, passport) {
 	/* Dashboard */
 	app.get("/dashboard", function (req, res) {
 		var dashboard = new Dashboard();
-		data.getData(function (response) {
+		dashboard.getData(function (response) {
 			res.json(response[0]);
 		})
 		// How to render view with variables that jade can use
