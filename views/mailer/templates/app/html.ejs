@@ -1,0 +1,49 @@
+<body>
+	<div class="logo">
+		<a href="http://www.weaveuk.com">
+			<img src="http://weaveuk.com/images/weave-red.png">
+		</a>
+	</div>
+	<h1>
+		Hey there!
+	</h1>
+
+	<p>
+		Here are the items you found through Weave's Fashion App.  
+	</p>
+
+	<div class="products">
+		<table class="product-table">
+			<% for(var i=0; i< locals.length; i++) { %>
+				<tr class="product-row">
+  					<td class="image-cell">
+  						<img src="<%=locals[i].images[0]%>" class="product-image">
+  					</td>
+  					<td class="info-cell">
+  						<h2> 
+  							<%= locals[i].shop %> 
+  						</h2>
+  						<% if(locals[i].brand != locals[i].shop) { %>
+  							<h4 class="tagline">
+  								- <%= locals[i].brand %> -
+  							</h4>
+  						<% }; %>
+  						<h4>
+  							<%= locals[i].price %>
+  						</h4>
+  					</td>
+  					<td class="shop-cell">
+  						<a href="<%= locals[i].url %>">See in Store</a>
+  					</td>
+  				</tr>
+			<% } %>
+		</table>
+	</div>
+
+	<p>Happy Shopping!</p>
+
+	<p class="signature"> Chloe, Andy &amp; Nick </p>
+	<p class="ps">P.S. We're real people, if you have anything you want to share we'd love to hear from you</p>
+	<p class="ps">P.P.S If you didn't send this to yourself it means that someone you know used Weave and wanted to share the items they found with you.</p>
+	<a href="http://www.weaveuk.com">www.weaveuk.com</a>
+</body>
