@@ -4,9 +4,10 @@ block content
 	script(type='text/javascript')
 		mixpanel.track("Landing Page Loaded")
 		mixpanel.track_links(".getApp", "Download App Main");
+		mixpanel.track_links(".blog", "Visit Blog");
 	.container.test
 		h3(style="float: right; padding-right: 20px; font-family: 'Raleway', sans-serif; font-weight: 800; color: slategrey;") 
-			a(href="http://weavefashion.wordpress.com/") BLOG
+			a.blog(href="http://weavefashion.wordpress.com/") BLOG
 		.col-xs-1.col-sm-2
 		.col-xs-12.col-sm-8.test2
 			.col-xs-12(style="text-align: center; margin-top: 50px")
