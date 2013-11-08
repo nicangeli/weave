@@ -2,8 +2,7 @@ extends headers
 
 block content
 	script(type='text/javascript')
-		mixpanel.track("Landing Page Loaded November")
-		mixpanel.track_links(".getApp", "Download App Main");
+		mixpanel.track("Landing Page Loaded November");
 		mixpanel.track_links(".blog", "Visit Blog");
 	.container.test
 		h3(style="float: right; padding-right: 20px; font-family: 'Raleway', sans-serif; font-weight: 800; color: slategrey;") 
@@ -14,9 +13,14 @@ block content
 				img.iPhone(src="/images/Design_stuff/iPhone5c.png", style="float: right;")
 				img(src="images/weave-red.png", style="margin-top: 150px;")
 				h2(style="margin-bottom: 40px; font-family: 'Raleway', sans-serif; color: white; font-weight: 800;" )
-					| The Highstreet 
+					| Window Shop 
 					//br
-					| in your pocket.
+					| on the go.
 				a.getApp(href="https://itunes.apple.com/gb/app/weave-fashion/id725215782?mt=8&ign-mpt=uo%3D4")
 					btn.btn.btn-custom.download Get the App
+				form.email(style="height: 80px;")
+					input.landingForm(type='email', name='email', placeholder='Email')
+					a.btn.btn-custom.submitEmail(href="https://itunes.apple.com/gb/app/weave-fashion/id725215782?mt=8&ign-mpt=uo%3D4") Go
+	script(src="/javascripts/landing.js", type="text/javascript")
+
 

@@ -173,6 +173,19 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 
+.submitEmail {
+  font-size: 25px;
+  height: 50px;
+  margin-bottom: 9px;
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 300;
+}
+
+.whitebox {
+  background: white;
+  width: 50%;
+}
+
 .landingBackground {
   margin: 0px;
   min-width: 100% !important;
@@ -804,6 +817,19 @@ form input[type=password] {
 }
 :-ms-input-placeholder {
   color: #e74c3c;
+}
+
+.landingForm {
+  width: 30% !important;
+  border: none !important;
+  background: white !important;
+  height: 50px !important;
+}
+
+.appButton {
+  margin-left: 20px;
+
+
 }
 
 .signup {
