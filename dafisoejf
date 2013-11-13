@@ -1,0 +1,2626 @@
+commit 9af4f748f0bdf7e97ddd70951d1a406f1516cb38
+Merge: fa1f25f 537df4d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Oct 31 11:08:01 2013 +0000
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit fa1f25f5540daca6e8ba755a66e0083771513ca6
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Oct 31 11:05:53 2013 +0000
+
+    merged correctly, dashboard up and running
+
+commit 537df4d1991d6523416efdee360c8449c0e5cf31
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Oct 31 10:38:05 2013 +0000
+
+    only sends data once to each UDID
+
+commit e62a83a952e560ef809bd4b78c501dd5229c984a
+Merge: 2421832 5c616ee
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Oct 30 17:29:45 2013 +0000
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 24218322855cb8634bfe4bb7248061dc4f396791
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Oct 30 17:04:35 2013 +0000
+
+    segues back in place
+
+commit 5c616ee3b912978a0a51e75990d94626ce703dbe
+Merge: 7adeefa fe7f295
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Oct 30 14:52:37 2013 +0000
+
+    Dashboard v1 merged to master
+
+commit fe7f295861487f783bd7f11cbde6f962216fd17c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Oct 30 14:50:15 2013 +0000
+
+    Dashboard live
+
+commit 7adeefa0a3f35e9b548fbee247a957af49e80436
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Oct 28 22:40:45 2013 +0000
+
+    random commit, I don't get git
+
+commit 5e8d2b108a42fc2d554ab05b2059e1fa80b74e14
+Merge: 1a14e23 e6ec383
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Oct 28 19:14:22 2013 +0000
+
+    Merge branch 'Landing-Page'
+
+commit e6ec383a54efdc38a3cc9a934e149a24fee3f7ec
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Oct 28 19:13:47 2013 +0000
+
+    Landing page 99% done
+
+commit e186437dba00db82ac29753c1cbc4c1226fc34d8
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Oct 26 19:55:32 2013 +0100
+
+    half way through landing page redesign
+
+commit 1a14e237aeac98795c9279cb411576f12c94c5bb
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Oct 25 11:33:28 2013 +0100
+
+    show next day when new products are in bug fix
+
+commit a884dbda740cc467c3ae4807129c274c11e3dcb3
+Merge: 81941eb adf817b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Oct 22 15:06:31 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+    
+    Conflicts:
+    	config/routes.js
+    	libs/UserCollections.js
+
+commit 81941eb4c09e33f098c41b0359317d55e6e6597e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Oct 22 14:58:08 2013 +0100
+
+    MVP2 api
+
+commit adf817b6634b23d528a553cc5ac2d60dba4db00f
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Oct 22 10:09:19 2013 +0100
+
+    select which api to use
+
+commit 76f1eea6eef29dfa4ea74ee85eddc486cd5eb6dd
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Oct 17 13:59:12 2013 +0100
+
+    new in api
+
+commit bb29ab76af3cc5bc04361cbd6cff81724afc9028
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Oct 17 13:54:12 2013 +0100
+
+    new in api
+
+commit 6cc95d2e9f2d4a3aa27607c25909f4dea74fecd2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Oct 7 15:24:28 2013 +0100
+
+    return array not object from api
+
+commit 8f0cadbae3b2f1b32d5c7352a2aa06eff24841ad
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 21:36:12 2013 +0100
+
+    warp JSON in actual JSON not array
+
+commit 0206e49b50c2924a2c9f67b6e46441e6aae61117
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 21:35:13 2013 +0100
+
+    only return collevtions where there is data
+
+commit 734051ad9a2c4e2ed352aa860fda7f4d2258c213
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 21:23:10 2013 +0100
+
+    only return collectionDates that have some of the specified shops in
+
+commit adac13df70cc170710fa99e36b51a555bc40adf4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 21:18:50 2013 +0100
+
+    comma seprated shops list
+
+commit 0046b14ad7d006aa7fd5e22012df77c88f2faa54
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 20:54:46 2013 +0100
+
+    order dates desc
+
+commit 4c6723c32171c93dcedd8f3d8f992279f37d669e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 20:50:07 2013 +0100
+
+    sorting dates
+
+commit 993d29393ad7f645f4e9c2c7852c87336627189d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 20:30:01 2013 +0100
+
+    api working, not sorted
+
+commit dc386e7c7f60ab3111b45c7e10d30be286630077
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 19:37:47 2013 +0100
+
+    stop app crashing if no shops
+
+commit 6a6aaf70c67e4ea07af1fe8afd460e2a5ea2b92e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 18:47:43 2013 +0100
+
+    Post data not get
+
+commit 9280640cb41d17502949a5a88b086266de531a82
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Oct 6 18:19:23 2013 +0100
+
+    API
+
+commit fa717c8851b5bec817efee3ac74d989c22fbc19f
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Oct 4 18:37:09 2013 +0100
+
+    almost there on API
+
+commit c9ef3b02d2baae61377e05404be933cf3efdf6d4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Oct 4 18:04:37 2013 +0100
+
+    andy
+
+commit c6f131f6f8ad71f2fa8c1f3ac9c427c91d3d1870
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Oct 4 16:52:53 2013 +0100
+
+    start API
+
+commit cf46b4f5834f44cf1edf845375052d96fdb1ee64
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Oct 3 15:10:36 2013 +0100
+
+    Andrew Brown, born 30th March 1988, first API built 3rd October 2013, BOOOOOOOOOOOOOOOOOOOM
+
+commit 6709e762f6fa69553c4cbf515b2328643d498f8b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Oct 2 15:56:41 2013 +0100
+
+    landing page launchrock
+
+commit 32811e98087c60588071daaa5d1fc2566ec8e4aa
+Merge: 4705541 7389538
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 30 09:36:31 2013 +0100
+
+    new in
+
+commit 47055416df8011fe6cc741bdf0a46221ff5f2d71
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 30 09:35:17 2013 +0100
+
+    adding new in
+
+commit 73895380926921f9e69a526323b2b5aed92a10f3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 22:04:26 2013 +0100
+
+    downgrade npm for heroku
+
+commit 01c9cf33afa9ef10bb5ad731773908d055bd0cba
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 21:51:33 2013 +0100
+
+    Log in not Log In
+
+commit ef8a2a2f98826fe9e604a613a8dc91365876a1a2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 21:44:49 2013 +0100
+
+    stop redirect loop
+
+commit be954eb5a0fdfece2c65c9b39d4081870d85e40c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 13:57:38 2013 +0100
+
+    vipxo collection
+
+commit bf0c2dab2b9f8499846b999fcc1e0aaad1258bb5
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 00:24:40 2013 +0100
+
+    skeena collection
+
+commit 4fe4b89dcfcc5e6ada362a0d20e0befa0aee5281
+Merge: 6f1e0c9 eceda87
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 00:03:40 2013 +0100
+
+    t Merge branch 'master' of github.com:nicangeli/weave
+
+commit 6f1e0c9dd0deedd23c36f00aba9847dabf1c7ac5
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 26 00:03:28 2013 +0100
+
+    redirect on login
+
+commit eceda87ca8bc095d45e5e3f0d223f85764f3fa38
+Merge: b3423b8 3e2a79a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 25 16:15:09 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit b3423b861763872e5f47339d8f842ce432e36146
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 25 16:14:59 2013 +0100
+
+    small image hack
+
+commit 3e2a79ab0f1198dd3d1ce084e9a6c7380aba22ba
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 16:10:50 2013 +0100
+
+    change to let you play 3 times not 2 before prompt for login
+
+commit 9a7dea621f126a6a9a50af15240cae5f6a9ed5b2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 16:01:35 2013 +0100
+
+    redirect on play again
+
+commit b2156be151e97f6b28c2fd7967d7c6e81fc8e5bd
+Merge: e0398ef ffc73df
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 15:59:05 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit e0398ef03b1010a52d46f99532df84f4e73ff9b4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 15:58:29 2013 +0100
+
+    no login no blue
+
+commit 5eb3651f64d31356614995f853f2e0fb05732bf3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 15:57:28 2013 +0100
+
+    redirect to login on multi play
+
+commit ffc73df4dcb0522f2e2b7550840d71978aadb249
+Merge: 0eab909 56cd7e8
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 25 15:50:31 2013 +0100
+
+    merge collections
+
+commit 0eab9092541672e9d518e89dce09290acd23b22c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 25 15:47:52 2013 +0100
+
+    5 inch heels collection
+
+commit 56cd7e83027334c827c31c7f63e67c46127cfa85
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 15:37:44 2013 +0100
+
+    lydia fashion influx
+
+commit 2ffc5f8e981f4bbba8fea4b3dea9479b1d15cbc9
+Merge: 9046120 3570bef
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 14:52:02 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 90461206de90d7094729d9960948c31a7c0bff6a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 14:51:50 2013 +0100
+
+    watches collection
+
+commit 3570bef2127e52bc3f6b9d9557ddaea4db64c7c0
+Merge: 0b91b36 807daf0
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 25 14:46:41 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 0b91b36d07bf9e761f51ecf762887b6af2436b74
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 25 14:44:28 2013 +0100
+
+    fix pintrest
+
+commit 807daf06bd16959704318f9feb3ff16f6398b36b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 14:18:51 2013 +0100
+
+    that's peachy blogger
+
+commit abafb6117d1d18d8e18246317412b38b4d246cf9
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 12:23:31 2013 +0100
+
+    JPG to jpg
+
+commit 7e6db720c9b5a0e934e24ca18bb1696e64930f00
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 12:21:34 2013 +0100
+
+    rename
+
+commit eac0ce9b04b9726fac261836397381f6bc5028dd
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 25 12:06:56 2013 +0100
+
+    leslie from svpply
+
+commit c15043ed06d28d0f78eecf75357fdf89ed2bb27f
+Author: nicangeli <nicangeli@gmail.com>
+Date:   Tue Sep 24 14:22:27 2013 +0100
+
+    miobile feedback
+
+commit ba29a1054dc8a3e3b08b4390ef227e50808e571d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 24 00:16:50 2013 +0100
+
+    twitter button added
+
+commit 0df832bc9d1d643696c4fcf45b95ce5fd46c4720
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 20:26:44 2013 +0100
+
+    validation on signup
+
+commit b27492d143bda2f6d073d014ca962f859c83c8b3
+Merge: 4d4b767 c0dda86
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 20:01:10 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 4d4b76786087507430de8b443dd00327d3ea9999
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 20:01:06 2013 +0100
+
+    signup styling
+
+commit c0dda860014708dd6d0f28d41bbf8befed22d937
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 20:00:59 2013 +0100
+
+    redirct to collections on complete
+
+commit 14ea6d3cd0a66e235cf0ebad0f26546f7f06501a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 19:28:50 2013 +0100
+
+    signup
+
+commit 9930760d1f5c4849383f7b4dabb0470a280d8375
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 19:05:31 2013 +0100
+
+    unexpected identify }
+
+commit 2e0bc1dfb3aaa228315a6eb37905323f7cbd8380
+Merge: ad852bb acc043d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 19:04:23 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit ad852bb1c7a804c799555e8523c6bbbbfea9ca7c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 19:04:15 2013 +0100
+
+    sign up reason
+
+commit acc043d6eb7b18f1973a5f08c4639ab3a653e8ff
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:59:48 2013 +0100
+
+    identify gone
+
+commit a7ecdd0de9b2b3597401af068045ef10cd95ff14
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:56:06 2013 +0100
+
+    identfy
+
+commit f1b6cfd5607b64c40a6433935b0bace4def6c1d0
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:47:46 2013 +0100
+
+    fb no name
+
+commit a96759dd8a5ec5ed0b58ab7cef37ebec9a0322d8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:24:32 2013 +0100
+
+    fb log user
+
+commit b6553c4bb20a00675a9a8c26e9295e89979c8b75
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:18:39 2013 +0100
+
+    fb req.user.facebok
+
+commit ccfe6261532b379d93e56e0beddf3fbdc753dc13
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:14:12 2013 +0100
+
+    fb in right place mixpanel
+
+commit 5f0214c39b33f9640129f6d4f704df24a1dcecc6
+Merge: 7356808 15602dc
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 18:06:05 2013 +0100
+
+    changes Useful
+
+commit 15602dcc3e84a2a295ce6bdc235e0624684bff9c
+Merge: 263ff90 26d5697
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 23 18:02:05 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 263ff90b1300a624530fd5abaabbbbf3c1c4be3a
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 23 18:01:59 2013 +0100
+
+     chloes changes to the words on weave
+
+commit 26d5697e812fcaa440ef4003f00c3d413ec81f15
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 18:01:38 2013 +0100
+
+    facebook track event
+
+commit 7356808bde286d2d7f8586077a93b4af9cb4c9c5
+Merge: 2ea3d32 825af35
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:59:17 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 2ea3d32b6bd5ae8ee6445e391f89f3edc1eedd72
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:59:07 2013 +0100
+
+    turn on sharing
+
+commit 825af3517f13f56dc610d34c0e93c15171d2ec64
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 17:57:46 2013 +0100
+
+    small shoe fix
+
+commit 8776d54c462b00471e87e57378916f7c765ae43b
+Merge: 33c9fb9 144039b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 17:55:28 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 33c9fb9ef9412108566613dd9a47fc2ad3462999
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 17:55:18 2013 +0100
+
+    alice missing item
+
+commit 144039b30b08bcfa5afda646d11344e2c12b137a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:54:54 2013 +0100
+
+    add share to likes
+
+commit 19072b1dad43ebdbdbe53ea3bbe0052691493176
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:52:12 2013 +0100
+
+    pintrest dam you
+
+commit a7b3439c5d88359f21b1339b46af209a0b8bede9
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:42:35 2013 +0100
+
+    onboarding
+
+commit c1a63210543d7cf028712e281b8ddbceee277a10
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:37:41 2013 +0100
+
+    onboarding simplification
+
+commit 42c73933ec49b6d2780d4a160bcab64674aae415
+Merge: 678489e 26a6f9c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:35:22 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 678489e4bf3f385d2949fd1d2eeb8cb4c65e6b50
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:35:18 2013 +0100
+
+    feedback
+
+commit 26a6f9c9bcd37fb89c95aea0e948c76ebd339e8e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 17:32:27 2013 +0100
+
+    mixpanel
+
+commit 6421ad6257a712ccc98fb3e4b88bc5648a30b775
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:25:49 2013 +0100
+
+    sign up styling
+
+commit 3dce31301210226061bbb4153f40782675dd507b
+Merge: fe673ee 40a3f91
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:21:32 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit fe673eee8dfef3f53acd73a6fd570a9b96f5de0a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 17:21:00 2013 +0100
+
+    styling
+
+commit 40a3f918c3504862144ee423aec5189bb6191462
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 17:18:34 2013 +0100
+
+    no jade script
+
+commit 7782e079569a42a0e9124d93a1cd9fc7b5c3e90a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 17:13:08 2013 +0100
+
+    mixpanel attempt
+
+commit e06331863d2d5b87ca0f93fd98f196d7c6e49b51
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 16:46:37 2013 +0100
+
+    print user obj out
+
+commit 5a0ed2bb3bb775d1f533f91f4f619cdb1d35ba6f
+Merge: 3b63f8c 8f4a5df
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 23 16:45:36 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 3b63f8c202acbfe6c9a987cb261197e2803aa03c
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 23 16:45:28 2013 +0100
+
+    nadia images
+
+commit 8f4a5df7c2901183b03a320dea815477562ee009
+Merge: 2e92f8f 7b761ca
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 16:42:16 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 2e92f8face81f96677bda2c9e43816ca814d9b3d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 16:42:10 2013 +0100
+
+    styling
+
+commit 7b761ca971054248f89ade21297bbbfee17afe3c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 16:26:37 2013 +0100
+
+    signup page tracks people
+
+commit 017522e357472004445f27eb2f206677e20c6799
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 15:54:40 2013 +0100
+
+    signup working
+
+commit 0dc3c0e47001fd1b2768e410105e1250e321a9f5
+Merge: a4246ed 1d4fe5a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 14:32:04 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit a4246ed0eacf61592675c429ce0bfa4f58e0c33d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 14:30:28 2013 +0100
+
+    sends user to all pages
+
+commit 1d4fe5a312c7fc38dd9e8565bf5fb1bd36ee00e0
+Merge: ac5d228 a76c56d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 14:24:03 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit ac5d2281a69a87e7ec72f086c0266e50cda13d41
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 14:23:55 2013 +0100
+
+    some tracking
+
+commit a76c56d7a89af342ddcf3cad24546fee86fa6938
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 14:05:03 2013 +0100
+
+    renamed miranda images from jpeg to jpg
+
+commit 3357086b3c3a6651863f68770c0a0ea39bbd5217
+Merge: 9857f51 5c2f804
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 13:59:00 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 9857f51855e9122c2627c8219b22e158424225a4
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 13:58:56 2013 +0100
+
+    shit
+
+commit 5c2f804517ba028bcbc5b734955033b4294219c0
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 13:51:01 2013 +0100
+
+    Collections
+
+commit 4dfb4695722b9e862323a7601e71486c495a7068
+Merge: 8e5e7e9 cb3827a
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 23 12:57:21 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 8e5e7e9e2396eaf02712b4ba4369a2256faa72bc
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 23 12:57:10 2013 +0100
+
+    girls competitionetition images
+
+commit cb3827a88ccf88498500f8e2a4002762172d9404
+Merge: c5c6f4d c3905a6
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 12:56:37 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit c5c6f4d66baf2797867d459efc3b8320d2286fe5
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 12:56:31 2013 +0100
+
+    change like board
+
+commit c3905a6659e0fb4f09bc8844f3836ffcd673cf86
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 12:48:13 2013 +0100
+
+    adding compettion tracks
+
+commit 33fe824d16a726c8fb60f4fc05f3c5631cdccc89
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 12:35:20 2013 +0100
+
+    Deleting old files"
+    gZZ
+
+commit a32ad0c799f88c4593c578ea8ad82b1d62223a75
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 12:30:43 2013 +0100
+
+    signup fixed
+
+commit d7df69042f92bcec43bfb527f2081fd478df8489
+Merge: c96ad4c 7845559
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 12:17:20 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit c96ad4cfeeb51963d24d5b640c69b6391df0e6b7
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 12:17:03 2013 +0100
+
+    signup
+
+commit 78455593281eb05823dff801f17b2b33c8f276dd
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 12:14:00 2013 +0100
+
+    lovely login, perfect in every way
+
+commit d5487f16442ddaca6e4aa4950b9ffb5ec8413afd
+Merge: 16c49a2 7a072d1
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:57:56 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 16c49a236aec3c54f6164f583ec21087a8584471
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:57:48 2013 +0100
+
+    signup fixed
+
+commit 7a072d1b3a6676a8334c5470d7c3fb19cab67a15
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 11:51:58 2013 +0100
+
+    login hidden if logged in
+
+commit 32af827bf2d05a44215e207d787a890c64a2bfbb
+Merge: 7f38ca8 ed6e019
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:45:14 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 7f38ca8652482ab185bf114e9a631815362c8f4a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:45:10 2013 +0100
+
+    login button
+
+commit ed6e019866d51dbe6f466d5a2726ac9871298310
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 23 11:41:26 2013 +0100
+
+    signup if not logge in
+
+commit 223ff84abd5d7059d08572dc99687fcdf7697d6a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:18:00 2013 +0100
+
+    move type
+
+commit cceeababcf093bf796cee6379db2548dfb3e8d1d
+Merge: 704bb6b 5d9c048
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:16:33 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 704bb6bb20191f2e4f43f89ae1c72c7b03905e07
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 23 11:15:53 2013 +0100
+
+    Save it
+
+commit 5d9c048ba67a4e320f7c8d36647b15bdae01ae06
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 22 20:12:29 2013 +0100
+
+    favicon
+
+commit 6a331e94db1743c8b1095c852b7d27670793daae
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sun Sep 22 15:01:37 2013 +0100
+
+    Sign up page finished
+
+commit daaf613aead41ffbeb0e4ae0eeb9a6efb54ec06b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sun Sep 22 13:27:38 2013 +0100
+
+    initial commit on branch
+
+commit cde11ac39f2058f88a93446aa5c3cdb39015471d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sun Sep 22 01:04:03 2013 +0100
+
+    fucking pinit working
+
+commit 75fa5cff89c9310ebffe409eceb90cec14074a6b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 23:37:47 2013 +0100
+
+    mobile styling of likes page
+
+commit 70ffaf4e0857f6cd37607986301915c1daa3ec22
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 23:02:18 2013 +0100
+
+    add pintrest button
+
+commit 4aac6118564f7c538c6ec8140771dda864efe046
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 22:31:16 2013 +0100
+
+    tidying up Nick's front end
+
+commit 0aaad6bab97e23e70cb58b9b4045609410ddf01e
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 17:20:33 2013 +0100
+
+    buy event
+
+commit 95369cb6154a21c433d354cd2e59e68d33504560
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 16:58:46 2013 +0100
+
+    sorting out buy event
+
+commit 7dc387e34dd93107521856b94aec4da1dc2c3c44
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 16:41:50 2013 +0100
+
+    mobile style of onboarding
+
+commit 3eba1e6b591cd46387b8d09375b36d8567b424a4
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 21 16:30:23 2013 +0100
+
+    overlay on collections, improved on boarding
+
+commit 2f446ccea53cc0294b4f9a81fd69f41b83a41863
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 20 15:58:01 2013 +0100
+
+    facebook register styling
+
+commit 7aed628df24b8d6ddc4fc7c6db1de0a96cb3fa0b
+Merge: 04d2d25 bb8acf7
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 20 15:50:23 2013 +0100
+
+    signup with facebook
+
+commit 04d2d25c1689edc28867e9f3b4efc628a5469e22
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 20 15:49:18 2013 +0100
+
+    andy signup
+
+commit 9a403581f39a9de713ffab043516da7d0cd8a7dd
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 20 15:48:40 2013 +0100
+
+    signup andy
+
+commit bb8acf7b2daa5581fb0aef5cfbec0d1143bfc9e2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:48:08 2013 +0100
+
+    redirect instead of render
+
+commit 125a4ce59582d9b71dfc2541438e285a93127139
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:36:46 2013 +0100
+
+    facebook login working
+
+commit c2b16763ed3e80aa411a5b2896deee5baa2b61a0
+Merge: 9b33528 3bf0a42
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:28:54 2013 +0100
+
+    Merge branch 'facebook'
+
+commit 9b33528ff3aadc01652f7f4dc1189d28913be00b
+Merge: f365c02 03755dd
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:28:49 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 3bf0a42b14d0800a9d2c8c83ac9a7e53ff956194
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:28:35 2013 +0100
+
+    facebook testing on live server
+
+commit 03755ddb11f9485e2a83a4e4ce5e8f36ba02ab22
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 20 15:15:24 2013 +0100
+
+    remove M/F
+
+commit aaa932c9271ec5650dadd8130b08602458fc2bd0
+Merge: 9e7e347 f365c02
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:06:20 2013 +0100
+
+    Merge branch 'master' into facebook
+    
+    Conflicts:
+    	config/passport.js
+
+commit f365c020bfdcafca4b07cfc2363d970c20d2222d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 15:05:35 2013 +0100
+
+    start on fb
+
+commit 797f9dd49e542d8e55b4b84694b74f5fcca01de4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 14:36:43 2013 +0100
+
+    tracks name changd
+
+commit 9e7e347c32229b45dc35d28d32787785c555d1c3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 13:51:13 2013 +0100
+
+    passport facebook
+
+commit 62b5f804bfb562001dcb8303c8448f1bb4fa78f3
+Merge: 9458ace f0ede87
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 13:22:55 2013 +0100
+
+    Merge branch 'auth' into auth_merge
+
+commit f0ede87ad226873b31109ab088886a4d56ca9377
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 13:22:09 2013 +0100
+
+    login working with site
+
+commit 9458ace0a7e2ad8e63eb67fefbc8f8c295e34f44
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 12:28:29 2013 +0100
+
+    authors
+
+commit 63f64bd5a5c48cf215329bc9c39f9d9bea563888
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 12:14:05 2013 +0100
+
+    all products bar alice, etc
+
+commit 1692d55a83abf64697cc435805752a30983a86d4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 11:55:44 2013 +0100
+
+    clear page
+
+commit 044a6110ce88ad1a9d4db9a04a2966b880017208
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 20 11:32:03 2013 +0100
+
+    more space for bin
+
+commit 92f1fc06f64349345c7c899332ea1805f0c69205
+Merge: a8d623c 69ae272
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 19 23:57:28 2013 +0100
+
+    merged
+
+commit a8d623c947c2cf71e2dc5f1ba011c61a185a5120
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 19 23:56:01 2013 +0100
+
+    nice on-boarding
+
+commit 69ae27207c54d36bb6bad6ae717a930524cae0bc
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 17:35:10 2013 +0100
+
+    andy fixes my opactiy problem
+    g
+
+commit ea13def67f8ea2951697132d7053b561dc309a33
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 17:19:09 2013 +0100
+
+    grey out
+
+commit ca51336fa1d5b6622c8494718380a6fe040529cd
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 17:12:07 2013 +0100
+
+    weave logo font stamp
+
+commit c0e5a562f45cbe90ac5ef0d8f6250c083e7f2147
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 17:08:33 2013 +0100
+
+    weave stamp
+
+commit c7749034e7719b8d0321c0c4a91f0992ae634fd7
+Merge: 2aa9498 b64e3e1
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 16:30:40 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+    
+    Conflicts:
+    	views/collections.jade
+
+commit 2aa9498142be38e7951f35cb51b67bbe153b2d23
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 16:29:58 2013 +0100
+
+    stamp
+
+commit b64e3e17c84e96cd30f7ca5cbbf77d0d7eb2bf5d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 19 16:28:42 2013 +0100
+
+    new collections feed
+
+commit 80cf6b26ef8d0c133cf4aae712cfff2c03603975
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 16:21:51 2013 +0100
+
+    login working, inrergrating with site
+
+commit e9537d40ba0521337e6654861951e72a5f394db2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 15:10:52 2013 +0100
+
+    basic login funcitonality working
+
+commit 73d6a6e32be0b8d50e228e97de92dfbccae74119
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 19 11:36:56 2013 +0100
+
+    passport to package
+
+commit 2e7381d8180b8aa600123a932ad27b95252afb5b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 18 14:10:15 2013 +0100
+
+    h1
+
+commit 365f507f79f877638b1a11e5881e02535fae8f98
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 18 14:04:37 2013 +0100
+
+    change products collections 18 sep
+
+commit e35fe7987b8a8cd7db9e1bbe3df2b52a713b9cbf
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 20:07:31 2013 +0100
+
+    lost ref to this in alertify
+
+commit 2209c390734ba28bb9c317aeed472f29781ab477
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 20:01:07 2013 +0100
+
+    bug fix: null being entered
+
+commit 330871ee5e6e0c6100d05c2664f894dfaa760585
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 19:38:11 2013 +0100
+
+    skim
+
+commit 509f94490cb65633e34ca2c0b7baf845aa5d58f5
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 19:34:05 2013 +0100
+
+    skim
+
+commit 70aaac82d636e13d79a8b180e972e6c7aec68cba
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 19:24:53 2013 +0100
+
+    skim
+
+commit 0fca10820d53a3565db13654599328cf1d450727
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 19:21:47 2013 +0100
+
+    skim
+
+commit 7ea72de4bf99b7f42f44e65119ffc6c50adc6e54
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 18:50:59 2013 +0100
+
+    bug fix shares
+
+commit 0938104f1868f6b589e89af87e6015e92a688788
+Merge: 863cb8e 3534185
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 18:38:16 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 863cb8e2822c806ff072da01f841c8329f66420c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 18:38:10 2013 +0100
+
+    no weaved
+
+commit 3534185a908c748d61eab53af33d8ecbe354a6e5
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 18:32:10 2013 +0100
+
+    title restyling
+
+commit c10cb6c86f786ebe0eb33683f7526e49d02bf64b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 18:26:29 2013 +0100
+
+    CTO eying up the code
+
+commit 0880357eef20f9b746a8887083c6336bdc74bf01
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 18:14:25 2013 +0100
+
+    create collection alert
+
+commit 45df0bf6350b77e174c496800ae7007cb411670d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:59:58 2013 +0100
+
+    Fuck
+
+commit b5263ed756475162dc098ff4149aac56e2eba8da
+Merge: 864547a 1c303d7
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:57:22 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 864547ac31fa2c97852da26dfec5f338c9259db3
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:57:13 2013 +0100
+
+    shit
+
+commit 1c303d76c2d4af8b5d8b166253c90d9611848590
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 17:54:40 2013 +0100
+
+    show people landing page
+
+commit 23c32714b32cf40a82d43dd93b1f9a25ddc7bbaf
+Merge: 5ac745b ab960b9
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:48:14 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 5ac745bb12d5bf5521c46fd260802047e6c16b97
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:48:05 2013 +0100
+
+    Collection Complete
+
+commit ab960b9a1e1c01fa672d05297a9d27c0c0a981bd
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 17:43:44 2013 +0100
+
+    force email
+
+commit f75c0d2f7b55189fcc3e5e3845706b56e91369de
+Merge: 3b2fecb 560870e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 17:42:02 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 560870e7564f703d67a9ed15e1cfd31e2624eede
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:41:06 2013 +0100
+
+    play again
+
+commit 520379fb2c3a3a74ed75e9e161e243c597d652bd
+Merge: 4d21c13 d17f325
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:39:20 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 4d21c13ee5843b3b26d99bf25c6107f345c02b34
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 17:38:33 2013 +0100
+
+    track create collections
+
+commit 3b2fecb2325a029187fd69fdc677d0574bfa3110
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 17:02:20 2013 +0100
+
+    weave logo
+
+commit 427dd24002b6324c52cc522607b9f0f0c233239f
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 16:58:20 2013 +0100
+
+    fb image
+
+commit dddd518b64a6d5ed2ab64c925e9c5292325d3d7d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 16:07:25 2013 +0100
+
+    removing skim test link
+
+commit 57c86e78da383a486234cd5da77a875d8669d596
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 16:04:33 2013 +0100
+
+    heroku skim
+
+commit c28c05064939ffbf826792b347df7652b2679787
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 16:00:20 2013 +0100
+
+    skimlinks test
+
+commit d17f325415ddb3f0e0dba2912158e5b6ca767cbc
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 15:49:16 2013 +0100
+
+    bug fix: undefined likes
+
+commit 9b0709435e69f5d1ba8d6c7cc605b90a87f75d5b
+Merge: 9e31ce2 39abee6
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:39:03 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 9e31ce2ff1e288a9a48ee58eb34ff1da5490f7a2
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:38:55 2013 +0100
+
+    title on landing
+
+commit 39abee607f37821d7f726761d6c909035bee788e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 15:36:21 2013 +0100
+
+    bug fix: liking moved you on
+
+commit 79e6f892a31edc489426a1c500883e7dc8bdba81
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 17 15:32:46 2013 +0100
+
+    chloe changes
+
+commit e8d3a406bf0b2561b118b37afddcb8a91f17ddba
+Merge: 3c72a36 70ba358
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:28:53 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 3c72a3629167c9993c3cffda87600195a55fd457
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:28:38 2013 +0100
+
+    alertify bug fix
+
+commit 70ba35888452f5f7d016f5d0ef2b666ec7dba0d4
+Merge: 9ba81ec 1e9be9b
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 17 15:21:47 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 9ba81ecafff974e36f4709cd984afcb46b282a5d
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 17 15:21:41 2013 +0100
+
+    chloes changes to words and collections
+
+commit 13ce136947d85e2e78fd97cf6b8e8fa4cea416b5
+Merge: aee5b27 1e9be9b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:21:25 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit aee5b2720b41f3429f3f91a5a63bc2cec9b4b040
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:20:36 2013 +0100
+
+    men can't play
+
+commit 1e9be9b81011569294436ecce12283d3b329eb97
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 15:15:18 2013 +0100
+
+    removing -
+
+commit e9e3a0104214b35b89ffad9933b1d5822a6689f9
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 15:11:43 2013 +0100
+
+    skimlinks heroku domain
+
+commit 3118052605d47997e7e46fa5bb02faf2c53e1646
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 15:08:04 2013 +0100
+
+    gender done, procrastination over
+
+commit 1cabb105697f74cfbf175098f82dcf1280273c19
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 14:59:46 2013 +0100
+
+    Design almost perfect
+
+commit c7b2a843cb1fc7eb9b573cfe7bc533e658774513
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 14:36:28 2013 +0100
+
+    Chloe's dabbling with Code
+
+commit fcbbb924b271fdd0ff23fbae03c322a509bc642f
+Merge: 6fc0ffa baf1377
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 14:31:19 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 6fc0ffa76781a78c666d762af30c8cb8a006a3ad
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 14:31:09 2013 +0100
+
+    mixpannel tracking smashes SMASHED SMASHED SMASHED
+
+commit baf1377f05f841ce7887ea0d5badf0aca308f8ea
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 17 14:20:33 2013 +0100
+
+     changed collections
+
+commit 7466da150bfa71d31d68f7028766ee11ad481433
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 17 13:57:06 2013 +0100
+
+    changed collections & their names
+
+commit 0fb29d72bcb36e67f330c5683f92c1ab206ce84c
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 17 11:57:44 2013 +0100
+
+    changed collections for release 2
+
+commit 4e48b13f52f82a31d0dd322a9bf481c3802afda7
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 11:51:47 2013 +0100
+
+    mixpanel tracking of anonymous people
+
+commit f3000b3bea35d1b9ecd5ef60fde968223dcbac2f
+Merge: 6349d90 6db08db
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 11:50:44 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 6349d90af49d16a76be99f235533e4f190eabc01
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 11:50:40 2013 +0100
+
+    mixpanel tracking of anonymous people
+
+commit 6db08db8eb76f862c489bd205ca6d9c145f6c59b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 11:23:38 2013 +0100
+
+    open in new tabs
+
+commit 371fe73bee35877091d0b51ddb8d428d3215620c
+Merge: 11095af 83fceda
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 11:10:26 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 11095afd93bdc9d428b00e636eef075ae795b902
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 11:10:19 2013 +0100
+
+    progress bar flat ui green
+
+commit 83fcedafc72ad28c4beb06f6e3b2d34402887116
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 11:09:17 2013 +0100
+
+    bug fix: move on if you've already been on a track|
+
+commit 6c445e0ac00e9bb2b7cfdb97831781573a46ba5a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 10:55:07 2013 +0100
+
+    undefined collection bug fixed
+
+commit d1ab1fdfb7383c4673df25d0c8f027f158508c6b
+Merge: 63f06db 4f1b2a6
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 10:46:40 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 63f06dbe989b7c497855c9056ceb22fdbab02a8a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 10:46:35 2013 +0100
+
+    comment on share
+
+commit 4f1b2a63cbcb7f9820e8f8003313d17c425fa952
+Merge: b405038 c894f75
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 10:44:57 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit b405038e9233fabe7bbc89a76da88335ecc9991d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 17 10:44:40 2013 +0100
+
+    Create collection butto
+
+commit b4518cf431cf463d54edf20c84914c00b778cfd9
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 00:20:18 2013 +0100
+
+    Removng skimlinks test
+
+commit 156909370d8c178a58a498aebd0cfda34816adc8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 00:10:17 2013 +0100
+
+    skimlinks test
+
+commit c894f75dce3900b95582956e2b18d56dddac804f
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 17 00:01:38 2013 +0100
+
+    skimlinks to bottom
+
+commit 344fd2d1b3d7ba7fa341b84d58090f7ac39f0d1c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 23:54:19 2013 +0100
+
+    remove hr
+
+commit bf3c245385f04815c6b20c39a5d55844948585e8
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 23:36:24 2013 +0100
+
+    progress bars for Alice
+
+commit f0f0f33a659ee709151ef2772bdabe9629912a9c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 23:13:54 2013 +0100
+
+    I'm a mobile dev
+
+commit 5d43877454b5bfc810aae0e41851bc84b4d61894
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 23:02:38 2013 +0100
+
+    mobile styling fixed
+
+commit 12ee2bd768e66ecc2629d655ac0e2c0f1074f7f8
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 22:03:07 2013 +0100
+
+    quick fix mobile landing page
+
+commit 862f4101589de02f03a20cf41a1f8c0db1bf34a2
+Merge: e18ecbc 3428c19
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 19:42:28 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit e18ecbc383a1447ac223d339384c07f48f96e160
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 19:42:04 2013 +0100
+
+    shoeshoeshoes renamed folder
+
+commit 3428c19a86da504a4e6a8a54c348c82fb20c9021
+Merge: d83e79d abb2d47
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 19:40:57 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit d83e79d4e7fa0bfe99db7f82ae4caee07ac0000f
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 19:40:48 2013 +0100
+
+    landing page sorted
+
+commit abb2d472ec5bd532eef35f09f61affc0558e4e43
+Merge: 7e968f0 f3b579c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 19:39:28 2013 +0100
+
+    extra weekend track:
+
+commit 7e968f0390de7e85b9bf3ded2188f69e6bcb94d8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 19:38:28 2013 +0100
+
+    progress bars on collections
+
+commit f3b579cbd612a9af5a05f037d562cd44125bd866
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 16 19:16:20 2013 +0100
+
+    shoes-shoes-shoes
+
+commit 67e8a720a41efee26f193464424b0877ca348fe5
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 19:02:54 2013 +0100
+
+    english comments corrected by chloe
+
+commit 5c1da1812a9c94372503f542de01883e9f29a6ff
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 18:34:23 2013 +0100
+
+    find that fucking white coat hanger
+
+commit 9c2996095ea33e47040ac6400d7f078d85049de5
+Merge: 7847f96 ebc20cd
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 18:14:46 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 7847f960ae62f16eee891a0777197cd7f229902a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 18:14:42 2013 +0100
+
+    hanger fix
+
+commit ebc20cdc6d17029e0841b52569db4ea9a3d0f3ff
+Merge: 91969a6 efb52db
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 18:14:09 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 91969a69ab28b5261780efdf451a4ba89e82a9b3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 18:13:59 2013 +0100
+
+    comments on collections
+
+commit efb52dbbbcca3497aa1da41a642f234af5fd200b
+Merge: 214b0be 7c5b998
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 18:10:39 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 214b0be93cfa61aa7134bcb1dbfb4b9f692d16b0
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 18:10:34 2013 +0100
+
+    pink colors
+
+commit 7c5b9987fa0caed831c8172b7961315e3dff44c3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 18:02:25 2013 +0100
+
+    collections to collection
+
+commit ff7b5116bf5793cfeac684fae39e9dc38592c7c3
+Merge: a9f9330 40b646e
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 17:55:10 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit a9f933061b1c53631a0ec30d91133f74d38e4a38
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 17:55:05 2013 +0100
+
+    red weave logo
+
+commit 40b646eb4a7b0ac3c3d5673583730779e4208f68
+Merge: 522634a 0817927
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 17:46:13 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 522634ae893133ddefd501bc9a1bfc1aadee8dda
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 17:44:22 2013 +0100
+
+    active collections
+
+commit 0817927b7c544d2492a07f9bdb4223b261a62198
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 17:41:21 2013 +0100
+
+    free styling
+
+commit 8456fafe65b37d4ee3edf7101f750f6702b70eb3
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 16:29:05 2013 +0100
+
+    commit
+
+commit 08075c1437fb10a7ec883b0404324b33c69154df
+Merge: 2cc6d90 6029fbe
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 16:17:04 2013 +0100
+
+    collections styling finished
+
+commit 2cc6d900404c77832a5f232c1579bc3f3cc391bb
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 16:15:52 2013 +0100
+
+    collections finished
+
+commit b436369e8ced1df3577ce2f802a766c4577aa797
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 16:15:16 2013 +0100
+
+    buttons fixed
+
+commit 6029fbeea876d1e72215f10d33712a587ea7682d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 15:50:47 2013 +0100
+
+    hides horizontal rules
+
+commit 83b64686f0cc133a5222d396d4b060bdcd11019b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 15:26:40 2013 +0100
+
+    sends image of products back to view file
+
+commit 86b988ee0dbbd3dcfe8f53b3063ce8ba39a051e9
+Merge: 43d6687 bfbc12b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 15:08:43 2013 +0100
+
+    basic styling of collections
+
+commit 43d6687f1d020204a64e130cf295171bcd5a6d42
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 15:04:20 2013 +0100
+
+    basic collections styling
+
+commit bfbc12bec8ac4aa6e6fa9940aeaf277833a6337c
+Merge: 11c69ea 584545c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 15:03:30 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+    
+    Conflicts:
+    	views/index.jade
+
+commit 584545c07a811707b2d8cf8e86d0a49b2c3b1bb1
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 16 14:09:29 2013 +0100
+
+    new design CALM DOWN NICHOLAS
+
+commit 11c69ea41a6eb301581a3c8629ae7001559464f4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 12:49:01 2013 +0100
+
+    skimlinks test
+
+commit b796e40433ab0a95482271fc04a54845f20eda7a
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Mon Sep 16 12:23:41 2013 +0100
+
+    added skimlinks
+
+commit 01feea3e09f6e29a1aaf9a5ea91ad6ebf268ecaf
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 16 11:12:04 2013 +0100
+
+    reverse of null stopped
+
+commit 285dc705626db947eeec2e2fc0a4e8003e9d837b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 23:59:50 2013 +0100
+
+    NICK BG IMAGE
+
+commit 28477ef674020599c9cae67fac198c9d49dd9f1d
+Merge: 6649832 4c6cdfb
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 22:19:42 2013 +0100
+
+    Merge branch 'new-design' of github.com:nicangeli/weave
+    
+    Conflicts:
+    	public/javascripts/onboarding.js
+
+commit 66498321e3d4a0704705b0849c981687e536f836
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 22:06:23 2013 +0100
+
+    lets you rejoin a collection mid way through
+
+commit 308a61aaec6bc4cc00bfd15b26a1640cbce88b5a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 21:46:41 2013 +0100
+
+    bug fix: clicking like moves you on
+
+commit e494fd7518c50ce52abb7331c1f38710063d7d25
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 21:29:50 2013 +0100
+
+    tests if there are still collections to see
+
+commit bec169e35c5a9c11663fef0992a59b8d4af545bc
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 21:10:10 2013 +0100
+
+    pass the size of the collection to the page that views
+
+commit c3e63cc1225602b1fa51444d66d5d1048d6bc118
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 20:17:10 2013 +0100
+
+    removed superflorous getObj methods
+
+commit 9520a7214c5f426eb286e96fa670a704d903b43d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 19:22:41 2013 +0100
+
+    basic redirecting to collections and basic collections load
+
+commit eb732e07f7e8c4d7ce7b9dfef4c7de4f074d1aa2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 19:02:39 2013 +0100
+
+    jade for collections page
+
+commit 71d7e1849cfa0baaa9d72861605c77179265e556
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 19:01:27 2013 +0100
+
+    uri to db settings file
+
+commit 695b4f615ad450c49b42e181cd7b14108add91e8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 18:53:47 2013 +0100
+
+    collections object for dealing with collections
+
+commit 89caabbee988e2b078e25bdc10f640f9c2995f7c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 15 18:53:34 2013 +0100
+
+    db settings in common file
+
+commit 4c6cdfbf9197afe3411c04a95bd5a9c492f5bea5
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 14 13:09:05 2013 +0100
+
+    Onboarding style finished
+
+commit 09d07b3b865cfeabc990706fc23769b429a5fbf4
+Merge: ccdb580 b3877de
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sat Sep 14 09:56:23 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit ccdb5803a420c6c8017be3032aebdbba16a86a62
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sat Sep 14 09:56:06 2013 +0100
+
+    move mongo db t europe zone
+
+commit 43c235823ba7e1e6d9311525c56239d72d95d6f9
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 13 23:18:42 2013 +0100
+
+    half decent landing page
+
+commit b8b8784e0e58890676977d197537c6d42aa1b1e5
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 13 19:11:04 2013 +0100
+
+    Progression
+
+commit f4ec75c2b65c41f5ef2c92bd982552986b22f1d4
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 13 16:04:59 2013 +0100
+
+    design comming along
+
+commit c0cc2e005f213f9f8480424f33a29ea0418e3222
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 13 15:16:23 2013 +0100
+
+    vogue styling
+
+commit b3877de445edbe83e5f0de4fb1b36608b76f19d4
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Thu Sep 12 18:13:32 2013 +0100
+
+     lux shoes images and jason
+
+commit bf70978b2fdb1afe4a929df75ca6042c4a615349
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Thu Sep 12 17:39:46 2013 +0100
+
+    json files for new collections
+
+commit 9cbc9c80f4f73d2dff7d24896ef516e661db3bfe
+Merge: 44693bb f7fd05f
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Thu Sep 12 17:39:03 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 44693bb6e82a3bceb4aaa948ed6ffd7610578723
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Thu Sep 12 17:38:45 2013 +0100
+
+    json collections aand mvp2 images
+
+commit f7fd05f6ec5297472b237799e42ec457eb88df7e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 16:04:17 2013 +0100
+
+    not let you pass unless you select gender
+
+commit 034bd7863237ecbadaf635229c0230577c0f013d
+Merge: 1ad0a4f 30c2f46
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 15:55:14 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 1ad0a4f91115a49f8ebc1214496250c41ca15540
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 15:55:02 2013 +0100
+
+    bug fix
+
+commit 24803d8a4d137b3b44312a180ee4879793c2e162
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 15:52:51 2013 +0100
+
+    only one popup on multi tracks
+
+commit 30c2f46aea986ad45e1b4890a2351632d6f4dbc9
+Merge: 414be29 bc75a40
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 15:33:43 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave into email-styling
+
+commit 414be29386bef675d276c6c4509c02d1c8851a23
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 15:33:29 2013 +0100
+
+    Finished email template
+
+commit bc75a407d4a51b174b52dd220d94d7d3647c33ee
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 14:54:08 2013 +0100
+
+    weave logo
+
+commit 7526e1a0e629fbc29201f78a9905b2e57f09e3c3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 14:49:13 2013 +0100
+
+    remove email required
+
+commit 550ca01093792362d7d578a96fc42d20592452bf
+Merge: 42782ab 6b8e19d
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 14:22:39 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave into email-styling
+
+commit 42782ab0c17e11a94062c5099fe73f22673649c9
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 14:18:29 2013 +0100
+
+    basic style of the products in email
+
+commit 6b8e19df55f0e8bbc25dbe14dac4c335fafbc413
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 13:48:45 2013 +0100
+
+    fix undefined friend name
+
+commit cf4de40861a142941f9115bb416f32cc6e599ce2
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 13:21:05 2013 +0100
+
+    puts images into html
+
+commit d3ae5ea1fe806b940c3959769dd95b914d0f5e08
+Merge: d56503c c52c441
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 13:03:29 2013 +0100
+
+    Merge branch 'share-styling' of github.com:nicangeli/weave
+
+commit d56503c0f2bc6409f477c6971276bad2773c6952
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Thu Sep 12 13:03:09 2013 +0100
+
+    loop through products
+
+commit c52c4411df3aaf3b76a75a9cfd562ee9a89137a8
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 13:02:11 2013 +0100
+
+    onboarding swish
+
+commit 2af6bfe15e46379a9df440870001d7cafad91687
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 11:32:07 2013 +0100
+
+    Redo onboarding, a bit of share email styling
+
+commit 91369b35e1de560abb7cd13af4df4a65b9ee58cb
+Merge: 14974a3 d9fa6d1
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 09:45:33 2013 +0100
+
+    Merge branch 'master' into share-styling
+
+commit 14974a33bfd012428b6ef34f1e23b43c0d2df98b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Thu Sep 12 09:41:30 2013 +0100
+
+    initial styling of share
+
+commit d9fa6d1b096d2590222c48cb6019c6081c9b9bb6
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 23:07:18 2013 +0100
+
+    stores friendName
+
+commit ba0af4ab223d595afc136777079dc79e0bb36fd3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 22:05:21 2013 +0100
+
+    send email
+
+commit 7e16e010f92a9a52f53d566edebf8f12e7bf0778
+Merge: fe715a0 6a7891a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 19:38:01 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit fe715a0877b086413bcf5aa9f6c26a2d270664cb
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 19:37:50 2013 +0100
+
+    sends data to server properly
+
+commit 6a7891a7f842b4039ebbd93444efa180b452c04b
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 19:29:28 2013 +0100
+
+    fix friend styling
+
+commit 698c1bc5a48c5a7d580759da83e1d8bb73956006
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 19:12:24 2013 +0100
+
+    typo
+
+commit 69f9c835af3171d0d977044901b77f6419304175
+Merge: b41ef23 847e087
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 19:10:43 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit b41ef238944e425d089f65f65825a58d54f5bb99
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 19:10:33 2013 +0100
+
+    just about to send email to oriinator
+
+commit 847e087cf2603bc1c1892a96339c09676d8a768f
+Merge: 1b150c4 e1d95b3
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 19:09:52 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 1b150c4eda0f060e354ae11a1ae011504d43ce4f
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 19:08:47 2013 +0100
+
+    share button
+
+commit e1d95b35ede22eb0f2ab52fa17ff08e00898aa2e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 18:41:27 2013 +0100
+
+    thanks working
+
+commit 2824fd71b733b156bed7c50d187b516cb13697dc
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 17:13:07 2013 +0100
+
+    no longer shows hr
+
+commit 69275e3e67120ef4cc7c07ea05f3b0613f23b381
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 16:57:32 2013 +0100
+
+    friend pages with buttons
+
+commit 85f89d56cf5fe49b6bcc67f911d7e09e12cc4d6c
+Merge: 8a9541b 7ffd402
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 16:28:33 2013 +0100
+
+    Merge branch 'fontend-design' of github.com:nicangeli/weave into realData
+    
+    Conflicts:
+    	public/javascripts/likes.js
+
+commit 8a9541bf23d6958dfeb214cc4a23b6a5e7a694d9
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 16:27:57 2013 +0100
+
+    bug fix
+
+commit 7ffd4029ef209f81ee7f3b638f1e27aae59d7414
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 16:27:04 2013 +0100
+
+    Andy fixes the bug
+
+commit 4dcece92624e0a5fae6ab95afab8672c9ecb36be
+Merge: fcfad1a 86a8a75
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 16:13:05 2013 +0100
+
+    Merge branch 'fontend-design' of github.com:nicangeli/weave into realData
+
+commit fcfad1a0d4982c5b9583978c86e5f3bc3abad3ff
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 16:11:53 2013 +0100
+
+    puts images into friend file
+
+commit 86a8a75c9e2fdf769e0ba00c6e80e28518b7d7ba
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 16:11:51 2013 +0100
+
+    modal styling
+
+commit 91f2e908432058176380090c3bfc994080e06340
+Merge: 10cbb2f 22d6519
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 15:31:42 2013 +0100
+
+    Merge branch 'realData' of https://github.com/nicangeli/weave into fontend-design
+
+commit 10cbb2f9fa1cf66444cdf083b8e28b9469d05ee3
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 15:31:30 2013 +0100
+
+    bootstrap form
+
+commit 22d6519d33d88fd7f0a1e6c7b51f0a8f67b28a4e
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 15:31:08 2013 +0100
+
+    sends real data
+
+commit 1e16640858c49dd6ddb7e0e2a082e7165ce5b07a
+Merge: 8ad05bc 4a358e9
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 14:35:51 2013 +0100
+
+    Merge branch 'likes-page-restyle'
+    
+    Conflicts:
+    	views/likes.jade
+
+commit 4a358e969f3ef9bd90cd5ca1e4e72888c6a72551
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Wed Sep 11 14:33:36 2013 +0100
+
+    likes restyled and sharing mechanism
+
+commit 8ad05bcc8423335a642a80f14bfe54e045323ef9
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 14:32:47 2013 +0100
+
+    push dummy data to server
+
+commit 13d5beceda381a328f3311bc3fd36a7518d5bbf1
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 13:42:55 2013 +0100
+
+    returns url of inserting dummy data not from form
+
+commit 1ce0b019c00c28212c09262952cce2de132b47c3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Wed Sep 11 12:47:27 2013 +0100
+
+    generating random unique strings
+
+commit f2af760361414405f48dfb6e7fbde09729a61e13
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 15:45:24 2013 +0100
+
+    move when we prompt for email
+
+commit cb424517f1bfa295f2d609c274473ad119eaade1
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 13:10:07 2013 +0100
+
+    send to likes not email now
+
+commit 687c6eb5626bc16e142b27ee5821bf5d63953119
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 11:32:46 2013 +0100
+
+    fix wrong imageUrls
+
+commit 29aa5d0f2afb27f1e2f0a3ea2b9fe2f5e7b7d8e8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 11:28:54 2013 +0100
+
+    female collections updated
+
+commit ce4bea326dd0f952861785b1f897fc538ba9413f
+Merge: 48cbdc6 8023b46
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 10 11:25:37 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 48cbdc683b65bd10aba1efebee161a1330d52c00
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Tue Sep 10 11:23:34 2013 +0100
+
+    female day 2
+
+commit 8023b4605ba14cfe953ce36d7fc8f76f532f8d25
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 10 11:15:36 2013 +0100
+
+    Add the hipflask
+
+commit 3129e2231f313b49c99cf17c582594b7576f66f9
+Merge: bead997 f31769a
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 10 11:08:39 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit bead9978ec7f61eb99d610c9ce29acb270270c1c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Tue Sep 10 11:08:29 2013 +0100
+
+    Day 2 collections from Andy
+
+commit f31769aabe6e86cccebcb1fdae394cbff77850ba
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 10:42:56 2013 +0100
+
+    second day collection
+
+commit b938f4e63b09543dc8131f98fd8c4fd34c35cd2f
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 10:20:35 2013 +0100
+
+    men day 2 tracks
+
+commit dadc8559ee8d0e6ad2e7d620eb15e12a62386a34
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 23:50:09 2013 +0100
+
+    fade out then remove
+
+commit 216c12a3a31c0288fad41a728f5e04a3eeba7744
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 23:48:11 2013 +0100
+
+    delete removes all not just the button
+
+commit bc2e1af2ca041148c346698787864790d1250c79
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 23:46:53 2013 +0100
+
+    track delete button
+
+commit e5669feaf9c3de1ecd01dd72bfa47851987a8d97
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 23:46:08 2013 +0100
+
+    positioning delete button
+
+commit e833e73942cbe57bc0aac299146ec226d0cbcbaa
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 23:42:05 2013 +0100
+
+    removing silly pounds signs
+
+commit 2543c144bc1e2796c65b2fb284aaef0989664fe4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 23:36:03 2013 +0100
+
+    remove items works?
+
+commit c95ef8c5f907afc8b10ae5dc2fcafc52e4511886
+Merge: 8e1d00e 7258411
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 22:57:36 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 8e1d00e277cf73775e2289f45218e7a8cc486b78
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 22:57:26 2013 +0100
+
+    if no items display diff message
+
+commit 7258411df43221bc96087d919a742c88f7ffb035
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 9 22:57:03 2013 +0100
+
+    fix twitter & share on mobile
+
+commit 4c2cf55ef1d6c6ab186357e1b3562c7c22d97ac5
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 15:47:40 2013 +0100
+
+    views
+
+commit 2469a6499bbdcba7902f40da8d2ad60ad5d574cb
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 15:46:32 2013 +0100
+
+    removing likes count
+
+commit 3df311618f6a08d86f3fdcb8142ea5a5e8a44d03
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 14:59:49 2013 +0100
+
+    review not view
+
+commit 7d627687d57c71c443c65e2ed029ed14b4b13895
+Merge: 379b226 4afc5cb
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 14:15:21 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 379b2262bfce9db9dd929179681daa7b4f6a0d69
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 14:15:05 2013 +0100
+
+    text on likes page disapears
+
+commit 4afc5cbafdca1292e31a5199dadf9b73a184c9d5
+Merge: 26643ef 6c1561f
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 9 14:08:52 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 26643ef7118dc657e3272a8610021970738c2f76
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 9 14:08:46 2013 +0100
+
+    girl and boy button
+
+commit 6c1561f69b788346a50d1444f32ffd7eed71f0be
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 13:04:31 2013 +0100
+
+    go button bigger
+
+commit e26b954aeabbdc60fe7a1a9fbe84dca3ec61019a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 13:01:27 2013 +0100
+
+    X number on email page
+
+commit d9a488692b78e963bdb1aee436192e09d44cb8bb
+Merge: eab609b 674460f
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 12:56:03 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit eab609ba1b01ab0be428c729f5fa16b6d3ddc2dc
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 12:55:59 2013 +0100
+
+    stuff
+
+commit 674460f1f4c298c6b5d97b5d0bacb85f86acfad4
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Mon Sep 9 12:41:05 2013 +0100
+
+    hide Go button on email
+
+commit afbeedd66d96f393f9be32a75eed7c18d3e511f1
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 12:09:19 2013 +0100
+
+    callback functions on mixpanel tracks
+
+commit f9b37f763be92432fc0cb5c473d38dd0d12f1a1c
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 10:56:34 2013 +0100
+
+    Play button working
+
+commit 861b878d7cfcc817c7511086670ca209f858d752
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Tue Sep 10 00:43:25 2013 +0100
+
+    testing and working redirection on new days
+
+commit b28774da57f5a1695dbabe2bb1919dee1f422030
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Mon Sep 9 00:22:00 2013 +0100
+
+    redirect on next day to first collection
+
+commit 4ccd16cc692cc9ebb1cbe13ea148014046dc294d
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 8 23:58:23 2013 +0100
+
+    modernizr
+
+commit 50587941493e41c31b8a63a36ab7d872af96e380
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 8 22:25:58 2013 +0100
+
+    proper redirects
+
+commit 47a776ffe8039c9c1ceffe503a0520cdac6e01e3
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 8 11:06:14 2013 +0100
+
+    no longer hard coded the amount of products in
+
+commit f189680427173044691515dea5a71f0dc8486e19
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Sun Sep 8 11:00:44 2013 +0100
+
+    winter coats shown to all
+
+commit dd3da4292f27ac236be91848a4df78d04cc75f02
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 22:08:01 2013 +0100
+
+    add in give email as an event
+
+commit fa55aa7c3c013368553d8957a0e23d71fd0e5670
+Merge: 703fa73 4609ec0
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 21:37:45 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 703fa7347cf5f9896537eb09e801ccef25fdf789
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 21:37:20 2013 +0100
+
+    Fix mix panel to track people
+
+commit 4609ec08daf2c56001247d586abb4099901cd8b6
+Merge: 8be10d7 4370798
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Sat Sep 7 17:09:35 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 8be10d70bb4a1b8af14586610aa180a42f0f4246
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Sat Sep 7 17:09:17 2013 +0100
+
+    images winter coats
+
+commit 4370798f1cf8bae5826e353e2b17d68e9d69f963
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 13:48:33 2013 +0100
+
+    Get email not working
+
+commit 614732fe0622b21f4a84ee9b8d981e766f86f3fd
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 12:06:11 2013 +0100
+
+    mobile styling of buttons
+    :
+
+commit 7637324c1296db86f7f2440a792a55f0dcd829c3
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 11:45:46 2013 +0100
+
+    mixpanel tracking applied
+
+commit 0feb28c4dece7cb0a3cd5f24f70e68f2278c6533
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Sat Sep 7 10:59:09 2013 +0100
+
+    track all the likes and dislikes with mixpanel
+
+commit ee83e556bb94f3fb395737d4ffd3a10d9cbc8be1
+Merge: 4d775b5 5f0d018
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 6 22:59:54 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 4d775b5265ae108b7096a940612b8009141ba88c
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 6 22:59:43 2013 +0100
+
+    Broken mixpanel, too drunk to fix/not a good enough dev
+
+commit 5f0d018d980bec841768776c87b8cbcd8c40dbfa
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 18:12:24 2013 +0100
+
+    add male 19 product shop
+
+commit bbdfb6e7c4f4596ef46c2dd9c7f3c48ce4c4b2cd
+Merge: 289bea4 acde31a
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 18:05:48 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 289bea4214e52ea9dbb6a0df98509021319d2dc8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 18:05:41 2013 +0100
+
+    alert:
+
+commit acde31a7ec36d3f58db3e92ba5b734319b3e8688
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 6 17:49:31 2013 +0100
+
+    my collections back in
+
+commit d6327fb154ee93cce6d5dd3b21305859d7793632
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 17:44:02 2013 +0100
+
+    buy buttons
+
+commit 4e5904b07eff0ff0d479ca0f08bec1fe3b58a907
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 17:36:27 2013 +0100
+
+    _blank AGAIN ANDY
+
+commit 5bcc62b42f9f0f107f1b6487b7a2ab7cebac9d67
+Merge: 711999d bb3ba6b
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 17:31:10 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+    
+    Conflicts:
+    	views/likes.jade
+
+commit bb3ba6b42e340c42411dc801993893ee252b0a9b
+Merge: 92f6037 6568777
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Fri Sep 6 17:29:53 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 711999dd59122f5a50c715e32fd10e1f3b8e335c
+Merge: e01b303 6568777
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 17:29:50 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+
+commit 92f6037652b2bc34e582d2a2efd425a1886288e2
+Author: Chloe Donegan <chloedonegan@gmail.com>
+Date:   Fri Sep 6 17:29:44 2013 +0100
+
+    wordsmithing mvp2
+
+commit e01b303c69dd362d76059b4b39a9918910b1a6dc
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 17:29:43 2013 +0100
+
+    thanks added
+
+commit 656877734c1329d04ad5b62250727e137be28733
+Merge: 70533fc 67549a2
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 6 17:22:00 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
+
+commit 70533fc747972c6f96a35d0c3471c095d81ec9a3
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 6 17:21:54 2013 +0100
+
+    bits and bops on styling buy button fixed
+
+commit 67549a20ef1218f0e1fdb63048962fe027881c06
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 16:44:47 2013 +0100
+
+    twitter
+
+commit 5da6cf38cf7d1d30338ae40abfb08b7f6dc290f4
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 16:29:36 2013 +0100
+
+    removing silly characters from chloe files
+
+commit 3f9fab26d010c403352c025cfe58a586be680d1f
+Merge: 97d9820 2f80c92
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 16:25:42 2013 +0100
+
+    Merge branch 'master' of github.com:nicangeli/weave
+    
+    Conflicts:
+    	views/email.jade
+
+commit 97d982004948b72d48ef45377f2d24292dfeef40
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 16:22:29 2013 +0100
+
+    email validation
+
+commit 6bf69b62025a6e818efc51c3cfcb02d0a76191c8
+Author: Nicholas Angeli <nicangeli@gmail.com>
+Date:   Fri Sep 6 15:54:57 2013 +0100
+
+    male tracls
+
+commit 2f80c922a730270222bf4d03d9073132314ef2bf
+Merge: 5ed7e34 ebfe3f2
+Author: brownie3003 <brownie3003@gmail.com>
+Date:   Fri Sep 6 15:53:54 2013 +0100
+
+    Merge branch 'master' of https://github.com/nicangeli/weave
