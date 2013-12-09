@@ -1,2 +1,1 @@
-exports.db = 'mongodb://nodescript:nodescript@ds045938.mongolab.com:45938/heroku_app18114381';
-
+exports.db = 'mongodb://weave:weave2013@paulo.mongohq.com:10028/weave-production_copy';

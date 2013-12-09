@@ -2,7 +2,7 @@
 	Module that handles collections
 */
 var config = require('../config/config.js'),
-	db = require('mongoskin').db("mongodb://weave:weave2013@eloise.mongohq.com:10022/weave-production"),
+	db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10028/weave-production_copy"),
 	async = require('async');
 
 module.exports = function() {

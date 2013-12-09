@@ -366,4 +366,8 @@ module.exports = function(app, passport) {
 		}
 		res.json(j);
 	});
+
+	app.post('/api/facebook_user', function(req, res) {
+		console.log(req.body);
+	});
 }

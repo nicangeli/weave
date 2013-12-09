@@ -1,7 +1,7 @@
 //config/config.js
 
 module.exports = {
-	db: 'mongodb://weave:weave2013@paulo.mongohq.com:10025/weave-dev_copy',
+	db: 'mongodb://weave:weave2013@paulo.mongohq.com:10028/weave-production_copy',
 	app: {
 		name: 'Weave - Fashion discovery'
 	},

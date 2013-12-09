@@ -1,6 +1,6 @@
 /* Module that makes the dashboard */
 
-var db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10000/weave-dev"),
+var db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10028/weave-production_copy"),
 	async = require('async'),
 	sugar = require('sugar');
 
