@@ -1,18 +1,44 @@
 extends headers
 
 block content
-	.container.test
-		h3(style="float: right; padding-right: 20px; font-family: 'Raleway', sans-serif; font-weight: 800; color: slategrey;") 
-			a(href="http://weavefashion.wordpress.com/") BLOG
-		.col-xs-1.col-sm-2
-		.col-xs-12.col-sm-8.test2
-			.col-xs-12(style="text-align: center; margin-top: 50px")
-				img.iPhone(src="/images/Design_stuff/iPhone5c.png", style="float: right;")
-				img(src="images/weave-red.png", style="margin-top: 150px;")
-				h2(style="margin-bottom: 40px; font-family: 'Raleway', sans-serif; color: white; font-weight: 800;" )
-					| The Highstreet 
+	script(type='text/javascript')
+		mixpanel.track("Landing Page Loaded November 13th");
+		mixpanel.track_links(".blog", "Visit Blog");
+	
+	.section1
+		.col-sm-11
+		.col-sm-1
+			h3(style="text-align: right; padding-right: 20px; font-family: 'Raleway', sans-serif; font-weight: 800; color: slategrey;") 
+				a.blog(href="http://weavefashion.wordpress.com/") BLOG
+		.col-sm-2
+		.col-sm-4
+			img.logo(src="images/weave-red.png")
+			h2(style="margin-bottom: 40px; font-family: 'Raleway', sans-serif; color: white; font-weight: 800;" )
+					| Window Shop 
 					//br
-					| in your pocket.
-				a(href="https://itunes.apple.com/gb/app/weave-fashion/id725215782?mt=8&ign-mpt=uo%3D4")
-					btn.btn.btn-custom.download Get the App
+					| on the go.
+			//- a.getApp(href="https://itunes.apple.com/gb/app/weave-fashion/id725215782?mt=8&ign-mpt=uo%3D4")
+			//- 	btn.btn.btn-custom.download Want the App?
+			h3(style="font-family: 'Raleway', sans-serif; color: white; font-weight: 800;") Interested? Get an early invite.
+			form.email(style="height: 80px;")
+				input.landingForm(type='email', name='email', placeholder='name@email.com')
+				a.btn.btn-custom.submitEmail(href="#") Go
+			h3.message(style="font-family: 'Raleway', sans-serif; color: white; font-weight: 800;") Thanks, we'll be in touch
+		.col-sm-4
+			img.iPhone(src="/images/Design_stuff/iPhone5c.png", style="float: right;")
+		.col-sm-2
+		.clearfix
+	.section2
+		div(styl)
+		.col-sm-4.step1
+			img.step(src="images/Design_stuff/step1-web-black.png")
+		.col-sm-4.step2
+			img.step(src="images/Design_stuff/step2-web-black.png")
+		.col-sm-4.step3
+			img.step(src="images/Design_stuff/step3-web-black.png")
+		.clearfix
+			
+				
+	script(src="/javascripts/landing.js", type="text/javascript")
+
 
