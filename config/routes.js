@@ -277,7 +277,7 @@ module.exports = function(app, passport) {
 		emailTemplates(templatesDir, function (err, template) {
 			if (err) throw err;
 
-			var db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10000/weave-dev"),
+			var db = require('mongoskin').db("mongodb://weave:weave2013@paulo.mongohq.com:10028/weave-production_copy"),
 				smtpTransport = nodemailer.createTransport("SMTP", {
 					service: "Zoho", 
 					auth: {
